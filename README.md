@@ -1,6 +1,6 @@
-## Project 2 - Food 
+## Project 2 - Jumanji 
 
-With developer Johanna, David and Pierre.
+With developer Chloé, Elodie, Michaël and Grégory.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
