@@ -1,13 +1,26 @@
 import React from 'react'
+import Intro from '../intro/Intro'
+import $ from 'jquery'
+
 import './css/landing.css'
+import slideTop from '../../image/slide-top.jpg'
+import slideBottom from '../../image/slide-bottom.jpg'
+
 
 function LandingPage(){
+    $(document).ready(function () {
+        $('.jcontentle').appendTo('.img-whois+p');
+    });
     return(
-        <div className="container">
+        <div className=" jcontentle ">
             container
-            <img className="slide-top" src="../image/plateau.jpg" alt="slide du plateau de jeu top"/>
-            <img className="slide-background" src="../image/plateau.jpg" alt="plateau de jeu fond"/>
-            <img className="slide-bottom" src="../image/plateau.jpg" alt="slide du plateau de jeu bottom"/>
+            <div className="jalterre" id="jalter1">
+                <Intro className="video"/>
+            </div>
+            
+            <div class="jcontentle">
+                <a href="http://www.oursourcecode.net/u6090" target="_blank" class="jcredit">By Jackin</a>
+            </div>
         </div>
     )
 }

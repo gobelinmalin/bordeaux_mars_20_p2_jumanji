@@ -1,19 +1,101 @@
 .container{
-    width: 80rem;
-    height: 50rem;
+    /* width: 80rem; */
+    /* height: 50rem; */
     max-height: 100%;
     background-color: brown;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
 }
 
-.slide-top, .slide-background, .slide-bottom{
-    /* width: 150px; */
-    /* height: 180px; */
+
+.video{
+    color: black;
+    /* z-index: 10; */
+    display: flex;
+    justify-content: center;
     margin: 0 auto;
-    padding: 10px;
-    border: solid black;
-    background-color: rgb(152, 192, 79);
+    height: 5em;
+    background-color: aqua;
+    align-self: center;
+    align-items: center;
 }
+/* Código para leyenda tipo Invisionfree por Jackin. Door Slide. */
+
+/* Contenedor básico. */
+.jcontentle {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    width: -moz-available;
+    height: auto;
+    padding: 25px 20px 25px 20px;
+    background-color: silver;
+    border: gray solid 2px;
+    border-radius: 1em;
+    margin: 0 auto;
+}
+/* Crédito. No tocar. */
+ .jcredit {
+    float: right;
+    font-size: 10px;
+    color: black;
+    text-decoration: none;
+    position: relative;
+    bottom: -10px;
+    right: -5px;
+}
+/* Cuadrados básicos */
+ .jalterre {
+    display: flex;
+    margin-right: 10px;
+    text-decoration: none;
+    position: relative;
+    color: white;
+    padding: 17px 0px 0px 0px;
+    text-indent: 2px;
+    background-color: rgb(133, 62, 62);
+}
+/* .jalterre:nth-last-child(2) {
+    margin-right: 0px;
+} */
+/* Grupos invisibles. */
+ .jalterre::before, .jalterre::after {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    -webkit-transition: all 0.2s;
+    transition: all 2s;
+    top: 0%;
+    left: 0%;
+    content:"";
+}
+.jalterre::after {
+    top: 50%;
+}
+/* Grupos visibles. */
+.jalterre:hover:before {
+    top: -50%;
+}
+.jalterre:hover::after {
+    top: 100%;
+}
+/* Cuadrado 1 */
+#jalter1{
+    height: 590px;
+    width: inherit;
+}
+
+#jalter1::before {
+    background-color: #0C2F4A;
+    background-image: url(../../../image/slide-top.jpg);
+}
+#jalter1::after {
+    background-color: #0C2F4A;
+    background-image: url(../../../image/slide-bottom.jpg);
+}
+/* Cuadrado 2 */
+ #jalter2::before, #jalter2::after {
+    background-color: #2A5576;
+ }
