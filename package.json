@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "jumanji",
+=======
+  "name": "food",
+>>>>>>> 3bb7bc63c260c3d37b56e2356741130c873538e3
   "version": "0.1.0",
   "private": true,
   "dependencies": {
