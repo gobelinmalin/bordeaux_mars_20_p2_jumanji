@@ -1,7 +1,7 @@
 // LIBRARY
 import React from 'react'
-import Intro from '../intro/Intro'
 import $ from 'jquery'
+import Intro from '../Intro/Intro'
 // LIBRARY
 
 // CSS
@@ -9,8 +9,8 @@ import './css/landing.css'
 // CSS
 
 // IMAGE
-import slideTop from '../../image/slide-top.jpg'
-import slideBottom from '../../image/slide-bottom.jpg'
+/* import slideTop from '../../image/slide-top.jpg'
+import slideBottom from '../../image/slide-bottom.jpg' */
 // IMAGE
 
 
@@ -19,7 +19,7 @@ function LandingPage(){
         $('.jcontentle').appendTo('.img-whois+p');
     });
     return(
-        <div className=" jcontentle ">
+        <div className=" jcontentle">
             <div className="jalterre" id="jalter1">
                 <Intro className="video"/>
             </div>

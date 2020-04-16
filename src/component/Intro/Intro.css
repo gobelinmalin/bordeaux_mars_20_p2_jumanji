@@ -1,7 +1,7 @@
 .bg {
     display: flex;
     justify-content: center;
-    background-image: url('./body-background.jpg');
+    /* background-image: url('./body-background.jpg'); */
     background-size: cover;
     margin-left: auto;
     margin-right: auto;

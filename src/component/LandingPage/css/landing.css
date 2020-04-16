@@ -21,7 +21,7 @@
 .jcontentle {
 	background-image: url(/static/media/body-background.b6762e1c.jpg);
 	background-repeat: no-repeat;
-	background-size: 100% auto;
+	background-size: auto 100vh;
 	border-radius: 0.1em;
 	display: flex;
 	justify-content: center;
@@ -29,7 +29,7 @@
 	flex-wrap: wrap;
 	/* flex-flow: column; */
 	width: max-content;
-	height: max-content;
+	height: 100vh;
 	min-width: 100%;
 	min-height: 100%;
 	/* box-sizing: content-box; */
@@ -85,12 +85,6 @@
 }
 /* Cuadrado 1 */
 #jalter1 {
-	height: 522px;
-	min-height: 100%;
-	width: auto;
-	/* min-width: 100%; */
-	/* max-width: 100%; */
-	/* min-width: -moz-min-content; */
 	display: flex;
 	justify-content: center;
 	/* border: solid red; */
@@ -99,17 +93,17 @@
 
 #jalter1::before {
     background-color: #0C2F4A;
-    background: url(../../../image/slide-top.jpg);
-    background-size:  100%;
+    background: url(../image/slide-top.jpg);
+    background-size:  100vw 50vh;
     background-repeat: no-repeat;
-    display: none;
+    /* display: none; */
 }
 #jalter1::after {
     background-color: #0C2F4A;
-    background: url(../../../image/slide-bottom.jpg);
-    background-size: 100%;
+    background: url(../image/slide-bottom.jpg);
+    background-size: 100vw 50vh;
     background-repeat: no-repeat;
-    display: none;
+    /* display: none; */
 }
 /* Cuadrado 2 */
  #jalter2::before, #jalter2::after {
@@ -124,4 +118,15 @@
 
 a{
     border: solid;
+}
+
+.bg {
+    display: flex;
+    justify-content: center;
+    background-size: cover;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100vh;
+    min-height: 100%;
+    align-items: center;
 }

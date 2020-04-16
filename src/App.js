@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+//import './App.css';
 import LandingPage from './component/LandingPage/LandingPage'
 import Intro from './component/Intro/Intro';
 
@@ -13,7 +13,6 @@ function App() {
       </div>
 
       <div className="intro-movie">
-        <Intro />
       </div>
 
       <div className="select-player">
