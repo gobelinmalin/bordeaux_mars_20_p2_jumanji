@@ -1,10 +1,17 @@
+// LIBRARY
 import React from 'react'
 import Intro from '../intro/Intro'
 import $ from 'jquery'
+// LIBRARY
 
+// CSS
 import './css/landing.css'
+// CSS
+
+// IMAGE
 import slideTop from '../../image/slide-top.jpg'
 import slideBottom from '../../image/slide-bottom.jpg'
+// IMAGE
 
 
 function LandingPage(){
@@ -13,14 +20,10 @@ function LandingPage(){
     });
     return(
         <div className=" jcontentle ">
-            container
             <div className="jalterre" id="jalter1">
                 <Intro className="video"/>
             </div>
-            
-            <div class="jcontentle">
-                <a href="http://www.oursourcecode.net/u6090" target="_blank" class="jcredit">By Jackin</a>
-            </div>
+            <a href="http://www.oursourcecode.net/u6090" target="_blank" class="">By Jackin</a>
         </div>
     )
 }
