@@ -8,7 +8,7 @@ function Intro() {
     <div className="general">
         <div className="bg">
           <div className="intro-ring">
-           <button className="intro" onClick={() => alert('Sélection Perso')}>
+           <button className="intro" title="Jouer à Jumanji" onClick={() => alert('Sélection Perso')}>
             <ReactPlayer className="movie" width={530} url="https://youtu.be/19qYDTNbGwA"
               controls={true} />          
            </button>
