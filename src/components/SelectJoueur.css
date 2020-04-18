@@ -1,0 +1,50 @@
+
+
+h1 {
+    text-align:center;
+    margin-top: 1%;
+    font-size: 3ems;
+    color: rgb(238, 220, 220);
+    background-image: none;
+    margin-bottom:-0.5%;
+}
+
+HTML {
+    background-image: url('vrai-body.jpg');
+    background-size: cover;
+
+}
+
+.containerlogo {
+    text-align:center;
+    margin-top: 2%;
+}
+
+.playCTAContainer {
+    margin-top:24.5%;
+    text-align: center;
+}
+
+.playCTA {
+    width: 160px;
+    height: 40px;
+    font-size: 1.3em;
+    font-weight: bolder;
+    color: rgb(3, 36, 21);
+    background-image: url('boutPlay.jpg');
+    border-radius: 2%;
+    opacity: 0.5;
+
+}
+
+.playCTA:hover {
+    width: 160px;
+    height: 40px;
+    font-size: 1.3em;
+    font-weight: bolder;
+    color: rgb(3, 36, 21);
+    background-image: url('boutPlay.jpg');
+    border-radius: 2%;
+    opacity: 1;
+
+}
