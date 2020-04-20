@@ -1,0 +1,37 @@
+.square{
+    background-color: whitesmoke;
+    width: 64px;
+    height: 64px;
+    border-radius: 0.3em;
+    margin: 5px ;
+}
+
+.board{
+    width: calc((64px + 5px + 5px) * 11);
+    max-height: calc((64px + 5px + 5px)* 11);
+    /* height: calc( 64px*10); */
+    background-color: grey;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.enigma{
+    align-self: stretch;
+    background-color: tomato;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 30%;
+    position: absolute;
+}
+
+.handler{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}

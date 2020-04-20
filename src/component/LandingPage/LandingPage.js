@@ -23,6 +23,11 @@ function LandingPage(){
             <div className="jalterre" id="jalter1">
                 <Intro className="video"/>
             </div>
+
+            <div className="select-player"></div>
+
+            <div className="end-page"></div>
+
             <a href="http://www.oursourcecode.net/u6090" target="_blank" class="">By Jackin</a>
         </div>
     )
