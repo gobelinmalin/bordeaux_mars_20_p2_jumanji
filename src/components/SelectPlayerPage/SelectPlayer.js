@@ -21,8 +21,14 @@ class SelectPlayer extends React.Component {
       };
       render() {
         return (
-        
-          <div className="selectPlayerContainer">
+         <body>
+
+        <div className ="logo">
+            <img src="https://zupimages.net/up/20/16/fc7x.png" alt="" />
+        </div>
+        <div className ="title">
+            <h1>Sélection joueurs (4 max.)</h1>
+        </div>
            
             <div className="checkboxesContainer">
                <div className="JoueurAContainer" >
@@ -69,7 +75,8 @@ class SelectPlayer extends React.Component {
             <div className="playCTAContainer">
                 <button className="playCTA"  disabled={this.state.count > 0 ? false : true}>Jouer</button>
             </div>
-          </div>
+       
+          </body>
         );
       }
     }

@@ -1,5 +1,22 @@
+body {
+    background-image: url("vrai-body.jpg");
+    background-size: cover;
+}
+
+.logo {
+  
+    margin-top: 1.5%;
+}
+
+.title{
+    color: rgb(243, 209, 209);
+    font-weight: bold;
+    margin-top: -1%;
+
+}
+
 .playCTAContainer{
-    margin-top:26%;
+    margin-top:18%;
     text-align: center;
 
 }
@@ -13,6 +30,7 @@
     background-image: url();
     border-radius: 2%;
     opacity: 0.5;
+    font-weight: bolder;
 
 }
 
@@ -27,8 +45,12 @@
     border-radius: 2%;
     opacity: 0.9;
     cursor: pointer;  
+    font-weight: bolder;
 
 }
+
+
+
 
 
 .playCTA:enabled:hover{
@@ -36,7 +58,7 @@
     height: 40px;
     font-size: 1.3em;
     font-weight: bolder;
-
+    font-weight: bolder;
     background-image: url('boutPlay.jpg');
     border-radius: 2%;
     opacity: 1;
@@ -98,7 +120,7 @@ form p {
 	position: absolute;
 	left: 0;
 	top: 0;
-	width: 14em;
+	width: 15em;
 	height: 22em;
     background-image: url('back-3.png');
     background-size: cover;
@@ -227,7 +249,7 @@ form p {
 	position: absolute;
 	left: 0;
 	top: 0;
-	width: 14em;
+	width: 15em;
 	height: 22em;
     background-image: url('back-3.png');
     background-size: cover;
@@ -360,7 +382,7 @@ form p {
 	position: absolute;
 	left: 0;
 	top: 0;
-	width: 14em;
+	width: 15em;
 	height: 22em;
     background-image: url('back-3.png');
     background-size: cover;
@@ -489,7 +511,7 @@ form p {
 	position: absolute;
 	left: 0;
 	top: 0;
-	width: 14em;
+	width: 15em;
 	height: 22em;
     background-image: url('back-3.png');
     background-size: cover;
