@@ -1,28 +1,21 @@
 import React from 'react';
-//import './App.css';
-import LandingPage from './component/LandingPage/LandingPage'
-import Intro from './component/Intro/Intro';
 
+import Enigme from './components/EnigmeCards'
+import EnigmesAnswers from './components/EnigmesAnswers'
 
-function App() {
-  return (
-    <div className="App">
+import './App.css';
 
-      <div className="landing-page">
-        <LandingPage/>
+class App extends React.Component {
+  
+  render(){
+    return (
+      <div className="App">
+        <Enigme/>
+        <EnigmesAnswers/>
+       
       </div>
-
-      <div className="intro-movie">
-      </div>
-
-      <div className="select-player">
-      </div>
-
-      <div className="end-page">
-      </div>
-      
-    </div>
-  );
+    );
+  }
 }
 
 export default App;
