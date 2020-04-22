@@ -3,7 +3,7 @@ import '../css/board-square.css'
 
 function TestEnigme(){
     return(
-        <div className="enigma"> test </div>
+        <div className="enigma"> composant énigme</div>
     )
 }
 

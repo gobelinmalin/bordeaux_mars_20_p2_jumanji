@@ -3,6 +3,7 @@ import datas from './data.js'
 import './css/board-square.css'
 
 import TestEnigme from './components/TestEnigme'
+import SmallSquare from './components/SmallSquare'
 
 class Board extends React.Component{
     constructor(){
@@ -10,10 +11,22 @@ class Board extends React.Component{
         this.state = datas
     }
 
-    buildRootSquare = () => {
+    buildBigSquare = () => {
 
+        const totalSmallSquare = []
+        const numSquare = 3
+        for( let y = 0; y < numSquare; y++){
+            
+            for( let x = 1; x < numSquare; x++){
+                
+                totalSmallSquare.push(<SmallSquare/>)
+            }
+            
+            totalSmallSquare.push(<SmallSquare/>) 
+            
+        }
         return (
-            <div className="square"></div>
+        <div className="bigSquare">{totalSmallSquare}</div>
         )
     }
     
@@ -41,18 +54,23 @@ class Board extends React.Component{
             "test"
             )
         }
+    
+    
         
         render(){
             const totalSquare = []
             const numSquare = 3
-            for( let y = 0; y < numSquare; y++){
+            for( let y = 1; y < numSquare; y++){
                 
-                for( let x = 1; x < numSquare; x++){
+                if( y> 1  ){
+                    totalSquare.push(<TestEnigme/>)
+                }
+                for( let x = 0; x < numSquare; x++){
                     
-                    totalSquare.push(this.buildRootSquare())
+                    totalSquare.push(this.buildBigSquare())
                 }
                 
-                totalSquare.push(this.buildRootSquare()) 
+                totalSquare.push(this.buildBigSquare()) 
                 
             }
             
