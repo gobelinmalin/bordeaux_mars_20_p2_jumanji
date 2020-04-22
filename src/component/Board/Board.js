@@ -2,13 +2,15 @@ import React from "react"
 import datas from './data.js'
 import './css/board-square.css'
 
+import TestEnigme from './components/TestEnigme'
+
 class Board extends React.Component{
     constructor(){
         super()
         this.state = datas
     }
 
-    buildSquare = () => {
+    buildRootSquare = () => {
 
         return (
             <div className="square"></div>
@@ -25,7 +27,7 @@ class Board extends React.Component{
     }
     squareEnigma = () => {
         return(
-            <h1 className="enigma">enigma</h1>
+            <div className="enigma">?</div>
         )
     }
 
@@ -42,25 +44,16 @@ class Board extends React.Component{
         
         render(){
             const totalSquare = []
-            const numSquare = 10
-    
+            const numSquare = 3
             for( let y = 0; y < numSquare; y++){
                 
-                for( let x = 0; x < numSquare; x++){
+                for( let x = 1; x < numSquare; x++){
                     
-                    totalSquare.push(this.buildSquare())
-
+                    totalSquare.push(this.buildRootSquare())
                 }
-
-                if( y >= numSquare/2 && y <= numSquare/2){
-                    totalSquare.push(this.squareEnigma())
-                }else{
-
-                    totalSquare.push(this.buildSquare())
-                }
-
-                totalSquare.push(this.buildSquare())
-
+                
+                totalSquare.push(this.buildRootSquare()) 
+                
             }
             
             return(

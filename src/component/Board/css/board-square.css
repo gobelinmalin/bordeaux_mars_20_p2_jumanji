@@ -1,15 +1,29 @@
 .square{
     background-color: whitesmoke;
-    width: 64px;
-    height: 64px;
+    width: 29vw;
+    height: 30vw;
     border-radius: 0.3em;
     margin: 5px ;
+    border: solid red 1px;
+}
+.square:nth-of-type(5){
+    align-self: stretch;
+    background-color: rgb(38, 180, 61);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 29vw;
+    height: 30vw;
+    border: solid rgb(36, 15, 131) 1px;
+    align-self: center;
+
 }
 
 .board{
-    /* width: calc((64px + 5px + 5px) * 11); */
-    width: auto;
-    max-height: calc((64px + 5px + 5px)* 11);
+    width: calc((64px + 5px + 5px) * 13);
+    /* width: auto; */
+    max-height: calc((64px + 5px + 5px)* 13);
     /* height: calc( 64px*10); */
     background-color: grey;
     padding: 5px;
@@ -21,17 +35,24 @@
 
 .enigma{
     align-self: stretch;
-    background-color: tomato;
-    border-radius: 30%;
+    background-color: rgb(38, 180, 61);
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 256px;
     height: 256px;
+    border: solid rgb(36, 15, 131) 1px;
 }
 
 .handler{
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
+}
+
+.test{
+    flex-grow: 2;
+    flex-shrink: 2;
+    background-color: teal;
 }
