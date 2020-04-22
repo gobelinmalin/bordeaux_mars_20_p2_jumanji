@@ -20,11 +20,15 @@ class Board extends React.Component{
         return (
                 <div className="board">
                     {square}
-                    <h1 className="enigma">enigma</h1>
                 </div>
         )
     }
-    
+    squareEnigma = () => {
+        return(
+            <h1 className="enigma">enigma</h1>
+        )
+    }
+
     squareLocation = () => {
         const xLoc = this.state.x
         const yLoc = this.state.y
@@ -39,21 +43,29 @@ class Board extends React.Component{
         render(){
             const totalSquare = []
             const numSquare = 10
-            
-            
+    
             for( let y = 0; y < numSquare; y++){
                 
                 for( let x = 0; x < numSquare; x++){
+                    
+                    totalSquare.push(this.buildSquare())
+
+                }
+
+                if( y >= numSquare/2 && y <= numSquare/2){
+                    totalSquare.push(this.squareEnigma())
+                }else{
+
                     totalSquare.push(this.buildSquare())
                 }
 
                 totalSquare.push(this.buildSquare())
+
             }
             
             return(
                 <div className="handler">
                     {this.buildBoard(totalSquare)}
-                    {this.buildSquare()}
                 </div>
                 )
             }

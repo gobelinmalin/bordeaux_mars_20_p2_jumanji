@@ -7,7 +7,8 @@
 }
 
 .board{
-    width: calc((64px + 5px + 5px) * 11);
+    /* width: calc((64px + 5px + 5px) * 11); */
+    width: auto;
     max-height: calc((64px + 5px + 5px)* 11);
     /* height: calc( 64px*10); */
     background-color: grey;
@@ -21,13 +22,12 @@
 .enigma{
     align-self: stretch;
     background-color: tomato;
-    border-radius: 50%;
+    border-radius: 30%;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 30%;
-    height: 30%;
-    position: absolute;
+    width: 256px;
+    height: 256px;
 }
 
 .handler{
