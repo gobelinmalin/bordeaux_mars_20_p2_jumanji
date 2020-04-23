@@ -3,6 +3,7 @@ import './App.css';
 import SelectPlayer from './components/SelectPlayerPage/SelectPlayer';
 
 
+
 function App() {
   return (
     <div className="App">
@@ -17,6 +18,7 @@ function App() {
         </div>
       <div className="end-page">
       </div>
+  
       </div>
   );
 }

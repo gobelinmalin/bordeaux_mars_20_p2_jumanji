@@ -18,9 +18,10 @@
 .arrowSelectJoueurD {
     display: flex;
     justify-content: space-between;
-    margin-top: 17%;
+    margin-top: 8%;
     position: relative;
-    margin-left: 3%;
+    margin-left: 9%;
+
    
 }
 

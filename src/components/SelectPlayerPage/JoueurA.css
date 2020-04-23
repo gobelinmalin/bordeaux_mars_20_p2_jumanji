@@ -8,6 +8,7 @@
     margin-left:-20px;
     margin-right:auto;
     color: #c65e18;
+  
 }
 
 .descriptionJoueurA{
@@ -16,15 +17,16 @@
     justify-content: center;
     width: 14.6em;
     margin-left: 3%;
+      
 
 }
 
 .arrowSelectJoueurA {
     display: flex;
     justify-content: space-between;
-    margin-top: 16%;
+    margin-top: 8%;
     position: relative;
-    margin-left: 2%;
+    margin-left: 4%;
    
 }
 
@@ -42,11 +44,11 @@
 }
 
 .randomSelectCTAA {
-    margin-left:5%;
+    margin-left:7%;
 }
 
 .randomSelectCTAA2 {
-    margin-right:7%;
+    margin-right:4%;
 }
 
 

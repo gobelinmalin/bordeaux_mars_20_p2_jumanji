@@ -157,9 +157,9 @@ form p {
 [type="checkbox"]#player1:checked + label:after {
 	content: '✕';
 	position: absolute;
-	top: 4.95em;
-	left: 1.4em;
-	font-size: 4em;
+	top: 5.3em;
+	left: 1.6em;
+	font-size: 3.8em;
 	color: #c65e18;
 	line-height: 0;
     z-index:3;
@@ -171,10 +171,10 @@ form p {
     content: 'CHOISIR';
     color: #c65e18ad;
     font-size: 1.3em;
-    top: 15.2em;
-    left: 3.4em;
+    top: 15.5em;
+    left: 4em;
     font-weight: bolder;
-
+    text-align: center;
 }
 
 /* Aspect non cochée:hover */
@@ -182,9 +182,10 @@ form p {
     content: 'CHOISIR';
     color: #c65e18;
     font-size: 1.3em;
-    top: 15.2em;
-    left: 3.4em;
+    top: 15.5em;
+    left: 4em;
     font-weight: bolder;
+    text-align: center;
 
 }
 
@@ -272,7 +273,7 @@ form p {
 	content: '✕';
 	position: absolute;
 	top: 4.6em;
-	left: 1.8em;
+	left: 1.9em;
 	font-size: 4em;
 	color: #181bc691;
 	line-height: 0;
@@ -286,12 +287,13 @@ form p {
 [type="checkbox"]#player2:checked + label:after {
 	content: '✕';
 	position: absolute;
-	top: 4.55em;
-	left: 1.4em;
-	font-size: 4em;
+	top: 5.3em;
+	left: 1.6em;
+	font-size: 3.8em;
 	color: #00B0F0;
 	line-height: 0;
     z-index:3;
+  
    
 }
 
@@ -300,9 +302,10 @@ form p {
     content: 'CHOISIR';
     color: rgba(0, 176, 240, 0.616);
     font-size: 1.3em;
-    top: 13.9em;
-    left: 3.4em;
+    top: 15.5em;
+    left: 3.7em;
     font-weight: bolder;
+  
 
 }
 
@@ -311,9 +314,10 @@ form p {
     content: 'CHOISIR';
     color: #00B0F0;
     font-size: 1.3em;
-    top: 13.9em;
-    left: 3.4em;
+    top: 15.5em;
+    left: 3.7em;
     font-weight: bolder;
+
 
 }
 
@@ -404,9 +408,9 @@ form p {
 [type="checkbox"]#player3:checked + label:after {
 	content: '✕';
 	position: absolute;
-	top: 3.6em;
+	top: 5.6em;
 	left: 1.8em;
-	font-size: 4em;
+	font-size: 3.8em;
 	color: #181bc691;
 	line-height: 0;
     z-index:3;
@@ -419,8 +423,8 @@ form p {
 [type="checkbox"]#player3:checked + label:after {
 	content: '✕';
 	position: absolute;
-	top: 4.1em;
-	left: 1.4em;
+	top: 5.03em;
+	left: 1.5em;
 	font-size: 4em;
 	color: #47C092;
 	line-height: 0;
@@ -433,8 +437,8 @@ form p {
     content: 'CHOISIR';
     color: rgba(71, 192, 146, 0.596);
     font-size: 1.3em;
-    top: 12.7em;
-    left: 3.4em;
+    top: 15.4em;
+    left: 3.7em;
     font-weight: bolder;
 
 }
@@ -444,8 +448,8 @@ form p {
     content: 'CHOISIR';
     color: #47C092;
     font-size: 1.3em;
-    top: 12.7em;
-    left: 3.4em;
+    top: 15.4em;
+    left: 3.7em;
     font-weight: bolder;
 
 }
@@ -533,8 +537,8 @@ form p {
 [type="checkbox"]#player4:checked + label:after {
 	content: '✕';
 	position: absolute;
-	top: 4.6em;
-	left: 1.8em;
+	top:5em;
+	left: 1.6em;
 	font-size: 4em;
 	color: #181bc691;
 	line-height: 0;
@@ -548,8 +552,8 @@ form p {
 [type="checkbox"]#player4:checked + label:after {
 	content: '✕';
 	position: absolute;
-	top: 3.65em;
-	left: 1.4em;
+	top: 5em;
+	left: 1.5em;
 	font-size: 4em;
 	color: #C630A5;
 	line-height: 0;
@@ -562,8 +566,8 @@ form p {
     content: 'CHOISIR';
     color: rgba(198, 48, 165, 0.555);
     font-size: 1.3em;
-    top: 11.3em;
-    left: 3.3em;
+    top: 15.4em;
+    left: 3.7em;
     font-weight: bolder;
 
 }
@@ -573,8 +577,8 @@ form p {
     content: 'CHOISIR';
     color: #C630A5;
     font-size: 1.3em;
-    top: 11.3em;
-    left: 3.3em;
+    top: 15.4em;
+    left: 3.7em;
     font-weight: bolder;
 
 }

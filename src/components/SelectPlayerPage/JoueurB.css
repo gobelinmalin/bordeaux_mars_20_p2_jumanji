@@ -22,9 +22,9 @@
 .arrowSelectJoueurB {
     display: flex;
     justify-content: space-between;
-    margin-top: 16%;
+    margin-top: 8%;
     position: relative;
-    margin-left: 3%;
+    margin-left: 4%;
    
 }
 
@@ -42,7 +42,7 @@
 }
 
 .randomSelectCTAB {
-    margin-left:5%;
+    margin-left:9%;
 }
 
 .randomSelectCTAB2 {
@@ -115,7 +115,7 @@ form p {
 	content: '✕';
 	position: absolute;
 	top: 4.6em;
-	left: 1.8em;
+	left: 1.9em;
 	font-size: 4em;
 	color: #181bc691;
 	line-height: 0;
@@ -144,7 +144,7 @@ form p {
     color: rgba(0, 176, 240, 0.616);
     font-size: 1.3em;
     top: 13.9em;
-    left: 3.4em;
+    left: 3.5em;
     font-weight: bolder;
 
 }
@@ -155,7 +155,7 @@ form p {
     color: #00B0F0;
     font-size: 1.3em;
     top: 13.9em;
-    left: 3.4em;
+    left: 3.5em;
     font-weight: bolder;
 
 }

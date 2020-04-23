@@ -5,8 +5,9 @@ import axios from 'axios';
 
 
 const sampleEmployee = {
-    lastname: 'Alan Parish',
-    description: 'Coincé dans Jumanji depuis 26 ans, Alan en connait tous les secrets'
+  lastname: 'Alan Parish',
+  picture: "https://zupimages.net/up/20/16/2tpa.png",
+  description: 'Coincé dans Jumanji depuis 26 ans, Alan en connait tous les secrets',
    
   };
   
