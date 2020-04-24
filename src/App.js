@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import SelectPlayer from './components/SelectPlayerPage/SelectPlayer';
+import SelectPlayer from './component/SelectPlayerPage/SelectPlayer';
 import LandingPage from './component/LandingPage/LandingPage'
-import Intro from './component/Intro/Intro';
+
 
  
 class App extends Component {
