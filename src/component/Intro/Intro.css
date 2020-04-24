@@ -8,13 +8,11 @@
     height: 100vh;
     min-height: 100%;
     align-items: center;
-  
 }
 .movie {
     display: flex;
     justify-content: center;
     margin: auto;
-    
 }
 .intro-ring {
     background-image: url('./ring.png');
@@ -28,7 +26,6 @@
     background-position: center;
     background-color: black;
 }
-
 .intro {
     width: 644px;
     height: 648px;
@@ -109,7 +106,3 @@
     opacity:0.9;
     color: black;
 }
-
-
-
-
