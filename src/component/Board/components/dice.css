@@ -1,0 +1,18 @@
+.dice{
+    width : 128px;
+    height: 128px;
+    border: 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
+    border-radius: 0.3em;
+    box-shadow: 2px 2px 5px;
+    background-color: rgb(197, 50, 50);
+}
+
+.handle-dice{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
