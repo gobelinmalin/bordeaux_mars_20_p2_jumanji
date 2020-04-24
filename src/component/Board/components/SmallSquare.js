@@ -1,9 +1,9 @@
 import React from 'react'
 import '../css/board-square.css'
 
-function SmallSquare (){
+function SmallSquare (props){
         
-    return <div className="smallSquare"> small square (component)</div>
+return <div className="smallSquare">x:{props.idx} y:{props.idy}</div>
     
 }
 
