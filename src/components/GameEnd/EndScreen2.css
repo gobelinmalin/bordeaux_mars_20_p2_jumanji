@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+.Wrapper {
+  height: 100vh;
+  background-image: url('../img_end/boardgame.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.Voile {
+  height: 100%;
+  background: linear-gradient( #1d1b0da5, #301305a5);
+}
+
+
+
+/* GameEnd Message  */
+
+.GameEndResult {
+  min-height: 100px;
+}
+
+.GameEndMessageBox {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Righteous', cursive;
+  font-size: 2rem;
+  color: #60f14d;
+}
+
+.EndGameMessageBox .Win p {
+  color: #965c06;
+}
+
+.EndGameMessageBox .Lost p {
+  color: #cc7c3b;
+}
+
+
+
+/* Jumanji Box  */
+
+.JumanjiBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  min-height: 200px;
+  margin: 10px 0;
+}
+
+.JumanjiLoader {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  border-radius: 50%;
+  width:190px;
+  height:190px;
+  box-shadow: 0 20px 50px #77e736;
+  transition: 1s;
+}
+
+.Loader:hover {
+  box-shadow: 5px 5px 25px 30px #77e736;
+  transition: 1s;
+}
+
+.Ring {
+  border-radius: 50%;
+  border: 2px;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border-left:2px solid #ffff00;
+  border-top:2px solid #ffff00;
+  animation: animate-border 6s linear infinite;
+  background-color:#266326c7;
+}
+
+.JumanjiMessage {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  color: #ffff00;
+  font-family: 'Righteous', cursive;
+  font-size: large;
+}
+
+.Ring:hover {
+  background-color: #2d5f2df5;
+  border-left:4px solid #ffff00;
+  border-top:4px solid #ffff00;
+  transition: 1s;
+  cursor: pointer;
+}
+
+/* Jumanji Border animation */
+
+@keyframes animate-border
+{
+  0%
+  {
+    transform: rotate(0deg);
+  }
+  100%
+  {
+    transform: rotate(360deg);
+  } 
+}
+
+
+/* Player Cards */
+
+.GamePlayersList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.GamePlayersCardsBox {
+  display: flex;
+}
+
+
+
+/* Credits Animation */
+
+.CreditsCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 25%;
+  text-align: center;
+}
