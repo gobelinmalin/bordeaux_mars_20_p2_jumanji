@@ -5,10 +5,10 @@ import '../css/board-square.css'
 
 function BigSquare (){
     
-    const totalSmallSquare = new Array()
-    let location = new Array()
-    let cols = new Array()
-    let rows = new Array()
+    const totalSmallSquare = []
+    let location = []
+    let cols = []
+    let rows = []
     const numberCols = 3
     const numberRows = 3
     const coordinate = [
@@ -25,15 +25,17 @@ function BigSquare (){
 > result[0] = [x[],y[0]]
 [ 1, 'a' ]
  */
-    
+
     for( let y = 0; y < numberCols; y++){
         cols=y
         for( let x = 0; x < numberRows; x++){
             
             rows=x
+            console.log(location.map( i => i), "before")
             location[x]=[rows,cols]
-            location.map( i => coordinate.y = cols)
+            console.log(location.map( i => i), "after")
             location.map( i => coordinate.x = rows)
+            location.map( i => coordinate.y = cols)
 
             totalSmallSquare.push(<SmallSquare key={Math.ceil(Math.random()*1000)} idy={coordinate.y} idx={coordinate.x}/>)
         }
@@ -41,7 +43,6 @@ function BigSquare (){
     }
 
    
-    console.log(location);
     return(
     <div className="bigSquare" >{totalSmallSquare}</div>
     )

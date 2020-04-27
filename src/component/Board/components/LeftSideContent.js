@@ -11,7 +11,7 @@ const players = ['Chloe','Elodie','Michael','Grégory']
     return(
         <div className="side-content">
             {players}
-            <h1>left side</h1>
+            <h1 on>left side</h1>
         </div>
     )
 }

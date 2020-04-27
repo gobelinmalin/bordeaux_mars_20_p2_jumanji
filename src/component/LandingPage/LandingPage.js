@@ -28,7 +28,7 @@ function LandingPage(){
 
             <div className="end-page"></div>
 
-            <a href="http://www.oursourcecode.net/u6090" target="_blank" class="">By Jackin</a>
+            <a href="http://www.oursourcecode.net/u6090" target="_blank" rel="noopener noreferrer" class="">By Jackin</a>
         </div>
     )
 }

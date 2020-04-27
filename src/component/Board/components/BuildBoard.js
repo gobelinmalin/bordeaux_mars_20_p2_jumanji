@@ -12,17 +12,17 @@ function BuildBoard(){
 
     for( let y = 1; y < numSquare; y++){
         if( y> 1  ){
-            totalSquare.push(<CentralButton/>)
+            totalSquare.push(<CentralButton key={Math.ceil(Math.random()*1000)}/>)
         }
         for( let x = 0; x < numSquare; x++){
-            totalSquare.push(<BigSquare key={x.toString()}/>)
+            totalSquare.push(<BigSquare key={Math.ceil(Math.random()*1000)}/>)
         }
     
-        totalSquare.push(<BigSquare key={y.toString()} />) 
+        totalSquare.push(<BigSquare key={Math.ceil(Math.random()*1000)} />) 
     }
     
     return (
-        <div className="board">
+        <div className="board" >
             {totalSquare}
         </div>
     )

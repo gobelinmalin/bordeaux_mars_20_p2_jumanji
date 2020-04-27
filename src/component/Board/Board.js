@@ -1,5 +1,5 @@
 import React from "react"
-import datas from './data.js'
+//import datas from './data.js'
 import './css/board-square.css'
 
 import BuildBoard from './components/BuildBoard'
@@ -14,9 +14,8 @@ class Board extends React.Component{
 
     
     squareLocation = () => {
-        const xLoc = this.state.x
-        const yLoc = this.state.y
-        const locate = [xLoc,yLoc]
+        //const xLoc = this.state.x
+        //const yLoc = this.state.y
         
         
         return (

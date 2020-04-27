@@ -1,10 +1,10 @@
 import React from "react"
 import '../css/board-square.css'
 
-function TestEnigme(){
+function CentralButton(){
     return(
         <div className="enigma"> composant énigme</div>
     )
 }
 
-export default TestEnigme;
+export default CentralButton;
