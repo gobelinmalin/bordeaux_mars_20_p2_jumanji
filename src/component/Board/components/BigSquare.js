@@ -31,9 +31,9 @@ function BigSquare (){
         for( let x = 0; x < numberRows; x++){
             
             rows=x
-            console.log(location.map( i => i), "before")
+            //console.log(location.map( i => i), "before")
             location[x]=[rows,cols]
-            console.log(location.map( i => i), "after")
+            //console.log(location.map( i => i), "after")
             location.map( i => coordinate.x = rows)
             location.map( i => coordinate.y = cols)
 
@@ -44,7 +44,8 @@ function BigSquare (){
 
    
     return(
-    <div className="bigSquare" >{totalSmallSquare}</div>
+       
+        <div className="bigSquare" >{totalSmallSquare}</div>
     )
 
 }
