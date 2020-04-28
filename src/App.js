@@ -1,16 +1,15 @@
 import React from 'react';
 import './App.css';
 
-import EndScreen2 from './components/GameEnd/EndScreen2';
+import FinalScreen from './components/GameEnd/FinalScreen';
 
 function App() {
   return (
     <div>
-      <EndScreen2 />
+      <FinalScreen />
       
     </div>
   );
 }
 
 export default App;
-
