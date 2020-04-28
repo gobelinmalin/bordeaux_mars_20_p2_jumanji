@@ -1,28 +1,30 @@
 import React from 'react'
-function Path(){
+import SmallSquare from './SmallSquare'
+
+function Path(props){
 
     const pathsPlayers = [
         {
             pathPlayer1:{
-                id:'',
+                id:0,
                 startX:0, // x+8 => y+5 => x-1
                 startY:0, //
                 color: "cyan"
             },
             pathPlayer2:{
-                id:'',
+                id:10,
                 startX:10, // y+8 => x-5 => y-1
                 startY:0,
                 color: "magenta"
             },
             pathPlayer3:{
-                id:'',
+                id:120,
                 startX:10, // x-8 => y-5 => x+1
                 startY:10,
                 color: "yellow"
             },
             pathPlayer4:{
-                id:'',
+                id:110,
                 startX:0, // y-8 => x-5 => y+1
                 startY:10,
                 color: "black"
@@ -41,7 +43,7 @@ function Path(){
             //   {x:8,y:1},{x:8,y:2},{x:8,y:3},{x:8,y:4},
             //   {x:7,y:5}
             // ]
-    const paths = (player) => {
+    function paths(player) {
 
         const finalPath = []
         const patha = []
@@ -49,6 +51,7 @@ function Path(){
         const pathc = []
         for(let x = 0 ; x < 8 ; x++){
             patha.push({'x': x, 'id': x.toString()} )
+
         }
         for(let y = 0 ; y < 5 ; y++){
             pathb.push({'y': y, 'id': y.toString()})
@@ -61,6 +64,14 @@ function Path(){
         finalPath.push(patha,pathb,pathc)
         console.log(finalPath)
     }
+
+    /* function testID(){
+        const smallSquare = <SmallSquare/>
+       
+            console.log(smallSquare, "world")
+        
+    } */
+    
     return (
         <>
             {paths(pathsPlayers)}

@@ -110,3 +110,18 @@
 .test2{
     color: brown;
 }
+
+.originalPath{
+    background-color: cyan;
+    width: 64px;
+    height: 64px;
+    border-radius: 0.3em;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid red 1px;
+    font-size: smaller;
+    text-align: center;
+    
+}

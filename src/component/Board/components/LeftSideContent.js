@@ -5,7 +5,7 @@ import Player from './Player'
 
 function LeftSideContent(){
 
-    const players = ['Chloe','Elodie','Michael','Grégory']
+    const players = ['Chloe','Elodie','Michael','Grégory'] // bouchon API
     .map( (player, id )=> <Player key={id.toString()} player={player}/>)
 
         return(
