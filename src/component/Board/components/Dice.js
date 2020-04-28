@@ -25,9 +25,7 @@ class Dice extends React.Component {
         this.setState({
                 dice1: Math.ceil(Math.random()*6),
                 dice2: Math.ceil(Math.random()*6),
-                result: this.state.dice1 + this.state.dice2,
         })
-        console.log("click2", this.state)
 
     }
   
