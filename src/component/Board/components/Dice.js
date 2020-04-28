@@ -31,7 +31,6 @@ class Dice extends React.Component {
   
     
     render() {
-        console.log("render", this.state)
         return (
             <div className="handle-dice">
                 <h1 className="dice"  >{this.state.dice1}</h1>
