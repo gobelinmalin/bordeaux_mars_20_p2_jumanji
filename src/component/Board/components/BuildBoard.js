@@ -48,6 +48,7 @@ function BuildBoard(){
                     id={count++} 
                     idy={coordinate.y} 
                     idx={coordinate.x}
+                    name=""
                 />)
             path
             .push(
