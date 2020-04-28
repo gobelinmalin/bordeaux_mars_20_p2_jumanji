@@ -12,27 +12,28 @@ class Dice extends React.Component {
         this.handleClick = this.handleClick.bind(this)
     }
     
+    componentDidUpdate(prevProps, prevState){
+        if(prevState.dice1 !== this.state.dice1 || prevState.dice2 !== this.state.dice2) {
+            this.setState({
+                    result: this.state.dice1 + this.state.dice2,
+            })
+        }
+    }
+    
     handleClick() {
-        this.setState(prevState => {
-            return {
-                result: this.state.dice1 + this.state.dice2,
+
+        this.setState({
                 dice1: Math.ceil(Math.random()*6),
                 dice2: Math.ceil(Math.random()*6),
-            }
+                result: this.state.dice1 + this.state.dice2,
         })
+        console.log("click2", this.state)
+
     }
-
-    /* result= () => {
-        const dice1 = this.state.dice1
-        const dice2 = this.state.dice2
-        const result = dice1 + dice2
-        return this.setState({result: dice1 + dice2})
-
-    } */
   
     
     render() {
-        
+        console.log("render", this.state)
         return (
             <div className="handle-dice">
                 <h1 className="dice"  >{this.state.dice1}</h1>
