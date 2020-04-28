@@ -39,7 +39,7 @@ function BuildBoard(){
             totalSmallSquare
             .push(
                 <SmallSquare 
-                key={count++} 
+                key={count.toString()} 
                 id={count++} 
                 idy={coordinate.y} 
                 idx={coordinate.x}
