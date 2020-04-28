@@ -1,11 +1,15 @@
 import React from 'react'
 import '../css/board-square.css'
+// test //
+import Path from './Path'
+// test //
 
 function Player(props){
     console.log(props)
     return(
-        
-        <div className="player">{props.player}</div>
+        <>
+            <div className="player">{props.player}</div>
+        </>
     )
 }
 

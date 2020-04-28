@@ -36,6 +36,7 @@
     align-items: center;
     border: solid red 1px;
     font-size: smaller;
+    text-align: center;
 }
 
 .board{
@@ -61,6 +62,7 @@
     width: 255px;
     height: 255px;
     border: solid rgb(36, 15, 131) 1px;
+    position: absolute;
 }
 
 .handler{

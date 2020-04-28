@@ -5,20 +5,18 @@ class Dice extends React.Component {
     constructor() {
         super()
         this.state = {
-            result : 0,
             dice1: 0,
             dice2: 0,
+            result  :0,
         }
         this.handleClick = this.handleClick.bind(this)
     }
-    
+
     handleClick() {
-        this.setState(prevState => {
-            return {
-                result: this.state.dice1 + this.state.dice2,
-                dice1: Math.ceil(Math.random()*6),
-                dice2: Math.ceil(Math.random()*6),
-            }
+        this.setState({
+            result: this.state.dice1 + this.state.dice2,
+            dice1: Math.ceil(Math.random()*6),
+            dice2: Math.ceil(Math.random()*6),
         })
     }
 

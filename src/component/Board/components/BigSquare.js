@@ -18,22 +18,12 @@ function BigSquare (){
         }
     ]
 
-/* 
-> let result = []
-> let x = [ 1 ,2 ,3]
-> let y = [ 'A', 'B' ,'C']
-> result[0] = [x[],y[0]]
-[ 1, 'a' ]
- */
-
     for( let y = 0; y < numberCols; y++){
         cols=y
         for( let x = 0; x < numberRows; x++){
             
             rows=x
-            //console.log(location.map( i => i), "before")
             location[x]=[rows,cols]
-            //console.log(location.map( i => i), "after")
             location.map( i => coordinate.x = rows)
             location.map( i => coordinate.y = cols)
 
@@ -41,13 +31,11 @@ function BigSquare (){
         }
         
     }
-
    
     return(
        
         <div className="bigSquare" >{totalSmallSquare}</div>
     )
-
 }
 
 export default BigSquare
