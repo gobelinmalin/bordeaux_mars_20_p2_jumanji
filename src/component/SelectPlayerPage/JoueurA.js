@@ -8,6 +8,7 @@ const sampleEmployee = {
     lastname: 'Alan Parish',
     picture: "https://zupimages.net/up/20/16/2tpa.png",
     description: 'Coincé dans Jumanji depuis 26 ans, Alan en connait tous les secrets',
+    panic: 0
    
   };
   

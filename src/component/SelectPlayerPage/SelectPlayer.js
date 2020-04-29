@@ -31,6 +31,8 @@ class SelectPlayer extends React.Component {
 
         this.setState({players: players})
 
+        localStorage.setItem("players", players)
+        
 
       };
       render() {
@@ -100,6 +102,8 @@ class SelectPlayer extends React.Component {
              <p key={number}>item: {number}</p>
           )}
         </div>
+       
+     
       
 
        
