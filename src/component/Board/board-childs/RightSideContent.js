@@ -1,7 +1,7 @@
 import React from 'react'
-import '../css/board-square.css'
+import './board-childs.css'
 
-import Dice from './Dice'
+import Dice from './rightsidecontent-childs/Dice'
 
 function RightSideContent(){
     return(

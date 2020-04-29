@@ -1,5 +1,5 @@
 import React from 'react'
-import SmallSquare from './SmallSquare'
+import SmallSquare from '../board-childs/buildboard-childs/SmallSquare'
 
 import '../css/board-square.css'
 

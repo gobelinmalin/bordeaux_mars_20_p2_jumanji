@@ -1,9 +1,9 @@
 import React from "react"
-import '../css/board-square.css'
+import './css/central-button.css'
 
 function CentralButton(){
     return(
-        <div className="enigma"> composant énigme</div>
+        <div className="central-button"> composant énigme</div>
     )
 }
 

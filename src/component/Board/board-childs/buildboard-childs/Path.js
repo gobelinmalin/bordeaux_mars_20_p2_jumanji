@@ -64,16 +64,10 @@ function Path(props){
         finalPath.push(patha,pathb,pathc)
         console.log(finalPath)
     }
-
-    /* function testID(){
-        const smallSquare = <SmallSquare/>
-       
-            console.log(smallSquare, "world")
-        
-    } */
     
     return (
         <>
+            <SmallSquare test="test"/>
             {paths(pathsPlayers)}
         </>
     )

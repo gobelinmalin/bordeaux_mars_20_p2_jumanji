@@ -1,7 +1,7 @@
 import React from 'react'
-import '../css/board-square.css'
+import './board-childs.css'
 
-import Player from './Player'
+import Player from './leftsidecontent-childs/Player'
 
 function LeftSideContent(){
 

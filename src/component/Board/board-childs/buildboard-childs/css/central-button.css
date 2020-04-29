@@ -1,0 +1,13 @@
+.central-button{
+    align-self: stretch;
+    background-color: rgb(38, 180, 61);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    width: 255px;
+    height: 255px;
+    border: solid rgb(36, 15, 131) 1px;
+    position: absolute;
+}

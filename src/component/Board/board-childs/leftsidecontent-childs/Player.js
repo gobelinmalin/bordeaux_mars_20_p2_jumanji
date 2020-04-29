@@ -1,8 +1,5 @@
 import React from 'react'
-import '../css/board-square.css'
-// test //
-import Path from './Path'
-// test //
+import './player.css'
 
 function Player(props){
     return(
