@@ -2,8 +2,9 @@ import React from "react"
 import './css/central-button.css'
 
 function CentralButton(props){
+    console.log(props)
     return(
-    <div className={props.className}> test-props: {props.test} <br/>composant énigme</div>
+    <div className={props.className}> <br/>composant énigme</div>
     )
 }
 

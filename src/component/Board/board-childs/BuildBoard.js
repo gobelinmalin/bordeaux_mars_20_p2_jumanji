@@ -52,11 +52,10 @@ function BuildBoard(props){
     .push(<CentralButton 
         className="central-button" 
         key={"CentralButton"} 
-        test="tttest"
         />)
 
     console.log(props)
-    
+
     return (
         <>
             <div className="board" >

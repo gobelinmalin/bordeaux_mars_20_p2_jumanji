@@ -27,7 +27,7 @@ class Board extends React.Component{
         return(
             <div className="handler">
                 <LeftSideContent/>
-                <div className="handler-board"><BuildBoard/></div>
+                <div className="handler-board"><BuildBoard test="test from Board"/></div>
                 <RightSideContent/>
             </div>
             

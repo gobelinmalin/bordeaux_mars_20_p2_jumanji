@@ -1,7 +1,7 @@
 import React from 'react'
 import BuildBoard from './BuildBoard'
 
-function Path(props){
+function Path(){
 
     const pathsPlayers = [
         {
@@ -67,7 +67,7 @@ function Path(props){
     console.log(props)
     return (
         <>
-            <BuildBoard test="123213"/>
+            {/* <BuildBoard test="123213"/> */}
             {paths(pathsPlayers)}
         </>
     )
