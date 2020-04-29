@@ -8,7 +8,7 @@ function SmallSquare (props){
     const pathPlayer3 = [0,1,2,3,4,5,6,7,8,,,,,,,,,,,19,,,,,,,,,,,30,,,,,,,,,,,41,,,,,,,,,,,52,,,,,,,,,,,63,62]
     const pathPlayer4 = [0,1,2,3,4,5,6,7,8,,,,,,,,,,,19,,,,,,,,,,,30,,,,,,,,,,,41,,,,,,,,,,,52,,,,,,,,,,,63,62]
     
-
+    //console.log( pathPlayer1[props.id],props.id)
     return (
         <>
             <div className={
@@ -18,7 +18,7 @@ function SmallSquare (props){
                     : 
                     "smallSquare"
                 }>
-                    x:{props.idx} y:{props.idy} id:{props.id} test:{props.test}
+                    x:{props.idx} y:{props.idy} id:{props.id}
             </div>
         </>
         )

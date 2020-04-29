@@ -1,5 +1,5 @@
 import React from 'react'
-import SmallSquare from './SmallSquare'
+import BuildBoard from './BuildBoard'
 
 function Path(props){
 
@@ -64,10 +64,10 @@ function Path(props){
         finalPath.push(patha,pathb,pathc)
         console.log(finalPath)
     }
-    
+    console.log(props)
     return (
         <>
-            <SmallSquare test="test"/>
+            <BuildBoard test="123213"/>
             {paths(pathsPlayers)}
         </>
     )

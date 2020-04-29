@@ -4,7 +4,7 @@ import CentralButton from './buildboard-childs/CentralButton'
 import SmallSquare from './buildboard-childs/SmallSquare'
 import './board-childs.css'
 
-function BuildBoard(){
+function BuildBoard(props){
 
     let totalSmallSquare = []
     let count = 0
@@ -48,15 +48,23 @@ function BuildBoard(){
             
     }
     
+    totalSmallSquare
+    .push(<CentralButton 
+        className="central-button" 
+        key={"CentralButton"} 
+        test="tttest"
+        />)
+
+    console.log(props)
     
-    totalSmallSquare.push(<CentralButton className="" key={"CentralButton"}/>)
-
     return (
-
-        <div className="board" >
-            {totalSmallSquare}
-        </div>
+        <>
+            <div className="board" >
+                {totalSmallSquare} 
+            </div>
+            test:{props.test}
+        </>
     )
 }
 
-export default BuildBoard
+export default BuildBoard;

@@ -1,9 +1,9 @@
 import React from "react"
 import './css/central-button.css'
 
-function CentralButton(){
+function CentralButton(props){
     return(
-        <div className="central-button"> composant énigme</div>
+    <div className={props.className}> test-props: {props.test} <br/>composant énigme</div>
     )
 }
 
