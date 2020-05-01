@@ -1,0 +1,47 @@
+.containerPlayer1 {
+    border-color: rgba(255, 0, 0, 0);
+    border-style: solid;
+    width: 16%;
+    height: 150px;
+    background-image: url('allan-plateau.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top:0.5%;
+ 
+}
+
+.namePlayer1 {
+    font-size: 2vw;
+    text-align:center;
+    margin-top:8%;
+    color: #c65e18;
+}
+
+
+.containerPanicPlayer1{
+    border-color: rgba(255, 0, 0, 0);
+    border-style: solid;
+    margin-top:20%;
+}
+
+.panicPlayer1{
+    background-color: black;
+    height: 1.7vw;
+    width: 10.6vw;
+    border-radius: 10px;
+    margin-left:15%;
+    margin-top:5%;
+}
+
+
+.panicJauge1{
+    background-color: #c65e18;
+    margin-top:-9%;
+    height: 1vw;
+    width: 20%;
+    border-radius: 10px;
+    margin-left:18%;
+}
+
+
+

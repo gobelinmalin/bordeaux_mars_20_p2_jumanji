@@ -3,9 +3,10 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
  
 
 import SelectPlayer from './component/SelectPlayerPage/SelectPlayer';
-import Plateau from './component/SelectPlayerPage/Plateau'
+import Plateau from './component/PlateauLeftSide/LeftSide'
 
 import LandingPage from './component/LandingPage/LandingPage';
+import LeftSide from './component/PlateauLeftSide/LeftSide';
 
 
  
@@ -18,7 +19,7 @@ class App extends Component {
             <Switch>
              <Route path="/" component={LandingPage} exact/>
              <Route path="/select-player" component={SelectPlayer}/>
-             <Route path="/plateau" component={Plateau}/>
+             <Route path="/plateau" component={LeftSide}/>
        
            </Switch>
         </div> 
