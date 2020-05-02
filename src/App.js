@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
  
 
 import SelectPlayer from './component/SelectPlayerPage/SelectPlayer';
-import Plateau from './component/PlateauLeftSide/LeftSide'
+
 
 import LandingPage from './component/LandingPage/LandingPage';
 import PlateauA from './component/Plateau/Plateau'

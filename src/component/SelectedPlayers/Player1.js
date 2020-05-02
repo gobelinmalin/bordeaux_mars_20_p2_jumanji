@@ -1,6 +1,6 @@
 import React from 'react';
 import './Player1.css'
-import AnswerBouton from './AnswerBouton'
+
 
 class Parent extends React.Component {
      constructor(props) {
@@ -40,7 +40,8 @@ class Parent extends React.Component {
                </div>
           </div>
              <div>
-                 <AnswerBouton clickHandler={this.outputEvent} />
+                 
+                 <button>{this.props.message}</button>
              </div>
              </div>
          );

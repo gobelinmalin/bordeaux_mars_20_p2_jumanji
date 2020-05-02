@@ -8,6 +8,8 @@ import Dice3 from './Dice3'
 import Dice4 from './Dice4'
 import Dice5 from './Dice5'
 import Dice6 from './Dice6'
+import TestEnfant from '../SelectedPlayers/SelectedPlayers';
+
 
 const sampleEnigme = {
   question: 'JoueurA lance les dès'
@@ -55,8 +57,8 @@ class Enigme extends React.Component {
     const index = Math.floor((Math.random()*(data.length -1)))
     this.setState({
     enigme: data[0],
-    actionCombattre : <button>Combattre </button>,
-    actionFuir : <button>S'enfuir</button>,
+    actionCombattre : <button className="enigmeCTA">Combattre </button>,
+    actionFuir : <button className="enigmeCTA">S'enfuir</button>,
     dice1: Math.ceil(Math.random()*6),
     dice2: Math.ceil(Math.random()*6),
   
@@ -68,8 +70,8 @@ class Enigme extends React.Component {
 
   getEscape (){
     this.setState({
-      actionCombattre : <button>LOL </button>,
-      actionFuir : <button>MDR</button>,
+      actionCombattre : <button className="enigmeCTA" >LOL </button>,
+      actionFuir : <button  className="enigmeCTA">MDR</button>,
       enigme: sampleFuir,
        })
   }
@@ -110,36 +112,37 @@ pictureDice2 = [<Dice6 />]
 
 
     return (
-      <div className="containerBoule">
-         
-        <div className="containerEnigme">
-           <div className="enigmeContent">
-
-                <DisplayEnigme className="enigme" enigme={this.state.enigme} />
-                <div className="containerActionCTA">
-                  <div className="CombattreCTA" onClick={this.getEscape}>
-                    {this.state.actionCombattre} 
-                  </div>
-                  <div className="FuirCTA">
-                    {this.state.actionFuir}
-                  </div>
+      <div className="container">
+            <div className="selectedPlayers"> 
+                <TestEnfant />
+            </div>
+            <div className="containerBoule">
+                <div className="containerEnigme">
+                    <div className="enigmeContent">
+                          <DisplayEnigme className="enigme" enigme={this.state.enigme} />
+                    </div>
+                    <div className="containerActionCTA">
+                          <div className="CombattreCTA" onClick={this.getEscape}>
+                              {this.state.actionCombattre} 
+                          </div>
+                          <div className="FuirCTA" onClick={this.getEscape}>
+                              {this.state.actionFuir}
+                          </div>
+                    </div>
+                </div>
+            </div>
+            <div className="containerRollDice">
+                <div className="CTA">
+                    <button  className="rollDiceCTA" type="button" onClick={this.getEnigme}> {this.state.result}</button>
+                </div>
+                <div className="dice1"> 
+                    {pictureDice1}
+                </div>
+                <div className="dice2">
+                    {pictureDice2}
                 </div>
            </div>
         </div>
-        <div className="containerRollDice">
-            <div className="CTA">
-                <button  className="rollDiceCTA" type="button" onClick={this.getEnigme}> {this.state.result}</button>
-            </div>
-            <div className="dice1"> 
-                {pictureDice1}
-            </div>
-            <div className="dice2">
-                {pictureDice2}
-            </div>
-        </div>
-       
-         
-      </div>
     )
   }
 

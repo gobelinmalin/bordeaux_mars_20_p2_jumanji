@@ -1,103 +1,67 @@
-.containerBoule{
-    border-color: red;
-    border-style: solid;
-    width: 80vw;
-    display:flex;
-    height: 640px;
-    justify-content: space-between;
-}
-
-.containerEnigme{
+.container{
+    text-align: left;
     border-color: blue;
     border-style: solid;
-    text-align:center;
-    width: 76%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: stretch;
+    align-content: stretch;
+    width:100%;
 }
 
-.containerRollDice {
+.selectedPlayers, .containerRollDice{
+    border-color: red;
+    border-style: solid;
+    width: 18%;
+}
+
+.containerBoule {
     border-color: yellow;
     border-style: solid;
-    width:23%;
-    text-align:center;
-}
-
-.enigmeContent {
-    border-color: orange;
-    border-style: solid;
-    width:60%;
-    height: 60%;
-    text-align: center;
-    color: blue;
-    background-image: url('boule-plateau.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    margin-left:10%;
-}
-
-.rollDiceCTA{
-    width:80%;
-    height: 50px;
-    background-image: url('roll-dice-button.png');
-    background-size: cover;
-    border: none;
-    border-radius: 10px;
-    font-size: 1.5vw;
-    font-weight: bold;
-    color: rgb(8, 75, 8);
-}
-
-.dice1{
-    margin-left: 0%;
-    border-color: orange;
-    border-style: solid;
+    width: 62%;
     display: flex;
-    justify-content: flex-start;
-    width: 100%;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
 }
 
-
-.dice2{
-    margin-left: 0%;
-    border-color: orange;
-    border-style: solid;
-    display: flex;
-    justify-content: space-around;
-    margin-top:-10%;
-    width: 120%;
-
-}
-
-.enigme {
-    color: blue;
-}
-
-
-.DisplayEnigme {
- display: flex;
- justify-content: center;
- border-color: greenyellow;
-   border-style: solid;
-   width:78%;
-}
-
-.question {
-   margin-top: 35%;
-   margin-left: 0%;
-   border-color: purple;
-   border-style: solid;
-   width:65%;
- font-size: 1.8vw;
-
+.enigmeCTA {
+    font-size: 1vw;
+    width: 7vw;
+    height: 2vw;
+  
 }
 
 .containerActionCTA{
-    border-color: green;
-    border-style: solid;
-    width:78%;
-    display: flex;
+    display:flex;
     justify-content: center;
 }
+
+.rollDiceCTA {
+    font-size: 1.5vw;
+    font-weight: bold;
+    width: 15vw;
+    height: 40px;
+    background-image: url('roll-dice-button.png');
+    border-radius: 5px;
+}
+
+.dice1 {
+    border-color: blue;
+    border-style: solid;
+    width: 120%;
+    margin-left:1%;
+}
+
+.dice2 {
+    border-color: blue;
+    border-style: solid;
+    width: 140%;
+    margin-left:25%;
+}
+
+
+
+

@@ -1,5 +1,5 @@
 import React from 'react';
-import './Enigme.css'
+import './DisplayEnigme.css'
 
 
 import { NavLink } from 'react-router-dom';

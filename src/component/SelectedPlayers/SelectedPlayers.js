@@ -1,28 +1,24 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-import Player1 from './Player1';
+import React from 'react'
+import Player1 from './Player1'
 import Player2 from './Player2'
-import Player3 from './Player3';
+import Player3 from './Player3'
 import Player4 from './Player4'
-import AnswerBouton from './AnswerBouton'
 
-class LeftSide extends React.Component {
+class TestEnfant extends React.Component {
   constructor(props) {
-  super(props)
-  this.state = {
-    selectedPlayers : localStorage.getItem('players'),
+    super(props)
+    this.state = {
+      selectedPlayers : localStorage.getItem('players'),
+    }
+  
   }
 
-}
+    render() {
 
-
-
-  render() {
-
-    let playerNumber
+      let playerNumber
   
     if (this.state.selectedPlayers == "1") {
-    playerNumber = [ <Player1 /> ]
+    playerNumber = [ <Player1 message="hello"/> ]
     } else if (this.state.selectedPlayers == "2") {
       playerNumber = [ <Player2 /> ]
     } else if (this.state.selectedPlayers == "3") {
@@ -48,16 +44,21 @@ class LeftSide extends React.Component {
     } else if (this.state.selectedPlayers == "3,4") {
       playerNumber = [ <Player3 />, <Player4 /> ]
     }
-  
-    
 
     return (
-      <div>
-    <div> {playerNumber}</div>
-    
-    </div>
-    )
-  }
+
+
+
+        <div className="containerLeftSidePlateau">
+            {playerNumber}
+        </div>
+
+        
+ 
+  )
+}
 }
 
-export default LeftSide
+
+
+  export default TestEnfant
