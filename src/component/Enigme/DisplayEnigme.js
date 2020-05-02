@@ -1,4 +1,5 @@
 import React from 'react';
+import './Enigme.css'
 
 
 import { NavLink } from 'react-router-dom';
@@ -11,11 +12,11 @@ function DisplayEnigme({ enigme }) {
       
       <div className="question">
         {enigme.question} 
-       {enigme.idcard}
-      </div>    
+   
+      </div>   
+     
 
-      <button> S'enfuir</button>
-      <button> Combattre</button>
+     
      
     
     </div>

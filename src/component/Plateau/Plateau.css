@@ -1,0 +1,10 @@
+
+.containerPlateau {
+    display : flex;
+}
+
+.containerLeftSidePlateau{
+    width: 20%;
+    border-color: pink;
+    border-style: solid;
+}

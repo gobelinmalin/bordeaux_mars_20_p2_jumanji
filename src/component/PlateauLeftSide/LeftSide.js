@@ -4,13 +4,15 @@ import Player1 from './Player1';
 import Player2 from './Player2'
 import Player3 from './Player3';
 import Player4 from './Player4'
+import AnswerBouton from './AnswerBouton'
 
 class LeftSide extends React.Component {
   constructor(props) {
   super(props)
   this.state = {
-    selectedPlayers : localStorage.getItem('players')
+    selectedPlayers : localStorage.getItem('players'),
   }
+
 }
 
 
@@ -29,6 +31,10 @@ class LeftSide extends React.Component {
       playerNumber = [ <Player4 /> ]
     } else if (this.state.selectedPlayers == "1,2") {
       playerNumber = [ <Player1 />, <Player2 /> ]
+    } else if (this.state.selectedPlayers == "1,3") {
+      playerNumber = [ <Player1 />, <Player3 /> ]
+    } else if (this.state.selectedPlayers == "1,4") {
+      playerNumber = [ <Player1 />, <Player4 /> ]
     } else if (this.state.selectedPlayers == "1,2,3") {
       playerNumber = [ <Player1 />, <Player2 />, <Player3 /> ]
     } else if (this.state.selectedPlayers == "1,2,3,4") {
@@ -43,8 +49,13 @@ class LeftSide extends React.Component {
       playerNumber = [ <Player3 />, <Player4 /> ]
     }
   
+    
+
     return (
+      <div>
     <div> {playerNumber}</div>
+    
+    </div>
     )
   }
 }
