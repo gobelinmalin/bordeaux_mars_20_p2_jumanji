@@ -4,66 +4,70 @@ import CentralButton from './buildboard-childs/CentralButton'
 import SmallSquare from './buildboard-childs/SmallSquare'
 import './board-childs.css'
 
-function BuildBoard(props){
-
-    let totalSmallSquare = []
-    let count = 0
-    let location = []
-    let cols = []
-    let rows = []
-    const numberCols = 11
-    const numberRows = 11
-    const coordinate = [
-        {
-            x: 0,
-            y: 1,
-        }
-    ]
+class BuildBoard extends React.Component {
 
 
-    for( let y = 0; y < numberCols; y++){
-        cols=y
-       
-        for( let x = 0; x < numberRows; x++){
-            rows=x
-            
-            location[x]=[rows,cols]
-            
-            location.map( i => coordinate.x = rows)
-            location.map( i => coordinate.y = cols)
-            
-            /* ids.push(rows + cols)
-            ids = ids.map((i,j) => j) */
-            
-            totalSmallSquare
-            .push(
-                <SmallSquare 
-                    key={count.toString()} 
-                    id={count++} 
-                    idy={coordinate.y} 
-                    idx={coordinate.x}
-                    name=""
-                />)
-            }
-            
+    state = {
+        squares: [
+            //[0, 69] // 64px with + 5px margin
+        ]
     }
-    
-    totalSmallSquare
-    .push(<CentralButton 
-        className="central-button" 
-        key={"CentralButton"} 
-        />)
+    addArraysInArray = (array) => {
 
-    console.log(props)
+        let test = []
+        const side = 64
+        const margin = 5
+        for (let nbrSquare = 0; nbrSquare < 100; nbrSquare++) {
+            array.push(test)
+        }
 
-    return (
-        <>
-            <div className="board" >
-                {totalSmallSquare} 
-            </div>
-            test:{props.test}
-        </>
-    )
+        for (let i = 0; i < array.length; i++) {
+
+            array[i][0] = 0
+            array[i][1] = 0
+        }
+
+        return array
+
+    }
+
+    incrementXY = (currentValue,index) => {
+        let counter = 0
+        while(index < 10){
+
+            currentValue[0] = counter
+            counter += 64
+            index ++
+        }
+    }
+
+    render() {
+
+        let total = []
+
+        /* for (let i = 0; i < total.length; i++) {
+            for (let i = 0; i < total.length/10; i++) {
+                let count = 0
+                total.map( i => i[0] += 64)
+            }
+            total[i][1] += 64
+        } */
+
+        this.addArraysInArray(total)
+        total.forEach(this.incrementXY)
+
+
+        // this.setState(prevState => {squares: prevState})
+        console.log(total)
+
+        return (
+            <>
+                <div className="board" >
+                    <SmallSquare coordinate={this.state.squares} />
+                </div>
+            </>
+        )
+    }
 }
 
 export default BuildBoard;

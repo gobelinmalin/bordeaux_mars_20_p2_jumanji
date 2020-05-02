@@ -29,16 +29,16 @@ function Path(){
                 startY:10,
                 color: "black"
             },
-          
+
         }
     ]
-    // pour le player1 
-        // tant que startX !== 8 
-            // then x+1 
-            // then tant que y !== 5 y+1 
+    // pour le player1
+        // tant que startX !== 8
+            // then x+1
+            // then tant que y !== 5 y+1
             // then tant que x!==5 x- (8-5)
         // push le tout pour obtenir :
-            // [ 
+            // [
             //   {x:0,y:0},{x:1,y:0},{x:2,y:0},{x:3,y:0},{x:4,y:0},{x:5,y:0},{x:6,y:0},{x:7,y:0},{x:8,y:0},
             //   {x:8,y:1},{x:8,y:2},{x:8,y:3},{x:8,y:4},
             //   {x:7,y:5}
@@ -56,7 +56,7 @@ function Path(){
         for(let y = 0 ; y < 5 ; y++){
             pathb.push({'y': y, 'id': y.toString()})
         }
-        
+
         for(let x = 8 ; x > 7 ; x--){
             pathc.push({'x': x, 'id': x.toString()} )
         }
