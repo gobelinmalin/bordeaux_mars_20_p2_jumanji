@@ -12,54 +12,30 @@ class BuildBoard extends React.Component {
             //[0, 69] // 64px with + 5px margin
         ]
     }
-    addArraysInArray = (array) => {
 
-        let test = []
-        const side = 64
-        const margin = 5
-        for (let nbrSquare = 0; nbrSquare < 100; nbrSquare++) {
-            array.push(test)
+    changeItemValue = (array) => {
+        let array2Push = []
+
+        for (let i = 0; i < 10; i++) {
+
+            array2Push[0] = 0
+            array2Push[1] = 0
+            array.push(array2Push)
         }
 
-        for (let i = 0; i < array.length; i++) {
+        array.forEach(i => {
+            i[0] += 64
 
-            array[i][0] = 0
-            array[i][1] = 0
-        }
+            console.log(i[0],"foreach")
+        })
 
         return array
 
     }
-
-    incrementXY = (currentValue,index) => {
-        let counter = 0
-        while(index < 10){
-
-            currentValue[0] = counter
-            counter += 64
-            index ++
-        }
-    }
-
     render() {
-
         let total = []
-
-        /* for (let i = 0; i < total.length; i++) {
-            for (let i = 0; i < total.length/10; i++) {
-                let count = 0
-                total.map( i => i[0] += 64)
-            }
-            total[i][1] += 64
-        } */
-
-        this.addArraysInArray(total)
-        total.forEach(this.incrementXY)
-
-
-        // this.setState(prevState => {squares: prevState})
+        this.changeItemValue(total)
         console.log(total)
-
         return (
             <>
                 <div className="board" >
