@@ -1,4 +1,5 @@
 import React from 'react'
+import paths from './path-datas'
 
 import CentralButton from './buildboard-childs/CentralButton'
 import SmallSquare from './buildboard-childs/SmallSquare'
@@ -10,7 +11,8 @@ class BuildBoard extends React.Component {
     state = {
         squares: [
             [0, 0] //[0, 69] // 64px with + 5px margin
-        ]
+        ],
+        path: paths
     }
 
     changeItemValue = (array) => {
@@ -49,13 +51,37 @@ class BuildBoard extends React.Component {
         this.setState(prevState => ({
             squares: array
         }))
+    } // wrong
+
+    createPlayerPath = () => {
+        const playerOnePath = this.state.path[0].pathPlayer1.path.map(i => i)
+        const boardSquare = this.state.squares.map((i, j) => j)
+
+        for (let i = 0; i < boardSquare.length; i++) {
+
+            let count1 = 0
+            let count2 = 0
+
+            if(playerOnePath[count1] === boardSquare[count2]){
+                console.log("test")
+
+            }else{
+                console.log("tu peux pas test")
+                count2 = i
+            }
+
+            // console.log(count1 = i)
+            console.log(playerOnePath[count1]===boardSquare[count2])
+        }
+
+
+
     }
 
     render() {
         let coordinate = []
         this.changeItemValue(this.state.squares)
-
-        // console.log(this.state.squares, "render")
+        this.createPlayerPath()
         return (
             <>
                 <button onClick={() => this.addArrayToState(coordinate)} > TEST</button>
