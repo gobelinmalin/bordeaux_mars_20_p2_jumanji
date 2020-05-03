@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './EndCircle.css';
+import './style/EndCircle.css';
 
 
 function EndCircle (props) {

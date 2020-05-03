@@ -1,5 +1,5 @@
 import React from 'react';
-import './EndMessage.css'
+import './style/EndMessage.css'
 
 function EndMessage (props) {
 

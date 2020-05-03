@@ -1,5 +1,5 @@
 import React from 'react';
-import './FinalScreen.css';
+import './style/FinalScreen.css';
 
 import EndMessage from './EndMessage'
 import EndCircle from './EndCircle'

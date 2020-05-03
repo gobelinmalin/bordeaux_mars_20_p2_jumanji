@@ -1,5 +1,5 @@
 import React from 'react';
-import './EndPlayerCard.css';
+import './style/EndPlayerCard.css';
 
 function EndPlayerCard (props) {
 
