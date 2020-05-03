@@ -1,0 +1,19 @@
+.board{
+    width: calc((64px + 4px) * 10);
+    max-height: calc((64px + 5px + 5px)* 13);
+    height: calc((64px + 4px) * 10);
+    background-color: grey;
+    padding: 5px;
+}
+
+.side-content{
+    border: solid black;
+    width: 10%;
+    height: 820px;
+    max-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: darkkhaki;
+    flex-wrap: wrap;
+}

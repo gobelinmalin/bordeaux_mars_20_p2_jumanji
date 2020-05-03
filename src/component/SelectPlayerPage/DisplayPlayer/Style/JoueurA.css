@@ -1,0 +1,192 @@
+
+
+
+.selectJoueurA{
+    width: 13em;
+    text-align: center;
+    justify-content: center;
+    margin-left:-20px;
+    margin-right:auto;
+    color: #c65e18;
+  
+}
+
+.descriptionJoueurA{
+    position: absolute;
+    z-index:1;
+    justify-content: center;
+    width: 14.6em;
+    margin-left: 3%;
+      
+
+}
+
+.arrowSelectJoueurA {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8%;
+    position: relative;
+    margin-left: 4%;
+   
+}
+
+.randomSelectCTAA, .randomSelectCTAA2 {
+
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    border-width: 0.2em;
+    border-color: #c65e189f;
+    color:#c65e189f;
+    font-size:1em;
+    font-weight: bolder;
+    background: none;
+}
+
+.randomSelectCTAA {
+    margin-left:7%;
+}
+
+.randomSelectCTAA2 {
+    margin-right:4%;
+}
+
+
+.randomSelectCTAA:hover, .randomSelectCTAA2:hover {
+
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    border-width: 0.2em;
+    border-color: #c65e18;
+    color:#c65e18;
+    font-size:1em;
+    font-weight: bolder;
+    background: none;
+}
+
+form p {
+	position: relative; /* permet de positionner la checkbox cachée */
+}
+
+[type="checkbox"]#joueurA:not(:checked), 
+[type="checkbox"]#joueurA:checked {
+	/* Cache la checkbox sans
+	   la désactiver pour les
+	   lecteurs d'écran */
+	position: absolute;
+	left: 0;
+	opacity: 0.01;
+}
+
+/* on prépare le label */
+[type="checkbox"]#joueurA:not(:checked) + label,
+[type="checkbox"]#joueurA:checked + label {
+	position: relative; /* permet de positionner les pseudo-éléments */
+	padding-left: 2.3em; /* fait un peu d'espace pour notre case à venir */
+	font-size: 1.05em; /* Label un peu plus gros */
+	line-height: 1.7;
+    cursor: pointer;    /* affiche un curseur adapté */
+    margin-left:3%;
+}
+
+/* Aspect de la case */
+[type="checkbox"]#joueurA:not(:checked) + label:before,
+[type="checkbox"]#joueurA:checked + label:before{
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 14em;
+	height: 22em;
+    background-image: url('back-4.jpg');
+    background-size: cover;
+	border-radius: .2em;
+	
+    transition: all .275s;
+    color: red;
+}
+
+
+
+
+/* Aspect de la coche */
+[type="checkbox"]#joueurA:not(:checked) + label:after,
+[type="checkbox"]#joueurA:checked + label:after {
+	content: '✕';
+	position: absolute;
+	top: 4.6em;
+	left: 1.8em;
+	font-size: 4em;
+	color: #181bc691;
+	line-height: 0;
+    z-index:3;
+   
+}
+
+
+/* Aspect de la coche: hover */
+[type="checkbox"]#joueurA:not(:checked) + label:after,
+[type="checkbox"]#joueurA:checked + label:after {
+	content: '✕';
+	position: absolute;
+	top: 4.95em;
+	left: 1.4em;
+	font-size: 4em;
+	color: #c65e18;
+	line-height: 0;
+    z-index:3;
+   
+}
+
+/* Aspect non cochée */
+[type="checkbox"]#joueurA:not(:checked) + label:after {
+    content: 'CHOISIR';
+    color: #c65e18ad;
+    font-size: 1.3em;
+    top: 15.2em;
+    left: 3.4em;
+    font-weight: bolder;
+
+}
+
+/* Aspect non cochée:hover */
+[type="checkbox"]#joueurA:not(:checked) + label:hover:after {
+    content: 'CHOISIR';
+    color: #c65e18;
+    font-size: 1.3em;
+    top: 15.2em;
+    left: 3.4em;
+    font-weight: bolder;
+
+}
+
+/* Aspect cochée */
+[type="checkbox"]#joueurA:checked + label:after {
+	opacity: 1;
+    color: #c65e18ad;  
+    
+}
+
+/* Aspect cochée:hover */
+[type="checkbox"]#joueurA:checked + label:hover:after {
+	opacity: 1;
+    color: #c65e18;  
+    
+}
+
+
+
+/* Disabled checkbox */
+[type="checkbox"]#joueurA:disabled:not(:checked) + label:before,
+[type="checkbox"]#joueurA:disabled:checked + label:before {
+    box-shadow: none;
+    transform:  rotate(0);
+}
+
+
+
+/* Accessibility focus */
+[type="checkbox"]#joueurA:checked + label:before {
+	box-shadow: inset 0 10px 10px rgba(0,0,0, .2), 0 0 0 12px #c65e18;
+}
