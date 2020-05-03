@@ -64,6 +64,7 @@
     height: 255px;
     border: solid rgb(36, 15, 131) 1px;
     position: absolute;
+    left: 600px;
 }
 
 .handler{

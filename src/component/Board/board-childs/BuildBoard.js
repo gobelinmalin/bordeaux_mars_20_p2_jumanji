@@ -9,7 +9,7 @@ class BuildBoard extends React.Component {
 
     state = {
         squares: [
-            //[0, 69] // 64px with + 5px margin
+            [0, 0] //[0, 69] // 64px with + 5px margin
         ]
     }
 
@@ -19,18 +19,19 @@ class BuildBoard extends React.Component {
 
         for (let j = 0; j < 10; j++) {
 
-            let counter = 64
+            let counter = 64 + 5
             for (let i = 0; i < 9; i++) {
 
-                let count = 64
+                let count = 64 + 5
                 array2Push = [count * i, counter * j]
                 array.push(array2Push)
 
             }
-            array2Push = [ array2Push[0]+64, counter * j]
+            array2Push = [array2Push[0] + (64 + 5), counter * j]
             array.push(array2Push)
         }
-        return array
+        // return array
+
 
         /* let count = 64
         array2Push = [count,0]
@@ -42,14 +43,27 @@ class BuildBoard extends React.Component {
 
 
     }
+
+    addArrayToState = (array) => {
+
+        this.setState(prevState => ({
+            squares: array
+        }))
+    }
+
     render() {
-        let total = []
-        this.changeItemValue(total)
-        console.log(total)
+        let coordinate = []
+        this.changeItemValue(this.state.squares)
+
+        // console.log(this.state.squares, "render")
         return (
             <>
+                <button onClick={() => this.addArrayToState(coordinate)} > TEST</button>
                 <div className="board" >
                     <SmallSquare coordinate={this.state.squares} />
+                </div>
+                <div className="enigma">
+                    <CentralButton />
                 </div>
             </>
         )
