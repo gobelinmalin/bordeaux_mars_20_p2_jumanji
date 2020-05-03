@@ -1,9 +1,9 @@
 import React from 'react';
-import './SelectPlayer.css';
-import JoueurA from './JoueurA'
-import JoueurB from './JoueurB'
-import JoueurC from './JoueurC'
-import JoueurD from './JoueurD'
+import './Style/SelectPlayer.css'
+import JoueurA from './DisplayPlayer/DisplayPlayerComponent/JoueurA'
+import JoueurB from './DisplayPlayer/DisplayPlayerComponent/JoueurB'
+import JoueurC from './DisplayPlayer/DisplayPlayerComponent/JoueurC'
+import JoueurD from './DisplayPlayer/DisplayPlayerComponent/JoueurD'
 import { NavLink } from 'react-router-dom';
 
 
@@ -39,7 +39,7 @@ class SelectPlayer extends React.Component {
         return (
          <body>
 
-        <div className ="logo">
+        <div className ="logo1">
             <img src="https://zupimages.net/up/20/16/fc7x.png" alt="" />
         </div>
         <div className ="title">
@@ -94,7 +94,7 @@ class SelectPlayer extends React.Component {
             </div>
             <div className="playCTAContainer">
                 <button className="playCTA"  disabled={this.state.count > 0 ? false : true}>
-                <NavLink className="toPlateau" to="/plateau" >JOUER !</NavLink>        
+                    <NavLink className="playCTA" to="/plateau"   >  JOUER !</NavLink>        
                 </button>
             </div>
             <div className="selected-items">

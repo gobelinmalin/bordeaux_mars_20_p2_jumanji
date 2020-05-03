@@ -1,0 +1,75 @@
+.container{
+    text-align: left;
+    border-color: blue;
+    border-style: solid;
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: stretch;
+    align-content: stretch;
+    width:100%;
+}
+
+.logo {
+ 
+    margin-top:-63%;
+}
+
+.selectedPlayers, .containerRollDice{
+    border-color: red;
+    border-style: solid;
+    width: 18%;
+}
+
+.containerBoule {
+    border-color: yellow;
+    border-style: solid;
+    width: 62%;
+    height: 730px;
+    display: flex;
+	flex-direction: column;
+	justify-content: center;
+    align-items: center;
+}
+
+
+
+.enigmeCTA {
+    font-size: 1vw;
+    width: 7vw;
+    height: 2vw;
+  
+}
+
+.containerActionCTA{
+    display:flex;
+    justify-content: center;
+}
+
+.rollDiceCTA {
+    font-size: 1.5vw;
+    font-weight: bold;
+    width: 15vw;
+    height: 40px;
+    background-image: url('roll-dice-button.png');
+    border-radius: 5px;
+}
+
+.dice1 {
+    border-color: blue;
+    border-style: solid;
+    width: 120%;
+    margin-left:1%;
+}
+
+.dice2 {
+    border-color: blue;
+    border-style: solid;
+    width: 140%;
+    margin-left:25%;
+}
+
+
+
+

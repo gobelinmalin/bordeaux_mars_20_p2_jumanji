@@ -6,7 +6,7 @@ import SelectPlayer from './component/SelectPlayerPage/SelectPlayer';
 
 
 import LandingPage from './component/LandingPage/LandingPage';
-import PlateauA from './component/Plateau/Plateau'
+import Plateau from './component/Plateau/Plateau'
 
 
 
@@ -20,7 +20,7 @@ class App extends Component {
             <Switch>
              <Route path="/" component={LandingPage} exact/>
              <Route path="/select-player" component={SelectPlayer}/>
-             <Route path="/plateau" component={PlateauA}/>
+             <Route path="/plateau" component={Plateau}/>
        
            </Switch>
         </div> 

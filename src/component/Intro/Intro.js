@@ -1,5 +1,5 @@
 import React from 'react';
-import './Intro.css';
+import './Style/Intro.css'
 import ReactPlayer from "react-player";
 import { NavLink } from 'react-router-dom';
 

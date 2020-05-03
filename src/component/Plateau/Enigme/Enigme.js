@@ -1,15 +1,14 @@
-import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom';
-import DisplayEnigme from './Enigme/DisplayEnigme'
+import React from 'react';
+import DisplayEnigme from './DisplayEnigme'
 import axios from 'axios';
-import '../Plateau/Style/Plateau.css'
-import Dice1 from '../Plateau/RightSide/Dice1'
-import Dice2 from '../Plateau/RightSide/Dice2'
-import Dice3 from '../Plateau/RightSide/Dice3'
-import Dice4 from '../Plateau/RightSide/Dice4'
-import Dice5 from '../Plateau/RightSide/Dice5'
-import Dice6 from '../Plateau/RightSide/Dice6'
-import LeftSide from './LeftSide/LeftSide'
+import './Enigme.css'
+import Dice1 from '../RightSide/Dice1'
+import Dice2 from '../RightSide/Dice2'
+import Dice3 from '../RightSide/Dice3'
+import Dice4 from '../RightSide/Dice4'
+import Dice5 from '../RightSide/Dice5'
+import Dice6 from '../RightSide/Dice6'
+import TestEnfant from '../LeftSide/LeftSide';
 
 
 const sampleEnigme = {
@@ -21,7 +20,7 @@ const sampleFuir = {
 }
 
 
-class Plateau extends React.Component {
+class Enigme extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -115,7 +114,7 @@ pictureDice2 = [<Dice6 />]
     return (
       <div className="container">
             <div className="selectedPlayers"> 
-                <LeftSide />
+                <TestEnfant />
             </div>
             <div className="containerBoule">
                 <div className ="logo">
@@ -153,4 +152,4 @@ pictureDice2 = [<Dice6 />]
 
 }
 
-export default Plateau;
+export default Enigme;
