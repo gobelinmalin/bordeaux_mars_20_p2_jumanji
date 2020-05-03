@@ -14,25 +14,22 @@ class BuildBoard extends React.Component {
     }
 
     changeItemValue = (array) => {
-        let array2Push = [0,0]
-        array.push(array2Push)
+        let array2Push = [0, 0]
 
-        for (let i = 0; i < 10; i++) {
 
-            let count = 64
-            array2Push = [count * i,0]
+        for(let j = 0 ; j < 10 ; j++){
+            for (let i = 0; i < 9; i++) {
+
+                let count = 64
+                array2Push = [count * i, 0]
+                array.push(array2Push)
+
+            }
+            let counter = 64
+            array2Push = [array2Push[0]+64,counter * j]
+
             array.push(array2Push)
-
         }
-
-        /* array.forEach(array2Push => {
-            console.log(array2Push,"foreach")
-        }) */
-
-        /* for(const item of array){
-            item[0] += 64
-            return item
-        } */
         /* let count = 64
         array2Push = [count,0]
         array.push(array2Push)
