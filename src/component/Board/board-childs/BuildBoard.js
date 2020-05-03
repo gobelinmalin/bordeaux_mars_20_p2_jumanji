@@ -17,19 +17,21 @@ class BuildBoard extends React.Component {
         let array2Push = [0, 0]
 
 
-        for(let j = 0 ; j < 10 ; j++){
+        for (let j = 0; j < 9; j++) {
+
+            let counter = 64
             for (let i = 0; i < 9; i++) {
 
                 let count = 64
-                array2Push = [count * i, 0]
+                array2Push = [count * i, counter * j]
                 array.push(array2Push)
 
             }
-            let counter = 64
-            array2Push = [array2Push[0]+64,counter * j]
-
+            array2Push = [ array2Push[0]+64, counter * j]
             array.push(array2Push)
         }
+        return array
+
         /* let count = 64
         array2Push = [count,0]
         array.push(array2Push)
@@ -38,7 +40,6 @@ class BuildBoard extends React.Component {
         array2Push = [count*3,0]
         array.push(array2Push) */
 
-        return array
 
     }
     render() {
