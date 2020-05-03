@@ -17,7 +17,7 @@ class BuildBoard extends React.Component {
         let array2Push = [0, 0]
 
 
-        for (let j = 0; j < 9; j++) {
+        for (let j = 0; j < 10; j++) {
 
             let counter = 64
             for (let i = 0; i < 9; i++) {
