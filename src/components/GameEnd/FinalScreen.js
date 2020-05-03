@@ -10,7 +10,7 @@ class FinalScreen extends React.Component {
     constructor (props) {
         super(props);
         this.state = {
-            gameVictory : true
+            gameVictory : true,
         };
     }
 
@@ -28,14 +28,10 @@ class FinalScreen extends React.Component {
             
 
             <div className = "GamePlayersList">
-                <div className="GamePlayersCardsBox">
                     <EndPlayerCard gameVictory={this.state.gameVictory}/>
                     <EndPlayerCard gameVictory={this.state.gameVictory}/>
-                </div>
-                <div className="GamePlayersCardsBox">
                     <EndPlayerCard gameVictory={this.state.gameVictory}/>
                     <EndPlayerCard gameVictory={this.state.gameVictory}/>
-                </div>
             </div>
         
         </div>
