@@ -1,0 +1,18 @@
+.characterNameD{
+    font-size: 1.8em;
+}
+
+.characterDescriptionD{
+    font-size:1.1em;
+    margin-top: 0.5em;
+}
+
+.DisplayJoueurD {
+    margin-top: -4%;
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+    justify-content: center;
+    width: 11em;
+    margin-left: 1em;
+}

@@ -1,18 +1,33 @@
-import React from 'react';
-//import './App.css';
-import LandingPage from './component/LandingPage/LandingPage'
-import Intro from './component/Intro/Intro';
-import Board from './component/Plateau/Board'
+import React, { Component } from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+ 
 
-function App() {
-  return (
-    <div className="App">
-      <div className="landing-page">
-        {/* <LandingPage/> */}
-        <Board/>
-      </div>
-    </div>
-  );
+import SelectPlayer from './component/SelectPlayerPage/SelectPlayer';
+
+
+import LandingPage from './component/LandingPage/LandingPage';
+import Plateau from './component/Plateau/Plateau'
+
+
+
+ 
+class App extends Component {
+  render() {
+    return (      
+       <BrowserRouter>
+        <div>
+        
+            <Switch>
+             <Route path="/" component={LandingPage} exact/>
+             <Route path="/select-player" component={SelectPlayer}/>
+             <Route path="/plateau" component={Plateau}/>
+       
+           </Switch>
+        </div> 
+      </BrowserRouter>
+    );
+  }
 }
+
 
 export default App;
