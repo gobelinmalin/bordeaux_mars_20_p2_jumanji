@@ -27,7 +27,7 @@ function Intro() {
            <NavLink className="toSelectPlayer" to="/select-player">Tenter l'aventure !</NavLink>        
            </button>
            </div>
-
+          
     </div>
   );
 }
