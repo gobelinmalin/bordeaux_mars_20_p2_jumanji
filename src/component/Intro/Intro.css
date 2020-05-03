@@ -8,11 +8,13 @@
     height: 100vh;
     min-height: 100%;
     align-items: center;
+  
 }
 .movie {
     display: flex;
     justify-content: center;
     margin: auto;
+    
 }
 .intro-ring {
     background-image: url('./ring.png');
@@ -26,6 +28,7 @@
     background-position: center;
     background-color: black;
 }
+
 .intro {
     width: 644px;
     height: 648px;
@@ -73,7 +76,7 @@
     width: 160px;
     height: 35px;
     border-radius: 2%;
-    background-image: url(../SelectPlayerPage/boutPlay.jpg); 
+    background-image: url('boutPlay.jpg'); 
     opacity:0.7;
 }
 
@@ -87,7 +90,7 @@
     width: 160px;
     height: 35px;
     border-radius: 2%;
-    background-image: url(../SelectPlayerPage/boutPlay.jpg); 
+    background-image: url('boutPlay.jpg'); 
     Opacity:1;
 }
 
@@ -106,3 +109,5 @@
     opacity:0.9;
     color: black;
 }
+
+
