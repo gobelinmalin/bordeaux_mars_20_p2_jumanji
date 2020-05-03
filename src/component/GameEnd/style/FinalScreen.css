@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+.Wrapper {
+  height: 100vh;
+  background-image: url('./img_end/boardgame.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.Voile {
+  height: 100%;
+  background: linear-gradient( #1d1b0da5, #301305a5);
+}
+
+.Voile {
+  height: 100%;
+  background: linear-gradient( #1d1b0da5, #301305a5);
+}
+
+
+/* GameEnd Message  */
+
+.GameEndResult {
+  min-height: 100px;
+}
+
+/* Jumanji Box  = fixe la position de la sphère */
+
+.JumanjiLoader {
+  position: relative;
+}
+
+.JumanjiMessageWin,
+.JumanjiMessageLost {
+  position: absolute;
+  width: 100%;
+}
+
+
+/* Player Cards */
+
+.GamePlayersList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.GamePlayersCardsBox {
+  display: flex;
+}
+
+
+/* Credits Animation */
+
+.CreditsCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 25%;
+  text-align: center;
+}
