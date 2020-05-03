@@ -2,7 +2,7 @@ import React from 'react';
 //import './App.css';
 import LandingPage from './component/LandingPage/LandingPage'
 import Intro from './component/Intro/Intro';
-import Board from './component/Board/Board'
+import Board from './component/Plateau/Board'
 
 function App() {
   return (
