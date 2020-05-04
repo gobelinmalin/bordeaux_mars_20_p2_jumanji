@@ -1,9 +1,0 @@
-.player{
-    width: 128px;
-    height: 128px;
-    border: solid black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
