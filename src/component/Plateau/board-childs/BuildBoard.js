@@ -64,12 +64,12 @@ class BuildBoard extends React.Component {
 
             if(playerOnePath[count1] === boardSquare[count2]){
                 console.log("test")
-                console.log(playerOnePath[count1]===boardSquare[count2])
 
             }else{
                 console.log("tu peux pas test")
                 count2 = i
             }
+            console.log(playerOnePath[count1]===boardSquare[count2])
 
             // console.log(count1 = i)
         }
