@@ -33,6 +33,8 @@ class LeftSide extends React.Component {
       playerNumber = [ <Player1 />, <Player4 /> ]
     } else if (this.state.selectedPlayers == "1,2,3") {
       playerNumber = [ <Player1 />, <Player2 />, <Player3 /> ]
+    } else if (this.state.selectedPlayers == "1,2,4") {
+      playerNumber = [ <Player1 />, <Player2 />, <Player4 />  ]
     } else if (this.state.selectedPlayers == "1,2,3,4") {
       playerNumber = [ <Player1 />, <Player2 />, <Player3 />, <Player4 /> ]
     } else if (this.state.selectedPlayers == "2,3") {
