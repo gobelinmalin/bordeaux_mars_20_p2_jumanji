@@ -14,11 +14,12 @@ class LeftSide extends React.Component {
   }
 
     render() {
+     
 
       let playerNumber
   
     if (this.state.selectedPlayers == "1") {
-    playerNumber = [ <Player1 message="hello"/> ]
+    playerNumber = [ <Player1 panicUpdate={this.props.panic}/> ]
     } else if (this.state.selectedPlayers == "2") {
       playerNumber = [ <Player2 /> ]
     } else if (this.state.selectedPlayers == "3") {
@@ -26,17 +27,17 @@ class LeftSide extends React.Component {
     } else if (this.state.selectedPlayers == "4") {
       playerNumber = [ <Player4 /> ]
     } else if (this.state.selectedPlayers == "1,2") {
-      playerNumber = [ <Player1 />, <Player2 /> ]
+      playerNumber = [ <Player1 panicUpdate={this.props.panic}/>, <Player2 /> ]
     } else if (this.state.selectedPlayers == "1,3") {
-      playerNumber = [ <Player1 />, <Player3 /> ]
+      playerNumber = [ <Player1 panicUpdate={this.props.panic}/>, <Player3 /> ]
     } else if (this.state.selectedPlayers == "1,4") {
-      playerNumber = [ <Player1 />, <Player4 /> ]
+      playerNumber = [ <Player1 panicUpdate={this.props.panic}/>, <Player4 /> ]
     } else if (this.state.selectedPlayers == "1,2,3") {
-      playerNumber = [ <Player1 />, <Player2 />, <Player3 /> ]
+      playerNumber = [ <Player1 panicUpdate={this.props.panic}/>, <Player2 />, <Player3 /> ]
     } else if (this.state.selectedPlayers == "1,2,4") {
-      playerNumber = [ <Player1 />, <Player2 />, <Player4 />  ]
+      playerNumber = [ <Player1 panicUpdate={this.props.panic}/>, <Player2 />, <Player4 />  ]
     } else if (this.state.selectedPlayers == "1,2,3,4") {
-      playerNumber = [ <Player1 />, <Player2 />, <Player3 />, <Player4 /> ]
+      playerNumber = [ <Player1 panicUpdate={this.props.panic}/>, <Player2 />, <Player3 />, <Player4 /> ]
     } else if (this.state.selectedPlayers == "2,3") {
       playerNumber = [ <Player2 />, <Player3 />]
     } else if (this.state.selectedPlayers == "2,3,4") {

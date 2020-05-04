@@ -1,6 +1,7 @@
 import React from "react"
 //import datas from './data.js'
 import './css/board-square.css'
+import { NavLink } from 'react-router-dom';
 
 import BuildBoard from './board-childs/BuildBoard'
 

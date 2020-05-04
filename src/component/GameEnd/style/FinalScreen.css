@@ -2,7 +2,7 @@
 
 .Wrapper {
   height: 100vh;
-  background-image: url('./img_end/boardgame.jpg');
+  background-image: url('../img/boardgame.jpg');
   background-size: cover;
   background-repeat: no-repeat;
 }

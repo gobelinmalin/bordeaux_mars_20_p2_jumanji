@@ -54,11 +54,12 @@
 
 .panicJaugeC{
     background-color:red;
-    margin-top:-7%;
+    margin-top:-8%;
     height: 1vw;
-    width: 50%;
+    width: 20%;
     border-radius: 10px;
     margin-left:18%;
+    transition-duration: 5s;
 }
 
 

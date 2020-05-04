@@ -94,7 +94,7 @@ class SelectPlayer extends React.Component {
             </div>
             <div className="playCTAContainer">
                 <button className="playCTA"  disabled={this.state.count > 0 ? false : true}>
-                    <NavLink className="playCTA" to="/plateau"   >  JOUER !</NavLink>        
+                    <NavLink className="playCTA" to="/plateau"   >  JOUER !</NavLink>           
                 </button>
             </div>
             <div className="selected-items">

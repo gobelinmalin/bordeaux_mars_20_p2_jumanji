@@ -13,7 +13,7 @@ import LeftSide from './LeftSide/LeftSide'
 
 
 const sampleEnigme = {
-  question: 'JoueurA lance les dès'
+  question: 'Allan lance les dès'
 };
 
 const sampleFuir = {
@@ -31,6 +31,7 @@ class Plateau extends React.Component {
       dice2:"",
       result:"Lancez les dès",
       dicePicture:"",
+      panic:0,
     };
  this.getEnigme = this.getEnigme.bind(this);
  this.getEscape = this.getEscape.bind(this);
@@ -46,6 +47,8 @@ class Plateau extends React.Component {
         })
     }
 }
+
+
      
   getEnigme() {
     // Send the request
@@ -57,7 +60,7 @@ class Plateau extends React.Component {
     console.log(data)
     const index = Math.floor((Math.random()*(data.length -1)))
     this.setState({
-    enigme: data[0],
+    enigme: data[index],
     actionCombattre : <button className="enigmeCTA">Combattre </button>,
     actionFuir : <button className="enigmeCTA">S'enfuir</button>,
     dice1: Math.ceil(Math.random()*6),
@@ -71,9 +74,10 @@ class Plateau extends React.Component {
 
   getEscape (){
     this.setState({
-      actionCombattre : <button className="enigmeCTA" >LOL </button>,
-      actionFuir : <button  className="enigmeCTA">MDR</button>,
+      actionCombattre : "",
+      actionFuir : "",
       enigme: sampleFuir,
+      panic: this.state.panic + 1,
        })
   }
 
@@ -111,11 +115,19 @@ pictureDice2 = [<Dice5 />]
 pictureDice2 = [<Dice6 />]
 }
 
+let panicBar 
+if (this.state.panic === 0) {
+     panicBar  = "panicJaugeA"
+     } else if (this.state.panic > 0) {
+          panicBar  = "panicJaugeC"
+     } else if (this.state.panic >= 3) {
+          panicBar = "panicJaugeC"
+     }
 
     return (
       <div className="container">
             <div className="selectedPlayers"> 
-                <LeftSide />
+                <LeftSide panic={panicBar}/>
             </div>
             <div className="containerBoule">
                 <div className ="logo">
@@ -145,6 +157,11 @@ pictureDice2 = [<Dice6 />]
                 <div className="dice2">
                     {pictureDice2}
                 </div>
+                <br/>  <br/>
+                   <NavLink className="playCTA" to="/finalscreen"   >  END GAME!</NavLink> 
+                   <br/>  <br/>
+                 
+                    <NavLink className="playCTA" to="/testboard"   >  BOARD !</NavLink> 
            </div>
         </div>
     )

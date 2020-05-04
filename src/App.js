@@ -7,6 +7,8 @@ import SelectPlayer from './component/SelectPlayerPage/SelectPlayer';
 
 import LandingPage from './component/LandingPage/LandingPage';
 import Plateau from './component/Plateau/Plateau'
+import FinalScreen from './component/GameEnd/FinalScreen'
+import Board from './component/Plateau/Board'
 
 
 
@@ -21,6 +23,8 @@ class App extends Component {
              <Route path="/" component={LandingPage} exact/>
              <Route path="/select-player" component={SelectPlayer}/>
              <Route path="/plateau" component={Plateau}/>
+             <Route path="/finalscreen" component={FinalScreen}/>
+             <Route path="/testboard" component={Board}/>
        
            </Switch>
         </div> 
