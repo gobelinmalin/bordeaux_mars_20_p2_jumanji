@@ -1,6 +1,7 @@
 import React from 'react';
-import './Intro.css';
+import './Intro.css'
 import ReactPlayer from "react-player";
+import { NavLink } from 'react-router-dom';
 
 
 function Intro() {
@@ -8,12 +9,25 @@ function Intro() {
     <div className="general">
         <div className="bg">
           <div className="intro-ring">
-           <button className="intro" title="Jouer à Jumanji" onClick={() => alert('Sélection Perso')}>
-            <ReactPlayer className="movie" width={530} url="https://youtu.be/19qYDTNbGwA"
-              controls={true} />          
+         
+          <iframe src='https://www.youtube.com/embed/19qYDTNbGwA?autoplay=1'
+            frameBorder='0'
+            allow='autoplay; encrypted-media'
+            allowFullScreen
+            title='video'
+            width={535}
+            height={350}
+            className="movie" 
+          />
+           </div>
+ 
+        </div> 
+       <div className="containerBouton">
+        <button className="selectPlayerContainer2">
+           <NavLink className="toSelectPlayer" to="/select-player">Tenter l'aventure !</NavLink>        
            </button>
            </div>
-        </div> 
+          
     </div>
   );
 }
