@@ -4,6 +4,8 @@
     height: calc((64px + 4px) * 10);
     background-color: grey;
     padding: 5px;
+    position: relative;
+    top: 120px;
 }
 
 .side-content{

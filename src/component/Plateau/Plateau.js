@@ -11,6 +11,7 @@ import Dice5 from '../Plateau/RightSide/Dice5'
 import Dice6 from '../Plateau/RightSide/Dice6'
 import LeftSide from './LeftSide/LeftSide'
 
+import BuildBoard from './board-childs/BuildBoard'
 
 const sampleEnigme = {
   question: 'JoueurA lance les dès'
@@ -46,7 +47,7 @@ class Plateau extends React.Component {
         })
     }
 }
-     
+
   getEnigme() {
     // Send the request
     axios.get('https://api-jumanji.herokuapp.com/api/cards')
@@ -62,10 +63,10 @@ class Plateau extends React.Component {
     actionFuir : <button className="enigmeCTA">S'enfuir</button>,
     dice1: Math.ceil(Math.random()*6),
     dice2: Math.ceil(Math.random()*6),
-  
- 
+
+
         });
-    }); 
+    });
 
   }
 
@@ -114,7 +115,7 @@ pictureDice2 = [<Dice6 />]
 
     return (
       <div className="container">
-            <div className="selectedPlayers"> 
+            <div className="selectedPlayers">
                 <LeftSide />
             </div>
             <div className="containerBoule">
@@ -127,8 +128,9 @@ pictureDice2 = [<Dice6 />]
                     </div>
                     <div className="containerActionCTA">
                           <div className="CombattreCTA" onClick={this.getEscape}>
-                              {this.state.actionCombattre} 
+                              {this.state.actionCombattre}
                           </div>
+                          <div className="handler-board"><BuildBoard test="test from Board" /></div>
                           <div className="FuirCTA" onClick={this.getEscape}>
                               {this.state.actionFuir}
                           </div>
@@ -139,7 +141,7 @@ pictureDice2 = [<Dice6 />]
                 <div className="CTA">
                     <button  className="rollDiceCTA" type="button" onClick={this.getEnigme}> {this.state.result}</button>
                 </div>
-                <div className="dice1"> 
+                <div className="dice1">
                     {pictureDice1}
                 </div>
                 <div className="dice2">
