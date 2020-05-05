@@ -1,17 +1,3 @@
-.smallSquare{
-    background-color: whitesmoke;
-    width: 64px;
-    height: 64px;
-    border-radius: 0.3em;
-    margin: 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: solid red 1px;
-    font-size: smaller;
-    text-align: center;
-}
-
 .playerOne{
     background-color: cyan;
     width: 64px;
@@ -24,7 +10,7 @@
     border: solid red 1px;
     font-size: smaller;
     text-align: center;
-    
+
 }
 .playerTwo{
     background-color: magenta;
@@ -38,7 +24,7 @@
     border: solid red 1px;
     font-size: smaller;
     text-align: center;
-    
+
 }
 .playerThree{
     background-color:yellow;
@@ -52,7 +38,7 @@
     border: solid red 1px;
     font-size: smaller;
     text-align: center;
-    
+
 }
 .playerFour{
     background-color: black;
@@ -67,5 +53,5 @@
     border: solid red 1px;
     font-size: smaller;
     text-align: center;
-    
+
 }

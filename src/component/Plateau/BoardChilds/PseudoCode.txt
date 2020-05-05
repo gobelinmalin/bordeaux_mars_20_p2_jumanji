@@ -1,0 +1,64 @@
+state {
+    startTiles : ,
+    PlayerTurn : ,
+    
+}
+
+Plateau de cases
+> Créer un tableau de 100 cellules BoardArray
+> Afficher un tableau de 10 cases x 10 cases
+= créer un array de 100 cellules
+= chaque cellule a une id (001, 002, 003...)
+= chaque case correspond à 1 Composant BoardSquare
+= grâce au css 1 case = 10% largeur hauteur
+
+OU
+
+> Créer un tableau de 100 cellules BoardArray
+> Afficher un tableau de 10 cases x 10 cases
+= créer un array de 10 lignes par 10 colonnes
+= chaque cellule a une abscisse et une ordonnée (quel intérêt ? vu qu'on a des lignes de 10)
+= chaque case correspond à 1 Composant BoardSquare
+= grâce au css 1 case = 10% largeur / hauteur
+
+
+Parcours
+> Créer un parcours de cases
+= créer un array de 20 cellules PathPlayer1
+= chacune des cellules a une id correspondant aux ID des cellules du BoardArray
+ 
+ OU
+
+ > Créer un parcours de cases
+ = créer un array de 20 cellules PathPlayer1
+ = filtrer BoardArray ID === BoardPathPlayer1 pour obtenir les coordonnées
+
+
+
+C'est le tour d'un joueur
+-------------------------
+nota bene
+TurnPlayer : true/false
+passage d'un joeuur à l'autre : compteur ++ 
+
+
+Afficher le parcours du joueur
+> si c'est le tour de ce joueur = afficher le parcours du joueur en entier
+= si props Player1.TurnPlayer = true alors display le parcours
+= Si PathPlayer1 = BoardArray alors afficher le css correspondant
+
+(le joueur lance les dés)
+
+Afficher le parcours que le joueur peut effectuer une fois les dés lancés
+> récupérer le résultat du dé
+> n'afficher que le nombre de cases correspondant au résultat du lancé
+= au clic sur le bouton "dices", écouter (eventlistener) le résultat
+= maper PathPlayer1 dans CurrentPathPlayer1
+= garder CurrentPathPlayer1 lenght = résultat (slice)
+= mettre à jour PathPlayer1 : mapper PathPlayer1 (moins) le résultat du dé (slice)
+
+
+Mouvement du Pion
+> faire avancer le pion sur le parcours automatiquement selon le résultat du dé
+= le pion est sur la première cellule de CurrentPathPlayer1
+= count ++ (avance dans le tableau)

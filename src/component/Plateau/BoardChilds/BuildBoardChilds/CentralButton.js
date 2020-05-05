@@ -1,5 +1,5 @@
 import React from "react"
-import './css/central-button.css'
+import './Style/CentralButton.css'
 
 function CentralButton(props){
     console.log(props)
