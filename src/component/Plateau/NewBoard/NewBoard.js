@@ -33,10 +33,6 @@ class NewBoard extends React.Component {
         console.log("WILLMOUNT")
     }
 
-    componentWillUpdate() {
-        console.log("WILLUPDATE")
-    }
-
     createBoard = () => {
         let tileArray = []
         let board = this.state.board
