@@ -1,18 +1,18 @@
 import React from 'react'
 import Grid from 'react-css-grid'
 import './NewBoard.css'
-//import './pathPlayers'
 import pathPlayers from './pathPlayers'
+import pathsPlayers from './pathPlayers'
 
 
 class NewBoard extends React.Component {
-    constructor() {
-        super()
+    constructor(props) {
+        super(props)
         this.state = {
             playerTurn: 1,
             path: pathPlayers,
             board: '',
-            color: true
+            color: false
         }
     }
 
@@ -30,6 +30,23 @@ class NewBoard extends React.Component {
         }
         return board  // <== !!!! this.state.board
     } */
+
+
+    componentWillMount() {
+        this.setState({ board: [this.createBoard()] })
+        console.log("WILLMOUNT")
+    }
+    componentDidUpdate() {
+        return this.handleChangeColor
+        console.log("WILLUPDATE")
+    }
+
+    /* componentDidMount(pP, pS) {
+
+        this.setState({ board: [this.createBoard()], color: true })
+        console.log(pS, pP, "DIDUPDATE")
+    } */
+
     createBoard = () => {
         let tileArray = []
         const pathPlayer = this.state.path[0].pathPlayer1.path
@@ -38,25 +55,38 @@ class NewBoard extends React.Component {
             tileArray.push(counter)
         }
 
-        const board = tileArray.map((tile, tileIndex) => <div
-            key={tileIndex}
-            className={this.state.color
+        const board = tileArray.map((tile, tileIndex) =>
+            tileIndex === 0 || tileIndex === 1
                 ?
-                "TilePathPlayer1"
+                <div
+                    key={tileIndex}
+                    className={
+
+                        "TilePathPlayer1"
+
+                    }>
+                    {tileIndex}
+                </div>
                 :
-                "TileNeutral"}>
-            {tileIndex}
-        </div>)
+                <div
+                    key={tileIndex}
+                    className={
+
+                        "TileNeutral"
+
+                    }>
+                    {tileIndex}
+                </div>)
 
         return board
     }
 
+    handleChangeColor = () => {
+        this.setState({ color: !this.state.color })
+        // console.log(this.state.color, "KOLOR")
 
-    componentWillMount(newProps, newState) {
-        this.setState({ board: [this.createBoard()] })
-
-        console.log(newState, "newS")
     }
+
 
     // Gestion du tour de jeu
     //  handlePlayerTurn(){
@@ -68,12 +98,10 @@ class NewBoard extends React.Component {
     //On compare board avec pathPlayers / si cell PathPlayers = cell board alors renvoie true pour la cell
 
     isThisTileInPathPlayer(array, pathArray) {
-        const functTest = (ele) => pathArray.indexOf(ele) !== -1
-        //array.some(number => pathArray.indexOf(number) !== -1 )
-
-        console.log(functTest())
+        array.some(number => pathArray.indexOf(number) !== -1)
 
     }
+
 
     /* let updatedTile = this.state.til
 
@@ -109,8 +137,7 @@ class NewBoard extends React.Component {
 
     render() {
         const pathCurrentPlayer = this.state.path
-        //const board = this.createBoard().map((i, j) => j)
-        // console.log(this.state.board[0])
+        console.log(this.state.color, "STATE")
         return (
             <div className="game-board">
                 {/* <Tile tileColor={this.state.tileColor}/> */}
@@ -119,6 +146,7 @@ class NewBoard extends React.Component {
                     gap={5}
                 >
                     {this.state.board[0]}
+                    <button onClick={this.handleChangeColor}> {this.state.color}</button>
                     {/* {this.createBoard()} */}
                 </Grid>
             </div>
