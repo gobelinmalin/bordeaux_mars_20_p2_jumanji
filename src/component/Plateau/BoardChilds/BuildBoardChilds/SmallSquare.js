@@ -1,5 +1,5 @@
 import React from 'react'
-import './css/small-square.css'
+import './Style/SmallSquare.css'
 
 function SmallSquare(props) {
 

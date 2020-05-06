@@ -1,9 +1,0 @@
-.smallSquare{
-    background-color: whitesmoke;
-    width: 64px;
-    height: 64px;
-    border-radius: 0.3em;
-    margin: 2px;
-    border: solid red 1px;
-    position: absolute;
-}

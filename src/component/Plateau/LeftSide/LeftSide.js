@@ -10,13 +10,13 @@ class LeftSide extends React.Component {
     this.state = {
       selectedPlayers : localStorage.getItem('players'),
     }
-  
+
   }
 
     render() {
 
       let playerNumber
-  
+
     if (this.state.selectedPlayers == "1") {
     playerNumber = [ <Player1 message="hello"/> ]
     } else if (this.state.selectedPlayers == "2") {
@@ -53,8 +53,8 @@ class LeftSide extends React.Component {
             {playerNumber}
         </div>
 
-        
- 
+
+
   )
 }
 }

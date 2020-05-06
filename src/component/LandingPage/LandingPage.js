@@ -12,7 +12,7 @@ import './css/landing.css'
 /* import slideTop from '../../image/slide-top.jpg'
 import slideBottom from '../../image/slide-bottom.jpg' */
 // IMAGE
-import { NavLink } from 'react-router-dom';
+// import { NavLink } from 'react-router-dom';
 
 
 function LandingPage(){
