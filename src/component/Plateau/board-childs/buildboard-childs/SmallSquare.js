@@ -5,6 +5,7 @@ function SmallSquare(props) {
 
     const squares = props.coordinate
         .map((i, j) =>
+           
             <div
                 key={j - 100}
                 className="smallSquare"
@@ -13,6 +14,7 @@ function SmallSquare(props) {
                 square <br />
                 id: {j - 100}
             </div>)
+  
 
     return (
         <>

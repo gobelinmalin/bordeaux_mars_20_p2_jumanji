@@ -27,25 +27,26 @@
 
 .smallSquare{
     background-color: whitesmoke;
-    width: 64px;
-    height: 64px;
+    width: 64vw;
+    height: 64vw;
     border-radius: 0.3em;
-    margin: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
     border: solid red 1px;
     font-size: smaller;
     text-align: center;
+    margin-left: 50%;
 }
 
 .board{
     width: calc((50px + 5px + 5px) * 13);
     max-height: calc((64px + 5px + 5px)* 13);
     height: calc( 81px*9);
-    background-color: grey;
+    background-color: none;
     padding: 5px;
     position: relative;
+    margin-left: 50%;
     /* display: flex;
     justify-content: center;
     align-items: center;
@@ -80,7 +81,7 @@
 }
 
 .side-content{
-    border: solid black;
+
     width: 10%;
     height: 820px;
     max-height: 100%;
@@ -92,13 +93,14 @@
 }
 
 .handler-board{
-    background-color: darkmagenta;
-    border: solid;
+    background-color: none;
     height: 820px;
     width: 1024px;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-color:none;
+
 }
 
 .player{

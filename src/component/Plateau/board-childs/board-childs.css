@@ -2,8 +2,7 @@
     width: calc((64px + 4px) * 10);
     max-height: calc((64px + 5px + 5px)* 13);
     height: calc((64px + 4px) * 10);
-    background-color: grey;
-    padding: 5px;
+
 }
 
 .side-content{
@@ -16,4 +15,18 @@
     justify-content: center;
     background-color: darkkhaki;
     flex-wrap: wrap;
+}
+
+.TestCTA, .enigma {
+    display:none;
+}
+
+.handler-board {
+    background-color: none;
+    border: solid;
+    height: 820px;
+    width: 1024px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

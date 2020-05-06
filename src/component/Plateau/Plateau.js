@@ -10,6 +10,7 @@ import Dice4 from '../Plateau/RightSide/Dice4'
 import Dice5 from '../Plateau/RightSide/Dice5'
 import Dice6 from '../Plateau/RightSide/Dice6'
 import LeftSide from './LeftSide/LeftSide'
+import Board from './Board'
 
 
 const sampleEnigme = {
@@ -17,8 +18,11 @@ const sampleEnigme = {
 };
 
 const sampleFuir = {
-  question: 'Fuir est pour les lâches, +10 points de panic !'
+  question: 'Fuir est pour les lâches, +10 points de panic ! Allan relance les dès'
 }
+
+
+
 
 
 class Plateau extends React.Component {
@@ -32,6 +36,8 @@ class Plateau extends React.Component {
       result:"Lancez les dès",
       dicePicture:"",
       panic:0,
+      countEnigmeCTA:0,
+      used : [],
     };
  this.getEnigme = this.getEnigme.bind(this);
  this.getEscape = this.getEscape.bind(this);
@@ -49,38 +55,58 @@ class Plateau extends React.Component {
 }
 
 
-     
-  getEnigme() {
-    // Send the request
-    axios.get('https://api-jumanji.herokuapp.com/api/cards')
-    // Extract the DATA from the received response
-    .then(response => response.data)
-    // Use this data to update the state
-    .then(data => {
-    console.log(data)
-    const index = Math.floor((Math.random()*(data.length -1)))
-    this.setState({
-    enigme: data[index],
-    actionCombattre : <button className="enigmeCTA">Combattre </button>,
-    actionFuir : <button className="enigmeCTA">S'enfuir</button>,
-    dice1: Math.ceil(Math.random()*6),
-    dice2: Math.ceil(Math.random()*6),
-  
  
-        });
-    }); 
+getEnigme() {
+  // Send the request
+  axios.get('https://api-jumanji.herokuapp.com/api/cards')
+  // Extract the DATA from the received response
+  .then(response => response.data)
+  // Use this data to update the state
+  .then(data => {
+  console.log(data)
+  const index = Math.floor((Math.random()*(data.length -1)));
+  const index2 = Math.floor((Math.random()*(data.length -1)));
+  const used = []
+  if (this.state.used.includes(index)) { 
+    alert ("alredy in array")
+      while ( index2 == index) {
+        const index2 = Math.floor((Math.random()*(data.length -1))) != index2
+       
+      }
+  
+  
+  } else  {
+    this.setState({
+      enigme: data[index],
+      actionCombattre : <button className="enigmeCTA">Combattre </button>,
+      actionFuir : <button className="enigmeCTA">S'enfuir</button>,
+      dice1: Math.ceil(Math.random()*6),
+      dice2: Math.ceil(Math.random()*6),
+    
+    
+          });
+    alert ("la valeur va etre pusher dans un array")
+    this.state.used.push(index)
+    alert (this.state.used)
 
   }
+
+  
+
+  }); 
+
+}
+ 
 
   getEscape (){
     this.setState({
       actionCombattre : "",
       actionFuir : "",
       enigme: sampleFuir,
-      panic: this.state.panic + 1,
+      panic: this.state.panic + 1
        })
   }
-
+  
 
 
   render () {
@@ -130,12 +156,12 @@ if (this.state.panic === 0) {
                 <LeftSide panic={panicBar}/>
             </div>
             <div className="containerBoule">
-                <div className ="logo">
-                     <img src="https://zupimages.net/up/20/16/fc7x.png" alt="" />
-                </div>
+                
                 <div className="containerEnigme">
+                    
                     <div className="enigmeContent">
                           <DisplayEnigme className="enigme" enigme={this.state.enigme} />
+                          {this.state.used}
                     </div>
                     <div className="containerActionCTA">
                           <div className="CombattreCTA" onClick={this.getEscape}>
@@ -144,6 +170,10 @@ if (this.state.panic === 0) {
                           <div className="FuirCTA" onClick={this.getEscape}>
                               {this.state.actionFuir}
                           </div>
+                          
+                    </div>
+                    <div className="boardContainer">
+                      
                     </div>
                 </div>
             </div>

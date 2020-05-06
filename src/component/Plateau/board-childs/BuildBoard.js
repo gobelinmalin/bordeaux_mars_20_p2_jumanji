@@ -21,15 +21,15 @@ class BuildBoard extends React.Component {
 
         for (let j = 0; j < 10; j++) {
 
-            let counter = 64 + 5
+            let counter = 57 + 2
             for (let i = 0; i < 9; i++) {
 
-                let count = 64 + 5
+                let count = 57 + 2
                 array2Push = [count * i, counter * j]
                 array.push(array2Push)
 
             }
-            array2Push = [array2Push[0] + (64 + 5), counter * j]
+            array2Push = [array2Push[0] + (57 + 2), counter * j]
             array.push(array2Push)
         }
         // return array
@@ -84,7 +84,7 @@ class BuildBoard extends React.Component {
         this.createPlayerPath()
         return (
             <>
-                <button onClick={() => this.addArrayToState(coordinate)} > TEST</button>
+                <button className="TestCTA" onClick={() => this.addArrayToState(coordinate)} > TEST</button>
                 <div className="board" >
                     <SmallSquare coordinate={this.state.squares} />
                 </div>

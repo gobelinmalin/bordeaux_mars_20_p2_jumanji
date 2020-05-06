@@ -9,7 +9,7 @@ function Board(){
 
     return (
         <div className="handler">
-            <div className="handler-board"><BuildBoard test="test from Board" /></div>
+            <div className=""><BuildBoard test="test from Board" /></div>
         </div>
 
     )

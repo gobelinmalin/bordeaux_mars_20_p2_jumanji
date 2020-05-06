@@ -1,9 +1,22 @@
 .smallSquare{
     background-color: whitesmoke;
-    width: 64px;
-    height: 64px;
+    width: 8%;
+    height: 8%;
     border-radius: 0.3em;
-    margin: 2px;
+    margin-left:-3%;
+    margin-right:-3%;
     border: solid red 1px;
     position: absolute;
+
+  
+}
+
+.handler-board {
+    background-color: none;
+    border: solid;
+    height: 820px;
+    width: 1024px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
