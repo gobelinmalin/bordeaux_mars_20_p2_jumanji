@@ -13,7 +13,7 @@ class SelectPlayer extends React.Component {
         count: 0,
         players:[],
       };
-    
+
       handleClick = e => {
         const { count } = this.state;
         const players =this.state.players;
@@ -32,7 +32,7 @@ class SelectPlayer extends React.Component {
         this.setState({players: players})
 
         localStorage.setItem("players", players)
-        
+
 
       };
       render() {
@@ -45,11 +45,11 @@ class SelectPlayer extends React.Component {
         <div className ="title">
             <h1>Sélection joueurs (4 max.)</h1>
         </div>
-           
+
             <div className="checkboxesContainer">
                <div className="JoueurAContainer" >
                     <JoueurA />
-                    <input 
+                    <input
                         onClick={e => this.handleClick(e)}
                         type="checkbox"
                         name="player1"
@@ -90,31 +90,31 @@ class SelectPlayer extends React.Component {
                         value={4}
                     />
                     <label for="player4" aria-describedby="label"></label>
-                </div>    
+                </div>
             </div>
             <div className="playCTAContainer">
                 <button className="playCTA"  disabled={this.state.count > 0 ? false : true}>
-                    <NavLink className="playCTA" to="/plateau"   >  JOUER !</NavLink>        
+                    <NavLink className="playCTA" to="/plateau"   >  JOUER !</NavLink>
                 </button>
             </div>
             <div className="selected-items">
-          {this.state.players.map(number => 
+          {this.state.players.map(number =>
              <p key={number}>item: {number}</p>
           )}
         </div>
-       
-     
-      
 
-       
+
+
+
+
           </body>
         );
       }
     }
 
 
-  
-       
+
+
 
 
 export default SelectPlayer ;

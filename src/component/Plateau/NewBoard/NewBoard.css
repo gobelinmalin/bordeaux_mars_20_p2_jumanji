@@ -14,14 +14,14 @@
 .TilePathPlayer1 {
     border: 1px solid #ffc65e;
     background-image: linear-gradient(to right, #ffc65e, #f4661b);
-    animation: gradient-animated 3s infinite;
+    animation: gradient-animated 2s infinite;
     background-size: 400%;
   }
 
   .SquarePathPlayer2 {
     background-image: linear-gradient(to right, #9999ff, #6565e5);
     border: 1px solid #9999ff;
-      animation: gradient-animated 2s infinite;
+    animation: gradient-animated 2s infinite;
     background-size: 400%;
   }
 

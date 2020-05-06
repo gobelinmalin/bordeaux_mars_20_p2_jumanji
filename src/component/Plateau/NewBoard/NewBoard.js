@@ -54,7 +54,7 @@ class NewBoard extends React.Component {
                             "TilePathPlayer1"
 
                         }>
-                        {tileIndex}
+                        {/* {tileIndex} */}
                     </div>
                     :
                     <div
@@ -65,7 +65,7 @@ class NewBoard extends React.Component {
 
                         }>
                         {console.log("YEAH")}
-                        {tileIndex}
+                        {/* {tileIndex} */}
                     </div>)
         }
 
@@ -85,7 +85,7 @@ class NewBoard extends React.Component {
                     width={50}
                     gap={5}
                 >
-                    {this.state.board[0]}
+                    {this.state.board}
                     <button onClick={this.handlePlayerTurn}>ChangeTurn</button>
                 </Grid>
             </div>
