@@ -1,8 +1,8 @@
 import React from 'react';
+import './DisplayEnigme.css'
 
 
 
-import { NavLink } from 'react-router-dom';
 
 
   
@@ -10,9 +10,10 @@ function DisplayEnigme({ enigme }) {
   return (
     <div className="DisplayEnigme">
       
-      <div className="question">
-        {enigme.question} 
-   
+      <div className='containerQuestion2'>
+          <div className="question2">
+             {enigme.question} 
+          </div>
       </div>   
      
 
@@ -22,9 +23,7 @@ function DisplayEnigme({ enigme }) {
     </div>
   );
 };
-
-
-  
+ 
        
 
 

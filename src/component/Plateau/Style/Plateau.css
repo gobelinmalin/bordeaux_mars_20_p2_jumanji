@@ -16,18 +16,16 @@
 }
 
 .selectedPlayers, .containerRollDice{
-    border-color: red;
-    border-style: solid;
-    width: 18%;
+  
+    width: 30%;
 }
 
 .containerBoule {
-    border-color: yellow;
-    border-style: solid;
-    width: 62%;
+  
+   width: 60%;
     height: 730px;
     display: flex;
-	flex-direction: column;
+	/* flex-direction: column; */
 	justify-content: center;
     align-items: center;
 }
@@ -38,6 +36,10 @@
     width: 7vw;
     height: 2vw;
 
+}
+
+.enigmeContent{
+   
 }
 
 .containerActionCTA{
@@ -70,4 +72,128 @@
 
 
 
+/* .handler-board{
+    margin-top:-420px;
+    border-color: blue;
+    border-style: solid;
+} */
 
+
+
+/* Test plateau */
+
+.handler-board {
+display: grid;
+grid-template-columns: repeat(10, 1fr);
+grid-template-rows: repeat(9, 1fr);
+grid-column-gap: 0.5%;
+grid-row-gap: 0.7%;
+grid-template: repeat(15, 1fr) / 80px 80px 80px 80px 80px 80px 80px 80px 80px 80px 80px;
+object-fit: contain;
+margin-left:5%;
+margin-top: 45%;
+object-fit: cover;
+
+
+}
+
+.div1 { border-color: red; border-style: solid; grid-area: 1 / 1 / 2 / 2; height: 60px; }
+.div2 { border-color: red; border-style: solid; grid-area: 2 / 1 / 3 / 2;} 
+.div3 { border-color: red; border-style: solid; grid-area: 3 / 1 / 4 / 2; }
+.div4 { border-color: red; border-style: solid; grid-area: 4 / 1 / 5 / 2; }
+.div5 { border-color: red; border-style: solid; grid-area: 5 / 1 / 6 / 2; }
+.div6 { border-color: red; border-style: solid; grid-area: 6 / 1 / 7 / 2; }
+.div7 { border-color: red; border-style: solid; grid-area: 7 / 1 / 8 / 2; }
+.div8 { border-color: red; border-style: solid; grid-area: 8 / 1 / 9 / 2; }
+.div9 { border-color: red; border-style: solid; grid-area: 9 / 1 / 10 / 2; }
+/* .div10 { border-color: red; border-style: solid; grid-area: 10 / 1 / 11 / 2; } */
+.div11 { border-color: blue; border-style: solid; grid-area: 1 / 2 / 2 / 3; }
+.div12 { border-color: blue; border-style: solid; grid-area: 2 / 2 / 3 / 3; }
+.div13 { border-color: blue; border-style: solid; grid-area: 3 / 2 / 4 / 3; }
+.div14 { border-color: blue; border-style: solid; grid-area: 4 / 2 / 5 / 3; }
+.div15 { border-color: blue; border-style: solid; grid-area: 5 / 2 / 6 / 3; }
+.div16 { border-color: blue; border-style: solid; grid-area: 6 / 2 / 7 / 3; }
+.div17 { border-color: blue; border-style: solid; grid-area: 7 / 2 / 8 / 3; }
+.div18 { border-color: blue; border-style: solid; grid-area: 8 / 2 / 9 / 3; }
+.div19 { border-color: blue; border-style: solid; grid-area: 9 / 2 / 10 / 3; }
+/* .div20 { border-color: blue; border-style: solid; grid-area: 10 / 2 / 11 / 3;} */
+.div21 { border-color: yellow; border-style: solid; grid-area: 1 / 3 / 2 / 4; }
+.div22 { border-color: yellow; border-style: solid; grid-area: 2 / 3 / 3 / 4; }
+.div23 { border-color: yellow; border-style: solid; grid-area: 3 / 3 / 4 / 4; }
+.div24 { border-color: yellow; border-style: solid; grid-area: 4 / 3 / 5 / 4;}
+.div25 { border-color: yellow; border-style: solid; grid-area: 5 / 3 / 6 / 4; }
+.div26 { border-color: yellow; border-style: solid; grid-area: 6 / 3 / 7 / 4; }
+.div27 { border-color: yellow; border-style: solid; grid-area: 7 / 3 / 8 / 4; }
+.div28 { border-color: yellow; border-style: solid; grid-area: 8 / 3 / 9 / 4; }
+.div29 { border-color: yellow; border-style: solid; grid-area: 9 / 3 / 10 / 4; }
+/* .div30 { border-color: yellow; border-style: solid; grid-area: 10 / 3 / 11 / 4; } */
+.div31 { border-color: green; border-style: solid; grid-area: 1 / 4 / 2 / 5; }
+.div32 { border-color: green; border-style: solid; grid-area: 2 / 4 / 3 / 5; }
+.div33 { border-color: green; border-style: solid; grid-area: 3 / 4 / 4 / 5; }
+.div34 { border-color: green; border-style: solid; grid-area: 4 / 4 / 5 / 5; }
+.div35 { border-color: green; border-style: solid; grid-area: 5 / 4 / 6 / 5; }
+.div36 { border-color: green; border-style: solid; grid-area: 6 / 4 / 7 / 5; }
+.div37 { border-color: green; border-style: solid; grid-area: 7 / 4 / 8 / 5; }
+.div38 { border-color: green; border-style: solid; grid-area: 8 / 4 / 9 / 5; }
+.div39 { border-color: green; border-style: solid; grid-area: 9 / 4 / 10 / 5; }
+/* .div40 { border-color: green; border-style: solid; grid-area: 10 / 4 / 11 / 5; } */
+.div41 { border-color: gray; border-style: solid; grid-area: 1 / 5 / 2 / 6; }
+.div42 { border-color: gray; border-style: solid; grid-area: 2 / 5 / 3 / 6; }
+.div43 { border-color: gray; border-style: solid; grid-area: 3 / 5 / 4 / 6; }
+.div44 { border-color: gray; border-style: solid; grid-area: 4 / 5 / 5 / 6; }
+.div45 { border-color: gray; border-style: solid; grid-area: 5 / 5 / 6 / 6; }
+.div46 { border-color: gray; border-style: solid; grid-area: 6 / 5 / 7 / 6; }
+.div47 { border-color: gray; border-style: solid; grid-area: 7 / 5 / 8 / 6; }
+.div48 { border-color: gray; border-style: solid; grid-area: 8 / 5 / 9 / 6; }
+.div49 { border-color: gray; border-style: solid; grid-area: 9 / 5 / 10 / 6; }
+/* .div50 { border-color: gray; border-style: solid; grid-area: 10 / 5 / 11 / 6; } */
+.div51 { border-color: orange; border-style: solid; grid-area: 1 / 6 / 2 / 7; }
+.div52 { border-color: orange; border-style: solid; grid-area: 2 / 6 / 3 / 7; }
+.div53 { border-color: orange; border-style: solid; grid-area: 3 / 6 / 4 / 7; }
+.div54 { border-color: orange; border-style: solid; grid-area: 4 / 6 / 5 / 7; }
+.div55 { border-color: orange; border-style: solid; grid-area: 5 / 6 / 6 / 7; }
+.div56 { border-color: orange; border-style: solid; grid-area: 6 / 6 / 7 / 7; }
+.div57 { border-color: orange; border-style: solid; grid-area: 7 / 6 / 8 / 7; }
+.div58 { border-color: orange; border-style: solid; grid-area: 8 / 6 / 9 / 7; }
+.div59 { border-color: orange; border-style: solid; grid-area: 9 / 6 / 10 / 7; }
+/* .div60 { border-color: orange; border-style: solid; grid-area: 10 / 6 / 11 / 7; } */
+.div61 { border-color: pink; border-style: solid; grid-area: 1 / 7 / 2 / 8; }
+.div62 { border-color: pink; border-style: solid; grid-area: 2 / 7 / 3 / 8; }
+.div63 { border-color: pink; border-style: solid; grid-area: 3 / 7 / 4 / 8; }
+.div64 { border-color: pink; border-style: solid; grid-area: 4 / 7 / 5 / 8; }
+.div65 { border-color: pink; border-style: solid; grid-area: 5 / 7 / 6 / 8; }
+.div66 { border-color: pink; border-style: solid; grid-area: 6 / 7 / 7 / 8; }
+.div67 { border-color: pink; border-style: solid; grid-area: 7 / 7 / 8 / 8; }
+.div68 { border-color: pink; border-style: solid; grid-area: 8 / 7 / 9 / 8; }
+.div69 { border-color: pink; border-style: solid; grid-area: 9 / 7 / 10 / 8; }
+/* .div70 { border-color: pink; border-style: solid; grid-area: 10 / 7 / 11 / 8; } */
+.div71 { border-color: purple; border-style: solid; grid-area: 1 / 8 / 2 / 9; }
+.div72 { border-color: purple; border-style: solid; grid-area: 2 / 8 / 3 / 9; }
+.div73 { border-color: purple; border-style: solid; grid-area: 3 / 8 / 4 / 9; }
+.div74 { border-color: purple; border-style: solid; grid-area: 4 / 8 / 5 / 9; }
+.div75 { border-color: purple; border-style: solid; grid-area: 5 / 8 / 6 / 9; }
+.div76 { border-color: purple; border-style: solid; grid-area: 6 / 8 / 7 / 9; }
+.div77 { border-color: purple; border-style: solid; grid-area: 7 / 8 / 8 / 9; }
+.div78 { border-color: purple; border-style: solid; grid-area: 8 / 8 / 9 / 9; }
+.div79 { border-color: purple; border-style: solid; grid-area: 9 / 8 / 10 / 9; }
+/* .div80 { border-color: purple; border-style: solid; grid-area: 10 / 8 / 11 / 9; } */
+.div81 { border-color: rgb(43, 57, 253); border-style: solid; grid-area: 1 / 9 / 2 / 10; }
+.div82 { border-color: rgb(43, 57, 253); border-style: solid; grid-area: 2 / 9 / 3 / 10; }
+.div83 { border-color: rgb(43, 57, 253); border-style: solid; grid-area: 3 / 9 / 4 / 10; }
+.div84 { border-color: rgb(43, 57, 253); border-style: solid; grid-area: 4 / 9 / 5 / 10; }
+.div85 { border-color: rgb(43, 57, 253); border-style: solid; grid-area: 5 / 9 / 6 / 10; }
+.div86 { border-color: rgb(43, 57, 253); border-style: solid; grid-area: 6 / 9 / 7 / 10; }
+.div87 { border-color: rgb(43, 57, 253); border-style: solid; grid-area: 7 / 9 / 8 / 10; }
+.div88 { border-color: rgb(43, 57, 253); border-style: solid; grid-area: 8 / 9 / 9 / 10; }
+.div89 { border-color: rgb(43, 57, 253); border-style: solid; grid-area: 9 / 9 / 10 / 10; }
+/* .div90 { border-color: rgb(43, 57, 253); border-style: solid; grid-area: 10 / 9 / 11 / 10; } */
+.div91 { border-color :white; border-style: solid; grid-area: 1 / 10 / 2 / 11; }
+.div92 { border-color :white; border-style: solid; grid-area: 2 / 10 / 3 / 11; }
+.div93 { border-color :white; border-style: solid; grid-area: 3 / 10 / 4 / 11; }
+.div94 { border-color :white; border-style: solid; grid-area: 4 / 10 / 5 / 11; }
+.div95 { border-color :white; border-style: solid; grid-area: 5 / 10 / 6 / 11; }
+.div96 { border-color :white; border-style: solid; grid-area: 6 / 10 / 7 / 11; }
+.div97 { border-color :white; border-style: solid; grid-area: 7 / 10 / 8 / 11; }
+.div98 { border-color :white; border-style: solid; grid-area: 8 / 10 / 9 / 11; }
+.div99 { border-color :white; border-style: solid; grid-area: 9 / 10 / 10 / 11; }
+/* .div100 { border-color :white; border-style: solid; grid-area: 10 / 10 / 11 / 11; } */

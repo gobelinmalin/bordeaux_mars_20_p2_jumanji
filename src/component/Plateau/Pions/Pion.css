@@ -1,0 +1,103 @@
+
+.containerPion {
+    width:177%;
+    height: 82vh;
+    margin-top:-50vh;
+    margin-left: -40%;
+
+
+}
+
+
+.containerTopPion {
+    display:flex;
+    width: 100%;
+    height:41vh;
+}
+
+.containerBottomPion {
+    display:flex;
+    width: 100%;
+    height:41vh;
+}
+.zonePion1 {
+    height:45vh;
+    width:43%;
+   
+}
+.zonePion2 {
+    height:35vh;
+    width:57%;
+   
+}
+
+.zonePion3 {
+    height:35vh;
+    width:55%;
+    margin-top:5vh;
+   
+}
+
+.zonePion4 {
+    height:45vh;
+    width:43%;
+    margin-top:-6vh;
+
+   
+}
+
+.containerPion1 {
+    width:20%;
+    margin-left:4%;
+    margin-top:3%;
+
+}
+
+.picturePion1{
+    width:100%;
+}
+
+.container2Pion2 {
+    width:40%;
+    display:flex;
+    border-style: solid;
+    margin-left:83%;
+    border:none;
+    margin-top:2%;
+    
+}
+
+.picturePion2{
+    width:40%;
+    transform: rotate(90deg);
+
+}
+
+
+.containerPion3 {
+    width:40%;
+    margin-top:28.2vh;
+    margin-left:2%;
+
+}
+
+.picturePion3{
+    width:40%;
+    transform: rotate(-90deg);
+}
+
+.containerPion4 {
+    width:40%;
+    display:flex;
+    border-style: solid;
+    margin-left:83%;
+    border:none;
+    margin-top:39.5vh;
+    
+}
+
+.picturePion4{
+    width:50%;
+    transform: rotate(180deg);
+
+}

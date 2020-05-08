@@ -12,6 +12,8 @@ import Dice6 from '../Plateau/RightSide/Dice6'
 import LeftSide from './LeftSide/LeftSide'
 import Boule from '../Plateau/Boule/Boule'
 import NewBoard from './NewBoard/NewBoard'
+import DisplayEnigmeJ1 from '../DisplayEnigme/DisplayEnigmeJ1'
+import DisplayPion from '../Plateau/Pions/DisplayPion'
 
 const sampleEnigme = {
   question: 'JoueurA lance les dès'
@@ -114,6 +116,8 @@ class Plateau3 extends React.Component {
 
 
     return (
+    <section>
+      <section>
       <div className="container">
         <div className="selectedPlayers">
             <LeftSide />
@@ -191,17 +195,20 @@ class Plateau3 extends React.Component {
                                     <div className='squareL14'></div>
                                     <div className='squareL15'></div>
                                 </div>
-                                <div className="rowF">
-                                    <div className='squareR13'></div>
-                                    <div className='squareR14'></div>
-                                    <div className='squareR15'></div>
-                                </div>
+                               
                                     
                                   
 
                             </div>
                             <div className="middle">
+                                <div className="displayPionContainer">
+                                  <DisplayPion />
+                                </div>
+                                <div className="displayEnigme2Container"> 
+                                  <DisplayEnigmeJ1 />
+                                </div>
                                 
+                               
                                 
                             </div>
                             <div className="right">
@@ -230,11 +237,7 @@ class Plateau3 extends React.Component {
                                     <div className='squareR14'></div>
                                     <div className='squareR15'></div>
                                 </div>
-                                <div className="rowF">
-                                    <div className='squareR13'></div>
-                                    <div className='squareR14'></div>
-                                    <div className='squareR15'></div>
-                                </div>
+                                
                                 
                               
                                 
@@ -306,6 +309,10 @@ class Plateau3 extends React.Component {
             <NavLink className="playCTA" to="/plateau2"   >  Plateau 2</NavLink> 
         </div>
       </div>
+      </section>
+    
+    </section>
+     
     )
   }
 

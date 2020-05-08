@@ -1,9 +1,12 @@
 .game-board{
     display: grid;
-    width: 550px;
-    height: 550px;
+    width: 500%;
+    height: 210%;
     margin: auto;
     border: dotted deeppink;
+    margin-left:-200%;
+
+  
 }
 
 .TileNeutral {
@@ -35,4 +38,24 @@
     100%{
       background-position: 4% 0%;
     }
+  }
+
+  .containerBoardBoule{
+    border-color: red;
+    border-style:solid;
+    height: 80%;
+  }
+
+  .game-board{
+    border-color: yellow;
+    border-style:solid;
+  
+
+ 
+  }
+
+  .boule {
+    border-color: greenyellow;
+    border-style:solid;
+    height: 20%;
   }
