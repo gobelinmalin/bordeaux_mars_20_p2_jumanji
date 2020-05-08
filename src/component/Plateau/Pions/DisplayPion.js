@@ -11,6 +11,8 @@ class DisplayPion extends React.Component {
     super(props)
     this.state = {
       selectedPion: localStorage.getItem('players'),
+      marginTop1: 0,
+      marginLeft1: 0,
     }
 
   }
@@ -93,40 +95,47 @@ class DisplayPion extends React.Component {
   componentDidMount() { }
 
 
-  avancerPion1 = () => {
+  avancerPion1 = (e) => {
     const { diceOne, diceTwo } = this.props
-    let style = {
-      marginTop: 271, //max 270px <== à mettre en state pour que la condition soit prise en compte
-      marginLeft: 0, // puis faire un setState dans un componentDidUpdate()
-      position: 'absolute',
-      width: '64px'
-    }
-    const diceTest = 3
-      if (style.marginTop > 270) {
-
-        style.marginLeft = diceTest * 50
-      }else{
-        style.marginTop = diceTest * 50
+    let { marginLeft1, marginTop1 } = this.state
+    /*   let style = {
+        marginTop: marginTop1, //max 270px <== à mettre en state pour que la condition soit prise en compte
+        marginLeft: 0, // puis faire un setState dans un componentDidUpdate()
+        position: 'absolute',
+        width: '64px'
       }
+      const diceTest = 3
+        if (marginTop1 > 270) {
 
-    console.log(style.marginTop,style.marginLeft)
+          this.setState({marginLeft: marginLeft1 + diceTest * 50})
+        }else{
+          this.setState({marginTop: marginTop1 + diceTest * 50})
+        }
+   */
+    let fakeDice = 1
+    console.log(e )
+    this.setState({marginTop1: e + fakeDice*50})
 
 
-    return <div style={style} className="containerPion1">
-      {this.displayPion1()}
-    </div>
 
   };
+
+  /* componentDidUpdate(){
+    return this.avancerPion1
+  } */
 
   render() {
     const { diceOne, diceTwo } = this.props
 
-    console.log(diceOne, "D1")
     return (
       <div className="containerPion">
         <div className="containerTopPion">
           <div className="zonePion1">
-            {this.avancerPion1()}
+            {/* {this.avancerPion1()} */}
+            <button onClick={() => this.avancerPion1(this.state.marginTop1)}> ALLEZ UH!</button>
+            <div style={{ marginTop: this.state.marginTop1,position:'relative'}} className="containerPion1">
+      {this.displayPion1()}
+    </div>
           </div>
           <div className="zonePion2">
             <div className="container2Pion2">
