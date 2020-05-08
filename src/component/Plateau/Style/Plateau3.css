@@ -1,0 +1,357 @@
+.selectedPlayers{
+    width:20%;
+
+}
+
+.containerRollDice {
+    width: 20%
+}
+.containerBoard{
+    margin-top:1%;
+    width: 60%;
+    height: 100vh;
+}
+
+.element1 {
+ 
+    width: 100%;
+    height: 180px;
+    margin-bottom:-2%;
+
+}
+
+.element2 {
+
+    width: 101%;
+    height: 305px;
+    display:flex;
+    margin-left: 0.1%;
+}
+
+
+
+.element3 {
+
+    width: 100%;
+    height: 180px;
+
+}
+
+
+
+.row1, .row2, .row3 {
+    display:flex;
+
+    width: 100%;
+    height: 60px;
+}
+
+
+
+
+.left {
+  
+    width: 28%;
+    height: 305px;
+
+}
+
+.middle {
+    border-color:orange;
+    border-style: solid;
+    width: 46%;
+    height: 330px;
+    border-radius: 50%;
+    z-index:1;
+    margin-top:-2%;
+    margin-left:-1%;
+}
+
+.right {
+ 
+    width: 28%;
+    height: 305px;
+}
+
+.rowA, .rowB, .rowC, .rowD, .rowE, .rowF {
+    display:flex;
+    margin-left:-3%;
+    width: 100%;
+    height: 60px;
+
+}
+
+
+
+.middle {
+    background-color: black;
+    border-radius: 50%;
+}
+
+.squareL1, .squareL2, .squareL3, .squareL4, .squareL5, .squareL6, .squareL7, .squareL8, .squareL9, .squareL10, .squareL11, .squareL12, .squareL13, .squareL14, .squareL15, .squareL16, .squareL17, .squareL18,
+.squareR1, .squareR2, .squareR3, .squareR4, .squareR5, .squareR6, .squareR7, .squareR8, .squareR9, .squareR10, .squareR11, .squareR12, .squareR13, .squareR14, .squareR15, .squareR16, .squareR17, .squareR18 {
+
+    width: 33%;
+    height: 60px;
+   
+}
+
+
+.squareT1, .squareT2, .squareT3, .squareT4, .squareT5, .squareT6, .squareT7, .squareT8, .squareT9, .squareT10, .squareT11, .squareT12, .squareT13, .squareT14, .squareT15, .squareT16, .squareT17, .squareT18, .squareT19, .squareT20, .squareT21, .squareT22, .squareT23, .squareT24, .squareT25, .squareT26, .squareT27, .squareT28, .squareT29, .squareT30, .squareT31, .squareT32, .squareT33, .squareT34,
+.squareD1, .squareD2, .squareD3, .squareD4, .squareD5, .squareD6, .squareD7, .squareD8, .squareD9, .squareD10, .squareD11, .squareD12, .squareD13, .squareD14, .squareD15, .squareD16, .squareD17, .squareD18, .squareD19, .squareD20, .squareD21, .squareD22, .squareD23, .squareD24, .squareD25, .squareD26, .squareD27, .squareD28, .squareD29, .squareD30, .squareD31, .squareD32, .squareD33, .squareD34
+ {
+   
+    width: 25%;
+    height: 60px;
+}
+
+/*path JoueurA*/
+
+.squareD10{
+    width: 25%;
+    height: 60px;
+    background-color: rgba(245, 245, 220, 0.653);
+    border-top:solid;
+    border-top-width: 0.5px;
+    border-top-style: dashed;
+}
+
+.squareD20 {
+    width: 25%;
+    height: 60px;
+    background-color: rgba(245, 245, 220, 0.653);
+    border-top:solid;
+    border-top-width: 0.5px;
+    border-top-style: dashed;
+    border-left:solid;
+    border-left-width: 0.5px;
+    border-left-style: dashed;
+    
+}
+
+.squareR14 {
+    width: 33%;
+    height: 65px;
+    background-color: rgba(245, 245, 220, 0.653);
+    border-top:solid;
+    border-top-width: 0.5px;
+    border-top-style: dashed;
+  
+   
+}
+
+
+.squareR11 {
+    width: 33%;
+    background-color:  rgba(245, 245, 220, 0.653);
+}
+
+.squareR7 {
+  
+    width: 33%;
+    background-color:  rgba(245, 245, 220, 0.653);
+}
+
+.squareR8 {
+    width: 34.9%;
+    background-color:  rgba(245, 245, 220, 0.653);
+}
+
+
+.squareR12 {
+    border-top:solid;
+    border-top-width: 0.5px;
+    border-top-style: dashed;
+}
+
+
+.squareR8 {
+    border-left:solid;
+    border-left-width: 0.5px;
+    border-left-style: dashed;
+    width: 32.9%;
+    border-top:solid;
+    border-top-width: 0.5px;
+    border-top-style: dashed;
+    border-bottom:solid;
+    border-bottom-width: 0.5px;
+    border-bottom-style: dashed;
+    margin-top:-0.5%
+
+}
+
+/*path JoueurB*/
+
+.squareD17, .squareD18, .squareD19, .squareD15, .squareD14 {
+    width: 25%;
+    height: 60px;
+    background-color: rgba(245, 245, 220, 0.653);
+    border-left:solid;
+    border-left-width: 0.5px;
+    border-left-style: dashed;
+}
+
+.squareD13 {
+    width: 25%;
+    height: 60px;
+    background-color: rgba(245, 245, 220, 0.653);
+ 
+}
+
+.squareD16 {
+    width: 25%;
+    height: 60px;
+    background-color: rgba(245, 245, 220, 0.653);
+    border-top:solid;
+    border-top-width: 0.5px;
+    border-top-style: dashed;
+    border-left:solid;
+    border-left-width: 0.5px;
+    border-left-style: dashed;
+}
+
+.squareD6 {
+    width: 25%;
+    height: 60px;
+    background-color: rgba(245, 245, 220, 0.653);
+    margin-left:-0.2%;
+ 
+}
+
+.squareD2 {
+    width: 25%;
+    height: 59px;
+    background-color: rgba(245, 245, 220, 0.653);
+    border-top:solid;
+    border-top-width: 0.5px;
+    border-top-style: dashed;
+    border-bottom:solid;
+    border-bottom-width: 0.5px;
+    border-bottom-style: dashed;
+  
+}
+
+.squareL14, .squareL11, .squareL2, .squareL5  {
+    width: 35.5%;
+    height: 60px;
+    background-color: rgba(245, 245, 220, 0.653);
+    border-top:solid;
+    border-top-width: 0.5px;
+    border-top-style: dashed;
+    margin-left:4.5%;
+  
+}
+
+ .squareL8  {
+    width: 37%;
+    height: 60px;
+    background-color: rgba(245, 245, 220, 0.653);
+    border-top:solid;
+    border-top-width: 0.5px;
+    border-top-style: dashed;
+    margin-left:6%;
+  
+  
+}
+
+.squareL9  {
+    width: 37.5%;
+    height: 60px;
+    background-color: rgba(245, 245, 220, 0.653);
+    border-left:solid;
+    border-left-width: 0.5px;
+    border-left-style: dashed;
+    margin-right:-3%;
+  
+  
+}
+
+.squareL14, .squareL15 {
+    height: 65px;
+}
+
+/*path joueurC */
+
+.squareT24 {
+    width: 25%;
+    height: 60px;
+    background-color: rgba(245, 245, 220, 0.653);
+    border-top:solid;
+    border-top-width: 0.5px;
+    border-top-style: dashed;
+    margin-top:-2%
+}
+
+.squareT13 {
+    width: 25%;
+    height: 60px;
+    background-color: rgba(245, 245, 220, 0.653);
+    border-right:solid;
+    border-right-width: 0.5px;
+    border-right-style: dashed;
+    margin-top:-2%
+}
+
+
+.squareT14, .squareT15, .squareT16, .squareT17, .squareT18, .squareT19, .squareT20{
+    width: 25%;
+    height: 60px;
+    background-color: rgba(245, 245, 220, 0.653);
+    border-right:solid;
+    border-right-width: 0.5px;
+    border-right-style: dashed;
+    margin-top: -2%;
+}
+
+.squareT21 {
+
+    width: 25%;
+    height: 60px;
+    background-color: rgba(245, 245, 220, 0.653);
+    margin-top: -2%;
+    border-bottom:solid;
+    border-bottom-width: 0.5px;
+    border-bottom-style: dashed;
+
+}
+
+.squareT28 {
+
+    width: 25%;
+    height: 60px;
+    background-color: rgba(245, 245, 220, 0.653);
+    margin-top: -2%;
+    border-top:solid;
+    border-top-width: 0.5px;
+    border-top-style: dashed;
+
+}
+
+.squareT32 {
+    width: 25%;
+    height: 60px;
+    background-color: rgba(245, 245, 220, 0.653);
+    margin-top: -2%;
+
+}
+
+.squareR2, .squareR5 {
+    width: 33%;
+    height: 60px;
+    background-color: rgba(245, 245, 220, 0.653);
+    border-top:solid;
+    border-top-width: 0.5px;
+    border-top-style: dashed;
+}
+
+
+.displayEnigme2Container {
+    z-index:2;
+    margin-top:-68vh;
+}
+
+.displayPionContainer {
+    z-index:0;
+    margin-top:33vh;
+
+}

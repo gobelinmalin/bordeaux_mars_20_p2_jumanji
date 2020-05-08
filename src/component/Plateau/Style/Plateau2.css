@@ -1,0 +1,73 @@
+.containerPlateau2 {
+    border-color: blue;
+    border-style:solid;
+    display: flex;
+
+}
+
+.containerLeftSide2 {
+    width:20%;
+    height: 98vh;
+}
+
+.containerBoardDice{
+    width:80%;
+    border-color: red;
+    border-style:solid;
+    display: flex;
+    height: 98vh;
+
+}
+
+.board {
+    width: 100%;
+    border-color: green;
+    border-style:solid;
+    text-align:center;
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    background-size: cover;
+
+
+   
+   
+}
+
+.dice{
+    width: 35%;
+    border-color: pink;
+    border-style:solid;
+    margin-left:-50%;
+    background-image: url("boule2.png");
+    background-size: cover;
+    height: ;
+}
+
+.dice2 {
+    width: 20%;
+    border-color: purple;
+    border-style:solid;
+
+}
+
+.row1 {
+   display:flex;
+    width:100%;
+    justify-content: center;
+
+ 
+}
+
+
+
+.square44, .square45, .square46, .square47, .square54, .square55, .square56, .square57, .square64, .square65, .square66, .square67  {
+    width: 5vw;
+    height: 3.2rem;
+    border-color: yellow;
+ border-style: solid;
+    margin-right: 0.2%;
+    margin-top:0.5%;
+
+   
+   }

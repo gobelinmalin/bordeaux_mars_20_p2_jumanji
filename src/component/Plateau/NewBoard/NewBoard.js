@@ -3,6 +3,7 @@ import Grid from 'react-css-grid'
 import './NewBoard.css'
 import pathPlayers from './pathPlayers'
 import pathsPlayers from './pathPlayers'
+import Boule from '../Boule/Boule'
 
 
 class NewBoard extends React.Component {
@@ -80,14 +81,21 @@ class NewBoard extends React.Component {
         const pathCurrentPlayer = this.state.path
         console.log(this.state.color, "STATE")
         return (
-            <div className="game-board">
-                <Grid
-                    width={50}
-                    gap={5}
-                >
-                    {this.state.board}
-                    <button onClick={this.handlePlayerTurn}>ChangeTurn</button>
+            <div className="containerBoardBoule">
+           
+                <div className="game-board">
+            
+                    <Grid
+                        width={50}
+                        gap={5}
+                        >
+                        {this.state.board}
+                        <button onClick={this.handlePlayerTurn}>ChangeTurn</button>
                 </Grid>
+                </div>
+                <div className="boule">
+                    <Boule />
+                </div>
             </div>
         )
     }

@@ -1,6 +1,6 @@
 import React from 'react';
 import './style/FinalScreen.css';
-
+import { NavLink } from 'react-router-dom';
 import EndMessage from './EndMessage'
 import EndCircle from './EndCircle'
 import EndPlayerCard from './EndPlayerCard'
