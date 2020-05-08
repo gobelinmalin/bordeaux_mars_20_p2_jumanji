@@ -3,6 +3,11 @@ import axios from "axios";
 import ShowSolutions from "./ShowSolutions";
 import DisplayEnigme from './DisplayEnigme';
 import './DisplayEnigmeJ1.css'
+import Dice1 from '../Plateau/RightSide/Dice1'
+import Dice2 from '../Plateau/RightSide/Dice2'
+
+
+
 
 class DisplayEnigmeJ1 extends React.Component {
   constructor(props) {
@@ -11,8 +16,16 @@ class DisplayEnigmeJ1 extends React.Component {
       enigmes: [],
       enigmeIndex: 0,
       solutions: [],
-      isEnigmeVisible: true
+      isEnigmeVisible: true,
+      dice: "",
+      intro: 
+        (localStorage.getItem('players') === "1") || (localStorage.getItem('players') == "1,2") || (localStorage.getItem('players') == "1,2,3") || (localStorage.getItem('players') == "1,2,3,4") || (localStorage.getItem('players') == "1,3") || (localStorage.getItem('players') == "1,4")    ? "Allan Lance les dès" : "" 
+        || (localStorage.getItem('players') === "2") || (localStorage.getItem('players') === "2,3") || (localStorage.getItem('players') === "2,4") || (localStorage.getItem('players') === "2,3,4")? "Judith Lance les dès" : "" 
+        || (localStorage.getItem('players') === "3") || (localStorage.getItem('players') === "3,4")   ? "Peter Lance les dès" : "" 
+        || (localStorage.getItem('players') === "4")  ? "Sarah Lance les dès" : ""
     };
+
+ 
 
     this.getEnigmes().then(enigmes => {
       // On trie le tableau de manière aléatoire pour être certain de chaque partie aura un ordre de question différent
@@ -54,19 +67,27 @@ class DisplayEnigmeJ1 extends React.Component {
       // On stock ça dans notre state pour remettre à jour la vue (render)
       this.setState({ enigme, solutions });
     }
+     this.setState ({
+       dice:Math.ceil(Math.random() * 2),isEnigmeVisible: true,
+      intro:""
+    })
   };
 
   onCorrectResponse = () => {
     // Quand la réponse est correct on passe à la suivante
-    this.setState(state => ({ enigmeIndex: state.enigmeIndex + 1 }));
-    console.log("bonne réponse");
+    this.setState(state => ({ 
+          ...state,
+          enigmeIndex: state.enigmeIndex + 1,
+           isEnigmeVisible: false
+          }));
   };
 
   onIncorrectResponse = () => {
     // Quand la réponse est incorrect on passe à la suivante
     this.setState(state => ({
-      enigmeIndex: state.enigmeIndex + 1
-      //  isEnigmeVisible: false
+      ...state,
+      enigmeIndex: state.enigmeIndex + 1,
+       isEnigmeVisible: false
     }));
     console.log("mauvaise réponse");
   };
@@ -75,19 +96,40 @@ class DisplayEnigmeJ1 extends React.Component {
     const shouldShowEnigmeSection =
       this.state.enigme && this.state.isEnigmeVisible;
 
+
+      let pictureDice1;
+    if (this.state.dice === 1) {
+      pictureDice1 = [<Dice1 />]
+    } else if (this.state.dice === 2) {
+      pictureDice1 = [<Dice2 />]
+    }
+
     return (
+      <div>
+        
+          
+      
+          
       <div className='solutions-enigme'>
-        <button className='btn-enigme' onClick={this.getNewEnigmeAndSolutions}>afficher enigme</button>
+          <div className="introJoueur" >
+      {this.state.intro}
+      </div>
+        <button className='btn-enigme' onClick={this.getNewEnigmeAndSolutions}>Afficher enigme</button>
         {shouldShowEnigmeSection && (
-         
+           
          <div className="enigmeContent2">
-            
-            
-            <div className="questionContent"> 
+
+
+            <div className="questionContent">
+                
                 <DisplayEnigme className="enigme" enigme={this.state.enigme} />
+                <div className="diceContainer">
+                {pictureDice1}
+                </div>
+
             </div>
             <div className="showSolution">
-                <ShowSolutions 
+                <ShowSolutions
                 enigme={this.state.enigme}
                 solutions={this.state.solutions}
                 onCorrectResponse={this.onCorrectResponse}
@@ -97,6 +139,8 @@ class DisplayEnigmeJ1 extends React.Component {
           </div>
         )}
         <di />
+
+      </div>
       </div>
     );
   }

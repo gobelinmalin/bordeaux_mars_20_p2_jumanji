@@ -83,7 +83,6 @@ class Plateau3 extends React.Component {
 
 
   render() {
-
     let pictureDice1;
     if (this.state.dice1 === 1) {
       pictureDice1 = [<Dice1 />]
@@ -125,7 +124,7 @@ class Plateau3 extends React.Component {
 
         <div className="containerBoard" >
                         <div className="element1">
-                            <div className="row1"> 
+                            <div className="row1">
                                 <div className='squareT1'></div>
                                 <div className='squareT2'></div>
                                 <div className='squareT3'></div>
@@ -138,7 +137,7 @@ class Plateau3 extends React.Component {
                                 <div className='squareT10'></div>
                                 <div className='squareT11'></div>
                             </div>
-                            <div className="row2"> 
+                            <div className="row2">
                             <div className='square'></div>
                                 <div className='squareT12'></div>
                                 <div className='squareT13'></div>
@@ -152,7 +151,7 @@ class Plateau3 extends React.Component {
                                 <div className='squareT21'></div>
                                 <div className='squareT22'></div>
                             </div>
-                            <div className="row3"> 
+                            <div className="row3">
                                 <div className='squareT23'></div>
                                 <div className='squareT24'></div>
                                 <div className='squareT25'></div>
@@ -164,7 +163,7 @@ class Plateau3 extends React.Component {
                                 <div className='squareT31'></div>
                                 <div className='squareT32'></div>
                                 <div className='squareT33'></div>
-                              
+
                             </div>
 
                         </div>
@@ -195,21 +194,21 @@ class Plateau3 extends React.Component {
                                     <div className='squareL14'></div>
                                     <div className='squareL15'></div>
                                 </div>
-                               
-                                    
-                                  
+
+
+
 
                             </div>
                             <div className="middle">
                                 <div className="displayPionContainer">
                                   <DisplayPion />
                                 </div>
-                                <div className="displayEnigme2Container"> 
+                                <div className="displayEnigme2Container">
                                   <DisplayEnigmeJ1 />
                                 </div>
-                                
-                               
-                                
+
+
+
                             </div>
                             <div className="right">
                                 <div className="rowA">
@@ -237,14 +236,14 @@ class Plateau3 extends React.Component {
                                     <div className='squareR14'></div>
                                     <div className='squareR15'></div>
                                 </div>
-                                
-                                
-                              
-                                
+
+
+
+
                             </div>
                         </div>
                         <div className="element3">
-                             <div className="row1"> 
+                             <div className="row1">
                                 <div className='squareD1'></div>
                                 <div className='squareD2'></div>
                                 <div className='squareD3'></div>
@@ -256,10 +255,10 @@ class Plateau3 extends React.Component {
                                 <div className='squareD9'></div>
                                 <div className='squareD10'></div>
                                 <div className='squareD11'></div>
-                               
-                               
+
+
                              </div>
-                             <div className="row2"> 
+                             <div className="row2">
                                 <div className='squareD12'></div>
                                 <div className='squareD13'></div>
                                 <div className='squareD14'></div>
@@ -271,10 +270,10 @@ class Plateau3 extends React.Component {
                                 <div className='squareD19'></div>
                                 <div className='squareD20'></div>
                                 <div className='squareD21'></div>
-                              
-                              
+
+
                              </div>
-                             <div className="row3"> 
+                             <div className="row3">
                                 <div className='squareD22'></div>
                                 <div className='squareD23'></div>
                                 <div className='squareD24'></div>
@@ -286,14 +285,14 @@ class Plateau3 extends React.Component {
                                 <div className='squareD30'></div>
                                 <div className='squareD31'></div>
                                 <div className='squareD32'></div>
-                              
-                               
+
+
                              </div>
-                            
+
                         </div>
                     </div>
-             
-                    
+
+
         <div className="containerRollDice">
             <div className="CTA">
                 <button className="rollDiceCTA" type="button" onClick={this.getEnigme}> {this.state.result}</button>
@@ -304,15 +303,15 @@ class Plateau3 extends React.Component {
              <div className="dice2">
                  {pictureDice2}
             </div>
-         
-            <NavLink className="playCTA" to="/finalScreen"   >  END GAME!</NavLink> 
-            <NavLink className="playCTA" to="/plateau2"   >  Plateau 2</NavLink> 
+
+            <NavLink className="playCTA" to="/finalScreen"   >  END GAME!</NavLink>
+            <NavLink className="playCTA" to="/plateau2"   >  Plateau 2</NavLink>
         </div>
       </div>
       </section>
-    
+
     </section>
-     
+
     )
   }
 

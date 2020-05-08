@@ -5,7 +5,7 @@ class ShowSolutions extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      response: null
+      response: null,
     };
   }
 
@@ -17,9 +17,10 @@ class ShowSolutions extends React.Component {
     const isResponseCorrect =
       this.state.response === this.props.enigme.solution;
     if (isResponseCorrect) {
-      this.props.onCorrectResponse();
+      this.props.onCorrectResponse(); 
     } else {
       this.props.onIncorrectResponse();
+     
     }
   };
 
