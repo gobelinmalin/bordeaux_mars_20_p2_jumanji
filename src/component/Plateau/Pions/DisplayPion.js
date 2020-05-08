@@ -94,7 +94,7 @@ class DisplayPion extends React.Component {
   componentDidMount() { }
 
 
-  avancerPion1 = (e) => {
+  avancerPion1 = (e1, e2) => {
     const { diceOne, diceTwo } = this.props
     /*   let style = {
         marginTop: marginTop1, //max 270px <== à mettre en state pour que la condition soit prise en compte
@@ -111,8 +111,13 @@ class DisplayPion extends React.Component {
         }
    */
     let fakeDice = 1
-    console.log(e)
-    this.setState({ top1: e + fakeDice * 50 })
+    console.log(e1)
+    if (e1 > 270) {
+      this.setState({ left1: e2 + fakeDice * 50 })
+    }else{
+      this.setState({ top1: e1 + fakeDice * 50 })
+
+    }
 
 
 
@@ -130,8 +135,8 @@ class DisplayPion extends React.Component {
         <div className="containerTopPion">
           <div className="zonePion1">
             {/* {this.avancerPion1()} */}
-            <button onClick={() => this.avancerPion1(this.state.top1)}> ALLEZ UH!</button>
-            <div style={{ top: top1,left:left1, position: 'relative' }} className="containerPion1">
+            <button onClick={() => this.avancerPion1(top1, left1)}> ALLEZ UH!</button>
+            <div style={{ top: top1, left: left1, position: 'relative' }} className="containerPion1">
               {this.displayPion1()}
             </div>
           </div>
