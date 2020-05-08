@@ -1,10 +1,9 @@
-import React from 'react'
-import Pion1 from './Pion1'
-import Pion2 from './Pion2'
-import Pion3 from './Pion3'
-import Pion4 from './Pion4'
-import './Pion.css'
-
+import React from "react";
+import Pion1 from "./Pion1";
+import Pion2 from "./Pion2";
+import Pion3 from "./Pion3";
+import Pion4 from "./Pion4";
+import "./Pion.css";
 
 class DisplayPion extends React.Component {
   constructor(props) {
@@ -140,6 +139,7 @@ class DisplayPion extends React.Component {
             <div className="container2Pion2">
               {this.displayPion2()}
             </div>
+
           </div>
         </div>
         <div className="containerBottomPion">
@@ -156,7 +156,8 @@ class DisplayPion extends React.Component {
         </div>
       </div>
     )
+
   }
 }
 
-export default DisplayPion
+export default DisplayPion;
