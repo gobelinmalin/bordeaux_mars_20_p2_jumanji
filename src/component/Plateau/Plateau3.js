@@ -80,9 +80,7 @@ class Plateau3 extends React.Component {
     })
   }
 
-
-
-  render() {
+  diceOne = () => {
     let pictureDice1;
     if (this.state.dice1 === 1) {
       pictureDice1 = [<Dice1 />]
@@ -97,7 +95,10 @@ class Plateau3 extends React.Component {
     } else if (this.state.dice1 === 6) {
       pictureDice1 = [<Dice6 />]
     }
-
+    console.log(pictureDice1)
+    return pictureDice1
+  }
+  diceTwo = () => {
     let pictureDice2
     if (this.state.dice2 === 1) {
       pictureDice2 = [<Dice1 />]
@@ -112,8 +113,11 @@ class Plateau3 extends React.Component {
     } else if (this.state.dice2 === 6) {
       pictureDice2 = [<Dice6 />]
     }
+    console.log(pictureDice2)
+    return pictureDice2
+  }
 
-
+  render() {
     return (
     <section>
       <section>
@@ -201,7 +205,7 @@ class Plateau3 extends React.Component {
                             </div>
                             <div className="middle">
                                 <div className="displayPionContainer">
-                                  <DisplayPion />
+                                  <DisplayPion diceOne={this.diceOne()} diceTwo={this.diceTwo()} />
                                 </div>
                                 <div className="displayEnigme2Container">
                                   <DisplayEnigmeJ1 />
@@ -298,10 +302,10 @@ class Plateau3 extends React.Component {
                 <button className="rollDiceCTA" type="button" onClick={this.getEnigme}> {this.state.result}</button>
             </div>
             <div className="dice1">
-                {pictureDice1}
+                {this.diceOne()}
             </div>
              <div className="dice2">
-                 {pictureDice2}
+                 {this.diceTwo()}
             </div>
 
             <NavLink className="playCTA" to="/finalScreen"   >  END GAME!</NavLink>

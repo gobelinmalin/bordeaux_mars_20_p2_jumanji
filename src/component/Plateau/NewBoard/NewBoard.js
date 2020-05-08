@@ -117,3 +117,4 @@ pathPlayer = [1,2,3]
 1 => fonction IstileInPlayerPath .some renvoie true/false
 3 => fonction AddMatch renvoie un ID + résultat IstileInPlayerPath
 4 => fonction mapper updatedTileArray return tileArray this.setState ([tileArray: updatedArray])*/
+
