@@ -10,8 +10,8 @@ class DisplayPion extends React.Component {
     super(props)
     this.state = {
       selectedPion: localStorage.getItem('players'),
-      marginTop1: 0,
-      marginLeft1: 0,
+      top1: 0,
+      left1: 0,
     }
 
   }
@@ -111,8 +111,8 @@ class DisplayPion extends React.Component {
         }
    */
     let fakeDice = 1
-    console.log(e )
-    this.setState({marginTop1: e + fakeDice*50})
+    console.log(e)
+    this.setState({ top1: e + fakeDice * 50 })
 
 
 
@@ -124,16 +124,16 @@ class DisplayPion extends React.Component {
 
   render() {
     const { diceOne, diceTwo } = this.props
-
+    const { top1, left1 } = this.state
     return (
       <div className="containerPion">
         <div className="containerTopPion">
           <div className="zonePion1">
             {/* {this.avancerPion1()} */}
-            <button onClick={() => this.avancerPion1(this.state.marginTop1)}> ALLEZ UH!</button>
-            <div style={{ marginTop: this.state.marginTop1,position:'relative'}} className="containerPion1">
-      {this.displayPion1()}
-    </div>
+            <button onClick={() => this.avancerPion1(this.state.top1)}> ALLEZ UH!</button>
+            <div style={{ top: top1,left:left1, position: 'relative' }} className="containerPion1">
+              {this.displayPion1()}
+            </div>
           </div>
           <div className="zonePion2">
             <div className="container2Pion2">
