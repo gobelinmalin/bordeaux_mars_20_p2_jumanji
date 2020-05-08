@@ -18,3 +18,6 @@ const pathsPlayers = [
 ]
 
 export default pathsPlayers;
+
+
+//data-players
