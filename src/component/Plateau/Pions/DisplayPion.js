@@ -10,8 +10,9 @@ class DisplayPion extends React.Component {
     super(props)
     this.state = {
       selectedPion: localStorage.getItem('players'),
-      top1: 0,
+      top1: -25,
       left1: 0,
+      pathLeft : 4
     }
 
   }
@@ -110,16 +111,19 @@ class DisplayPion extends React.Component {
           this.setState({marginTop: marginTop1 + diceTest * 50})
         }
    */
-    let fakeDice = 1
-    console.log(e1)
-    if (e1 > 270) {
-      this.setState({ left1: e2 + fakeDice * 50 })
-    }else{
-      this.setState({ top1: e1 + fakeDice * 50 })
+    let dice = this.props.diceOne["0"]._owner.stateNode.state.dice1
+    let pathY = 155
+    let pathX = 40
+    this.setState(prvestate => ({pathLeft : Math.ceil(e1/60) +1 })) // calcul le nombre de case restante sur top1
+    console.log(e1, this.state.pathLeft, "TEST")
+
+    // si dice > 4 , dice = 4
+    if (e1 > pathY) {
+      this.setState({ left1: e2 + 40 })
+    } else {
+      this.setState({ top1: e1 + dice * 60 })
 
     }
-
-
 
   };
 
@@ -128,7 +132,10 @@ class DisplayPion extends React.Component {
   } */
 
   render() {
-    const { diceOne, diceTwo } = this.props
+    // const { diceOne, diceTwo } = this.props[""0""]._owner.stateNode.state.dice1
+    const dice_1 = this.props.diceOne["0"]._owner.stateNode.state.dice1
+    console.log(this.props.diceOne["0"]._owner.stateNode.state.dice1, "dice1")
+
     const { top1, left1 } = this.state
     return (
       <div className="containerPion">

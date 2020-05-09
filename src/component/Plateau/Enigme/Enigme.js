@@ -26,8 +26,8 @@ class Enigme extends React.Component {
     this.state = {
       enigme: sampleEnigme,
       actions: "",
-      dice1:"",
-      dice2:"",
+      dice1:0,
+      dice2:0,
       result:"Lancez les dès",
       dicePicture:"",
     };
@@ -45,7 +45,7 @@ class Enigme extends React.Component {
         })
     }
 }
-     
+
   getEnigme() {
     // Send the request
     axios.get('https://api-jumanji.herokuapp.com/api/cards')
@@ -61,10 +61,10 @@ class Enigme extends React.Component {
     actionFuir : <button className="enigmeCTA">S'enfuir</button>,
     dice1: Math.ceil(Math.random()*6),
     dice2: Math.ceil(Math.random()*6),
-  
- 
+
+
         });
-    }); 
+    });
 
   }
 
@@ -113,7 +113,7 @@ pictureDice2 = [<Dice6 />]
 
     return (
       <div className="container">
-            <div className="selectedPlayers"> 
+            <div className="selectedPlayers">
                 <TestEnfant />
             </div>
             <div className="containerBoule">
@@ -126,7 +126,7 @@ pictureDice2 = [<Dice6 />]
                     </div>
                     <div className="containerActionCTA">
                           <div className="CombattreCTA" onClick={this.getEscape}>
-                              {this.state.actionCombattre} 
+                              {this.state.actionCombattre}
                           </div>
                           <div className="FuirCTA" onClick={this.getEscape}>
                               {this.state.actionFuir}
@@ -138,7 +138,7 @@ pictureDice2 = [<Dice6 />]
                 <div className="CTA">
                     <button  className="rollDiceCTA" type="button" onClick={this.getEnigme}> {this.state.result}</button>
                 </div>
-                <div className="dice1"> 
+                <div className="dice1">
                     {pictureDice1}
                 </div>
                 <div className="dice2">

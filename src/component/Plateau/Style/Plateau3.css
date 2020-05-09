@@ -13,7 +13,7 @@
 }
 
 .element1 {
- 
+
     width: 100%;
     height: 180px;
     margin-bottom:-2%;
@@ -50,7 +50,7 @@
 
 
 .left {
-  
+
     width: 28%;
     height: 305px;
 
@@ -68,7 +68,7 @@
 }
 
 .right {
- 
+
     width: 28%;
     height: 305px;
 }
@@ -93,14 +93,14 @@
 
     width: 33%;
     height: 60px;
-   
+
 }
 
 
 .squareT1, .squareT2, .squareT3, .squareT4, .squareT5, .squareT6, .squareT7, .squareT8, .squareT9, .squareT10, .squareT11, .squareT12, .squareT13, .squareT14, .squareT15, .squareT16, .squareT17, .squareT18, .squareT19, .squareT20, .squareT21, .squareT22, .squareT23, .squareT24, .squareT25, .squareT26, .squareT27, .squareT28, .squareT29, .squareT30, .squareT31, .squareT32, .squareT33, .squareT34,
 .squareD1, .squareD2, .squareD3, .squareD4, .squareD5, .squareD6, .squareD7, .squareD8, .squareD9, .squareD10, .squareD11, .squareD12, .squareD13, .squareD14, .squareD15, .squareD16, .squareD17, .squareD18, .squareD19, .squareD20, .squareD21, .squareD22, .squareD23, .squareD24, .squareD25, .squareD26, .squareD27, .squareD28, .squareD29, .squareD30, .squareD31, .squareD32, .squareD33, .squareD34
  {
-   
+
     width: 25%;
     height: 60px;
 }
@@ -126,7 +126,7 @@
     border-left:solid;
     border-left-width: 0.5px;
     border-left-style: dashed;
-    
+
 }
 
 .squareR14 {
@@ -136,8 +136,8 @@
     border-top:solid;
     border-top-width: 0.5px;
     border-top-style: dashed;
-  
-   
+
+
 }
 
 
@@ -147,7 +147,7 @@
 }
 
 .squareR7 {
-  
+
     width: 33%;
     background-color:  rgba(245, 245, 220, 0.653);
 }
@@ -195,7 +195,7 @@
     width: 25%;
     height: 60px;
     background-color: rgba(245, 245, 220, 0.653);
- 
+
 }
 
 .squareD16 {
@@ -215,7 +215,7 @@
     height: 60px;
     background-color: rgba(245, 245, 220, 0.653);
     margin-left:-0.2%;
- 
+
 }
 
 .squareD2 {
@@ -228,7 +228,7 @@
     border-bottom:solid;
     border-bottom-width: 0.5px;
     border-bottom-style: dashed;
-  
+
 }
 
 .squareL14, .squareL11, .squareL2, .squareL5  {
@@ -239,7 +239,7 @@
     border-top-width: 0.5px;
     border-top-style: dashed;
     margin-left:4.5%;
-  
+
 }
 
  .squareL8  {
@@ -250,8 +250,8 @@
     border-top-width: 0.5px;
     border-top-style: dashed;
     margin-left:6%;
-  
-  
+
+
 }
 
 .squareL9  {
@@ -262,8 +262,8 @@
     border-left-width: 0.5px;
     border-left-style: dashed;
     margin-right:-3%;
-  
-  
+
+
 }
 
 .squareL14, .squareL15 {

@@ -30,8 +30,8 @@ class Plateau3 extends React.Component {
     this.state = {
       enigme: sampleEnigme,
       actions: "",
-      dice1: "",
-      dice2: "",
+      dice1: 1,
+      dice2: 1,
       result: "Lancez les dès",
       dicePicture: "",
     };
