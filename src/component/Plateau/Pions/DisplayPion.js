@@ -92,26 +92,11 @@ class DisplayPion extends React.Component {
     return pionNumber4
   }
 
-  componentDidMount() { }
-
-
   avancerPion1 = (e1, e2) => {
-    const { diceOne, diceTwo } = this.props
-    /*   let style = {
-        marginTop: marginTop1, //max 270px <== à mettre en state pour que la condition soit prise en compte
-        marginLeft: 0, // puis faire un setState dans un componentDidUpdate()
-        position: 'absolute',
-        width: '64px'
-      }
-      const diceTest = 3
-        if (marginTop1 > 270) {
 
-          this.setState({marginLeft: marginLeft1 + diceTest * 50})
-        }else{
-          this.setState({marginTop: marginTop1 + diceTest * 50})
-        }
-   */
-    let dice = this.props.diceOne["0"]._owner.stateNode.state.dice1
+    // let dice = this.props.diceOne["0"]._owner.stateNode.state.dice1
+    const {diceValue,getNewEnigmeAndSolutions} = this.props
+    let dice = diceValue
     let pathY = 155
     let pathX = 40
     this.setState(prvestate => ({pathLeft : Math.ceil(e1/60) +1 })) // calcul le nombre de case restante sur top1
@@ -124,26 +109,24 @@ class DisplayPion extends React.Component {
       this.setState({ top1: e1 + dice * 60 })
 
     }
-
   };
-
-  /* componentDidUpdate(){
-    return this.avancerPion1
-  } */
 
   render() {
     // const { diceOne, diceTwo } = this.props[""0""]._owner.stateNode.state.dice1
-    const dice_1 = this.props.diceOne["0"]._owner.stateNode.state.dice1
-    console.log(this.props.diceOne["0"]._owner.stateNode.state.dice1, "dice1")
 
+    /*const dice_1 = this.props.diceOne["0"]._owner.stateNode.state.dice1
+    console.log(this.props.diceOne["0"]._owner.stateNode.state.dice1, "dice1")
+    */
+    const {getNewEnigmeAndSolutions} = this.props
+    console.log({...this.props}, "PROPS")
     const { top1, left1 } = this.state
     return (
       <div className="containerPion">
         <div className="containerTopPion">
           <div className="zonePion1">
-            {/* {this.avancerPion1()} */}
-            <button onClick={() => this.avancerPion1(top1, left1)}> ALLEZ UH!</button>
-            <div style={{ top: top1, left: left1, position: 'relative' }} className="containerPion1">
+          {/* <button onClick={() => this.avancerPion1(top1, left1)}> ALLEZ UH!</button> */}
+            {/* <div style={{ top: top1, left: left1, position: 'relative' }} className="containerPion1"> */}
+            <div className="containerPion1">
               {this.displayPion1()}
             </div>
           </div>

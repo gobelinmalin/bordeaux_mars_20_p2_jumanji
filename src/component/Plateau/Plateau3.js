@@ -123,7 +123,7 @@ class Plateau3 extends React.Component {
       <section>
       <div className="container">
         <div className="selectedPlayers">
-    
+
         </div>
 
         <div className="containerBoard" >
@@ -205,10 +205,10 @@ class Plateau3 extends React.Component {
                             </div>
                             <div className="middle">
                                 <div className="displayPionContainer">
-                                  <DisplayPion diceOne={this.diceOne()} diceTwo={this.diceTwo()} />
+
                                 </div>
                                 <div className="displayEnigme2Container">
-                                  <DisplayEnigmeJ1 />
+                                  <DisplayEnigmeJ1/>
                                 </div>
 
 

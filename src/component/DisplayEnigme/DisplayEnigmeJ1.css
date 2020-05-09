@@ -1,12 +1,11 @@
 .containerGlobal {
     display:flex;
-    border-color: red;
-    border-style:solid;
     width:100%;
     margin-left:-36%;
-    margin-top:-22.5vh;
+    margin-top:-15vh;
     height: 100vh;
-    position: absolute
+    position: absolute;
+    z-index: -1;
 }
 
 
@@ -22,15 +21,16 @@
 }
 
 .solutions-enigme {
-    color: whitesmoke;  
+    color: whitesmoke;
     width: 62vw;
     display: flex;
     height: 33vh;
     margin-left:22%;
     margin-top:20vh;
-
-   
+    border-color:yellow;
+    border-style:solid;
 }
+
 ul {
     list-style: none;
   }
@@ -38,6 +38,7 @@ ul {
 .btn-enigme {
     margin-left: 50vw;
 }
+
 .enigmeContent2 {
     margin-left: -90vw;
     margin-top: 80px;
@@ -47,27 +48,30 @@ ul {
     flex-direction: column;
     align-items:center;
     color:rgb(34, 218, 61);
-   
 }
 
-.questionContent{
-   
-    height:50px;
-    width:20vw;
-}
 
 .showSolution {
     margin-bottom:3%;
     height:50vh;
     width:20vw;
 }
-  
-
-.diceContainer {
+.questionContent{
     border-color:red;
     border-style:solid;
-    margin-left:230%;
-    width:100%;
-    margin-top: -10vh;
+    height:50px;
+    width:20vw;
+}
+.diceContainer {
 
+    margin-left:420%;
+    width:100%;
+    margin-top:20%;
+
+}
+
+.leftSideContainer{
+
+    margin-top:8vh;
+    margin-top:8vh;
 }
