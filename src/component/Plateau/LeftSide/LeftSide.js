@@ -18,7 +18,7 @@ class LeftSide extends React.Component {
       let playerNumber
 
     if (this.state.selectedPlayers == "1") {
-    playerNumber = [ <Player1 message="hello"/> ]
+    playerNumber = [ <Player1 panicUpdate={this.props.panic}/> ]
     } else if (this.state.selectedPlayers == "2") {
       playerNumber = [ <Player2 /> ]
     } else if (this.state.selectedPlayers == "3") {

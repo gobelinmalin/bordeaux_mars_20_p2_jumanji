@@ -6,11 +6,12 @@ class ShowSolutions extends React.Component {
     super(props);
     this.state = {
       response: null,
+      buttonEnabled: false,
     };
   }
 
   onInputChange = event => {
-    this.setState({ response: event.target.value });
+    this.setState({ response: event.target.value, buttonEnabled: true });
   };
 
   onValidate = async () => {
@@ -41,7 +42,7 @@ class ShowSolutions extends React.Component {
             </li>
           ))}
         </ul>
-        <button onClick={this.onValidate}>Combattre</button>
+        <button onClick={this.onValidate} disabled={!this.state.buttonEnabled}>Combattre</button>
       </div>
     );
   }

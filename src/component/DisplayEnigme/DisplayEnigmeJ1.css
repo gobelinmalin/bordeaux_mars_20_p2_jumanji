@@ -1,3 +1,15 @@
+.containerGlobal {
+    display:flex;
+    border-color: red;
+    border-style:solid;
+    width:100%;
+    margin-left:-36%;
+    margin-top:-22.5vh;
+    height: 100vh;
+    position: absolute
+}
+
+
 .introJoueur{
     margin-top:25vh;
     width:60%;
@@ -14,6 +26,8 @@
     width: 62vw;
     display: flex;
     height: 33vh;
+    margin-left:22%;
+    margin-top:20vh;
 
    
 }

@@ -1,7 +1,7 @@
 .containerPlayer2 {
     border-color: rgba(255, 0, 0, 0);
     border-style: solid;
-    width: 100%;
+    width: 150%;
     height: 150px;
     background-image: url('judith-plateau.png');
     background-size: contain;
