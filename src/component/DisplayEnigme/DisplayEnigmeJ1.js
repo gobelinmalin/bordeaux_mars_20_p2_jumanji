@@ -19,7 +19,7 @@ class DisplayEnigmeJ1 extends React.Component {
       solutions: [],
       isEnigmeVisible: true,
       dice: 0,
-      count:0,
+      panicAllan:0,
       intro:
         (localStorage.getItem('players') === "1") || (localStorage.getItem('players') == "1,2") || (localStorage.getItem('players') == "1,2,3") || (localStorage.getItem('players') == "1,2,3,4") || (localStorage.getItem('players') == "1,3") || (localStorage.getItem('players') == "1,4")    ? "Allan Lance les dès" : ""
         || (localStorage.getItem('players') === "2") || (localStorage.getItem('players') === "2,3") || (localStorage.getItem('players') === "2,4") || (localStorage.getItem('players') === "2,3,4")? "Judith Lance les dès" : ""
@@ -72,7 +72,7 @@ class DisplayEnigmeJ1 extends React.Component {
      this.setState ({
        dice:Math.ceil(Math.random() * 2),isEnigmeVisible: true,
       intro:"",
-      count: this.state.count + 1
+   
     })
   };
 
@@ -82,7 +82,8 @@ class DisplayEnigmeJ1 extends React.Component {
           ...state,
           enigmeIndex: state.enigmeIndex + 1,
            isEnigmeVisible: false,
-           intro:(localStorage.getItem('players') === "1") ? "Bravo, relance les dès" : "" || (localStorage.getItem('players') === "1,2") ? "Bravo, Judith lance les dès" : ""
+           intro:(localStorage.getItem('players') === "1") ? "Bravo, relance les dès" : "" || (localStorage.getItem('players') === "1,2") ? "Bravo, Judith lance les dès" : "",
+           
           }));
   };
 
@@ -92,7 +93,8 @@ class DisplayEnigmeJ1 extends React.Component {
       ...state,
       enigmeIndex: state.enigmeIndex + 1,
        isEnigmeVisible: false,
-       intro: (localStorage.getItem('players') === "1") ? "t'est trop null, relance les dès" : "" || (localStorage.getItem('players') === "1,2") ? "T'est trop nul, Judith lance les dès" : ""
+       intro: (localStorage.getItem('players') === "1") ? "t'est trop null, relance les dès" : "",
+       panicAllan: this.state.panicAllan +10,
 
 
     }));
@@ -111,11 +113,25 @@ class DisplayEnigmeJ1 extends React.Component {
       pictureDice1 = [<Dice2 />]
     }
 
+    let panicBarAllan 
+      if (this.state.panicAllan === 0) {
+     panicBarAllan  = "panicJaugeA"
+     } else if (this.state.panicAllan === 10) {
+          panicBarAllan   = "panicJaugeB"
+     } else if (this.state.panicAllan === 20) {
+          panicBarAllan  = "panicJaugeC"
+     } else if (this.state.panicAllan === 30) {
+      panicBarAllan  = "panicJaugeD"
+ } else if (this.state.panicAllan === 40) {
+  panicBarAllan  = "panicJaugeE"
+  
+}
+
     return (
       <div className="containerGlobal">
 
         <div className="leftSideContainer">
-          <LeftSide />
+          <LeftSide panic={panicBarAllan}/>
         </div>
 
 

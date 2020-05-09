@@ -35,7 +35,7 @@ class Parent extends React.Component {
                <div className="panicPlayer1" >
                     
                </div>
-               <div className={panicBar}>
+               <div className={this.props.panicUpdate}>
                
                </div>
           </div>
