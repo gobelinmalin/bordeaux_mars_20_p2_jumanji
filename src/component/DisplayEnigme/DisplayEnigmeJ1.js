@@ -5,6 +5,7 @@ import DisplayEnigme from './DisplayEnigme';
 import './DisplayEnigmeJ1.css'
 import Dice1 from '../Plateau/RightSide/Dice1'
 import Dice2 from '../Plateau/RightSide/Dice2'
+import LeftSide from '../Plateau/LeftSide/LeftSide'
 
 
 
@@ -17,15 +18,16 @@ class DisplayEnigmeJ1 extends React.Component {
       enigmeIndex: 0,
       solutions: [],
       isEnigmeVisible: true,
-      dice: "",
-      intro: 
-        (localStorage.getItem('players') === "1") || (localStorage.getItem('players') == "1,2") || (localStorage.getItem('players') == "1,2,3") || (localStorage.getItem('players') == "1,2,3,4") || (localStorage.getItem('players') == "1,3") || (localStorage.getItem('players') == "1,4")    ? "Allan Lance les dès" : "" 
-        || (localStorage.getItem('players') === "2") || (localStorage.getItem('players') === "2,3") || (localStorage.getItem('players') === "2,4") || (localStorage.getItem('players') === "2,3,4")? "Judith Lance les dès" : "" 
-        || (localStorage.getItem('players') === "3") || (localStorage.getItem('players') === "3,4")   ? "Peter Lance les dès" : "" 
+      dice: 0,
+      count:0,
+      intro:
+        (localStorage.getItem('players') === "1") || (localStorage.getItem('players') == "1,2") || (localStorage.getItem('players') == "1,2,3") || (localStorage.getItem('players') == "1,2,3,4") || (localStorage.getItem('players') == "1,3") || (localStorage.getItem('players') == "1,4")    ? "Allan Lance les dès" : ""
+        || (localStorage.getItem('players') === "2") || (localStorage.getItem('players') === "2,3") || (localStorage.getItem('players') === "2,4") || (localStorage.getItem('players') === "2,3,4")? "Judith Lance les dès" : ""
+        || (localStorage.getItem('players') === "3") || (localStorage.getItem('players') === "3,4")   ? "Peter Lance les dès" : ""
         || (localStorage.getItem('players') === "4")  ? "Sarah Lance les dès" : ""
     };
 
- 
+
 
     this.getEnigmes().then(enigmes => {
       // On trie le tableau de manière aléatoire pour être certain de chaque partie aura un ordre de question différent
@@ -69,16 +71,18 @@ class DisplayEnigmeJ1 extends React.Component {
     }
      this.setState ({
        dice:Math.ceil(Math.random() * 2),isEnigmeVisible: true,
-      intro:""
+      intro:"",
+      count: this.state.count + 1
     })
   };
 
   onCorrectResponse = () => {
     // Quand la réponse est correct on passe à la suivante
-    this.setState(state => ({ 
+    this.setState(state => ({
           ...state,
           enigmeIndex: state.enigmeIndex + 1,
-           isEnigmeVisible: false
+           isEnigmeVisible: false,
+           intro:(localStorage.getItem('players') === "1") ? "Bravo, relance les dès" : "" || (localStorage.getItem('players') === "1,2") ? "Bravo, Judith lance les dès" : ""
           }));
   };
 
@@ -87,9 +91,12 @@ class DisplayEnigmeJ1 extends React.Component {
     this.setState(state => ({
       ...state,
       enigmeIndex: state.enigmeIndex + 1,
-       isEnigmeVisible: false
+       isEnigmeVisible: false,
+       intro: (localStorage.getItem('players') === "1") ? "t'est trop null, relance les dès" : "" || (localStorage.getItem('players') === "1,2") ? "T'est trop nul, Judith lance les dès" : ""
+
+
     }));
-    console.log("mauvaise réponse");
+
   };
 
   render() {
@@ -105,23 +112,25 @@ class DisplayEnigmeJ1 extends React.Component {
     }
 
     return (
-      <div>
-        
-          
-      
-          
+      <div className="containerGlobal">
+
+        <div className="leftSideContainer">
+          <LeftSide />
+        </div>
+
+
       <div className='solutions-enigme'>
           <div className="introJoueur" >
       {this.state.intro}
       </div>
         <button className='btn-enigme' onClick={this.getNewEnigmeAndSolutions}>Afficher enigme</button>
         {shouldShowEnigmeSection && (
-           
+
          <div className="enigmeContent2">
 
 
             <div className="questionContent">
-                
+
                 <DisplayEnigme className="enigme" enigme={this.state.enigme} />
                 <div className="diceContainer">
                 {pictureDice1}

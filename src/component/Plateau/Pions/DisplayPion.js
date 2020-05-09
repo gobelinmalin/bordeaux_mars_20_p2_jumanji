@@ -10,6 +10,31 @@ class DisplayPion extends React.Component {
     super(props)
     this.state = {
       selectedPion: localStorage.getItem('players'),
+      style1: {
+        marginTop: 150, //max 270px <== à mettre en state pour que la condition soit prise en compte
+        marginLeft: 0, // puis faire un setState dans un componentDidUpdate()
+        position: 'absolute',
+        width: '64px'
+      },
+      style2: {
+        marginTop: 0, //max 270px <== à mettre en state pour que la condition soit prise en compte
+        marginLeft: 0, // puis faire un setState dans un componentDidUpdate()
+        position: 'absolute',
+        width: '64px'
+      },
+      style3: {
+        marginTop: 0, //max 270px <== à mettre en state pour que la condition soit prise en compte
+        marginLeft: 0, // puis faire un setState dans un componentDidUpdate()
+        position: 'absolute',
+        width: '64px'
+      },
+      style4: {
+        marginTop: 0, //max 270px <== à mettre en state pour que la condition soit prise en compte
+        marginLeft: 0, // puis faire un setState dans un componentDidUpdate()
+        position: 'absolute',
+        width: '64px'
+      },
+
     }
 
   }
@@ -117,16 +142,19 @@ class DisplayPion extends React.Component {
 
   };
 
+
+
   render() {
     const { diceOne, diceTwo } = this.props
 
-    console.log(diceOne, "D1")
+    // console.log(diceOne, "D1")
 
     return (
       <div className="containerPion">
         <div className="containerTopPion">
           <div className="zonePion1">
-            {this.avancerPion1()}
+
+           {this.avancerPion1()}
           </div>
           <div className="zonePion2">
             <div className="container2Pion2">

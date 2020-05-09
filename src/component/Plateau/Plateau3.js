@@ -123,7 +123,7 @@ class Plateau3 extends React.Component {
       <section>
       <div className="container">
         <div className="selectedPlayers">
-            <LeftSide />
+    
         </div>
 
         <div className="containerBoard" >
