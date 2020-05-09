@@ -7,14 +7,6 @@ import Dice1 from '../Plateau/RightSide/Dice1'
 import Dice2 from '../Plateau/RightSide/Dice2'
 import LeftSide from '../Plateau/LeftSide/LeftSide'
 import DisplayPion from '../Plateau/Pions/DisplayPion'
-import Pion1 from "../Plateau/Pions/Pion1";
-import Pion2 from "../Plateau/Pions/Pion2";
-import Pion3 from "../Plateau/Pions/Pion3";
-import Pion4 from "../Plateau/Pions/Pion4";
-import "../Plateau/Pions/Pion.css";
-
-
-
 
 class DisplayEnigmeJ1 extends React.Component {
   constructor(props) {
@@ -31,7 +23,7 @@ class DisplayEnigmeJ1 extends React.Component {
           || (localStorage.getItem('players') === "2") || (localStorage.getItem('players') === "2,3") || (localStorage.getItem('players') === "2,4") || (localStorage.getItem('players') === "2,3,4") ? "Judith Lance les dès" : ""
             || (localStorage.getItem('players') === "3") || (localStorage.getItem('players') === "3,4") ? "Peter Lance les dès" : ""
               || (localStorage.getItem('players') === "4") ? "Sarah Lance les dès" : "",
-      top1: -25,
+      top1: 45,
       left1: 0,
       pathLeft: 4
     };
@@ -40,100 +32,6 @@ class DisplayEnigmeJ1 extends React.Component {
       this.state.enigmes = enigmes.sort(() => Math.random() - 0.5);
     });
   }
-
-  displayPion1 = () => {
-    let pionNumber1
-    if (this.state.selectedPion == "1") {
-      pionNumber1 = [<Pion1 />]
-    } else if (this.state.selectedPion == "1,2") {
-      pionNumber1 = [<Pion1 />]
-    } else if (this.state.selectedPion == "1,3") {
-      pionNumber1 = [<Pion1 />]
-    } else if (this.state.selectedPion == "1,4") {
-      pionNumber1 = [<Pion1 />]
-    } else if (this.state.selectedPion == "1,2,3") {
-      pionNumber1 = [<Pion1 />]
-    } else if (this.state.selectedPion == "1,2,3,4") {
-      pionNumber1 = [<Pion1 />]
-    }
-
-    return pionNumber1
-  }
-  displayPion2 = () => {
-    let pionNumber2
-    if (this.state.selectedPion == "2") {
-      pionNumber2 = [<Pion2 />]
-    } else if (this.state.selectedPion == "1,2") {
-      pionNumber2 = [<Pion2 />]
-    } else if (this.state.selectedPion == "2,3") {
-      pionNumber2 = [<Pion2 />]
-    } else if (this.state.selectedPion == "2,4") {
-      pionNumber2 = [<Pion2 />]
-    } else if (this.state.selectedPion == "1,2,3") {
-      pionNumber2 = [<Pion2 />]
-    } else if (this.state.selectedPion == "1,2,3,4") {
-      pionNumber2 = [<Pion2 />]
-    }
-
-    return pionNumber2
-  }
-  displayPion3 = () => {
-    let pionNumber3
-    if (this.state.selectedPion == "3") {
-      pionNumber3 = [<Pion3 />]
-    } else if (this.state.selectedPion == "1,3") {
-      pionNumber3 = [<Pion3 />]
-    } else if (this.state.selectedPion == "2,3") {
-      pionNumber3 = [<Pion3 />]
-    } else if (this.state.selectedPion == "3,4") {
-      pionNumber3 = [<Pion3 />]
-    } else if (this.state.selectedPion == "1,2,3") {
-      pionNumber3 = [<Pion3 />]
-    } else if (this.state.selectedPion == "1,2,3,4") {
-      pionNumber3 = [<Pion3 />]
-    } else if (this.state.selectedPion == "2,3,4") {
-      pionNumber3 = [<Pion3 />]
-    }
-    return pionNumber3
-  }
-  displayPion4 = () => {
-    let pionNumber4
-    if (this.state.selectedPion == "4") {
-      pionNumber4 = [<Pion4 />]
-    } else if (this.state.selectedPion == "1,4") {
-      pionNumber4 = [<Pion4 />]
-    } else if (this.state.selectedPion == "2,4") {
-      pionNumber4 = [<Pion4 />]
-    } else if (this.state.selectedPion == "3,4") {
-      pionNumber4 = [<Pion4 />]
-    } else if (this.state.selectedPion == "1,2,4") {
-      pionNumber4 = [<Pion4 />]
-    } else if (this.state.selectedPion == "1,2,3,4") {
-      pionNumber4 = [<Pion4 />]
-    } else if (this.state.selectedPion == "2,3,4") {
-      pionNumber4 = [<Pion4 />]
-    }
-    return pionNumber4
-  }
-
-  avancerPion1 = (e1, e2) => {
-
-    // let dice = this.props.diceOne["0"]._owner.stateNode.state.dice1
-    const { diceValue, getNewEnigmeAndSolutions } = this.props
-    let dice = diceValue
-    let pathY = 155
-    let pathX = 40
-    this.setState(prvestate => ({ pathLeft: Math.ceil(e1 / 60) + 1 })) // calcul le nombre de case restante sur top1
-    console.log(e1, this.state.pathLeft, "TEST")
-
-    // si dice > 4 , dice = 4
-    if (e1 > pathY) {
-      this.setState({ left1: e2 + 40 })
-    } else {
-      this.setState({ top1: e1 + dice * 60 })
-
-    }
-  };
 
   getEnigmes = async () => {
     // Send the request
@@ -158,7 +56,7 @@ class DisplayEnigmeJ1 extends React.Component {
     );
   };
 
-  getNewEnigmeAndSolutions = async (e1,e2) => {
+  getNewEnigmeAndSolutions = async (e1, e2) => {
     const index = this.state.enigmeIndex;
     // On vérifie que l'index dans le tableux existe
     if (index < this.state.enigmes.length) {
@@ -176,7 +74,7 @@ class DisplayEnigmeJ1 extends React.Component {
     })
 
     let dice = this.state.dice
-    let pathY = 155
+    let pathY = 240
     let pathX = 40
     this.setState(prvestate => ({ pathLeft: Math.ceil(e1 / 60) + 1 })) // calcul le nombre de case restante sur top1
     console.log(e1, this.state.pathLeft, "TEST")
@@ -257,24 +155,22 @@ class DisplayEnigmeJ1 extends React.Component {
             <div className="introJoueur" >
               {this.state.intro}
             </div>
-            <button className='btn-enigme' onClick={()=>this.getNewEnigmeAndSolutions(this.state.top1,this.state.left1)}>Afficher enigme</button>
+            <button className='btn-enigme' onClick={() => this.getNewEnigmeAndSolutions(this.state.top1, this.state.left1)}>Afficher enigme</button>
             {shouldShowEnigmeSection && (
 
               <div className="enigmeContent2">
 
 
                 <div className="questionContent">
-
                   < DisplayEnigme
                     className="enigme"
                     enigme={this.state.enigme}
-
                   />
                   <div className="diceContainer">
                     {pictureDice1}
                   </div>
-
                 </div>
+
                 <div className="showSolution">
                   <ShowSolutions
                     enigme={this.state.enigme}
@@ -285,14 +181,13 @@ class DisplayEnigmeJ1 extends React.Component {
                 </div>
               </div>
             )}
-
-
           </div>
         </div>
-        <div style={{ top: top1, left: left1, position: 'relative' }} className="containerDisplayPion2">
-          <DisplayPion/>
+        <div
+          style={{ top: top1, left: left1, position: 'relative' }}
+          className="containerDisplayPion2">
+          <DisplayPion />
         </div>
-
       </div>
     );
   }

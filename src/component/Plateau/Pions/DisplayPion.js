@@ -10,9 +10,6 @@ class DisplayPion extends React.Component {
     super(props)
     this.state = {
       selectedPion: localStorage.getItem('players'),
-      top1: -25,
-      left1: 0,
-      pathLeft : 4
     }
 
   }
@@ -92,40 +89,12 @@ class DisplayPion extends React.Component {
     return pionNumber4
   }
 
-  avancerPion1 = (e1, e2) => {
-
-    // let dice = this.props.diceOne["0"]._owner.stateNode.state.dice1
-    const {diceValue,getNewEnigmeAndSolutions} = this.props
-    let dice = diceValue
-    let pathY = 155
-    let pathX = 40
-    this.setState(prvestate => ({pathLeft : Math.ceil(e1/60) +1 })) // calcul le nombre de case restante sur top1
-    console.log(e1, this.state.pathLeft, "TEST")
-
-    // si dice > 4 , dice = 4
-    if (e1 > pathY) {
-      this.setState({ left1: e2 + 40 })
-    } else {
-      this.setState({ top1: e1 + dice * 60 })
-
-    }
-  };
-
   render() {
-    // const { diceOne, diceTwo } = this.props[""0""]._owner.stateNode.state.dice1
 
-    /*const dice_1 = this.props.diceOne["0"]._owner.stateNode.state.dice1
-    console.log(this.props.diceOne["0"]._owner.stateNode.state.dice1, "dice1")
-    */
-    const {getNewEnigmeAndSolutions} = this.props
-    console.log({...this.props}, "PROPS")
-    const { top1, left1 } = this.state
     return (
       <div className="containerPion">
         <div className="containerTopPion">
           <div className="zonePion1">
-          {/* <button onClick={() => this.avancerPion1(top1, left1)}> ALLEZ UH!</button> */}
-            {/* <div style={{ top: top1, left: left1, position: 'relative' }} className="containerPion1"> */}
             <div className="containerPion1">
               {this.displayPion1()}
             </div>
@@ -151,7 +120,6 @@ class DisplayPion extends React.Component {
         </div>
       </div>
     )
-
   }
 }
 
