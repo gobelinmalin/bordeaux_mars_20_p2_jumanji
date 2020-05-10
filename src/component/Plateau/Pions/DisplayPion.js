@@ -16,17 +16,17 @@ class DisplayPion extends React.Component {
 
   displayPion1 = () => {
     let pionNumber1
-    if (this.state.selectedPion == "1") {
+    if (this.state.selectedPion === '1') {
       pionNumber1 = [<Pion1 />]
-    } else if (this.state.selectedPion == "1,2") {
+    } else if (this.state.selectedPion === '1,2') {
       pionNumber1 = [<Pion1 />]
-    } else if (this.state.selectedPion == "1,3") {
+    } else if (this.state.selectedPion === '1,3') {
       pionNumber1 = [<Pion1 />]
-    } else if (this.state.selectedPion == "1,4") {
+    } else if (this.state.selectedPion === '1,4') {
       pionNumber1 = [<Pion1 />]
-    } else if (this.state.selectedPion == "1,2,3") {
+    } else if (this.state.selectedPion === '1,2,3') {
       pionNumber1 = [<Pion1 />]
-    } else if (this.state.selectedPion == "1,2,3,4") {
+    } else if (this.state.selectedPion === '1,2,3,4') {
       pionNumber1 = [<Pion1 />]
     }
 
@@ -34,17 +34,17 @@ class DisplayPion extends React.Component {
   }
   displayPion2 = () => {
     let pionNumber2
-    if (this.state.selectedPion == "2") {
+    if (this.state.selectedPion === '2') {
       pionNumber2 = [<Pion2 />]
-    } else if (this.state.selectedPion == "1,2") {
+    } else if (this.state.selectedPion === '1,2') {
       pionNumber2 = [<Pion2 />]
-    } else if (this.state.selectedPion == "2,3") {
+    } else if (this.state.selectedPion === '2,3') {
       pionNumber2 = [<Pion2 />]
-    } else if (this.state.selectedPion == "2,4") {
+    } else if (this.state.selectedPion === '2,4') {
       pionNumber2 = [<Pion2 />]
-    } else if (this.state.selectedPion == "1,2,3") {
+    } else if (this.state.selectedPion === '1,2,3') {
       pionNumber2 = [<Pion2 />]
-    } else if (this.state.selectedPion == "1,2,3,4") {
+    } else if (this.state.selectedPion === '1,2,3,4') {
       pionNumber2 = [<Pion2 />]
     }
 
@@ -90,12 +90,18 @@ class DisplayPion extends React.Component {
   }
 
   render() {
-
     return (
       <div className="containerPion">
         <div className="containerTopPion">
           <div className="zonePion1">
-            <div className="containerPion1">
+            <div
+              className="containerPion1"
+              style={{
+                top: this.props.p1TOP,
+                left: this.props.p1LEFT,
+                position: 'relative',
+                border: 'solid orange'
+              }}>
               {this.displayPion1()}
             </div>
           </div>

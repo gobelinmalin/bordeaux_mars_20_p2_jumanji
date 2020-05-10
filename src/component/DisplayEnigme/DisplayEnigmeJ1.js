@@ -25,7 +25,9 @@ class DisplayEnigmeJ1 extends React.Component {
               || (localStorage.getItem('players') === "4") ? "Sarah Lance les dès" : "",
       top1: 45,
       left1: 0,
-      pathLeft: 4
+      pathLeft: 4,
+      top2: 45,
+      right2: 0
     };
     this.getEnigmes().then(enigmes => {
       // On trie le tableau de manière aléatoire pour être certain de chaque partie aura un ordre de question différent
@@ -56,7 +58,7 @@ class DisplayEnigmeJ1 extends React.Component {
     );
   };
 
-  getNewEnigmeAndSolutions = async (e1, e2) => {
+  getNewEnigmeAndSolutions = async (p1Top, p1Left, p2Top, p2Right) => {
     const index = this.state.enigmeIndex;
     // On vérifie que l'index dans le tableux existe
     if (index < this.state.enigmes.length) {
@@ -76,16 +78,23 @@ class DisplayEnigmeJ1 extends React.Component {
     let dice = this.state.dice
     let pathY = 240
     let pathX = 40
-    this.setState(prvestate => ({ pathLeft: Math.ceil(e1 / 60) + 1 })) // calcul le nombre de case restante sur top1
-    console.log(e1, this.state.pathLeft, "TEST")
+    this.setState(prvestate => ({ pathLeft: Math.ceil(p1Top / 60) + 1 })) // calcul le nombre de case restante sur top1
+    console.log(p1Top, this.state.pathLeft, "TEST")
 
     // si dice > 4 , dice = 4
-    if (e1 > pathY) {
-      this.setState({ left1: e2 + 40 })
+    if (p1Top > pathY) {
+      this.setState({ left1: p1Left + 40 })
     } else {
-      this.setState({ top1: e1 + dice * 60 })
-
+      this.setState({ top1: p1Top + dice * 60 })
     }
+
+    if (p2Top > pathY) {
+      this.setState({ right2: p2Right - 40 })
+    } else {
+      this.setState({ top2: p2Top + dice * 60 })
+    }
+
+
   };
 
   onCorrectResponse = () => {
@@ -116,6 +125,7 @@ class DisplayEnigmeJ1 extends React.Component {
   render() {
 
     const { top1, left1 } = this.state
+    const { top2, right2 } = this.state
 
     const shouldShowEnigmeSection =
       this.state.enigme && this.state.isEnigmeVisible;
@@ -155,39 +165,47 @@ class DisplayEnigmeJ1 extends React.Component {
             <div className="introJoueur" >
               {this.state.intro}
             </div>
-            <button className='btn-enigme' onClick={() => this.getNewEnigmeAndSolutions(this.state.top1, this.state.left1)}>Afficher enigme</button>
-            {shouldShowEnigmeSection && (
+            <button className='btn-enigme' onClick={() => this
+              .getNewEnigmeAndSolutions(
+                this.state.top1,
+                this.state.left1
 
-              <div className="enigmeContent2">
+
+              )}>Afficher enigme</button>
+            {
+              shouldShowEnigmeSection && (
+
+                <div className="enigmeContent2">
 
 
-                <div className="questionContent">
-                  < DisplayEnigme
-                    className="enigme"
-                    enigme={this.state.enigme}
-                  />
-                  <div className="diceContainer">
-                    {pictureDice1}
+                  <div className="questionContent">
+                    <DisplayEnigme
+                      className="enigme"
+                      enigme={this.state.enigme}
+                    />
+                    <div className="diceContainer">
+                      {pictureDice1}
+                    </div>
+                  </div>
+
+                  <div className="showSolution">
+                    <ShowSolutions
+                      enigme={this.state.enigme}
+                      solutions={this.state.solutions}
+                      onCorrectResponse={this.onCorrectResponse}
+                      onIncorrectResponse={this.onIncorrectResponse}
+                    />
                   </div>
                 </div>
-
-                <div className="showSolution">
-                  <ShowSolutions
-                    enigme={this.state.enigme}
-                    solutions={this.state.solutions}
-                    onCorrectResponse={this.onCorrectResponse}
-                    onIncorrectResponse={this.onIncorrectResponse}
-                  />
-                </div>
-              </div>
-            )}
+              )}
           </div>
         </div>
-        <div
-          style={{ top: top1, left: left1, position: 'relative' }}
-          className="containerDisplayPion2">
-          <DisplayPion />
-        </div>
+          <div>
+            <DisplayPion
+            p1TOP={this.state.top1}
+            p1LEFT={this.state.left1} />
+          </div>
+
       </div>
     );
   }
