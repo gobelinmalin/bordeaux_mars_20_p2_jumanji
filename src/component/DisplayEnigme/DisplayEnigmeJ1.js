@@ -6,6 +6,8 @@ import './DisplayEnigmeJ1.css'
 import Dice1 from '../Plateau/RightSide/Dice1'
 import Dice2 from '../Plateau/RightSide/Dice2'
 import LeftSide from '../Plateau/LeftSide/LeftSide'
+import { CountdownCircleTimer } from 'react-countdown-circle-timer'
+
 
 
 
@@ -20,6 +22,7 @@ class DisplayEnigmeJ1 extends React.Component {
       isEnigmeVisible: true,
       dice: 0,
       panicAllan:0,
+      test: 0,
       intro:
         (localStorage.getItem('players') === "1") || (localStorage.getItem('players') == "1,2") || (localStorage.getItem('players') == "1,2,3") || (localStorage.getItem('players') == "1,2,3,4") || (localStorage.getItem('players') == "1,3") || (localStorage.getItem('players') == "1,4")    ? "Allan Lance les dès" : ""
         || (localStorage.getItem('players') === "2") || (localStorage.getItem('players') === "2,3") || (localStorage.getItem('players') === "2,4") || (localStorage.getItem('players') === "2,3,4")? "Judith Lance les dès" : ""
@@ -67,7 +70,7 @@ class DisplayEnigmeJ1 extends React.Component {
       // On récupère les solutions associé à l'énigme
       const solutions = await this.getSolutions(enigme);
       // On stock ça dans notre state pour remettre à jour la vue (render)
-      this.setState({ enigme, solutions });
+      this.setState({ enigme, solutions});
     }
      this.setState ({
        dice:Math.ceil(Math.random() * 2),isEnigmeVisible: true,
@@ -101,6 +104,27 @@ class DisplayEnigmeJ1 extends React.Component {
 
   };
 
+
+  renderTime = ({ remainingTime }) => {
+    if (remainingTime === 0) {
+   return <div className="timesUp"> 
+            <div className="text1TimesUp">Trop tard!</div>  
+            <div className="text2TimesUp"> Relance les dès</div>
+          </div>
+     
+    }
+  
+    return (
+      <div className="timer">
+        <div className="text"></div>
+        
+      </div>
+    );
+  };
+ 
+
+ 
+
   render() {
     const shouldShowEnigmeSection =
       this.state.enigme && this.state.isEnigmeVisible;
@@ -132,6 +156,7 @@ class DisplayEnigmeJ1 extends React.Component {
 
         <div className="leftSideContainer">
           <LeftSide panic={panicBarAllan}/>
+          {this.state.test}
         </div>
 
 
@@ -146,11 +171,30 @@ class DisplayEnigmeJ1 extends React.Component {
 
 
             <div className="questionContent">
-
+            <div className="timerContainer">
+                <CountdownCircleTimer className="timer"
+                    isPlaying
+                    duration={5}
+                    colors={[["#01D758", 0.33], ["#01D758", 0.33], ["#A30000"]]}
+                    onComplete={() => this.setState ({
+                      panicAllan : this.state.panicAllan +10,
+                      isEnigmeVisible: false,
+                      intro: "Trop tard, relance les dès",
+                      test : this.state.test +10,
+                    })}
+                    size= {362}
+                    trailColor={"#AA892D"}
+                  >
+                {this.renderTime}
+                  </CountdownCircleTimer>
+             </div>
+     
+          
                 <DisplayEnigme className="enigme" enigme={this.state.enigme} />
                 <div className="diceContainer">
                 {pictureDice1}
                 </div>
+               
 
             </div>
             <div className="showSolution">
@@ -165,6 +209,9 @@ class DisplayEnigmeJ1 extends React.Component {
         )}
         <di />
 
+      </div>
+      <div className="timer-wrapper">
+        
       </div>
       </div>
     );
