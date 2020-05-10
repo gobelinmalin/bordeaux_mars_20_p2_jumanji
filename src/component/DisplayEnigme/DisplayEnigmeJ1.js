@@ -139,7 +139,7 @@ class DisplayEnigmeJ1 extends React.Component {
           <div className="introJoueur" >
       {this.state.intro}
       </div>
-        <button className='btn-enigme' onClick={this.getNewEnigmeAndSolutions}>Afficher enigme</button>
+        <button className='btn-enigme' onClick={this.getNewEnigmeAndSolutions}>Lancer les dès</button>
         {shouldShowEnigmeSection && (
 
          <div className="enigmeContent2">

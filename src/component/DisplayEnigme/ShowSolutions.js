@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import './ShowSolution.css'
 
 class ShowSolutions extends React.Component {
   constructor(props) {
@@ -28,7 +29,7 @@ class ShowSolutions extends React.Component {
   render() {
     return (
       <div>
-        <ul>
+        <ul className="solutionEnigme2">
           {this.props.solutions.map(solution => (
             <li key={solution.text}>
               <input
@@ -42,7 +43,7 @@ class ShowSolutions extends React.Component {
             </li>
           ))}
         </ul>
-        <button onClick={this.onValidate} disabled={!this.state.buttonEnabled}>Combattre</button>
+        <button className="combattreCTA2" onClick={this.onValidate} disabled={!this.state.buttonEnabled}>Combattre</button>
       </div>
     );
   }

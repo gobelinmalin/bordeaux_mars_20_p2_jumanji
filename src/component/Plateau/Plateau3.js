@@ -297,20 +297,7 @@ class Plateau3 extends React.Component {
                     </div>
 
 
-        <div className="containerRollDice">
-            <div className="CTA">
-                <button className="rollDiceCTA" type="button" onClick={this.getEnigme}> {this.state.result}</button>
-            </div>
-            <div className="dice1">
-                {this.diceOne()}
-            </div>
-             <div className="dice2">
-                 {this.diceTwo()}
-            </div>
-
-            <NavLink className="playCTA" to="/finalScreen"   >  END GAME!</NavLink>
-            <NavLink className="playCTA" to="/plateau2"   >  Plateau 2</NavLink>
-        </div>
+       
       </div>
       </section>
 
