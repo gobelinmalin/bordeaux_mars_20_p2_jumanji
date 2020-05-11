@@ -7,7 +7,7 @@
     width: 20%
 }
 .containerBoard{
-    margin-top:1%;
+    margin-top:30%;
     width: 60%;
     height: 100vh;
 }
@@ -84,7 +84,7 @@
 
 
 .middle {
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0);
     border-radius: 50%;
 }
 
