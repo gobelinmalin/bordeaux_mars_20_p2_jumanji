@@ -57,7 +57,7 @@
 }
 
 .middle {
-    border-color:#AA892D;
+    border-color:rgba(170, 137, 45, 0);
     border-style: solid;
     border-width: 15px;
     width: 46%;

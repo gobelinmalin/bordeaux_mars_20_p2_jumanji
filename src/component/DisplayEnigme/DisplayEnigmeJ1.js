@@ -2,11 +2,13 @@ import React from "react";
 import axios from "axios";
 import ShowSolutions from "./ShowSolutions";
 import DisplayEnigme from './DisplayEnigme';
+import EndPlayerCard from "../GameEnd/EndPlayerCard";
 import './DisplayEnigmeJ1.css'
 import Dice1 from '../Plateau/RightSide/Dice1'
 import Dice2 from '../Plateau/RightSide/Dice2'
 import LeftSide from '../Plateau/LeftSide/LeftSide'
 import { CountdownCircleTimer } from 'react-countdown-circle-timer'
+import { Route, Redirect } from 'react-router-dom';
 
 
 
@@ -21,8 +23,8 @@ class DisplayEnigmeJ1 extends React.Component {
       solutions: [],
       isEnigmeVisible: true,
       dice: 0,
-      panicAllan: 0,
-      panicJudith: 0,
+      panicAllan:0,
+      redirect: null,
       test: 0,
       intro:
         (localStorage.getItem('players') === "1") || (localStorage.getItem('players') == "1,2") || (localStorage.getItem('players') == "1,2,3") || (localStorage.getItem('players') == "1,2,3,4") || (localStorage.getItem('players') == "1,3") || (localStorage.getItem('players') == "1,4")    ? "Allan Lance les dès" : ""
@@ -164,21 +166,9 @@ class DisplayEnigmeJ1 extends React.Component {
           panicBarAllan  = "panicJaugeC"
      } else if (this.state.panicAllan === 30) {
       panicBarAllan  = "panicJaugeD"
-     } else if (this.state.panicAllan === 40) {
-      panicBarAllan  = "panicJaugeE" 
-     }
-
-let panicBarJudith 
-if (this.state.panicJudith  === 0) {
-  panicBarJudith   = "panicJaugeA"
-} else if (this.state.panicJudith  === 10) {
-  panicBarJudith    = "panicJaugeB"
-} else if (this.state.panicJudith  === 20) {
-  panicBarJudith   = "panicJaugeC"
-} else if (this.state.panicJudith  === 30) {
-  panicBarJudith   = "panicJaugeD"
-} else if (this.state.panicJudith  === 40) {
-  panicBarJudith   = "panicJaugeE" 
+ } else if (this.state.panicAllan === 40) {
+    return  <Redirect to="/finalScreen" />
+  
 }
 
     return (
