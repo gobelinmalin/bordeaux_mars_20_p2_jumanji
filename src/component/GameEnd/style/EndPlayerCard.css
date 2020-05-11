@@ -13,9 +13,37 @@
   animation: animate-drum 2s linear infinite;
 }
 
-.CharacterPicLost {
-  width: 100%;
-  height: 76%;
+.CharacterPicLost2 {
+  margin-left: -250%;
+  width: 158%;
+  height: 40vh;
+  margin-bottom: 4%;
+  background: #071a0da6;
+  border: 2px solid #ffe055;
+  animation: animate-drum 2s linear infinite;
+}
+.CharacterPicLost2 {
+  margin-left: -250%;
+  width: 158%;
+  height: 147%;
+  margin-bottom: 4%;
+  background: #071a0da6;
+  border: 2px solid #ffe055;
+  animation: animate-drum 2s linear infinite;
+}
+.CharacterPicLost3 {
+  margin-left: -250%;
+  width: 158%;
+  height: 147%;
+  margin-bottom: 4%;
+  background: #071a0da6;
+  border: 2px solid #ffe055;
+  animation: animate-drum 2s linear infinite;
+}
+.CharacterPicLost4 {
+  margin-left: -250%;
+  width: 158%;
+  height: 147%;
   margin-bottom: 4%;
   background: #071a0da6;
   border: 2px solid #ffe055;
@@ -23,7 +51,7 @@
 }
 
 .CharacterNameWin {
-  width: 100%;
+  width: 158%;
   height: 20%;
   background: #071a0da6;
   border: 2px solid #4fb415;
@@ -31,8 +59,36 @@
   color: white;
 }
 
-.CharacterNameLost {
-  width: 100%;
+.CharacterNameLost1 {
+  margin-left: -250%;
+  width: 158%;
+  height: 20%;
+  background: #071a0da6;
+  border: 2px solid #ffe055;
+  box-shadow: 0 20px 50px #ffe055;
+  color: white;
+}
+.CharacterNameLost2 {
+  margin-left: -250%;
+  width: 158%;
+  height: 20%;
+  background: #071a0da6;
+  border: 2px solid #ffe055;
+  box-shadow: 0 20px 50px #ffe055;
+  color: white;
+}
+.CharacterNameLost2 {
+  margin-left: -250%;
+  width: 158%;
+  height: 20%;
+  background: #071a0da6;
+  border: 2px solid #ffe055;
+  box-shadow: 0 20px 50px #ffe055;
+  color: white;
+}
+.CharacterNameLost4 {
+  margin-left: -250%;
+  width: 158%;
   height: 20%;
   background: #071a0da6;
   border: 2px solid #ffe055;
@@ -57,4 +113,8 @@
     100%{
       box-shadow: 0 0px 5px #77e736,  0 0px px #77e736;
   }
+}
+
+.endPlayer1pic {
+  width: 60%;
 }
