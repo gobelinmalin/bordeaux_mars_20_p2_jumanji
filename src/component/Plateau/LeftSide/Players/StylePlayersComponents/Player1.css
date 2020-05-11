@@ -50,6 +50,7 @@
     width: 2.7vw;
     border-radius: 10px;
     margin-left:18%;
+    transition-duration: 5s;
 }
 
 .panicJaugeC{
@@ -59,6 +60,7 @@
     width: 5.6vw;
     border-radius: 10px;
     margin-left:18%;
+    transition-duration: 5s;
 }
 
 .panicJaugeD{
@@ -68,6 +70,7 @@
     width: 8.5vw;
     border-radius: 10px;
     margin-left:18%;
+    transition-duration: 5s;
 }
 
 .panicJaugeE{
@@ -77,6 +80,7 @@
     width: 10.9vw;
     border-radius: 10px;
     margin-left:18%;
+    transition-duration: 5s;
 }
 
 

@@ -21,7 +21,8 @@ class DisplayEnigmeJ1 extends React.Component {
       solutions: [],
       isEnigmeVisible: true,
       dice: 0,
-      panicAllan:0,
+      panicAllan: 0,
+      panicJudith: 0,
       test: 0,
       intro:
         (localStorage.getItem('players') === "1") || (localStorage.getItem('players') == "1,2") || (localStorage.getItem('players') == "1,2,3") || (localStorage.getItem('players') == "1,2,3,4") || (localStorage.getItem('players') == "1,3") || (localStorage.getItem('players') == "1,4")    ? "Allan Lance les dès" : ""
@@ -75,6 +76,7 @@ class DisplayEnigmeJ1 extends React.Component {
      this.setState ({
        dice:Math.ceil(Math.random() * 2),isEnigmeVisible: true,
       intro:"",
+      timeUp: "",
    
     })
   };
@@ -85,7 +87,7 @@ class DisplayEnigmeJ1 extends React.Component {
           ...state,
           enigmeIndex: state.enigmeIndex + 1,
            isEnigmeVisible: false,
-           intro:(localStorage.getItem('players') === "1") ? "Bravo, relance les dès" : "" || (localStorage.getItem('players') === "1,2") ? "Bravo, Judith lance les dès" : "",
+           intro:(localStorage.getItem('players') === "1") ? "Bravo, relance les dès" : "" || ((localStorage.getItem('players') === "1,2") || (localStorage.getItem('players') === "1,2,3") || (localStorage.getItem('players') === "1,2,3,4")) ? "Bravo, Judith lance les dès" : "" || ((localStorage.getItem('players') === "1,3") || (localStorage.getItem('players') === "1,3,4")) ? "Bravo, Peter lance les dès" : "" || (localStorage.getItem('players') === "1,4") ? "Bravo, Sarah lance les dès" : "",
            
           }));
   };
@@ -96,8 +98,9 @@ class DisplayEnigmeJ1 extends React.Component {
       ...state,
       enigmeIndex: state.enigmeIndex + 1,
        isEnigmeVisible: false,
-       intro: (localStorage.getItem('players') === "1") ? "t'est trop null, relance les dès" : "",
-       panicAllan: this.state.panicAllan +10,
+       intro: (localStorage.getItem('players') === "1") ? "Mauvaise réponse, relance les dès" : "" || ((localStorage.getItem('players') === "1,2") || (localStorage.getItem('players') === "1,2,3") || (localStorage.getItem('players') === "1,2,3,4") ) ? "Mauvaise réponse, Judith lance les dès" : "" ||  ((localStorage.getItem('players') === "1,3") || (localStorage.getItem('players') === "1,3,4")) ? "Mauvaise réponse, Peter lance les dès" : "" || (localStorage.getItem('players') === "1,4") ? "Mauvaise réponse, Sarah lance les dès" : "",
+       panicAllan: (localStorage.getItem('players') === "1") || (localStorage.getItem('players') === "1,2") || (localStorage.getItem('players') === "1,2,3") || (localStorage.getItem('players') === "1,2,3,4") || (localStorage.getItem('players') === "1,3") || (localStorage.getItem('players') === "1,4") || (localStorage.getItem('players') === "1,3,4")   ? this.state.panicAllan +10 :"",
+       /*panicJudith: (localStorage.getItem('players') === "1,2")? this.state.panicJudith +10 : "testetstst"*/
 
 
     }));
@@ -137,8 +140,23 @@ class DisplayEnigmeJ1 extends React.Component {
       pictureDice1 = [<Dice2 />]
     }
 
+
+  //   let panicBarJudith
+  //   if (this.state.panicJudith  === 0) {
+  //  panicBarAllan  = "panicJaugeA"
+  //  } else if (this.state.panicJudith === 10) {
+  //       panicBarAllan   = "panicJaugeB"
+  //  } else if (this.statepanicJudith === 20) {
+  //       panicBarAllan  = "panicJaugeC"
+  //  } else if (this.state.panicJudith === 30) {
+  //   panicBarAllan  = "panicJaugeD"
+  //   } else if (this.state.panicJudith === 40) {
+  //     panicJudith  = "panicJaugeE"
+  //   }
+
+
     let panicBarAllan 
-      if (this.state.panicAllan === 0) {
+      if (this.state.panicAllan  === 0) {
      panicBarAllan  = "panicJaugeA"
      } else if (this.state.panicAllan === 10) {
           panicBarAllan   = "panicJaugeB"
@@ -146,16 +164,28 @@ class DisplayEnigmeJ1 extends React.Component {
           panicBarAllan  = "panicJaugeC"
      } else if (this.state.panicAllan === 30) {
       panicBarAllan  = "panicJaugeD"
- } else if (this.state.panicAllan === 40) {
-  panicBarAllan  = "panicJaugeE"
-  
+     } else if (this.state.panicAllan === 40) {
+      panicBarAllan  = "panicJaugeE" 
+     }
+
+let panicBarJudith 
+if (this.state.panicJudith  === 0) {
+  panicBarJudith   = "panicJaugeA"
+} else if (this.state.panicJudith  === 10) {
+  panicBarJudith    = "panicJaugeB"
+} else if (this.state.panicJudith  === 20) {
+  panicBarJudith   = "panicJaugeC"
+} else if (this.state.panicJudith  === 30) {
+  panicBarJudith   = "panicJaugeD"
+} else if (this.state.panicJudith  === 40) {
+  panicBarJudith   = "panicJaugeE" 
 }
 
     return (
       <div className="containerGlobal">
 
         <div className="leftSideContainer">
-          <LeftSide panic={panicBarAllan}/>
+          <LeftSide panic={panicBarAllan}  panic2={panicBarJudith} />
           {this.state.test}
         </div>
 
@@ -178,15 +208,16 @@ class DisplayEnigmeJ1 extends React.Component {
                     colors={[["#01D758", 0.33], ["#01D758", 0.33], ["#A30000"]]}
                     onComplete={() => this.setState ({
                       panicAllan : this.state.panicAllan +10,
+                      panicJudith: this.state.panicJudith +10,
                       isEnigmeVisible: false,
-                      intro: "Trop tard, relance les dès",
+                      intro: (localStorage.getItem('players') === "1") ? "Trop tard! relance les dès" : "" || ( (localStorage.getItem('players') === "1,2") || (localStorage.getItem('players') === "1,2,3") || (localStorage.getItem('players') === "1,2,3,4")) ? "Trop tard! Judith les dès" : "",
                       test : this.state.test +10,
                     })}
                     size= {362}
                     trailColor={"#AA892D"}
                   >
                 {this.renderTime}
-                  </CountdownCircleTimer>
+                </CountdownCircleTimer>
              </div>
      
           
