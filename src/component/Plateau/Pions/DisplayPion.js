@@ -9,7 +9,7 @@ class DisplayPion extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      selectedPion: localStorage.getItem('players'),
+      selectedPion: '1'//localStorage.getItem('players'),
     }
 
   }
@@ -18,7 +18,7 @@ class DisplayPion extends React.Component {
     let pionNumber1
     if (this.state.selectedPion === '1') {
       pionNumber1 = [<Pion1 />]
-    } else if (this.state.selectedPion === '1,2') {
+    } /* else if (this.state.selectedPion === '1,2') {
       pionNumber1 = [<Pion1 />]
     } else if (this.state.selectedPion === '1,3') {
       pionNumber1 = [<Pion1 />]
@@ -28,7 +28,7 @@ class DisplayPion extends React.Component {
       pionNumber1 = [<Pion1 />]
     } else if (this.state.selectedPion === '1,2,3,4') {
       pionNumber1 = [<Pion1 />]
-    }
+    } */
 
     return pionNumber1
   }
@@ -36,7 +36,7 @@ class DisplayPion extends React.Component {
     let pionNumber2
     if (this.state.selectedPion === '2') {
       pionNumber2 = [<Pion2 />]
-    } else if (this.state.selectedPion === '1,2') {
+    } /* else if (this.state.selectedPion === '1,2') {
       pionNumber2 = [<Pion2 />]
     } else if (this.state.selectedPion === '2,3') {
       pionNumber2 = [<Pion2 />]
@@ -46,7 +46,7 @@ class DisplayPion extends React.Component {
       pionNumber2 = [<Pion2 />]
     } else if (this.state.selectedPion === '1,2,3,4') {
       pionNumber2 = [<Pion2 />]
-    }
+    } */
 
     return pionNumber2
   }
@@ -106,7 +106,14 @@ class DisplayPion extends React.Component {
             </div>
           </div>
           <div className="zonePion2">
-            <div className="container2Pion2">
+            <div
+            className="container2Pion2"
+            style={{
+                top: this.props.p2TOP,
+                right: this.props.p2RIGHT,
+                position: 'relative',
+                border: 'solid cyan'
+              }}>
               {this.displayPion2()}
             </div>
 
@@ -114,12 +121,28 @@ class DisplayPion extends React.Component {
         </div>
         <div className="containerBottomPion">
           <div className="zonePion3">
-            <div className="containerPion3">
+            <div
+            className="containerPion3"
+            style={{
+                bottom: this.props.p3BOTTOM,
+                right: this.props.p3RIGHT,
+                position: 'relative',
+                border: 'solid green'
+              }}
+            >
               {this.displayPion3()}
             </div>
           </div>
           <div className="zonePion4">
-            <div className="containerPion4">
+            <div
+            className="containerPion4"
+            style={{
+                bottom: this.props.p4BOTTOM,
+                left: this.props.p4LEFT,
+                position: 'relative',
+                border: 'solid pink'
+              }}
+            >
               {this.displayPion4()}
             </div>
           </div>

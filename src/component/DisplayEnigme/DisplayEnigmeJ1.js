@@ -23,11 +23,19 @@ class DisplayEnigmeJ1 extends React.Component {
           || (localStorage.getItem('players') === "2") || (localStorage.getItem('players') === "2,3") || (localStorage.getItem('players') === "2,4") || (localStorage.getItem('players') === "2,3,4") ? "Judith Lance les dès" : ""
             || (localStorage.getItem('players') === "3") || (localStorage.getItem('players') === "3,4") ? "Peter Lance les dès" : ""
               || (localStorage.getItem('players') === "4") ? "Sarah Lance les dès" : "",
+      //player1
       top1: 45,
       left1: 0,
       pathLeft: 4,
+      //player2
       top2: 45,
-      right2: 0
+      right2: 0,
+      //player3
+      bottom3: 145,
+      right3: 0,
+      //player4
+      bottom4: 145,
+      left4: 0,
     };
     this.getEnigmes().then(enigmes => {
       // On trie le tableau de manière aléatoire pour être certain de chaque partie aura un ordre de question différent
@@ -58,7 +66,7 @@ class DisplayEnigmeJ1 extends React.Component {
     );
   };
 
-  getNewEnigmeAndSolutions = async (p1Top, p1Left, p2Top, p2Right) => {
+  getNewEnigmeAndSolutions = async (p1Top, p1Left, p2Top, p2Right,p3Bottom,p3Right,p4Bottom,p4Left) => {
     const index = this.state.enigmeIndex;
     // On vérifie que l'index dans le tableux existe
     if (index < this.state.enigmes.length) {
@@ -82,17 +90,37 @@ class DisplayEnigmeJ1 extends React.Component {
     console.log(p1Top, this.state.pathLeft, "TEST")
 
     // si dice > 4 , dice = 4
+    //PLAYER 1
     if (p1Top > pathY) {
       this.setState({ left1: p1Left + 40 })
     } else {
       this.setState({ top1: p1Top + dice * 60 })
     }
+    //PLAYER 1
 
+    //PLAYER 2
     if (p2Top > pathY) {
       this.setState({ right2: p2Right - 40 })
     } else {
       this.setState({ top2: p2Top + dice * 60 })
     }
+    //PLAYER 2
+
+    //PLAYER 3
+    if (p2Top > pathY) {
+      this.setState({ right3: p3Right - 40 })
+    } else {
+      this.setState({ bottom3: p3Bottom - dice * 60 })
+    }
+    //PLAYER 3
+
+    //PLAYER 4
+    if (p2Top > pathY) {
+      this.setState({ left4: p4Left + 40 })
+    } else {
+      this.setState({ bottom4: p4Bottom - dice * 60 })
+    }
+    //PLAYER 4
 
 
   };
@@ -124,8 +152,10 @@ class DisplayEnigmeJ1 extends React.Component {
 
   render() {
 
-    const { top1, left1 } = this.state
-    const { top2, right2 } = this.state
+    const { top1, left1 } = this.state // player 1
+    const { top2, right2 } = this.state // player 2
+    const { bottom3, right3 } = this.state // player 3
+    const { bottom4, left4 } = this.state // player 4
 
     const shouldShowEnigmeSection =
       this.state.enigme && this.state.isEnigmeVisible;
@@ -151,7 +181,6 @@ class DisplayEnigmeJ1 extends React.Component {
       panicBarAllan = "panicJaugeE"
 
     }
-
     return (
       <div className="bigContainer">
         <div className="containerGlobal">
@@ -167,10 +196,14 @@ class DisplayEnigmeJ1 extends React.Component {
             </div>
             <button className='btn-enigme' onClick={() => this
               .getNewEnigmeAndSolutions(
-                this.state.top1,
-                this.state.left1
-
-
+                top1,
+                left1,
+                top2,
+                right2,
+                bottom3,
+                right3,
+                bottom4,
+                left4
               )}>Afficher enigme</button>
             {
               shouldShowEnigmeSection && (
@@ -200,11 +233,19 @@ class DisplayEnigmeJ1 extends React.Component {
               )}
           </div>
         </div>
-          <div>
-            <DisplayPion
-            p1TOP={this.state.top1}
-            p1LEFT={this.state.left1} />
-          </div>
+        <div>
+          <DisplayPion
+            p1TOP={top1}
+            p1LEFT={left1}
+            p2TOP={top2}
+            p2RIGHT={right2}
+            p3BOTTOM={bottom3}
+            p3RIGHT={right3}
+            p4BOTTOM={bottom4}
+            p4LEFT={left4}
+
+            />
+        </div>
 
       </div>
     );
