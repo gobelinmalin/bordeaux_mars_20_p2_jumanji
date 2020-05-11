@@ -31,10 +31,10 @@ class DisplayEnigmeJ1 extends React.Component {
       top2: 45,
       right2: 0,
       //player3
-      bottom3: 145,
+      bottom3: -235,
       right3: 0,
       //player4
-      bottom4: 145,
+      bottom4: -235,
       left4: 0,
     };
     this.getEnigmes().then(enigmes => {
@@ -107,7 +107,7 @@ class DisplayEnigmeJ1 extends React.Component {
     //PLAYER 2
 
     //PLAYER 3
-    if (p2Top > pathY) {
+    if (p3Bottom > pathY) {
       this.setState({ right3: p3Right - 40 })
     } else {
       this.setState({ bottom3: p3Bottom - dice * 60 })
@@ -115,7 +115,7 @@ class DisplayEnigmeJ1 extends React.Component {
     //PLAYER 3
 
     //PLAYER 4
-    if (p2Top > pathY) {
+    if (p4Bottom > pathY) {
       this.setState({ left4: p4Left + 40 })
     } else {
       this.setState({ bottom4: p4Bottom - dice * 60 })

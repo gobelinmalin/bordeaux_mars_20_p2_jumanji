@@ -9,7 +9,7 @@ class DisplayPion extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      selectedPion: '1'//localStorage.getItem('players'),
+      selectedPion: localStorage.getItem('players'),
     }
 
   }
@@ -18,7 +18,7 @@ class DisplayPion extends React.Component {
     let pionNumber1
     if (this.state.selectedPion === '1') {
       pionNumber1 = [<Pion1 />]
-    } /* else if (this.state.selectedPion === '1,2') {
+    } else if (this.state.selectedPion === '1,2') {
       pionNumber1 = [<Pion1 />]
     } else if (this.state.selectedPion === '1,3') {
       pionNumber1 = [<Pion1 />]
@@ -28,7 +28,7 @@ class DisplayPion extends React.Component {
       pionNumber1 = [<Pion1 />]
     } else if (this.state.selectedPion === '1,2,3,4') {
       pionNumber1 = [<Pion1 />]
-    } */
+    }
 
     return pionNumber1
   }
@@ -36,7 +36,7 @@ class DisplayPion extends React.Component {
     let pionNumber2
     if (this.state.selectedPion === '2') {
       pionNumber2 = [<Pion2 />]
-    } /* else if (this.state.selectedPion === '1,2') {
+    } else if (this.state.selectedPion === '1,2') {
       pionNumber2 = [<Pion2 />]
     } else if (this.state.selectedPion === '2,3') {
       pionNumber2 = [<Pion2 />]
@@ -46,7 +46,7 @@ class DisplayPion extends React.Component {
       pionNumber2 = [<Pion2 />]
     } else if (this.state.selectedPion === '1,2,3,4') {
       pionNumber2 = [<Pion2 />]
-    } */
+    }
 
     return pionNumber2
   }
@@ -89,10 +89,13 @@ class DisplayPion extends React.Component {
     return pionNumber4
   }
 
-  render() {
-    return (
-      <div className="containerPion">
-        <div className="containerTopPion">
+  renderPions = () => {
+
+    const { selectedPion } = this.state
+    switch (selectedPion) {
+      case '1':
+        return <div className="containerTopPion">
+
           <div className="zonePion1">
             <div
               className="containerPion1"
@@ -105,10 +108,17 @@ class DisplayPion extends React.Component {
               {this.displayPion1()}
             </div>
           </div>
+
+        </div>
+        break;
+
+      case '2':
+        return <div className="containerTopPion">
+
           <div className="zonePion2">
             <div
-            className="container2Pion2"
-            style={{
+              className="container2Pion2"
+              style={{
                 top: this.props.p2TOP,
                 right: this.props.p2RIGHT,
                 position: 'relative',
@@ -116,14 +126,18 @@ class DisplayPion extends React.Component {
               }}>
               {this.displayPion2()}
             </div>
-
           </div>
+
         </div>
-        <div className="containerBottomPion">
+        break;
+
+      case '3':
+        return <div className="containerBottomPion">
+
           <div className="zonePion3">
             <div
-            className="containerPion3"
-            style={{
+              className="containerPion3"
+              style={{
                 bottom: this.props.p3BOTTOM,
                 right: this.props.p3RIGHT,
                 position: 'relative',
@@ -133,10 +147,17 @@ class DisplayPion extends React.Component {
               {this.displayPion3()}
             </div>
           </div>
+
+        </div>
+
+        break;
+      case '4':
+        return <div className="containerBottomPion">
+
           <div className="zonePion4">
             <div
-            className="containerPion4"
-            style={{
+              className="containerPion4"
+              style={{
                 bottom: this.props.p4BOTTOM,
                 left: this.props.p4LEFT,
                 position: 'relative',
@@ -146,7 +167,23 @@ class DisplayPion extends React.Component {
               {this.displayPion4()}
             </div>
           </div>
+
         </div>
+        break
+
+
+      default:
+        break;
+    }
+
+
+  }
+
+  render() {
+    return (
+      <div className="containerPion">
+
+        {this.renderPions()}
       </div>
     )
   }
