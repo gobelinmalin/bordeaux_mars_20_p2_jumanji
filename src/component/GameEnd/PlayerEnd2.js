@@ -6,7 +6,7 @@ class PlayerEnd2 extends React.Component {
         return (
             <div className="EndCard">
                 <div className="CharacterPicLost2">
-                <img src="https://zupimages.net/up/20/16/vqap.png" alt="Judith Shepard" />
+                <img className="endPlayer2pic" src="https://zupimages.net/up/20/16/vqap.png" alt="Judith Shepard" />
 
                 </div>
                 <div className="CharacterNameLost2">

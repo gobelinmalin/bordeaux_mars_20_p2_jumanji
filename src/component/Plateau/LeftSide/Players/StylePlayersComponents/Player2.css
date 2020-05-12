@@ -34,11 +34,50 @@
 }
 
 
-.panicJauge2{
-    background-color: #00B0F0;
-    margin-top:-8%;
+
+
+
+.panicJaugeA2{
+    background-color: red;
+    margin-top:-7.5%;
     height: 1vw;
-    width: 20%;
+    width: 0vw;
     border-radius: 10px;
     margin-left:18%;
+    transition-duration: 5s;
 }
+
+
+
+.panicJaugeB2{
+    background-color: red;
+    margin-top:-7.5%;
+    height: 1vw;
+    width: 2.7vw;
+    border-radius: 10px;
+    margin-left:18%;
+    transition-duration: 5s;
+}
+
+
+.panicJaugeC2{
+    background-color:red;
+    margin-top:-7.5%;
+    height: 1vw;
+    width: 5.6vw;
+    border-radius: 10px;
+    margin-left:18%;
+    transition-duration: 5s;
+}
+
+.panicJaugeD2{
+    background-color:red;
+    margin-top:-7.5%;
+    height: 1vw;
+    width: 8.5vw;
+    border-radius: 10px;
+    margin-left:18%;
+    transition-duration: 5s;
+}
+
+

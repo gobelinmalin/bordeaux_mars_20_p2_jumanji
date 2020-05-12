@@ -6,12 +6,12 @@ class PlayerEnd4 extends React.Component {
         return (
             <div className="EndCard">
                 <div className="CharacterPicLost4">
-                <img src="https://zupimages.net/up/20/16/nr28.png" alt="Sarah Whittle" />
-                    
+                <img className="endPlayer4pic" src="https://zupimages.net/up/20/16/nr28.png" alt="Sarah Whittle" />
+
                 </div>
-                <div className="CharacterNameLost13">
+                <div className="CharacterNameLost4">
                 Sarah Whittle
-                
+
                 </div>
 
             </div>

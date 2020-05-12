@@ -11,7 +11,7 @@ class DisplayPion extends React.Component {
     this.state = {
       selectedPion: localStorage.getItem('players'),
       style1: {
-        marginTop: 150, //max 270px <== à mettre en state pour que la condition soit prise en compte
+        marginTop: 0, //max 270px <== à mettre en state pour que la condition soit prise en compte
         marginLeft: 0, // puis faire un setState dans un componentDidUpdate()
         position: 'absolute',
         width: '64px'
@@ -120,12 +120,12 @@ class DisplayPion extends React.Component {
   avancerPion1 = () => {
     const { diceOne, diceTwo } = this.props
     let style = {
-      marginTop: 271, //max 270px <== à mettre en state pour que la condition soit prise en compte
+      marginTop: 0, //max 270px <== à mettre en state pour que la condition soit prise en compte
       marginLeft: 0, // puis faire un setState dans un componentDidUpdate()
       position: 'absolute',
       width: '64px'
     }
-    const diceTest = 3
+    const diceTest = 0
       if (style.marginTop > 270) {
 
         style.marginLeft = diceTest * 50

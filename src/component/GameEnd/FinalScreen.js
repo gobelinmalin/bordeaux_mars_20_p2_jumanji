@@ -4,11 +4,10 @@ import { NavLink } from 'react-router-dom';
 import EndMessage from './EndMessage'
 import EndCircle from './EndCircle'
 import EndPlayerCard from './EndPlayerCard'
-import Player1 from '../Plateau/LeftSide/Players/PlayersComponents/Player1'
-import Player2 from '../Plateau/LeftSide/Players/PlayersComponents/Player2'
-import Player3 from '../Plateau/LeftSide/Players/PlayersComponents/Player3'
-import Player4 from '../Plateau/LeftSide/Players/PlayersComponents/Player4'
 import PlayerEnd1 from './PlayerEnd1'
+import PlayerEnd2 from './PlayerEnd2'
+import PlayerEnd3 from './PlayerEnd3'
+import PlayerEnd4 from './PlayerEnd4'
 
 
 class FinalScreen extends React.Component {
@@ -26,29 +25,29 @@ class FinalScreen extends React.Component {
         if (this.state.players == "1") {
             endPlayer = [ <PlayerEnd1 /> ]
             } else if (this.state.players== "2") {
-            endPlayer = [ <Player2 /> ]
+            endPlayer = [ <PlayerEnd2 /> ]
             } else if (this.state.players == "3") {
-            endPlayer = [ <Player3 /> ]
+            endPlayer = [ <PlayerEnd3 /> ]
             } else if (this.state.players == "4") {
-            endPlayer = [ <Player4 /> ]
+            endPlayer = [ <PlayerEnd4 /> ]
             } else if (this.state.players == "1,2") {
-            endPlayer = [ <Player1 />, <Player2 /> ]
+            endPlayer = [ <PlayerEnd1 />, <PlayerEnd2/> ]
             } else if (this.state.players == "1,3") {
-            endPlayer = [ <Player1 />, <Player3 /> ]
+            endPlayer = [ <PlayerEnd1/>, <PlayerEnd3  /> ]
             } else if (this.state.players == "1,4") {
-            endPlayer = [ <Player1 />, <Player4 /> ]
+            endPlayer = [ <PlayerEnd1 />, <PlayerEnd4 /> ]
             } else if (this.state.players == "1,2,3") {
-            endPlayer= [ <Player1 />, <Player2 />, <Player3 /> ]
+            endPlayer= [ <PlayerEnd1/>, <PlayerEnd2 />, <PlayerEnd3  /> ]
             } else if (this.state.players == "1,2,3,4") {
-            endPlayer = [ <Player1 />, <Player2 />, <Player3 />, <Player4 /> ]
+            endPlayer = [ <PlayerEnd1 />, <PlayerEnd2 />, <PlayerEnd3 />, <PlayerEnd4 /> ]
             } else if (this.state.players == "2,3") {
-            endPlayer = [ <Player2 />, <Player3 />]
+            endPlayer = [ <PlayerEnd2 />, <PlayerEnd3  />]
             } else if (this.state.players == "2,3,4") {
-            endPlayer = [ <Player2 />, <Player3 />, <Player4 /> ]
+            endPlayer = [ <PlayerEnd2 />, <PlayerEnd3  />, <PlayerEnd4 /> ]
             } else if (this.state.players == "2,4") {
-            endPlayer = [ <Player2 />, <Player4 /> ]
+            endPlayer = [ <PlayerEnd2 />, <PlayerEnd4 /> ]
             } else if (this.state.players == "3,4") {
-            endPlayer = [ <Player3 />, <Player4 /> ]
+            endPlayer = [ <PlayerEnd3  />, <PlayerEnd4 /> ]
             }
 
 
@@ -66,11 +65,9 @@ class FinalScreen extends React.Component {
 
 
             <div className = "GamePlayersList">
-                    {/* <EndPlayerCard />
-                    <EndPlayerCard gameVictory={this.state.gameVictory}/>
-                    <EndPlayerCard gameVictory={this.state.gameVictory}/>
-                    <EndPlayerCard gameVictory={this.state.gameVictory}/> */}
+
                     {endPlayer}
+
             </div>
 
         </div>

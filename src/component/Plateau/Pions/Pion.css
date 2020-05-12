@@ -23,7 +23,7 @@
 .zonePion1 {
     height:45vh;
     width:43%;
- 
+
 
 }
 .zonePion2 {
@@ -49,22 +49,22 @@
 
 .containerPion1 {
     width:20%;
-    margin-left:4%;
+    margin-left:2%;
     margin-top:3%;
 
 }
 
 .picturePion1{
-    width:100%;
+    width:80%;
 }
 
 .container2Pion2 {
     width:40%;
     display:flex;
     border-style: solid;
-    margin-left:83%;
+    margin-left:88%;
     border:none;
-    margin-top:2%;
+    margin-top:-0.5%;
 
 }
 
@@ -72,13 +72,14 @@
     width:40%;
     transform: rotate(90deg);
 
+
 }
 
 
 .containerPion3 {
     width:40%;
-    margin-top:28.2vh;
-    margin-left:2%;
+    margin-top:26.7vh;
+    margin-left:-2%;
 
 }
 
@@ -91,9 +92,9 @@
     width:40%;
     display:flex;
     border-style: solid;
-    margin-left:83%;
+    margin-left:88%;
     border:none;
-    margin-top:39.5vh;
+    margin-top:38vh;
 
 }
 

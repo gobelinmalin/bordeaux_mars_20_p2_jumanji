@@ -24,8 +24,9 @@ class DisplayEnigmeJ1 extends React.Component {
       isEnigmeVisible: true,
       dice: 0,
       panicAllan:0,
+      panicJudith:0,
       redirect: null,
-      test: 0,
+      count: 0,
       intro:
         (localStorage.getItem('players') === "1") || (localStorage.getItem('players') == "1,2") || (localStorage.getItem('players') == "1,2,3") || (localStorage.getItem('players') == "1,2,3,4") || (localStorage.getItem('players') == "1,3") || (localStorage.getItem('players') == "1,4")    ? "Allan Lance les dès" : ""
         || (localStorage.getItem('players') === "2") || (localStorage.getItem('players') === "2,3") || (localStorage.getItem('players') === "2,4") || (localStorage.getItem('players') === "2,3,4")? "Judith Lance les dès" : ""
@@ -79,6 +80,7 @@ class DisplayEnigmeJ1 extends React.Component {
        dice:Math.ceil(Math.random() * 2),isEnigmeVisible: true,
       intro:"",
       timeUp: "",
+      count: this.state.count +1,
    
     })
   };
@@ -89,7 +91,7 @@ class DisplayEnigmeJ1 extends React.Component {
           ...state,
           enigmeIndex: state.enigmeIndex + 1,
            isEnigmeVisible: false,
-           intro:(localStorage.getItem('players') === "1") ? "Bravo, relance les dès" : "" || ((localStorage.getItem('players') === "1,2") || (localStorage.getItem('players') === "1,2,3") || (localStorage.getItem('players') === "1,2,3,4")) ? "Bravo, Judith lance les dès" : "" || ((localStorage.getItem('players') === "1,3") || (localStorage.getItem('players') === "1,3,4")) ? "Bravo, Peter lance les dès" : "" || (localStorage.getItem('players') === "1,4") ? "Bravo, Sarah lance les dès" : "",
+           intro:(localStorage.getItem('players') === "1") ? "Bravo, relance les dès" : "" || ((localStorage.getItem('players') === "1,2") && (this.state.count % 2 ===0)) ? "Bravo, Allan lance les dès" : "Bravo, Judith  lance les dès",
            
           }));
   };
@@ -98,11 +100,11 @@ class DisplayEnigmeJ1 extends React.Component {
     // Quand la réponse est incorrect on passe à la suivante
     this.setState(state => ({
       ...state,
-      enigmeIndex: state.enigmeIndex + 1,
+       enigmeIndex: state.enigmeIndex + 1,
        isEnigmeVisible: false,
-       intro: (localStorage.getItem('players') === "1") ? "Mauvaise réponse, relance les dès" : "" || ((localStorage.getItem('players') === "1,2") || (localStorage.getItem('players') === "1,2,3") || (localStorage.getItem('players') === "1,2,3,4") ) ? "Mauvaise réponse, Judith lance les dès" : "" ||  ((localStorage.getItem('players') === "1,3") || (localStorage.getItem('players') === "1,3,4")) ? "Mauvaise réponse, Peter lance les dès" : "" || (localStorage.getItem('players') === "1,4") ? "Mauvaise réponse, Sarah lance les dès" : "",
-       panicAllan: (localStorage.getItem('players') === "1") || (localStorage.getItem('players') === "1,2") || (localStorage.getItem('players') === "1,2,3") || (localStorage.getItem('players') === "1,2,3,4") || (localStorage.getItem('players') === "1,3") || (localStorage.getItem('players') === "1,4") || (localStorage.getItem('players') === "1,3,4")   ? this.state.panicAllan +10 :"",
-       /*panicJudith: (localStorage.getItem('players') === "1,2")? this.state.panicJudith +10 : "testetstst"*/
+       intro: (localStorage.getItem('players') === "1") ? "Mauvaise réponse, relance les dès" : "" || ((localStorage.getItem('players') === "1,2") && (this.state.count %2 ===0 ))? "Mauvaise réponse, Allan lance les dès" : "Mauvaise réponse, Judith lance les dès",
+       panicAllan: (localStorage.getItem('players') === "1") ? this.state.panicAllan +10 : "" || ((localStorage.getItem('players') === "1,2") && (this.state.count %2 !== 0)) ? this.state.panicAllan +10 : this.state.panicAllan,
+       panicJudith: (localStorage.getItem('players') === "2") ? this.state.panicJudith +10 : "" || ((localStorage.getItem('players') === "1,2") && (this.state.count %2 === 0)) ? this.state.panicJudith +10 : this.state.panicJudith,
 
 
     }));
@@ -143,18 +145,6 @@ class DisplayEnigmeJ1 extends React.Component {
     }
 
 
-  //   let panicBarJudith
-  //   if (this.state.panicJudith  === 0) {
-  //  panicBarAllan  = "panicJaugeA"
-  //  } else if (this.state.panicJudith === 10) {
-  //       panicBarAllan   = "panicJaugeB"
-  //  } else if (this.statepanicJudith === 20) {
-  //       panicBarAllan  = "panicJaugeC"
-  //  } else if (this.state.panicJudith === 30) {
-  //   panicBarAllan  = "panicJaugeD"
-  //   } else if (this.state.panicJudith === 40) {
-  //     panicJudith  = "panicJaugeE"
-  //   }
 
 
     let panicBarAllan 
@@ -171,12 +161,29 @@ class DisplayEnigmeJ1 extends React.Component {
   
 }
 
+
+let panicBarJudith
+if (this.state.panicJudith  === 0) {
+  panicBarJudith  = "panicJaugeA2"
+} else if (this.state.panicJudith === 10) {
+  panicBarJudith  = "panicJaugeB2"
+} else if (this.state.panicJudith === 20) {
+  panicBarJudith = "panicJaugeC2"
+} else if (this.state.panicJudith === 30) {
+  panicBarJudith  = "panicJaugeD2"
+} else if (this.state.panicJudith === 40) {
+return  <Redirect to="/finalScreen" />
+
+}
+
+
+
     return (
       <div className="containerGlobal">
 
         <div className="leftSideContainer">
-          <LeftSide panic={panicBarAllan}  panic2={panicBarJudith} />
-          {this.state.test}
+          <LeftSide panic={panicBarAllan} panic2={panicBarJudith} />
+         {this.state.count}
         </div>
 
 
@@ -194,7 +201,7 @@ class DisplayEnigmeJ1 extends React.Component {
             <div className="timerContainer">
                 <CountdownCircleTimer className="timer"
                     isPlaying
-                    duration={5}
+                    duration={15}
                     colors={[["#01D758", 0.33], ["#01D758", 0.33], ["#A30000"]]}
                     onComplete={() => this.setState ({
                       panicAllan : this.state.panicAllan +10,
@@ -214,6 +221,7 @@ class DisplayEnigmeJ1 extends React.Component {
                 <DisplayEnigme className="enigme" enigme={this.state.enigme} />
                 <div className="diceContainer">
                 {pictureDice1}
+                {this.state.count}
                 </div>
                
 
