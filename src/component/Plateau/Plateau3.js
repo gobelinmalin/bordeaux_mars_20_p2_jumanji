@@ -205,7 +205,7 @@ class Plateau3 extends React.Component {
                             </div>
                             <div className="middle">
                                 <div className="displayPionContainer">
-                                  <DisplayPion diceOne={this.diceOne()} diceTwo={this.diceTwo()} />
+                               
                                 </div>
                                 <div className="displayEnigme2Container">
                                   <DisplayEnigmeJ1 />
