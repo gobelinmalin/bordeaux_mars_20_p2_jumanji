@@ -112,7 +112,10 @@ class DisplayEnigmeJ1 extends React.Component {
       this.setState({ enigme, solutions });
     }
     this.setState({
-      dice: (this.state.countPath1 === 1) || (this.state.countPath2 === 1) ? 1 : Math.ceil(Math.random() * 2),
+      dice:
+        this.state.countPath1 === 1 || this.state.countPath2 === 1
+          ? 1
+          : Math.ceil(Math.random() * 2),
       isEnigmeVisible: true,
       intro: "",
       timeUp: "",
@@ -121,43 +124,48 @@ class DisplayEnigmeJ1 extends React.Component {
     let dice = this.state.dice;
     let pathY = 240;
     let pathX = 40;
+
+    //PLAYER 1
     if (
       localStorage.getItem("players") === "1,2" &&
       this.state.count2J % 2 !== 0
     ) {
-      this.setState((prvestate) => ({ pathLeft: Math.ceil(p1Top / 60) + 1 })); // calcul le nombre de case restante sur top1
-      console.log(localStorage, "TEST");
+      //this.setState((prvestate) => ({ pathLeft: Math.ceil(p1Top / 60) + 1 })); // calcul le nombre de case restante sur top1
 
-      // si dice > 4 , dice = 4
-      //PLAYER 1
-      // valeur dice
       const { dice, countPath1 } = this.state;
-      //this.setState({ countPath1 : countPath1 - dice}) // laisser
-      console.log(dice, "DIIIIICE");
 
       this.setState({ countPath1: countPath1 - dice });
-      if (countPath1 <= 1 ) {
-        this.setState({ dice: 1, dice: 2 });
+      if (countPath1 <= 1) {
+
         this.setState({ top1: p1Top + dice });
       }
 
-      if (p1Top > pathY ){
+      if (p1Top > pathY) {
         this.setState({ left1: p1Left + 40 });
       } else {
-        this.setState({ top1: p1Top + dice * 60});
+        this.setState({ top1: p1Top + dice * 60 });
       }
-      //PLAYER 1
     }
+    //PLAYER 1
 
     //PLAYER 2
+
     if (
       localStorage.getItem("players") === "1,2" &&
       this.state.count2J % 2 === 0
     ) {
-      if (p2Right > - pathY) {
-        this.setState({ right2: p2Top + 40 });
+      const { right2, countPath2,top2 } = this.state;
+
+      this.setState({ countPath2: countPath2 - dice });
+      if (countPath2 <= 1) {
+        this.setState({ right2: right2 + dice});
+      }
+      console.log(p2Right, "P222222222")
+      if (p2Right < 240) {
+
+        this.setState({ top2: top2 + 40 });
       } else {
-        this.setState({ top2: p2Right - dice * 60 });
+        this.setState({ right2: right2 + dice * 60 });
       }
     }
     //PLAYER 2
@@ -354,7 +362,7 @@ class DisplayEnigmeJ1 extends React.Component {
                       })
                     }
                     size={362}
-                    trailColor={"#AA892D"}
+                    trailColor={"#FFFFF"}
                   >
                     {this.renderTime}
                   </CountdownCircleTimer>
