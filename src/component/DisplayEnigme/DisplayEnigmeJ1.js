@@ -150,22 +150,22 @@ class DisplayEnigmeJ1 extends React.Component {
 
     //PLAYER 2
 
-    if (
+    else if (
       localStorage.getItem("players") === "1,2" &&
       this.state.count2J % 2 === 0
     ) {
-      const { right2, countPath2,top2 } = this.state;
+      const { dice, countPath2 } = this.state;
 
       this.setState({ countPath2: countPath2 - dice });
       if (countPath2 <= 1) {
-        this.setState({ right2: right2 + dice});
+        this.setState({ top2: p2Top + dice});
       }
-      console.log(p2Right, "P222222222")
-      if (p2Right < 240) {
 
-        this.setState({ top2: top2 + 40 });
+      if (p2Right < pathY ) {
+
+        this.setState({ right2: p2Right + 60 });
       } else {
-        this.setState({ right2: right2 + dice * 60 });
+        this.setState({ top2: p2Top + dice * 40 });
       }
     }
     //PLAYER 2
