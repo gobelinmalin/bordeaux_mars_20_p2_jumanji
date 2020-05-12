@@ -21,7 +21,7 @@ class DisplayPion extends React.Component {
           top: this.props.p1TOP,
           left: this.props.p1LEFT,
           position: "relative",
-          border: "solid orange",
+          /*border: "solid orange",*/
         }}
       >
         <Pion1 />

@@ -41,7 +41,7 @@ ul {
 
 .btn-enigme {
     margin-left: 50vw;
-    margin-top:-17vh;
+    margin-top: 27vh;
     font-size: 1vw;
     font-weight: bold;
     background-image: url('roll-dice-button.png');
@@ -98,7 +98,7 @@ ul {
     margin-top:-10.9vh;
     border-color: rgba(255, 166, 0, 0);
     border-style: solid;
-    margin-left:-23.5%;
+    margin-left:-24.5%;
 }
 
 .timesUp {

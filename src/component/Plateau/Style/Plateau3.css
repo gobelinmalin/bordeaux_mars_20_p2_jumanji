@@ -92,7 +92,7 @@
 .squareL1, .squareL2, .squareL3, .squareL4, .squareL5, .squareL6, .squareL7, .squareL8, .squareL9, .squareL10, .squareL11, .squareL12, .squareL13, .squareL14, .squareL15, .squareL16, .squareL17, .squareL18,
 .squareR1, .squareR2, .squareR3, .squareR4, .squareR5, .squareR6, .squareR7, .squareR8, .squareR9, .squareR10, .squareR11, .squareR12, .squareR13, .squareR14, .squareR15, .squareR16, .squareR17, .squareR18 {
 
-    width: 33%;
+    width: 60px;
     height: 60px;
    
 }
@@ -102,14 +102,14 @@
 .squareD1, .squareD2, .squareD3, .squareD4, .squareD5, .squareD6, .squareD7, .squareD8, .squareD9, .squareD10, .squareD11, .squareD12, .squareD13, .squareD14, .squareD15, .squareD16, .squareD17, .squareD18, .squareD19, .squareD20, .squareD21, .squareD22, .squareD23, .squareD24, .squareD25, .squareD26, .squareD27, .squareD28, .squareD29, .squareD30, .squareD31, .squareD32, .squareD33, .squareD34
  {
    
-    width: 25%;
+    width: 60px;
     height: 60px;
 }
 
 /*path JoueurA*/
 
 .squareD10{
-    width: 25%;
+    width: 60px;;
     height: 60px;
     background-color: rgba(245, 245, 220, 0.653);
     border-top:solid;
@@ -118,7 +118,7 @@
 }
 
 .squareD20 {
-    width: 25%;
+    width: 60px;
     height: 60px;
     background-color: rgba(245, 245, 220, 0.653);
     border-top:solid;
@@ -131,8 +131,8 @@
 }
 
 .squareR14 {
-    width: 33%;
-    height: 65px;
+    width: 60px;
+    height: 60px;
     background-color: rgba(245, 245, 220, 0.653);
     border-top:solid;
     border-top-width: 0.5px;
@@ -143,18 +143,18 @@
 
 
 .squareR11 {
-    width: 33%;
+    width: 60px;
     background-color:  rgba(245, 245, 220, 0.653);
 }
 
 .squareR7 {
   
-    width: 33%;
+    width: 60px;
     background-color:  rgba(245, 245, 220, 0.653);
 }
 
 .squareR8 {
-    width: 34.9%;
+    width: 60px;
     background-color:  rgba(245, 245, 220, 0.653);
 }
 
@@ -170,7 +170,7 @@
     border-left:solid;
     border-left-width: 0.5px;
     border-left-style: dashed;
-    width: 32.9%;
+    width: 60px;
     border-top:solid;
     border-top-width: 0.5px;
     border-top-style: dashed;
@@ -184,7 +184,7 @@
 /*path JoueurB*/
 
 .squareD17, .squareD18, .squareD19, .squareD15, .squareD14 {
-    width: 25%;
+    width: 60px;
     height: 60px;
     background-color: rgba(245, 245, 220, 0.653);
     border-left:solid;
@@ -193,14 +193,14 @@
 }
 
 .squareD13 {
-    width: 25%;
+    width:60px;
     height: 60px;
     background-color: rgba(245, 245, 220, 0.653);
  
 }
 
 .squareD16 {
-    width: 25%;
+    width: 60px;
     height: 60px;
     background-color: rgba(245, 245, 220, 0.653);
     border-top:solid;
@@ -212,7 +212,7 @@
 }
 
 .squareD6 {
-    width: 25%;
+    width: 60px;
     height: 60px;
     background-color: rgba(245, 245, 220, 0.653);
     margin-left:-0.2%;
@@ -220,8 +220,8 @@
 }
 
 .squareD2 {
-    width: 25%;
-    height: 59px;
+    width: 60px;
+    height: 60px;
     background-color: rgba(245, 245, 220, 0.653);
     border-top:solid;
     border-top-width: 0.5px;
@@ -233,7 +233,7 @@
 }
 
 .squareL14, .squareL11, .squareL2, .squareL5  {
-    width: 35.5%;
+    width: 60px;
     height: 60px;
     background-color: rgba(245, 245, 220, 0.653);
     border-top:solid;
@@ -244,7 +244,7 @@
 }
 
  .squareL8  {
-    width: 37%;
+    width: 60px;
     height: 60px;
     background-color: rgba(245, 245, 220, 0.653);
     border-top:solid;
@@ -256,7 +256,7 @@
 }
 
 .squareL9  {
-    width: 37.5%;
+    width: 60px;
     height: 60px;
     background-color: rgba(245, 245, 220, 0.653);
     border-left:solid;
@@ -268,13 +268,13 @@
 }
 
 .squareL14, .squareL15 {
-    height: 65px;
+    height: 60px;
 }
 
 /*path joueurC */
 
 .squareT24 {
-    width: 25%;
+    width: 60px;
     height: 60px;
     background-color: rgba(245, 245, 220, 0.653);
     border-top:solid;
@@ -284,7 +284,7 @@
 }
 
 .squareT13 {
-    width: 25%;
+    width: 60px;
     height: 60px;
     background-color: rgba(245, 245, 220, 0.653);
     border-right:solid;
@@ -295,7 +295,7 @@
 
 
 .squareT14, .squareT15, .squareT16, .squareT17, .squareT18, .squareT19, .squareT20{
-    width: 25%;
+    width:60px;
     height: 60px;
     background-color: rgba(245, 245, 220, 0.653);
     border-right:solid;
@@ -306,7 +306,7 @@
 
 .squareT21 {
 
-    width: 25%;
+    width: 60px;
     height: 60px;
     background-color: rgba(245, 245, 220, 0.653);
     margin-top: -2%;
@@ -318,7 +318,7 @@
 
 .squareT28 {
 
-    width: 25%;
+    width:60px;
     height: 60px;
     background-color: rgba(245, 245, 220, 0.653);
     margin-top: -2%;
@@ -329,7 +329,7 @@
 }
 
 .squareT32 {
-    width: 25%;
+    width: 60px;
     height: 60px;
     background-color: rgba(245, 245, 220, 0.653);
     margin-top: -2%;
@@ -337,7 +337,7 @@
 }
 
 .squareR2, .squareR5 {
-    width: 33%;
+    width: 60px;
     height: 60px;
     background-color: rgba(245, 245, 220, 0.653);
     border-top:solid;
