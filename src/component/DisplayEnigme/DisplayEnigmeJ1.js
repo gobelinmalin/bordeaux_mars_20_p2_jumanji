@@ -24,6 +24,7 @@ class DisplayEnigmeJ1 extends React.Component {
       panicJudith: 0,
       redirect: null,
       count2J: 0,
+      count3J: 0,
       diceTest: 2,
       intro:
         localStorage.getItem("players") === "1" ||
@@ -50,18 +51,22 @@ class DisplayEnigmeJ1 extends React.Component {
       top1: 45,
       left1: 0,
       countPath1: 4,
+      endGame1: false,
       //player2
       top2: 45,
       right2: 0,
       countPath2: 4,
+      endGame2: false,
       //player3
       bottom3: -235,
       right3: 0,
       countPath3: 4,
+      endGame3:0,
       //player4
       bottom4: -235,
       left4: 0,
       countPath4: 4,
+      endGame4:false,
     };
 
     this.getEnigmes().then((enigmes) => {
@@ -145,6 +150,13 @@ class DisplayEnigmeJ1 extends React.Component {
       } else {
         this.setState({ top1: p1Top + dice * 60 });
       }
+      //endGame1
+
+      if(p1Left > 40){
+        //this.setState({endGame1 : true})
+        console.log(p1Left , "LEFTTTT")
+        return <Redirect to="/GameWin" />
+      }
     }
     //PLAYER 1
 
@@ -195,12 +207,12 @@ class DisplayEnigmeJ1 extends React.Component {
       isEnigmeVisible: false,
       intro:
         localStorage.getItem("players") === "1"
-          ? "Bravo, relance les dès"
+          ? "Bravo, relance les dés"
           : "" ||
             (localStorage.getItem("players") === "1,2" &&
               this.state.count2J % 2 === 0)
-          ? "Bravo, Allan lance les dès"
-          : "Bravo, Judith  lance les dès",
+          ? "Bravo, Allan lance les dés"
+          : "Bravo, Judith  lance les dès"
     }));
   };
 
@@ -259,6 +271,10 @@ class DisplayEnigmeJ1 extends React.Component {
     const { top2, right2 } = this.state; // player 2
     const { bottom3, right3 } = this.state; // player 3
     const { bottom4, left4 } = this.state; // player 4
+
+    if(left1 > 80){ // quand le joeur 1 arrive sur la boule => redirigé vers la page de win
+      return <Redirect to="/GameWin" />
+    }
 
     const shouldShowEnigmeSection =
       this.state.enigme && this.state.isEnigmeVisible;
