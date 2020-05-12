@@ -1,19 +1,21 @@
 .containerGlobal {
     display:flex;
+    border-color: rgba(43, 255, 0, 0);
+    border-style:solid;
     width:100%;
     margin-left:-36%;
-    margin-top:-15vh;
+    margin-top:10vh;
     height: 100vh;
-    position: absolute;
-    z-index: -1;
+    position: absolute
+
 }
 
 
 .introJoueur{
     margin-top:25vh;
-    width:60%;
+    width:20%;
     text-align:center;
-    margin-left:-16%;
+    margin-left:4.5%;
     position: absolute;
     color:rgb(34, 218, 61);
     font-size: 2vw;
@@ -25,10 +27,13 @@
     width: 62vw;
     display: flex;
     height: 33vh;
-    margin-left:22%;
+    margin-left:21.5%;
     margin-top:20vh;
-    border-color:yellow;
+    border-color: rgba(0, 128, 0, 0);
     border-style:solid;
+    width:30vw;
+
+
 }
 
 ul {
@@ -37,43 +42,95 @@ ul {
 
 .btn-enigme {
     margin-left: 50vw;
+    margin-top:-17vh;
+    font-size: 1vw;
+    font-weight: bold;
+    background-image: url('roll-dice-button.png');
+    border-radius: 5px;
+    width:200px;
 }
 
 .enigmeContent2 {
-    margin-left: -90vw;
-    margin-top: 80px;
+    margin-left: -190%;
+    margin-top: 15vh;
     width: 100vw;
     font-size: 1.5vw;
     display: flex;
     flex-direction: column;
     align-items:center;
     color:rgb(34, 218, 61);
+
 }
 
+.enigme {
+    border-color:rgba(255, 255, 0, 0);
+    border-style:solid;
+    z-index:2;
+}
+
+.questionContent{
+    border-color:rgba(255, 192, 203, 0);
+    border-style:solid;
+    height:fit-content;
+    width:20vw;
+    height: 10vh;
+    margin-top:-3vh;
+}
 
 .showSolution {
-    margin-bottom:3%;
+
     height:50vh;
     width:20vw;
-}
-.questionContent{
-    border-color:red;
+    border-color:rgba(128, 0, 128, 0);
     border-style:solid;
-    height:50px;
-    width:20vw;
+    z-index: 2
 }
+
+
 .diceContainer {
-
-    margin-left:420%;
+    border-color:rgba(255, 0, 0, 0);
+    border-style:solid;
+    margin-left:220%;
     width:100%;
-    margin-top:20%;
+    margin-top:-27vh;
 
 }
 
-.leftSideContainer{
+.timerContainer{
+    margin-top:-10.9vh;
+    border-color: rgba(255, 166, 0, 0);
+    border-style: solid;
+    margin-left:-23.5%;
+}
 
-    margin-top:8vh;
-    margin-top:8vh;
+.timesUp {
+    position:absolute;
+    z-index:4;
+    border-color: rgba(255, 166, 0, 0.831);
+    border-style: solid;
+    width:87%;
+    height: 48vh;
+    border-radius: 100%;
+
+}
+
+.text1TimesUp {
+    margin-top:17vh;
+    margin-left:32%;
+    font-size: 2.5vw;
+    color: red;
+}
+
+.text2TimesUp {
+    margin-left:22%;
+    font-size: 2.5vw;
+    color:red;
 }
 
 
+.displayPionsContainer2 {
+    margin-left:-40%;
+    width: 48.5%;
+    height: 82vh;
+    margin-top:6.5vh;
+}

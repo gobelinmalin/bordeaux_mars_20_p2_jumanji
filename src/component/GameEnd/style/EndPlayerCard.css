@@ -1,5 +1,5 @@
 .EndCard {
-  width: 150px;
+  width: 10%;
   height: 200px;
   margin: 10px;
 }
@@ -13,9 +13,37 @@
   animation: animate-drum 2s linear infinite;
 }
 
-.CharacterPicLost {
-  width: 100%;
-  height: 76%;
+.CharacterPicLost1 {
+  margin-left: -180%;
+  width: 158%;
+  height: 30vh;
+  margin-bottom: 4%;
+  background: #071a0da6;
+  border: 2px solid #ffe055;
+  animation: animate-drum 2s linear infinite;
+}
+.CharacterPicLost2 {
+  margin-left: -80%;
+  width: 158%;
+  height: 30vh;
+  margin-bottom: 4%;
+  background: #071a0da6;
+  border: 2px solid #ffe055;
+  animation: animate-drum 2s linear infinite;
+}
+.CharacterPicLost3 {
+  margin-left: 10%;
+  width: 158%;
+  height: 30vh;
+  margin-bottom: 4%;
+  background: #071a0da6;
+  border: 2px solid #ffe055;
+  animation: animate-drum 2s linear infinite;
+}
+.CharacterPicLost4 {
+  margin-left: 100%;
+  width: 158%;
+  height: 30vh;
   margin-bottom: 4%;
   background: #071a0da6;
   border: 2px solid #ffe055;
@@ -23,7 +51,7 @@
 }
 
 .CharacterNameWin {
-  width: 100%;
+  width: 158%;
   height: 20%;
   background: #071a0da6;
   border: 2px solid #4fb415;
@@ -31,30 +59,69 @@
   color: white;
 }
 
-.CharacterNameLost {
-  width: 100%;
+.CharacterNameLost1 {
+  margin-left: -180%;
+  width: 158%;
   height: 20%;
   background: #071a0da6;
   border: 2px solid #ffe055;
   box-shadow: 0 20px 50px #ffe055;
   color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+.CharacterNameLost2 {
+  margin-left: -80%;
+  width: 158%;
+  height: 20%;
+  background: #071a0da6;
+  border: 2px solid #ffe055;
+  box-shadow: 0 20px 50px #ffe055;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.CharacterNameLost3 {
+  margin-left: 10%;
+  width: 158%;
+  height: 20%;
+  background: #071a0da6;
+  border: 2px solid #ffe055;
+  box-shadow: 0 20px 50px #ffe055;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.CharacterNameLost4 {
+  margin-left: 100%;
+  width: 158%;
+  height: 20%;
+  background: #071a0da6;
+  border: 2px solid #ffe055;
+  box-shadow: 0 20px 50px #ffe055;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-
-@keyframes animate-drum{
-    0%{
-        box-shadow: 0 0px 0px #77e736,  0 0px 0px #77e736;
-    }
-    25%{
-        box-shadow: 0 0px 5px #77e736,  0 0px 0px #77e736;
-    }
-    50%{
-      box-shadow: 0 0px 5px #77e736,  0 0px 0px #77e736;
+@keyframes animate-drum {
+  0% {
+    box-shadow: 0 0px 0px #77e736, 0 0px 0px #77e736;
   }
-    70%{
-      box-shadow: 0 0px 0px #77e736,  0 0px 5px #77e736;
-    }
-    100%{
-      box-shadow: 0 0px 5px #77e736,  0 0px px #77e736;
+  25% {
+    box-shadow: 0 0px 5px #77e736, 0 0px 0px #77e736;
+  }
+  50% {
+    box-shadow: 0 0px 5px #77e736, 0 0px 0px #77e736;
+  }
+  70% {
+    box-shadow: 0 0px 0px #77e736, 0 0px 5px #77e736;
+  }
+  100% {
+    box-shadow: 0 0px 5px #77e736, 0 0px px #77e736;
   }
 }

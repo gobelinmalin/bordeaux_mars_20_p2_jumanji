@@ -15,7 +15,7 @@ class Player2 extends React.Component {
                         <div className="panicPlayer2" >
                              
                         </div>
-                        <div className="panicJauge2">
+                        <div className={this.props.panicUpdate2}>
                                   
                         </div>
                    </div>

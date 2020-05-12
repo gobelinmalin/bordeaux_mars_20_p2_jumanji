@@ -59,3 +59,27 @@
   height: 25%;
   text-align: center;
 }
+
+.endPlayer1pic {
+  width: 80%;
+  margin-left:10%;
+
+}
+
+.endPlayer2pic {
+  width: 75%;
+  margin-left:12%;
+
+}
+
+.endPlayer3pic {
+  width: 65%;
+  margin-left:15%;
+
+}
+
+.endPlayer4pic {
+  width: 68%;
+  margin-left:15%;
+
+}

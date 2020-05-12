@@ -57,13 +57,14 @@
 }
 
 .middle {
-    border-color:orange;
+    border-color:rgb(170, 137, 45);
     border-style: solid;
+    border-width: 15px;
     width: 46%;
-    height: 330px;
+    height: 335px;
     border-radius: 50%;
     z-index:1;
-    margin-top:-2%;
+    margin-top:-4%;
     margin-left:-1%;
 }
 

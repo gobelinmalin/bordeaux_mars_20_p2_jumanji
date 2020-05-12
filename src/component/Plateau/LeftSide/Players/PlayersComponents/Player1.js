@@ -15,14 +15,7 @@ class Parent extends React.Component {
      }
  
      render() {
-          let panicBar 
-          if (this.state.count === 0) {
-               panicBar  = "panicJaugeA"
-               } else if (this.state.count < 3) {
-                    panicBar  = "panicJaugeB"
-               } else if (this.state.count >= 3) {
-                    panicBar = "panicJaugeC"
-               }
+       
 
          return (
           <div className="containerPlayer1">
