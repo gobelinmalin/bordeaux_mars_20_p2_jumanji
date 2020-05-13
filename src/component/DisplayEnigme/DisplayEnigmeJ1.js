@@ -11,6 +11,11 @@ import { CountdownCircleTimer } from "react-countdown-circle-timer";
 import { Route, Redirect } from "react-router-dom";
 import DisplayPion from "../Plateau/Pions/DisplayPion";
 
+//FRAMER LIBRARY
+import { motion, AnimatePresence } from 'framer-motion'
+//FRAMER LIBRARY
+
+
 class DisplayEnigmeJ1 extends React.Component {
   constructor(props) {
     super(props);
@@ -29,11 +34,11 @@ class DisplayEnigmeJ1 extends React.Component {
       diceTest: 2,
       intro:
         localStorage.getItem("players") === "1" ||
-        localStorage.getItem("players") == "1,2" ||
-        localStorage.getItem("players") == "1,2,3" ||
-        localStorage.getItem("players") == "1,2,3,4" ||
-        localStorage.getItem("players") == "1,3" ||
-        localStorage.getItem("players") == "1,4"
+          localStorage.getItem("players") == "1,2" ||
+          localStorage.getItem("players") == "1,2,3" ||
+          localStorage.getItem("players") == "1,2,3,4" ||
+          localStorage.getItem("players") == "1,3" ||
+          localStorage.getItem("players") == "1,4"
           ? <p className="allanIntro">"Allan Lance les dès" </p>
           : "" ||
             localStorage.getItem("players") === "2" ||
@@ -62,12 +67,12 @@ class DisplayEnigmeJ1 extends React.Component {
       bottom3: -235,
       right3: 0,
       countPath3: 4,
-      endGame3:0,
+      endGame3: 0,
       //player4
       bottom4: -235,
       left4: 0,
       countPath4: 4,
-      endGame4:false,
+      endGame4: false,
     };
 
     this.getEnigmes().then((enigmes) => {
@@ -155,9 +160,9 @@ class DisplayEnigmeJ1 extends React.Component {
       }
       //endGame1
 
-      if(p1Left > 40){
+      if (p1Left > 40) {
         //this.setState({endGame1 : true})
-        console.log(p1Left , "LEFTTTT")
+        console.log(p1Left, "LEFTTTT")
         return <Redirect to="/GameWin" />
       }
     }
@@ -173,10 +178,10 @@ class DisplayEnigmeJ1 extends React.Component {
 
       this.setState({ countPath2: countPath2 - dice });
       if (countPath2 <= 1) {
-        this.setState({ top2: p2Top + dice});
+        this.setState({ top2: p2Top + dice });
       }
 
-      if (p2Right < pathY ) {
+      if (p2Right < pathY) {
 
         this.setState({ right2: p2Right + 65 });
       } else {
@@ -215,8 +220,8 @@ class DisplayEnigmeJ1 extends React.Component {
           : "" ||
             (localStorage.getItem("players") === "1,2" &&
               this.state.count2J % 2 === 0)
-          ? <div><p className="judithIntro">BRAVO!</p> <p className="allanIntro"> Allan lance les dés </p></div>
-          : <p className="judithIntro"> BRAVO! Judith lance les dés </p>
+            ? <div><p className="judithIntro">BRAVO!</p> <p className="allanIntro"> Allan lance les dés </p></div>
+            : <p className="judithIntro"> BRAVO! Judith lance les dés </p>
     }));
   };
 
@@ -233,8 +238,8 @@ class DisplayEnigmeJ1 extends React.Component {
           : "" ||
             (localStorage.getItem("players") === "1,2" &&
               this.state.count2J % 2 === 0)
-          ? <p className="wrongAnswer"> MAUVAISE RÉPONSE! Allan lance les dés </p>
-          : <p className="wrongAnswer"> MAUVAISE RÉPONSE! Allan lance les dés </p>,
+            ? <p className="wrongAnswer"> MAUVAISE RÉPONSE! Allan lance les dés </p>
+            : <p className="wrongAnswer"> MAUVAISE RÉPONSE! Allan lance les dés </p>,
       panicAllan:
         localStorage.getItem("players") === "1"
           ? this.state.panicAllan + 10
@@ -279,10 +284,10 @@ class DisplayEnigmeJ1 extends React.Component {
     const { bottom3, right3 } = this.state; // player 3
     const { bottom4, left4 } = this.state; // player 4
 
-    if(left1 > 80){ // quand le joeur 1 arrive sur la boule => redirigé vers la page de win
+    if (left1 > 80) { // quand le joeur 1 arrive sur la boule => redirigé vers la page de win
       return <Redirect to="/GameWin" />
     }
-    if(top2 > 80){ // quand le joeur 2 arrive sur la boule => redirigé vers la page de win
+    if (top2 > 80) { // quand le joeur 2 arrive sur la boule => redirigé vers la page de win
       return <Redirect to="/GameWin" />
     }
 
@@ -429,7 +434,7 @@ class DisplayEnigmeJ1 extends React.Component {
             p3RIGHT={right3}
             p4BOTTOM={bottom4}
             p4LEFT={left4}
-       />
+          />
         </div>
       </div>
     );

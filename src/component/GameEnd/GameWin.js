@@ -9,6 +9,9 @@ import PlayerEnd2 from './PlayerEnd2'
 import PlayerEnd3 from './PlayerEnd3'
 import PlayerEnd4 from './PlayerEnd4'
 
+//FRAMER LIBRARY
+import { motion, AnimatePresence } from 'framer-motion'
+//FRAMER LIBRARY
 
 class GameWin extends React.Component {
     constructor (props) {
@@ -53,10 +56,20 @@ class GameWin extends React.Component {
 
 
         return (
-        <div className ="Wrapper">
+        <motion.div
+        animate={{scale: [0.9, 1, 1,0.9]}}
+                    transition={{
+                        type:"tween",
+                        stiffness: 10,
+                        yoyo: Infinity,
+                        duration: 1
+                         }}
+        className ="Wrapper">
         <div className = "Voile">
 
-            <div className = "GameEndResult">
+            <div
+
+            className = "GameEndResult">
                 <EndMessage gameVictory={this.state.gameVictory} />
             </div>
 
@@ -64,14 +77,23 @@ class GameWin extends React.Component {
 
 
 
-            <div className = "GamePlayersList">
+            <div
+
+            animate={{scale: [0.9, 1, 1,0.9]}}
+                    transition={{
+                        type:"tween",
+                        stiffness: 10,
+                        yoyo: Infinity,
+                        duration: 1
+                         }}
+             className = "GamePlayersList">
 
                     {endPlayer}
 
             </div>
 
         </div>
-        </div>
+        </motion.div>
 
         )
 

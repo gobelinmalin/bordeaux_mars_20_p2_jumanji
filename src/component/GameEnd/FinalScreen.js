@@ -9,13 +9,16 @@ import PlayerEnd2 from './PlayerEnd2'
 import PlayerEnd3 from './PlayerEnd3'
 import PlayerEnd4 from './PlayerEnd4'
 
+//FRAMER LIBRARY
+import { motion, AnimatePresence } from 'framer-motion'
+//FRAMER LIBRARY
 
 class FinalScreen extends React.Component {
-    constructor (props) {
+    constructor(props) {
         super(props);
         this.state = {
-            gameVictory : false,
-            players : localStorage.getItem('players')
+            gameVictory: false,
+            players: localStorage.getItem('players')
         };
     }
 
@@ -23,55 +26,75 @@ class FinalScreen extends React.Component {
 
         let endPlayer
         if (this.state.players == "1") {
-            endPlayer = [ <PlayerEnd1 /> ]
-            } else if (this.state.players== "2") {
-            endPlayer = [ <PlayerEnd2 /> ]
-            } else if (this.state.players == "3") {
-            endPlayer = [ <PlayerEnd3 /> ]
-            } else if (this.state.players == "4") {
-            endPlayer = [ <PlayerEnd4 /> ]
-            } else if (this.state.players == "1,2") {
-            endPlayer = [ <PlayerEnd1 />, <PlayerEnd2/> ]
-            } else if (this.state.players == "1,3") {
-            endPlayer = [ <PlayerEnd1/>, <PlayerEnd3  /> ]
-            } else if (this.state.players == "1,4") {
-            endPlayer = [ <PlayerEnd1 />, <PlayerEnd4 /> ]
-            } else if (this.state.players == "1,2,3") {
-            endPlayer= [ <PlayerEnd1/>, <PlayerEnd2 />, <PlayerEnd3  /> ]
-            } else if (this.state.players == "1,2,3,4") {
-            endPlayer = [ <PlayerEnd1 />, <PlayerEnd2 />, <PlayerEnd3 />, <PlayerEnd4 /> ]
-            } else if (this.state.players == "2,3") {
-            endPlayer = [ <PlayerEnd2 />, <PlayerEnd3  />]
-            } else if (this.state.players == "2,3,4") {
-            endPlayer = [ <PlayerEnd2 />, <PlayerEnd3  />, <PlayerEnd4 /> ]
-            } else if (this.state.players == "2,4") {
-            endPlayer = [ <PlayerEnd2 />, <PlayerEnd4 /> ]
-            } else if (this.state.players == "3,4") {
-            endPlayer = [ <PlayerEnd3  />, <PlayerEnd4 /> ]
-            }
+            endPlayer = [<PlayerEnd1 />]
+        } else if (this.state.players == "2") {
+            endPlayer = [<PlayerEnd2 />]
+        } else if (this.state.players == "3") {
+            endPlayer = [<PlayerEnd3 />]
+        } else if (this.state.players == "4") {
+            endPlayer = [<PlayerEnd4 />]
+        } else if (this.state.players == "1,2") {
+            endPlayer = [<PlayerEnd1 />, <PlayerEnd2 />]
+        } else if (this.state.players == "1,3") {
+            endPlayer = [<PlayerEnd1 />, <PlayerEnd3 />]
+        } else if (this.state.players == "1,4") {
+            endPlayer = [<PlayerEnd1 />, <PlayerEnd4 />]
+        } else if (this.state.players == "1,2,3") {
+            endPlayer = [<PlayerEnd1 />, <PlayerEnd2 />, <PlayerEnd3 />]
+        } else if (this.state.players == "1,2,3,4") {
+            endPlayer = [<PlayerEnd1 />, <PlayerEnd2 />, <PlayerEnd3 />, <PlayerEnd4 />]
+        } else if (this.state.players == "2,3") {
+            endPlayer = [<PlayerEnd2 />, <PlayerEnd3 />]
+        } else if (this.state.players == "2,3,4") {
+            endPlayer = [<PlayerEnd2 />, <PlayerEnd3 />, <PlayerEnd4 />]
+        } else if (this.state.players == "2,4") {
+            endPlayer = [<PlayerEnd2 />, <PlayerEnd4 />]
+        } else if (this.state.players == "3,4") {
+            endPlayer = [<PlayerEnd3 />, <PlayerEnd4 />]
+        }
 
 
+        const list = {
+            visible: {
+                opacity: 1,
+                transition: {
+                    when: "beforeChildren",
+                    staggerChildren: 0.3,
+                },
+            },
+            hidden: {
+                opacity: 0,
+                transition: {
+                    when: "afterChildren",
+                },
+            },
+        }
 
         return (
-        <div className ="Wrapper">
-        <div className = "Voile">
+            <motion.div
+                initial={{opacity: 1}}
+                animate={{ opacity: 0 }}
+                exit={{opacity: 1}}
+                transition={{ duration: 5, ease: "linear" }}
+                className="Wrapper">
+                <div className="Voile">
 
-            <div className = "GameEndResult">
-                <EndMessage gameVictory={this.state.gameVictory} />
-            </div>
+                    <div className="GameEndResult">
+                        <EndMessage gameVictory={this.state.gameVictory} />
+                    </div>
 
-            <EndCircle gameVictory={this.state.gameVictory}/>
+                    <EndCircle gameVictory={this.state.gameVictory} />
 
 
 
-            <div className = "GamePlayersList">
+                    <div className="GamePlayersList">
 
-                    {endPlayer}
+                        {endPlayer}
 
-            </div>
+                    </div>
 
-        </div>
-        </div>
+                </div>
+            </motion.div>
 
         )
 
