@@ -122,11 +122,15 @@ class Plateau3 extends React.Component {
     <section>
       <section>
       <div className="container">
+      
+
+
         <div className="selectedPlayers">
 
         </div>
-
-        <div className="containerBoard" >
+        <div className="borderPlateau">
+          <div className="containerBoard" >
+        
                         <div className="element1">
                             <div className="row1">
                                 <div className='squareT1'></div>
@@ -156,6 +160,7 @@ class Plateau3 extends React.Component {
                                 <div className='squareT22'></div>
                             </div>
                             <div className="row3">
+                            <div className='square'></div>
                                 <div className='squareT23'></div>
                                 <div className='squareT24'></div>
                                 <div className='squareT25'></div>
@@ -167,8 +172,8 @@ class Plateau3 extends React.Component {
                                 <div className='squareT31'></div>
                                 <div className='squareT32'></div>
                                 <div className='squareT33'></div>
-
                             </div>
+                           
 
                         </div>
                         <div className="element2">
@@ -188,16 +193,7 @@ class Plateau3 extends React.Component {
                                     <div className='squareL8'></div>
                                     <div className='squareL9'></div>
                                 </div>
-                                <div className="rowD">
-                                    <div className='squareL10'></div>
-                                    <div className='squareL11'></div>
-                                    <div className='squareL12'></div>
-                                </div>
-                                <div className="rowE">
-                                    <div className='squareL13'></div>
-                                    <div className='squareL14'></div>
-                                    <div className='squareL15'></div>
-                                </div>
+                              
 
 
 
@@ -208,10 +204,8 @@ class Plateau3 extends React.Component {
 
                                 </div>
                                 <div className="displayEnigme2Container">
-                                  <DisplayEnigmeJ1 />
+                                <DisplayEnigmeJ1 />
                                 </div>
-
-
 
                             </div>
                             <div className="right">
@@ -230,20 +224,7 @@ class Plateau3 extends React.Component {
                                     <div className='squareR8'></div>
                                     <div className='squareR9'></div>
                                 </div>
-                                <div className="rowD">
-                                    <div className='squareR10'></div>
-                                    <div className='squareR11'></div>
-                                    <div className='squareR12'></div>
-                                </div>
-                                <div className="rowE">
-                                    <div className='squareR13'></div>
-                                    <div className='squareR14'></div>
-                                    <div className='squareR15'></div>
-                                </div>
-
-
-
-
+                               
                             </div>
                         </div>
                         <div className="element3">
@@ -266,7 +247,6 @@ class Plateau3 extends React.Component {
                                 <div className='squareD12'></div>
                                 <div className='squareD13'></div>
                                 <div className='squareD14'></div>
-                                <div className='squareD14'></div>
                                 <div className='squareD15'></div>
                                 <div className='squareD16'></div>
                                 <div className='squareD17'></div>
@@ -274,11 +254,9 @@ class Plateau3 extends React.Component {
                                 <div className='squareD19'></div>
                                 <div className='squareD20'></div>
                                 <div className='squareD21'></div>
-
-
+                                <div className='squareD22'></div>
                              </div>
                              <div className="row3">
-                                <div className='squareD22'></div>
                                 <div className='squareD23'></div>
                                 <div className='squareD24'></div>
                                 <div className='squareD25'></div>
@@ -289,16 +267,17 @@ class Plateau3 extends React.Component {
                                 <div className='squareD30'></div>
                                 <div className='squareD31'></div>
                                 <div className='squareD32'></div>
-
-
+                                <div className='squareD33'></div>
                              </div>
+                            
 
                         </div>
                     </div>
-
+                    </div>
 
 
       </div>
+    
       </section>
 
     </section>

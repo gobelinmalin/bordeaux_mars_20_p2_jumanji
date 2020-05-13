@@ -20,6 +20,7 @@ class DisplayEnigmeJ1 extends React.Component {
       solutions: [],
       isEnigmeVisible: true,
       dice: 2,
+      buttonEnabled2: true,
       panicAllan: 0,
       panicJudith: 0,
       redirect: null,
@@ -33,7 +34,7 @@ class DisplayEnigmeJ1 extends React.Component {
         localStorage.getItem("players") == "1,2,3,4" ||
         localStorage.getItem("players") == "1,3" ||
         localStorage.getItem("players") == "1,4"
-          ? "Allan Lance les dès"
+          ? <p className="allanIntro">"Allan Lance les dès" </p>
           : "" ||
             localStorage.getItem("players") === "2" ||
             localStorage.getItem("players") === "2,3" ||
@@ -125,6 +126,8 @@ class DisplayEnigmeJ1 extends React.Component {
       intro: "",
       timeUp: "",
       count2J: this.state.count2J + 1,
+      // Quand je clique sur le bouton "Lancer les dés" changements du bouton disabled
+      buttonEnabled2: !this.state.buttonEnabled2,
     });
     let dice = this.state.dice;
     let pathY = 240;
@@ -148,7 +151,7 @@ class DisplayEnigmeJ1 extends React.Component {
       if (p1Top > pathY) {
         this.setState({ left1: p1Left + 40 });
       } else {
-        this.setState({ top1: p1Top + dice * 60 });
+        this.setState({ top1: p1Top + dice * 65 });
       }
       //endGame1
 
@@ -175,7 +178,7 @@ class DisplayEnigmeJ1 extends React.Component {
 
       if (p2Right < pathY ) {
 
-        this.setState({ right2: p2Right + 60 });
+        this.setState({ right2: p2Right + 65 });
       } else {
         this.setState({ top2: p2Top + dice * 40 });
       }
@@ -186,7 +189,7 @@ class DisplayEnigmeJ1 extends React.Component {
     if (p3Bottom > pathY) {
       this.setState({ right3: p3Right - 40 });
     } else {
-      this.setState({ bottom3: p3Bottom - dice * 60 });
+      this.setState({ bottom3: p3Bottom - dice * 65 });
     }
     //PLAYER 3
 
@@ -194,7 +197,7 @@ class DisplayEnigmeJ1 extends React.Component {
     if (p4Bottom > pathY) {
       this.setState({ left4: p4Left + 40 });
     } else {
-      this.setState({ bottom4: p4Bottom - dice * 60 });
+      this.setState({ bottom4: p4Bottom - dice * 65 });
     }
     //PLAYER 4
   };
@@ -205,14 +208,15 @@ class DisplayEnigmeJ1 extends React.Component {
       ...state,
       enigmeIndex: state.enigmeIndex + 1,
       isEnigmeVisible: false,
+      buttonEnabled2: true,
       intro:
         localStorage.getItem("players") === "1"
           ? "Bravo, relance les dés"
           : "" ||
             (localStorage.getItem("players") === "1,2" &&
               this.state.count2J % 2 === 0)
-          ? "Bravo, Allan lance les dés"
-          : "Bravo, Judith  lance les dès"
+          ? <div><p className="judithIntro">BRAVO!</p> <p className="allanIntro"> Allan lance les dés </p></div>
+          : <p className="judithIntro"> BRAVO! Judith lance les dés </p>
     }));
   };
 
@@ -222,14 +226,15 @@ class DisplayEnigmeJ1 extends React.Component {
       ...state,
       enigmeIndex: state.enigmeIndex + 1,
       isEnigmeVisible: false,
+      buttonEnabled2: true,
       intro:
         localStorage.getItem("players") === "1"
           ? "Mauvaise réponse, relance les dès"
           : "" ||
             (localStorage.getItem("players") === "1,2" &&
               this.state.count2J % 2 === 0)
-          ? "Mauvaise réponse, Allan lance les dès"
-          : "Mauvaise réponse, Judith lance les dès",
+          ? <p className="wrongAnswer"> MAUVAISE RÉPONSE! Allan lance les dés </p>
+          : <p className="wrongAnswer"> MAUVAISE RÉPONSE! Allan lance les dés </p>,
       panicAllan:
         localStorage.getItem("players") === "1"
           ? this.state.panicAllan + 10
@@ -266,6 +271,8 @@ class DisplayEnigmeJ1 extends React.Component {
     );
   };
 
+
+
   render() {
     const { top1, left1 } = this.state; // player 1
     const { top2, right2 } = this.state; // player 2
@@ -275,6 +282,11 @@ class DisplayEnigmeJ1 extends React.Component {
     if(left1 > 80){ // quand le joeur 1 arrive sur la boule => redirigé vers la page de win
       return <Redirect to="/GameWin" />
     }
+    if(top2 > 80){ // quand le joeur 2 arrive sur la boule => redirigé vers la page de win
+      return <Redirect to="/GameWin" />
+    }
+
+
 
     const shouldShowEnigmeSection =
       this.state.enigme && this.state.isEnigmeVisible;
@@ -312,6 +324,8 @@ class DisplayEnigmeJ1 extends React.Component {
       return <Redirect to="/finalScreen" />;
     }
 
+    console.log("click button", this.state.buttonEnabled2)
+
     return (
       <div className="containerGlobal">
         <div className="leftSideContainer">
@@ -335,8 +349,9 @@ class DisplayEnigmeJ1 extends React.Component {
                 left4
               )
             }
+            disabled={!this.state.buttonEnabled2}
           >
-            Lancer les dès
+            Lance les dés
           </button>
           {shouldShowEnigmeSection && (
             <div className="enigmeContent2">
@@ -349,6 +364,7 @@ class DisplayEnigmeJ1 extends React.Component {
                     colors={[["#01D758", 0.33], ["#01D758", 0.33], ["#A30000"]]}
                     onComplete={() =>
                       this.setState({
+                        buttonEnabled2: !this.state.buttonEnabled2,
                         panicAllan:
                           localStorage.getItem("players") === "1"
                             ? this.state.panicAllan + 10
@@ -396,6 +412,7 @@ class DisplayEnigmeJ1 extends React.Component {
                   solutions={this.state.solutions}
                   onCorrectResponse={this.onCorrectResponse}
                   onIncorrectResponse={this.onIncorrectResponse}
+                  buttonEnabled2={this.state.buttonEnabled2}
                 />
               </div>
             </div>
@@ -412,7 +429,7 @@ class DisplayEnigmeJ1 extends React.Component {
             p3RIGHT={right3}
             p4BOTTOM={bottom4}
             p4LEFT={left4}
-          />
+       />
         </div>
       </div>
     );
