@@ -15,33 +15,46 @@ class DisplayPion extends React.Component {
 
   displayPion1 = () => {
     let pionNumber1 = (
-      <div
-        className="containerPion1"
-        style={{
-          top: this.props.p1TOP,
-          left: this.props.p1LEFT,
-          position: "relative",
-          border: "solid orange",
-        }}
-      >
-        <Pion1 />
+      <div className="containerBottomPion">
+        <div className="zonePion3">
+
+          <div
+            className="containerPion1"
+            style={{
+              top: this.props.p1TOP,
+              left: this.props.p1LEFT,
+              position: "relative",
+              border: "solid orange",
+            }}
+          >
+            <Pion1 />
+          </div>
+
+        </div>
       </div>
     );
     return pionNumber1;
   };
   displayPion2 = () => {
     let pionNumber2 = (
-      <div
-        className="container2Pion2"
-        style={{
-          top: this.props.p2TOP,
-          right: this.props.p2RIGHT,
-          position: "relative",
-          //border: "solid cyan",
-        }}
-      >
-        <Pion2 />
+      <div className="containerTopPion">
+        <div className="zonePion2">
+
+          <div
+            className="container2Pion2"
+            style={{
+              top: this.props.p2TOP,
+              right: this.props.p2RIGHT,
+              position: "relative",
+              //border: "solid cyan",
+            }}
+          >
+            <Pion2 />
+          </div>
+
+        </div>
       </div>
+
     );
     return pionNumber2;
   };
