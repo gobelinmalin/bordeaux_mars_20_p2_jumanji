@@ -10,6 +10,7 @@ import Plateau from './component/Plateau/Plateau'
 import FinalScreen from './component/GameEnd/FinalScreen'
 import Plateau2 from './component/Plateau/Plateau2'
 import Plateau3 from './component/Plateau/Plateau3';
+import GameWin from './component/GameEnd/GameWin';
 
 
  
@@ -26,6 +27,7 @@ class App extends Component {
              <Route path="/finalScreen" component={FinalScreen}/>
              <Route path="/plateau2" component={Plateau2}/>
              <Route path="/plateau3" component={Plateau3}/>
+             <Route path="/gamewin" component={GameWin}/>
        
            </Switch>
         </div> 

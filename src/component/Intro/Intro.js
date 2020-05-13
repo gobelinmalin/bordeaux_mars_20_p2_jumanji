@@ -24,7 +24,7 @@ function Intro() {
         </div> 
        <div className="containerBouton">
         <button className="selectPlayerContainer2">
-           <NavLink className="toSelectPlayer" to="/select-player">Tenter l'aventure !</NavLink>        
+           <NavLink className="toSelectPlayer" to="/select-player">Jouer</NavLink>        
            </button>
            </div>
           

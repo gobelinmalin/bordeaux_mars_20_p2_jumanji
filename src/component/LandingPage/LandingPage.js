@@ -28,8 +28,6 @@ function LandingPage(){
             <div className="select-player"></div>
 
             <div className="end-page"></div>
-
-            <a href="http://www.oursourcecode.net/u6090" target="_blank" rel="noopener noreferrer" class="">By Jackin</a>
         </div>
     )
 }

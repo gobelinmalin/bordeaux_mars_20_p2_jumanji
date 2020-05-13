@@ -24,6 +24,7 @@ class ShowSolutions extends React.Component {
       this.props.onIncorrectResponse();
      
     }
+    
   };
 
   render() {

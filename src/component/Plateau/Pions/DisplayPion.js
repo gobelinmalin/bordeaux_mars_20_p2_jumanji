@@ -15,22 +15,16 @@ class DisplayPion extends React.Component {
 
   displayPion1 = () => {
     let pionNumber1 = (
-      <div className="containerBottomPion">
-        <div className="zonePion3">
-
-          <div
-            className="containerPion1"
-            style={{
-              top: this.props.p1TOP,
-              left: this.props.p1LEFT,
-              position: "relative",
-              border: "solid orange",
-            }}
-          >
-            <Pion1 />
-          </div>
-
-        </div>
+      <div
+        className="containerPion1"
+        style={{
+          top: this.props.p1TOP,
+          left: this.props.p1LEFT,
+          position: "relative",
+          /*border: "solid orange",*/
+        }}
+      >
+        <Pion1 />
       </div>
     );
     return pionNumber1;
@@ -111,9 +105,9 @@ class DisplayPion extends React.Component {
     } else if (this.state.selectedPion === "1,4") {
       displayPionTest = "joueur3 et 4 est selectionné";
     } else if (this.state.selectedPion === "1,2,3") {
-      return [this.displayPion3(), this.displayPion2(), this.displayPion1()];
+      return [this.displayPion1(), this.displayPion2(), this.displayPion3()];
     } else if (this.state.selectedPion === "1,2,3,4") {
-      displayPionTest = "joueur1, 2, 3, 4 est selectionné";
+      return [this.displayPion3(), this.displayPion2(), this.displayPion1(),this.displayPion4() ];
     }
     return <div className="containerPion">{displayPionTest}</div>;
   }
