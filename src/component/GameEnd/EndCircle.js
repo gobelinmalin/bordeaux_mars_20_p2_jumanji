@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 import './style/EndCircle.css';
 
@@ -13,9 +14,17 @@ function EndCircle (props) {
                         <div className = {props.gameVictory
                             ? "JumanjiMessageWin"
                             : "JumanjiMessageLost"}>
+                                <NavLink classeName="JumanjiMessageWin" to="/select-player" 
+                                style={{
+                                    color: "#4fb415",
+                                    border: "none",
+                                    textDecoration: 'none',
+
+                                    }}>
                                 {props.gameVictory
-                                ? <p>Refermer<br/> le jeu</p>
-                                : <p>Entrer<br/> dans la jungle</p>}
+                                ? <p>Rejouer<br/> </p>
+                                : <p>Rejouer<br/> </p>}
+                                </NavLink>
                         </div>
                     </div>
             </div>

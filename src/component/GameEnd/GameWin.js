@@ -4,10 +4,10 @@ import { NavLink } from 'react-router-dom';
 import EndMessage from './EndMessage'
 import EndCircle from './EndCircle'
 import EndPlayerCard from './EndPlayerCard'
-import PlayerEnd1 from './PlayerEnd1'
-import PlayerEnd2 from './PlayerEnd2'
-import PlayerEnd3 from './PlayerEnd3'
-import PlayerEnd4 from './PlayerEnd4'
+import PlayerEnd1 from './Player1Win'
+import PlayerEnd2 from './Player2Win'
+import PlayerEnd3 from './Player3Win'
+import PlayerEnd4 from './Player4Win'
 
 
 class GameWin extends React.Component {
@@ -53,25 +53,25 @@ class GameWin extends React.Component {
 
 
         return (
-        <div className ="Wrapper">
-        <div className = "Voile">
-
+            <div className ="Wrapper">
+            <div className = "Voile">
             <div className = "GameEndResult">
-                <EndMessage gameVictory={this.state.gameVictory} />
+                    <EndMessage gameVictory={this.state.gameVictory} />
+                </div>
+                
+    
+    
+    
+                <div className = "GamePlayersList">
+    
+                        {endPlayer}
+    
+                </div>
+                
+    
+                <EndCircle gameVictory={this.state.gameVictory}/>
             </div>
-
-            <EndCircle gameVictory={this.state.gameVictory}/>
-
-
-
-            <div className = "GamePlayersList">
-
-                    {endPlayer}
-
             </div>
-
-        </div>
-        </div>
 
         )
 
@@ -79,4 +79,4 @@ class GameWin extends React.Component {
 
 }
 
-export default GameWin
+export default GameWin;

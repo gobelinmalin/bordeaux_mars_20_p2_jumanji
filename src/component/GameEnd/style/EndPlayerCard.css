@@ -3,109 +3,204 @@
   height: 200px;
   margin: 10px;
 }
+.Win {
+  font-size: 50px;
+}
 
-.CharacterPicWin {
-  width: 100%;
-  height: 76%;
+.CharacterPicWin1 {
+  margin-left: -180%;
+  border-radius: 8px;
+  width: 158%;
+  height: 30vh;
   margin-bottom: 4%;
   background: #071a0da6;
   border: 2px solid #4fb415;
   animation: animate-drum 2s linear infinite;
 }
-
-.CharacterPicLost1 {
+.CharacterPicWin2 {
   margin-left: -180%;
+  border-radius: 8px;
   width: 158%;
   height: 30vh;
   margin-bottom: 4%;
   background: #071a0da6;
-  border: 2px solid #ffe055;
+  border: 2px solid #4fb415;
+  animation: animate-drum 2s linear infinite;
+}
+.CharacterPicWin3 {
+  margin-left: -180%;
+  border-radius: 8px;
+  width: 158%;
+  height: 30vh;
+  margin-bottom: 4%;
+  background: #071a0da6;
+  border: 2px solid #4fb415;
+  animation: animate-drum 2s linear infinite;
+}
+.CharacterPicWin4 {
+  margin-left: -180%;
+  border-radius: 8px;
+  width: 158%;
+  height: 30vh;
+  margin-bottom: 4%;
+  background: #071a0da6;
+  border: 2px solid #4fb415;
+  animation: animate-drum 2s linear infinite;
+}
+.CharacterNameWin1 {
+  margin-left: -180%;
+  border-radius: 8px;
+  width: 158%;
+  height: 20%;
+  background: #071a0da6;
+  border: 2px solid #4fb415;
+  box-shadow: 0 20px 50px #4fb415;
+  color: #4fb415;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  font-size: 28px;
+}
+.CharacterNameWin2 {
+  margin-left: -180%;
+  border-radius: 8px;
+  width: 158%;
+  height: 20%;
+  background: #071a0da6;
+  border: 2px solid #4fb415;
+  box-shadow: 0 20px 50px #4fb415;
+  color: #4fb415;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  font-size: 28px;
+}
+.CharacterNameWin3 {
+  margin-left: -180%;
+  border-radius: 8px;
+  width: 158%;
+  height: 20%;
+  background: #071a0da6;
+  border: 2px solid #4fb415;
+  box-shadow: 0 20px 50px #4fb415;
+  color: #4fb415;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  font-size: 28px;
+}
+.CharacterNameWin4 {
+  margin-left: -180%;
+  border-radius: 8px;
+  width: 158%;
+  height: 20%;
+  background: #071a0da6;
+  border: 2px solid #4fb415;
+  box-shadow: 0 20px 50px #4fb415;
+  color: #4fb415;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  font-size: 28px;
+}
+.CharacterPicLost1 {
+  margin-left: -180%;
+  border-radius: 8px;
+  width: 158%;
+  height: 30vh;
+  margin-bottom: 4%;
+  background: #071a0da6;
+  border: 2px solid #d42222;
   animation: animate-drum 2s linear infinite;
 }
 .CharacterPicLost2 {
   margin-left: -80%;
+  border-radius: 8px;
   width: 158%;
   height: 30vh;
   margin-bottom: 4%;
   background: #071a0da6;
-  border: 2px solid #ffe055;
+  border: 2px solid #d42222;
   animation: animate-drum 2s linear infinite;
 }
 .CharacterPicLost3 {
   margin-left: 10%;
+  border-radius: 8px;
   width: 158%;
   height: 30vh;
   margin-bottom: 4%;
   background: #071a0da6;
-  border: 2px solid #ffe055;
+  border: 2px solid #d42222;
   animation: animate-drum 2s linear infinite;
 }
 .CharacterPicLost4 {
   margin-left: 100%;
+  border-radius: 8px;
   width: 158%;
   height: 30vh;
   margin-bottom: 4%;
   background: #071a0da6;
-  border: 2px solid #ffe055;
+  border: 2px solid #d42222;
   animation: animate-drum 2s linear infinite;
 }
 
-.CharacterNameWin {
-  width: 158%;
-  height: 20%;
-  background: #071a0da6;
-  border: 2px solid #4fb415;
-  box-shadow: 0 20px 50px #77e736;
-  color: white;
-}
+
 
 .CharacterNameLost1 {
   margin-left: -180%;
+  border-radius: 8px;
   width: 158%;
   height: 20%;
   background: #071a0da6;
-  border: 2px solid #ffe055;
-  box-shadow: 0 20px 50px #ffe055;
-  color: white;
+  border: 2px solid #d42222;
+  box-shadow: 0 20px 50px #d42222;
+  color: #d42222;
   display: flex;
   justify-content: center;
   align-items: center; 
+  font-size: 28px;
 }
 .CharacterNameLost2 {
   margin-left: -80%;
+  border-radius: 8px;
   width: 158%;
   height: 20%;
   background: #071a0da6;
-  border: 2px solid #ffe055;
-  box-shadow: 0 20px 50px #ffe055;
-  color: white;
+  border: 2px solid #d42222;
+  box-shadow: 0 20px 50px #d42222;
+  color: #d42222;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 28px;
 }
 .CharacterNameLost3 {
   margin-left: 10%;
+  border-radius: 8px;
   width: 158%;
   height: 20%;
   background: #071a0da6;
-  border: 2px solid #ffe055;
-  box-shadow: 0 20px 50px #ffe055;
-  color: white;
+  border: 2px solid #d42222;
+  box-shadow: 0 20px 50px #d42222;
+  color: #d42222;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 28px;
 }
 .CharacterNameLost4 {
   margin-left: 100%;
+  border-radius: 8px;
   width: 158%;
   height: 20%;
   background: #071a0da6;
-  border: 2px solid #ffe055;
-  box-shadow: 0 20px 50px #ffe055;
-  color: white;
+  border: 2px solid #d42222;
+  box-shadow: 0 20px 50px #d42222;
+  color: #d42222;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 28px;
 }
 
 @keyframes animate-drum {

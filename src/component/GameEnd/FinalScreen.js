@@ -55,12 +55,10 @@ class FinalScreen extends React.Component {
         return (
         <div className ="Wrapper">
         <div className = "Voile">
-
-            <div className = "GameEndResult">
+        <div className = "GameEndResult">
                 <EndMessage gameVictory={this.state.gameVictory} />
             </div>
-
-            <EndCircle gameVictory={this.state.gameVictory}/>
+            
 
 
 
@@ -69,7 +67,9 @@ class FinalScreen extends React.Component {
                     {endPlayer}
 
             </div>
+            
 
+            <EndCircle gameVictory={this.state.gameVictory}/>
         </div>
         </div>
 

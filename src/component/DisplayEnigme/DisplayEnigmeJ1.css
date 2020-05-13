@@ -23,7 +23,7 @@
 }
 
 .solutions-enigme {
-    color: whitesmoke;  
+    color: whitesmoke;
     width: 62vw;
     display: flex;
     height: 33vh;
@@ -32,8 +32,8 @@
     border-color: rgba(0, 128, 0, 0);
     border-style:solid;
     width:30vw;
-  
-   
+
+
 }
 ul {
     list-style: none;
@@ -83,7 +83,7 @@ ul {
     border-style:solid;
     z-index: 2
 }
-  
+
 
 .diceContainer {
     border-color:rgba(255, 0, 0, 0);
@@ -109,7 +109,7 @@ ul {
     width:87%;
     height: 48vh;
     border-radius: 100%;
-   
+
 }
 
 .text1TimesUp {
@@ -136,13 +136,50 @@ ul {
 
 .allanIntro {
     color: #c65e18;
+    font-weight: bold;
+   
 }
 
 
 .judithIntro {
     color: #00B0F0;
+    font-weight: bold;
 }
 
 .wrongAnswer {
     color: red;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.squareT1BIS {
+    border-color:yellow;
+    border-style: solid;
+    width: 100px;
+    height: 100px;
+}
+
+.squareT1BISActive {
+    border-color:orange;
+    border-style: solid;
+    width: 100px;
+    height: 100px;
+    margin-left:-10%;
+    background-color:  orange;
+}
+
+.squareT2BISActive {
+    border-color:blue;
+    border-style: solid;
+    width: 100px;
+    height: 100px;
+    background-color:  blue;
+}
+
+.squareT2BIS {
+    border-color:blue;
+    border-style: solid;
+    width: 100px;
+    height: 100px;
+    background-color:;
 }

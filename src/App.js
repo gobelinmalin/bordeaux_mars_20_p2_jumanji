@@ -13,6 +13,7 @@ import Plateau3 from './component/Plateau/Plateau3';
 import GameWin from './component/GameEnd/GameWin';
 
 
+
  
 class App extends Component {
   render() {
@@ -23,11 +24,10 @@ class App extends Component {
             <Switch>
              <Route path="/" component={LandingPage} exact/>
              <Route path="/select-player" component={SelectPlayer}/>
-             <Route path="/plateau" component={Plateau}/>
              <Route path="/finalScreen" component={FinalScreen}/>
-             <Route path="/plateau2" component={Plateau2}/>
              <Route path="/plateau3" component={Plateau3}/>
              <Route path="/gamewin" component={GameWin}/>
+          
        
            </Switch>
         </div> 

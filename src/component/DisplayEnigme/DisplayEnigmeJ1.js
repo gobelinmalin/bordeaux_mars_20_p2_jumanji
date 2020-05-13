@@ -10,6 +10,7 @@ import LeftSide from "../Plateau/LeftSide/LeftSide";
 import { CountdownCircleTimer } from "react-countdown-circle-timer";
 import { Route, Redirect } from "react-router-dom";
 import DisplayPion from "../Plateau/Pions/DisplayPion";
+import { NavLink } from 'react-router-dom';
 
 class DisplayEnigmeJ1 extends React.Component {
   constructor(props) {
@@ -27,6 +28,7 @@ class DisplayEnigmeJ1 extends React.Component {
       count2J: 0,
       count3J: 0,
       diceTest: 2,
+      pathCount:0,
       intro:
         localStorage.getItem("players") === "1" ||
         localStorage.getItem("players") == "1,2" ||
@@ -34,19 +36,19 @@ class DisplayEnigmeJ1 extends React.Component {
         localStorage.getItem("players") == "1,2,3,4" ||
         localStorage.getItem("players") == "1,3" ||
         localStorage.getItem("players") == "1,4"
-          ? <p className="allanIntro">"Allan Lance les dès" </p>
+          ? <p className="allanIntro">Allan lance les dès </p>
           : "" ||
             localStorage.getItem("players") === "2" ||
             localStorage.getItem("players") === "2,3" ||
             localStorage.getItem("players") === "2,4" ||
             localStorage.getItem("players") === "2,3,4"
-          ? "Judith Lance les dès"
+          ? "Judith lance les dès"
           : "" ||
             localStorage.getItem("players") === "3" ||
             localStorage.getItem("players") === "3,4"
-          ? "Peter Lance les dès"
+          ? "Peter lance les dès"
           : "" || localStorage.getItem("players") === "4"
-          ? "Sarah Lance les dès"
+          ? "Sarah lance les dès"
           : "",
       //player1
       top1: 45,
@@ -209,14 +211,15 @@ class DisplayEnigmeJ1 extends React.Component {
       enigmeIndex: state.enigmeIndex + 1,
       isEnigmeVisible: false,
       buttonEnabled2: true,
+      pathCount:this.state.pathCount +1,
       intro:
         localStorage.getItem("players") === "1"
-          ? "Bravo, relance les dés"
+          ? <p className="allanIntro">"Bravo, relance les dés" </p>
           : "" ||
             (localStorage.getItem("players") === "1,2" &&
               this.state.count2J % 2 === 0)
-          ? <div><p className="judithIntro">BRAVO!</p> <p className="allanIntro"> Allan lance les dés </p></div>
-          : <p className="judithIntro"> BRAVO! Judith lance les dés </p>
+          ? <div><p className="judithIntro">BRAVO Judith!</p> <br /> <p className="allanIntro"> Allan lance les dés </p></div>
+          : <div><p className="allanIntro">BRAVO Allan!</p> <br /> <p className="judithIntro">  Judith lance les dés </p></div>
     }));
   };
 
@@ -227,14 +230,15 @@ class DisplayEnigmeJ1 extends React.Component {
       enigmeIndex: state.enigmeIndex + 1,
       isEnigmeVisible: false,
       buttonEnabled2: true,
+      pathCount:this.state.pathCount +1,
       intro:
         localStorage.getItem("players") === "1"
           ? "Mauvaise réponse, relance les dès"
           : "" ||
             (localStorage.getItem("players") === "1,2" &&
               this.state.count2J % 2 === 0)
-          ? <p className="wrongAnswer"> MAUVAISE RÉPONSE! Allan lance les dés </p>
-          : <p className="wrongAnswer"> MAUVAISE RÉPONSE! Allan lance les dés </p>,
+          ? <p className="wrongAnswer"> MAUVAISE RÉPONSE! <br/> Allan lance les dés </p>
+          : <p className="wrongAnswer"> MAUVAISE RÉPONSE! <br/>  Judith lance les dés </p>,
       panicAllan:
         localStorage.getItem("players") === "1"
           ? this.state.panicAllan + 10
@@ -323,6 +327,19 @@ class DisplayEnigmeJ1 extends React.Component {
     } else if (this.state.panicJudith === 40) {
       return <Redirect to="/finalScreen" />;
     }
+
+    let pathAllan;
+    let pathJudith
+    if  (this.state.pathCount % 2 === 0){
+      pathAllan = "squareT1BISActive"
+      pathJudith= "squareT2BIS"
+    } else if (this.state.pathCount % 2 !== 0) {
+      pathAllan = "squareT1BIS"
+      pathJudith = "squareT2BISActive"
+    }
+
+
+
 
     console.log("click button", this.state.buttonEnabled2)
 
@@ -431,6 +448,8 @@ class DisplayEnigmeJ1 extends React.Component {
             p4LEFT={left4}
        />
         </div>
+        <div className={pathAllan}></div>
+        <div className={pathJudith}></div>
       </div>
     );
   }
