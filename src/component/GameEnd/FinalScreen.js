@@ -72,10 +72,10 @@ class FinalScreen extends React.Component {
 
         return (
             <motion.div
-                initial={{opacity: 1}}
-                animate={{ opacity: 0 }}
-                exit={{opacity: 1}}
-                transition={{ duration: 5, ease: "linear" }}
+                initial={{y: "-100vh"}}
+                animate={{ y: 0}}
+                exit={{y: 0}}
+                transition={{velocity:1,damping:1, type :"spring",  mass:0.1,stiffness:10}}
                 className="Wrapper">
                 <div className="Voile">
 

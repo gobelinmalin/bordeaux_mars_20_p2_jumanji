@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 
 class Pion1 extends React.Component {
     render() {
-        
+
         return (
             <div>
                 <motion.img
@@ -15,7 +15,7 @@ class Pion1 extends React.Component {
                         type:"tween",
                         stiffness: 10,
                         yoyo: Infinity,
-                        duration: 1
+                        duration: 1.5
                          }}
                     className="picturePion1" src="https://zupimages.net/up/20/19/cr8j.png" alt="" />
             </div>
