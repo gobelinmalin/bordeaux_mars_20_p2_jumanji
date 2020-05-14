@@ -33,11 +33,11 @@ class EscapeConfirmation extends React.Component {
              Votre partie sera perdue si vous quitter maintenant.
             </p>
             <div className="actionCTAcontainer">
-            <NavLink className="confirmerCTA" to="/select-player"  >Quitter le jeux !</NavLink>
-    
+            <NavLink className="confirmerCTA" to="/select-player"  >Quitter le jeu !</NavLink>
+
             </div>
           </div>
-        
+
         </Modal>
       </div>
     );
