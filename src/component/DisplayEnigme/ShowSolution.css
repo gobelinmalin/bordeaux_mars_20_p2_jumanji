@@ -2,12 +2,19 @@
     border-color:rgba(0, 0, 255, 0);
     border-style:solid;
     margin-top:28%;
-    
+
 }
 
 
 .combattreCTA2 {
  margin-left: 34%;
  margin-top:-1vh;
-
+ height: 24px;
+ cursor: pointer;
+ border-radius: 6px;
+ background-color: #bea248;
+ border-color: #bea248;
+ outline: none;
+ padding: relative;
+ bottom: 50;
 }

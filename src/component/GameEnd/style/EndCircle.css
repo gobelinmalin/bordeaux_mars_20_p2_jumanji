@@ -28,6 +28,7 @@
 }
 
 .Ring {
+  outline: none;
   border: 2px;
   width: 100%;
   height: 83%;
