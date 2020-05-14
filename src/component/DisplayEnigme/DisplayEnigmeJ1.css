@@ -40,26 +40,51 @@ ul {
     list-style: none;
   }
 
-.btn-enigme{
-    margin-left: 600px;
-    margin-top: 150px;
-    font-size: 1vw;
+.containerBtn-enigme {
+    margin-top:-17%;
+}
+ 
+.btn-enigme:enabled{
+    margin-left: 580px;
+    margin-top: -20%;
+    font-size: 20px;
     font-weight: bold;
     background-image: url('roll-dice-button.png');
     border-radius: 5px;
-    width: 300px;
+    width: 160px;
+    height: 50px;
+    cursor: pointer;
+    opacity:0.8;
     
+   
+}
+
+
+
+
+.btn-enigme:enabled:hover{
+    margin-left: 580px;
+    margin-top: -20px;
+    font-size: 20px;
+    font-weight: bold;
+    background-image: url('roll-dice-button.png');
+    border-radius: 5px;
+    width: 160px;
+    height: 50px;
+    cursor: pointer;
+    opacity:1
 }
 
 .btn-enigme:disabled {
-    margin-left: 600px;
-    margin-top: 150px;
-    font-size: 1vw;
+    margin-left: 580px;
+    margin-top: -20px;
+    font-size: 20px;
     font-weight: bold;
     background-image: url('roll-dice-button.png');
     border-radius: 5px;
-    width: 300px;
-    
+    width: 160px;
+    height: 50px;
+    opacity:0.5;
 }
 
 .enigmeContent2 {
@@ -506,3 +531,53 @@ margin-right:120px;
         100% { margin-left: 30px;opacity:1;transform: rotate(0deg); width:100% }
       
         } 
+
+
+    .containerRulesEscape {
+        border: none;
+        text-decoration: underline;
+        
+        margin-left:10%;
+        margin-top:1%;
+        display:flex;
+        justify-content: space-around;
+        width:300px;
+        height: 50px;
+    }
+
+    .toRules {
+        color: #4fb415; 
+        border: none;
+        text-decoration: underline;
+        font-size: 20px;
+    }
+
+    .toEscape {
+        color: #4fb4159e; 
+        border: none;
+        text-decoration: underline;
+        text-decoration-color:#4fb4159e; 
+        font-size: 20px;
+    }
+
+    .toRules {
+        color: #4fb4159e; 
+        border: none;
+        text-decoration: underline;
+        text-decoration-color:#4fb4159e; 
+        font-size: 20px;
+    }
+
+    .toEscape:hover {
+        color: #4fb415; 
+        border: none;
+        text-decoration: underline;
+        font-size: 20px;
+    }
+
+    .toRules:hover {
+        color: #4fb415; 
+        border: none;
+        text-decoration: underline;
+        font-size: 20px;
+    }

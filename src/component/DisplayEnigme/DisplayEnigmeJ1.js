@@ -11,6 +11,7 @@ import { CountdownCircleTimer } from "react-countdown-circle-timer";
 import { Route, Redirect } from "react-router-dom";
 import DisplayPion from "../Plateau/Pions/DisplayPion";
 import { NavLink } from 'react-router-dom';
+import EscapeConfirmation  from './EscapeConfirmation'
 
 
 //FRAMER LIBRARY
@@ -42,7 +43,7 @@ class DisplayEnigmeJ1 extends React.Component {
         localStorage.getItem("players") == "1,2,3,4" ||
         localStorage.getItem("players") == "1,3" ||
         localStorage.getItem("players") == "1,4"
-          ? <div className="containerIntroAllan"><p className="allanIntro">Allan lance les dès </p></div>
+          ? <div className="containerIntroAllan"><p className="allanIntro">Allan lance les dés </p></div>
           : "" ||
             localStorage.getItem("players") === "2" ||
             localStorage.getItem("players") === "2,3" ||
@@ -383,7 +384,7 @@ class DisplayEnigmeJ1 extends React.Component {
 
         <div className="solutions-enigme">
           <div className="introJoueur">{this.state.intro}</div>
-
+          <div className="containerBtn-enigme">
           <button
             className="btn-enigme"
             onClick={() =>
@@ -400,8 +401,9 @@ class DisplayEnigmeJ1 extends React.Component {
             }
             disabled={!this.state.buttonEnabled2}
           >
-            Lance les dés
+            Lancer les dés
           </button>
+          </div>
           {shouldShowEnigmeSection && (
             <div className="enigmeContent2">
               <div className="questionContent">
@@ -413,6 +415,7 @@ class DisplayEnigmeJ1 extends React.Component {
                     colors={[["#01D758", 0.33], ["#01D758", 0.33], ["#A30000"]]}
                     onComplete={() =>
                       this.setState({
+                        pathCount:this.state.pathCount +1,
                         buttonEnabled2: !this.state.buttonEnabled2,
                         panicAllan:
                           localStorage.getItem("players") === "1"
@@ -508,18 +511,13 @@ class DisplayEnigmeJ1 extends React.Component {
           />
           </div>
         </div>
+        <div className="containerRulesEscape" >
+        <NavLink className="toRules"  to="/rules">
 
-        <NavLink to="/rules"
-          style={{
-                    color: "#4fb415",
-                    border: "none",
-                    textDecoration: 'none',
-                    fontSize: "20px",
-
-                 }}>
                       Règles
          </NavLink>
-
+         <EscapeConfirmation className="toEscape"/>
+         </div>
 
       </div>
     );

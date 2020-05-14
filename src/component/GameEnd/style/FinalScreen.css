@@ -7,7 +7,7 @@
   background-repeat: no-repeat;
 }
 
-.Voile {
+/* .Voile {
   height: 100%;
   background: linear-gradient( #1d1b0da5, #301305a5);
 }
@@ -15,7 +15,7 @@
 .Voile {
   height: 100%;
   background: linear-gradient( #1d1b0da5, #301305a5);
-}
+} */
 
 
 /* GameEnd Message  */
@@ -84,5 +84,6 @@
 
 }
 .Lost {
+  margin-top: -40px;
   font-size: 50px
 }

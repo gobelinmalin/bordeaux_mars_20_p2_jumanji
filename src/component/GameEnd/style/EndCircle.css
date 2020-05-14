@@ -10,7 +10,7 @@
   justify-items: center;
   margin-top: 225px;
 }
-  
+
 .JumanjiLoader {
   display: flex;
   align-items: center;
@@ -18,14 +18,15 @@
   border-radius: 50%;
   width:190px;
   height:190px;
+  margin-top: -170px;
   transition: 1s;
 }
-  
+
 .JumanjiLoader:hover {
   box-shadow: 5px 5px 25px 30px #77e736;
   transition: 1s;
 }
-  
+
 .Ring {
   border: 2px;
   width: 100%;
@@ -60,12 +61,12 @@
     color: #4fb415;
     /* transition: 2s; */
   }
-  
+
 .JumanjiMessageLost:hover {
     color: #4fb415;
     /* transition: 2s; */
   }
-    
+
 
 
   /* Jumanji Border animation */
@@ -79,5 +80,5 @@
   100%
   {
     transform: rotate(360deg);
-  } 
+  }
 }
