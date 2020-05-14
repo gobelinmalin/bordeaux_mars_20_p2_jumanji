@@ -40,14 +40,26 @@ ul {
     list-style: none;
   }
 
-.btn-enigme {
-    margin-left: 50vw;
-    margin-top: 27vh;
+.btn-enigme{
+    margin-left: 600px;
+    margin-top: 150px;
     font-size: 1vw;
     font-weight: bold;
     background-image: url('roll-dice-button.png');
     border-radius: 5px;
-    width:300px;
+    width: 300px;
+    
+}
+
+.btn-enigme:disabled {
+    margin-left: 600px;
+    margin-top: 150px;
+    font-size: 1vw;
+    font-weight: bold;
+    background-image: url('roll-dice-button.png');
+    border-radius: 5px;
+    width: 300px;
+    
 }
 
 .enigmeContent2 {
@@ -160,7 +172,7 @@ ul {
     font-weight: bold;
     margin-bottom: 45px;
     margin-top:-7%;
-    margin-left:10px;
+    margin-left:50px;
     opacity:1;
     animation: transitionWrongAnswer  ease-in-out 6s forwards;
 }
@@ -184,16 +196,16 @@ ul {
 }
 
 @keyframes transitionWrongAnswer {
-    0%   { opacity:1; transform: rotate(-90deg)}
-    50%   { opacity:1; transform: rotate(0deg)}
-    100% { margin-left:20px; opacity:0;transform: rotate(0deg) }
+    0%   { margin-left:50px; opacity:1; transform: rotate(-90deg)}
+    50%   { margin-left:50px; opacity:1; transform: rotate(0deg)}
+    100% { margin-left:50px; opacity:0;transform: rotate(0deg) }
   
     }
 
 @keyframes transitionNextPlayer {
     0%   { opacity:0; transform: rotate(-90deg)}
     50%   { opacity:0; transform: rotate(-45deg)}
-    100% { margin-left: 30px;opacity:1;transform: rotate(0deg) }
+    100% { margin-left: 35px;opacity:1;transform: rotate(0deg) }
   
     } 
 
@@ -202,7 +214,7 @@ ul {
     width: 65px;
     height: 65px;
     margin-left:-10%;
-    background-color:  #97450aa3;
+     /*background-color:  #97450aa3;*/
     animation : pathAllan ease-in 6s forwards ;
 
     
@@ -213,7 +225,7 @@ ul {
     width: 65px;
     height: 65px;
     margin-left:-10%;
-    background-color:  #97450aa3;
+    /*background-color:  #97450aa3;*/
     animation : pathAllan ease-in 6s forwards;
    
 }
@@ -221,7 +233,7 @@ ul {
     width: 65px;
     height: 65px;
     margin-left:-10%;
-    background-color:  #97450aa3;
+    /*background-color:  #97450aa3;*/
     animation : pathAllan ease-in 6s forwards;
   
 }
@@ -230,7 +242,7 @@ ul {
     width: 65px;
     height: 65px;
     margin-left:-10%;
-    background-color:  #97450aa3;
+    /*background-color:  #97450aa3;*/
     animation : pathAllan ease-in 6s forwards;
    
 }
@@ -239,7 +251,7 @@ ul {
     width: 65px;
     height: 65px;
     margin-left:-10%;
-    background-color:  #97450aa3;
+    /*background-color:  #97450aa3;*/
     animation : pathAllan ease-in 6s forwards;
  
 }
@@ -247,7 +259,7 @@ ul {
     width: 46px;
     height: 67px;
     margin-left:-6px;
-    background-color:  #97450aa3;
+     /*background-color:  #97450aa3;*/
     animation : pathAllan ease-in 6s forwards;
  
    
@@ -257,35 +269,35 @@ ul {
     width: 65px;
     height: 67px;
     animation : pathJudith ease-in 6s forwards;
-    background-color: rgba(12, 77, 103, 0.722);
+    /*background-color: rgba(12, 77, 103, 0.722);*/
   
 }
 .squareT8JudithActive {
     width: 65px;
     height: 67px;
     animation : pathJudith  ease-in 6s forwards;
-    background-color: rgba(12, 77, 103, 0.722);
+   /*background-color: rgba(12, 77, 103, 0.722);*/
    
 }
 .squareT7JudithActive {
     width: 65px;
     height: 67px;
     animation : pathJudith ease-in 6s forwards;
-    background-color: rgba(12, 77, 103, 0.722);
+    /*background-color: rgba(12, 77, 103, 0.722);*/
 
 }
 .squareT6JudithActive {
     width: 65px;
     height: 67px;
     animation : pathJudith ease-in 6s forwards;
-    background-color: rgba(12, 77, 103, 0.722);
+     /*background-color: rgba(12, 77, 103, 0.722);*/
 
 }
 .squareT5JudithActive {
     width: 65px;
     height: 67px;
     animation : pathJudith ease-in 6s forwards;
-    background-color: rgba(12, 77, 103, 0.722);
+    /*background-color: rgba(12, 77, 103, 0.722);*/
  
 }
 
@@ -296,25 +308,22 @@ ul {
     height: 38px;
     margin-left:-6.5%;
     animation : pathJudith ease-in 6s forwards;
-    background-color: rgba(12, 77, 103, 0.722);
+    /*background-color: rgba(12, 77, 103, 0.722);*/
   
  
 }
 
 @keyframes pathJudith {
-    0%   { opacity:0;   box-shadow: 0 0px 0px #77e736, 0 0px 0px #77e736; }
-    25%   { opacity:0;   box-shadow: 0 0px 5px #77e736, 0 0px 0px #77e736; }
-    50%   { opacity:0;   box-shadow: 0 0px 0px #77e736, 0 0px 0px #77e736; }
-    75%   { opacity:0;   box-shadow: 0 0px 0px #77e736, 0 0px 0px #77e736; }
-    100% { opacity:1; box-shadow: 0 0px 5px #77e736, 0 0px 0px #77e736; }
+    0%   { opacity:0;   box-shadow: 0 0px 0px #00B0F0, 0 0px 0px #00B0F0; }
+    100% { opacity:1;  box-shadow: inset 0 0 1.5em goldenrod, 0 0 2em red }
   }
 
   
 
 
   @keyframes pathAllan {
-    0%   { opacity:0; }
-    100% { opacity:1 }
+    0%   { opacity:0;   box-shadow: 0 0px 0px #00B0F0, 0 0px 0px #00B0F0; }
+    100% { opacity:1;  box-shadow: inset 0 0 2em goldenrod, 0 0 2em red }
   }
 
 

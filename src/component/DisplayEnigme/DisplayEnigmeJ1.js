@@ -509,7 +509,16 @@ class DisplayEnigmeJ1 extends React.Component {
           </div>
         </div>
 
+        <NavLink to="/rules"
+          style={{
+                    color: "#4fb415",
+                    border: "none",
+                    textDecoration: 'none',
+                    fontSize: "20px",
 
+                 }}>
+                      Règles
+         </NavLink>
 
 
       </div>
