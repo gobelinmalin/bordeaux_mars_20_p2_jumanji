@@ -72,10 +72,10 @@ class FinalScreen extends React.Component {
 
         return (
             <motion.div
-                initial={{y: "-100vh"}}
-                animate={{ y: 0}}
-                exit={{y: 0}}
-                transition={{velocity:1,damping:1, type :"spring",  mass:0.1,stiffness:10}}
+                initial={{ y: "-100vh" }}
+                animate={{ y: 0 }}
+                exit={{ y: 0 }}
+                transition={{ velocity: 1, damping: 1, type: "spring", mass: 0.1, stiffness: 10 }}
                 className="Wrapper">
                 <div className="Voile">
 
@@ -92,7 +92,7 @@ class FinalScreen extends React.Component {
                         {endPlayer}
 
                     </div>
-
+                    <EndCircle gameVictory={this.state.gameVictory} />
                 </div>
             </motion.div>
 

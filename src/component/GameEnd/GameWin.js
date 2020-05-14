@@ -4,10 +4,10 @@ import { NavLink } from 'react-router-dom';
 import EndMessage from './EndMessage'
 import EndCircle from './EndCircle'
 import EndPlayerCard from './EndPlayerCard'
-import PlayerEnd1 from './PlayerEnd1'
-import PlayerEnd2 from './PlayerEnd2'
-import PlayerEnd3 from './PlayerEnd3'
-import PlayerEnd4 from './PlayerEnd4'
+import PlayerEnd1 from './Player1Win'
+import PlayerEnd2 from './Player2Win'
+import PlayerEnd3 from './Player3Win'
+import PlayerEnd4 from './Player4Win'
 
 //FRAMER LIBRARY
 import { motion, AnimatePresence } from 'framer-motion'
@@ -101,4 +101,4 @@ class GameWin extends React.Component {
 
 }
 
-export default GameWin
+export default GameWin;

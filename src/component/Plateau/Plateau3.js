@@ -274,7 +274,7 @@ class Plateau3 extends React.Component {
                         </div>
                     </div>
                     </div>
-
+                   
 
       </div>
 

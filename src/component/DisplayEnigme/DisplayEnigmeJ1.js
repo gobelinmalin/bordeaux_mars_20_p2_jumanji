@@ -10,6 +10,8 @@ import LeftSide from "../Plateau/LeftSide/LeftSide";
 import { CountdownCircleTimer } from "react-countdown-circle-timer";
 import { Route, Redirect } from "react-router-dom";
 import DisplayPion from "../Plateau/Pions/DisplayPion";
+import { NavLink } from 'react-router-dom';
+
 
 //FRAMER LIBRARY
 import { motion, AnimatePresence } from 'framer-motion'
@@ -32,27 +34,28 @@ class DisplayEnigmeJ1 extends React.Component {
       count2J: 0,
       count3J: 0,
       diceTest: 2,
+      pathCount:0,
       intro:
         localStorage.getItem("players") === "1" ||
-          localStorage.getItem("players") == "1,2" ||
-          localStorage.getItem("players") == "1,2,3" ||
-          localStorage.getItem("players") == "1,2,3,4" ||
-          localStorage.getItem("players") == "1,3" ||
-          localStorage.getItem("players") == "1,4"
-          ? <p className="allanIntro">"Allan Lance les dès" </p>
+        localStorage.getItem("players") == "1,2" ||
+        localStorage.getItem("players") == "1,2,3" ||
+        localStorage.getItem("players") == "1,2,3,4" ||
+        localStorage.getItem("players") == "1,3" ||
+        localStorage.getItem("players") == "1,4"
+          ? <div className="containerIntroAllan"><p className="allanIntro">Allan lance les dès </p></div>
           : "" ||
             localStorage.getItem("players") === "2" ||
             localStorage.getItem("players") === "2,3" ||
             localStorage.getItem("players") === "2,4" ||
             localStorage.getItem("players") === "2,3,4"
-            ? "Judith Lance les dès"
-            : "" ||
-              localStorage.getItem("players") === "3" ||
-              localStorage.getItem("players") === "3,4"
-              ? "Peter Lance les dès"
-              : "" || localStorage.getItem("players") === "4"
-                ? "Sarah Lance les dès"
-                : "",
+          ? "Judith lance les dès"
+          : "" ||
+            localStorage.getItem("players") === "3" ||
+            localStorage.getItem("players") === "3,4"
+          ? "Peter lance les dès"
+          : "" || localStorage.getItem("players") === "4"
+          ? "Sarah lance les dès"
+          : "",
       //player1
       top1: 45,
       left1: 0,
@@ -214,14 +217,15 @@ class DisplayEnigmeJ1 extends React.Component {
       enigmeIndex: state.enigmeIndex + 1,
       isEnigmeVisible: false,
       buttonEnabled2: true,
+      pathCount:this.state.pathCount +1,
       intro:
         localStorage.getItem("players") === "1"
-          ? "Bravo, relance les dés"
+          ? <p className="allanIntro">"Bravo, relance les dés" </p>
           : "" ||
             (localStorage.getItem("players") === "1,2" &&
               this.state.count2J % 2 === 0)
-            ? <div><p className="judithIntro">BRAVO!</p> <p className="allanIntro"> Allan lance les dés </p></div>
-            : <p className="judithIntro"> BRAVO! Judith lance les dés </p>
+          ? <div><p className="judithBravo">BRAVO Judith!</p>  <p className="nextPlayerAllanBravo"> Allan lance les dés </p></div>
+          : <div><p className="allanBravo">BRAVO Allan!</p> <p className="nextPlayerJudithBravo">  Judith lance les dés </p></div>
     }));
   };
 
@@ -232,14 +236,15 @@ class DisplayEnigmeJ1 extends React.Component {
       enigmeIndex: state.enigmeIndex + 1,
       isEnigmeVisible: false,
       buttonEnabled2: true,
+      pathCount:this.state.pathCount +1,
       intro:
         localStorage.getItem("players") === "1"
           ? "Mauvaise réponse, relance les dès"
           : "" ||
             (localStorage.getItem("players") === "1,2" &&
               this.state.count2J % 2 === 0)
-            ? <p className="wrongAnswer"> MAUVAISE RÉPONSE! Allan lance les dés </p>
-            : <p className="wrongAnswer"> MAUVAISE RÉPONSE! Allan lance les dés </p>,
+          ? <div className="containerWrongAnswer"> <p className="wrongAnswer"> MAUVAISE RÉPONSE! </p> <p className="wrongAnswer"> +10 de panic </p> <p className="nextPlayerAllan"> Allan lance les dés </p></div>
+          : <div> <p className="wrongAnswer"> MAUVAISE RÉPONSE! </p> <p className="wrongAnswer"> +10 de panic </p> <p className="nextPlayerJudith"> Judith lance les dés </p></div>,
       panicAllan:
         localStorage.getItem("players") === "1"
           ? this.state.panicAllan + 10
@@ -329,6 +334,39 @@ class DisplayEnigmeJ1 extends React.Component {
       return <Redirect to="/finalScreen" />;
     }
 
+    let pathAllan1;
+    let pathAllan2;
+    let pathAllan3;
+    let pathAllan4;
+    let pathAllan5;
+    let pathAllan6;
+
+    let pathJudith1;
+    let pathJudith2;
+    let pathJudith3;
+    let pathJudith4;
+    let pathJudith5;
+    let pathJudith6;
+
+    if  (this.state.pathCount % 2 === 0){
+      pathAllan1 = "squareT1AllanActive"
+      pathAllan2 = "squareT12AllanActive"
+      pathAllan3 = "squareT23AllanActive"
+      pathAllan4 = "squareL1AllanActive"
+      pathAllan5 = "squareL4AllanActive"
+      pathAllan6 = "squareL5AllanActive"
+    } else if (this.state.pathCount % 2 !== 0) {
+      pathJudith1 = "squareT9JudithActive"
+      pathJudith2 = "squareT8JudithActive"
+      pathJudith3 = "squareT7JudithActive"
+      pathJudith4 = "squareT6JudithActive"
+      pathJudith5 = "squareT5JudithActive"
+      pathJudith6 = "squareT16JudithActive"
+    }
+
+
+
+
     console.log("click button", this.state.buttonEnabled2)
 
     return (
@@ -393,8 +431,8 @@ class DisplayEnigmeJ1 extends React.Component {
                             : "" ||
                               (localStorage.getItem("players") === "1,2" &&
                                 this.state.count2J % 2 === 0)
-                              ? "Trop tard! Allan lance les dès"
-                              : "Trop tard ! Judith lance les dès",
+                            ? <div className="containerTimeIsUp"> <p className="tooLate"> TROP TARD ! </p> <p className="tooLate"> +10 de panic </p> <p className="nextPlayerAllanTooLate"> Allan lance les dés </p></div>
+                            : <div className="containerTimeIsUp"> <p className="tooLate"> TROP TARD ! </p> <p className="tooLate"> +10 de panic </p> <p className="nextPlayerJudithTooLate"> Judith lance les dés </p></div>,
                         test: this.state.test + 10,
                       })
                     }
@@ -425,6 +463,33 @@ class DisplayEnigmeJ1 extends React.Component {
           <di />
         </div>
         <div className="displayPionsContainer2">
+        <div className="coloredPath">
+            <div className="pathAllan">
+                <div className="straightPathAllan">
+                    <div className={pathAllan1}></div>
+                    <div className={pathAllan2}></div>
+                    <div className={pathAllan3}></div>
+                    <div className={pathAllan4}></div>
+                    <div className={pathAllan4}></div>
+                </div>
+                <div className="toRightPathAllan">
+                    <div className={pathAllan6}></div>
+                </div>
+            </div>
+            <div className="pathJudith">
+                <div className="straightPathJudith">
+                    <div className={pathJudith1}></div>
+                    <div className={pathJudith2}></div>
+                    <div className={pathJudith3}></div>
+                    <div className={pathJudith4}></div>
+                    <div className={pathJudith5}></div>
+                </div>
+                <div className="toLeftPathJudith">
+                    <div className={pathJudith6}></div>
+                </div>
+            </div>
+        </div>
+        <div className="displayPion3">
           <DisplayPion
             p1TOP={top1}
             p1LEFT={left1}
@@ -435,7 +500,12 @@ class DisplayEnigmeJ1 extends React.Component {
             p4BOTTOM={bottom4}
             p4LEFT={left4}
           />
+          </div>
         </div>
+
+
+
+
       </div>
     );
   }

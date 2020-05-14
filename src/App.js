@@ -25,16 +25,13 @@ class App extends Component {
         <div>
           <AnimatePresence exitBeforeEnter>
             <Switch>
-              <Route path="/" component={LandingPage} exact />
-              <Route path="/select-player" component={SelectPlayer} />
-              <Route path="/plateau" component={Plateau} />
-              <Route path="/finalScreen" component={FinalScreen} />
-              <Route path="/plateau2" component={Plateau2} />
-              <Route path="/plateau3" component={Plateau3} />
-              <Route path="/gamewin" component={GameWin} />
-
-            </Switch>
-          </AnimatePresence>
+             <Route path="/" component={LandingPage} exact/>
+             <Route path="/select-player" component={SelectPlayer}/>
+             <Route path="/finalScreen" component={FinalScreen}/>
+             <Route path="/plateau3" component={Plateau3}/>
+             <Route path="/gamewin" component={GameWin}/>
+           </Switch>
+           </AnimatePresence>
         </div>
       </BrowserRouter>
     );
