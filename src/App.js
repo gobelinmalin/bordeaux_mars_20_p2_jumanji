@@ -15,6 +15,7 @@ import FinalScreen from './component/GameEnd/FinalScreen'
 import Plateau2 from './component/Plateau/Plateau2'
 import Plateau3 from './component/Plateau/Plateau3';
 import GameWin from './component/GameEnd/GameWin';
+import Rules from './component/Plateau/Rules';
 
 
 
@@ -22,6 +23,7 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter>
+              <Route path="/rules" component={Rules} />
         <div>
           <AnimatePresence exitBeforeEnter>
             <Switch>

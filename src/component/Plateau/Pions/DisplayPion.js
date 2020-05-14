@@ -24,7 +24,7 @@ class DisplayPion extends React.Component {
           /*border: "solid orange",*/
         }}
       >
-        <Pion1 />
+        <Pion1 left={this.props.p1LEFT}/>
       </div>
     );
     return pionNumber1;
@@ -43,7 +43,7 @@ class DisplayPion extends React.Component {
               //border: "solid cyan",
             }}
           >
-            <Pion2 />
+            <Pion2 top={this.props.p2TOP}/>
           </div>
 
         </div>

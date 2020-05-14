@@ -14,11 +14,11 @@ import { motion, AnimatePresence } from 'framer-motion'
 //FRAMER LIBRARY
 
 class GameWin extends React.Component {
-    constructor (props) {
+    constructor(props) {
         super(props);
         this.state = {
-            gameVictory : true,
-            players : localStorage.getItem('players')
+            gameVictory: true,
+            players: localStorage.getItem('players')
         };
     }
 
@@ -26,74 +26,65 @@ class GameWin extends React.Component {
 
         let endPlayer
         if (this.state.players == "1") {
-            endPlayer = [ <PlayerEnd1 /> ]
-            } else if (this.state.players== "2") {
-            endPlayer = [ <PlayerEnd2 /> ]
-            } else if (this.state.players == "3") {
-            endPlayer = [ <PlayerEnd3 /> ]
-            } else if (this.state.players == "4") {
-            endPlayer = [ <PlayerEnd4 /> ]
-            } else if (this.state.players == "1,2") {
-            endPlayer = [ <PlayerEnd1 />, <PlayerEnd2/> ]
-            } else if (this.state.players == "1,3") {
-            endPlayer = [ <PlayerEnd1/>, <PlayerEnd3  /> ]
-            } else if (this.state.players == "1,4") {
-            endPlayer = [ <PlayerEnd1 />, <PlayerEnd4 /> ]
-            } else if (this.state.players == "1,2,3") {
-            endPlayer= [ <PlayerEnd1/>, <PlayerEnd2 />, <PlayerEnd3  /> ]
-            } else if (this.state.players == "1,2,3,4") {
-            endPlayer = [ <PlayerEnd1 />, <PlayerEnd2 />, <PlayerEnd3 />, <PlayerEnd4 /> ]
-            } else if (this.state.players == "2,3") {
-            endPlayer = [ <PlayerEnd2 />, <PlayerEnd3  />]
-            } else if (this.state.players == "2,3,4") {
-            endPlayer = [ <PlayerEnd2 />, <PlayerEnd3  />, <PlayerEnd4 /> ]
-            } else if (this.state.players == "2,4") {
-            endPlayer = [ <PlayerEnd2 />, <PlayerEnd4 /> ]
-            } else if (this.state.players == "3,4") {
-            endPlayer = [ <PlayerEnd3  />, <PlayerEnd4 /> ]
-            }
+            endPlayer = [<PlayerEnd1 />]
+        } else if (this.state.players == "2") {
+            endPlayer = [<PlayerEnd2 />]
+        } else if (this.state.players == "3") {
+            endPlayer = [<PlayerEnd3 />]
+        } else if (this.state.players == "4") {
+            endPlayer = [<PlayerEnd4 />]
+        } else if (this.state.players == "1,2") {
+            endPlayer = [<PlayerEnd1 />, <PlayerEnd2 />]
+        } else if (this.state.players == "1,3") {
+            endPlayer = [<PlayerEnd1 />, <PlayerEnd3 />]
+        } else if (this.state.players == "1,4") {
+            endPlayer = [<PlayerEnd1 />, <PlayerEnd4 />]
+        } else if (this.state.players == "1,2,3") {
+            endPlayer = [<PlayerEnd1 />, <PlayerEnd2 />, <PlayerEnd3 />]
+        } else if (this.state.players == "1,2,3,4") {
+            endPlayer = [<PlayerEnd1 />, <PlayerEnd2 />, <PlayerEnd3 />, <PlayerEnd4 />]
+        } else if (this.state.players == "2,3") {
+            endPlayer = [<PlayerEnd2 />, <PlayerEnd3 />]
+        } else if (this.state.players == "2,3,4") {
+            endPlayer = [<PlayerEnd2 />, <PlayerEnd3 />, <PlayerEnd4 />]
+        } else if (this.state.players == "2,4") {
+            endPlayer = [<PlayerEnd2 />, <PlayerEnd4 />]
+        } else if (this.state.players == "3,4") {
+            endPlayer = [<PlayerEnd3 />, <PlayerEnd4 />]
+        }
 
 
 
         return (
-        <motion.div
-        animate={{scale: [0.9, 1, 1,0.9]}}
-                    transition={{
-                        type:"tween",
-                        stiffness: 10,
-                        yoyo: Infinity,
-                        duration: 1
-                         }}
-        className ="Wrapper">
-        <div className = "Voile">
+            <motion.div
+                initial={{ y: "-100vh" }}
+                animate={{ y: 0 }}
+                exit={{ y: 0 }}
+                transition={{ velocity: 1, damping: 1, type: "spring", mass: 0.1, stiffness: 10 }}
+                className="Wrapper">
+                <div className="Voile">
 
-            <div
+                    <div
+                        className="GameEndResult">
+                        <EndMessage gameVictory={this.state.gameVictory} />
+                    </div>
+                    <div
 
-            className = "GameEndResult">
-                <EndMessage gameVictory={this.state.gameVictory} />
-            </div>
+                        animate={{ scale: [0.9, 1, 1, 0.9] }}
+                        transition={{
+                            type: "tween",
+                            stiffness: 10,
+                            yoyo: Infinity,
+                            duration: 2
+                        }}
+                        className="GamePlayersList">
 
-            <EndCircle gameVictory={this.state.gameVictory}/>
+                        {endPlayer}
 
-
-
-            <div
-
-            animate={{scale: [0.9, 1, 1,0.9]}}
-                    transition={{
-                        type:"tween",
-                        stiffness: 10,
-                        yoyo: Infinity,
-                        duration: 1
-                         }}
-             className = "GamePlayersList">
-
-                    {endPlayer}
-
-            </div>
-
-        </div>
-        </motion.div>
+                    </div>
+                    <EndCircle gameVictory={this.state.gameVictory} />
+                </div>
+            </motion.div>
 
         )
 

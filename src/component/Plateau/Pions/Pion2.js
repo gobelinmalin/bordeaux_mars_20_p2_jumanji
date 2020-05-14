@@ -6,6 +6,7 @@ import { motion } from 'framer-motion'
 
 class Pion2 extends React.Component {
     render() {
+        const {top} = this.props
         return (
             <div className="containerP2">
                 <motion.img
@@ -17,7 +18,7 @@ class Pion2 extends React.Component {
                         duration: 1
                     }}
 
-                    className="picturePion2" src="https://zupimages.net/up/20/19/gs4q.png" alt="" />
+                    className="picturePion2" src={top > 40 ? "https://zupimages.net/up/20/19/gs4q.png" : "https://zupimages.net/up/20/20/jdx0.png"} alt="" />
             </div>
         )
     }

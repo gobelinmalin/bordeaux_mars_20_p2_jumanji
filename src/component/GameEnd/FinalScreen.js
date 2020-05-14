@@ -54,22 +54,6 @@ class FinalScreen extends React.Component {
         }
 
 
-        const list = {
-            visible: {
-                opacity: 1,
-                transition: {
-                    when: "beforeChildren",
-                    staggerChildren: 0.3,
-                },
-            },
-            hidden: {
-                opacity: 0,
-                transition: {
-                    when: "afterChildren",
-                },
-            },
-        }
-
         return (
             <motion.div
                 initial={{ y: "-100vh" }}
@@ -82,10 +66,6 @@ class FinalScreen extends React.Component {
                     <div className="GameEndResult">
                         <EndMessage gameVictory={this.state.gameVictory} />
                     </div>
-
-                    <EndCircle gameVictory={this.state.gameVictory} />
-
-
 
                     <div className="GamePlayersList">
 

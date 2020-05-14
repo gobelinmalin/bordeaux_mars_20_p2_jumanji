@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Redirect } from 'react-router-dom';
 import DisplayEnigme from './Enigme/DisplayEnigme'
 import axios from 'axios';
 import '../Plateau/Style/Plateau3.css'
@@ -119,7 +119,6 @@ class Plateau3 extends React.Component {
 
   render() {
     return (
-    <section>
       <section>
       <div className="container">
 
@@ -274,13 +273,10 @@ class Plateau3 extends React.Component {
                         </div>
                     </div>
                     </div>
-                   
+
 
       </div>
-
       </section>
-
-    </section>
 
     )
   }

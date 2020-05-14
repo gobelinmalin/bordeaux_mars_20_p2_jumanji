@@ -18,7 +18,7 @@
   animation: animate-drum 2s linear infinite;
 }
 .CharacterPicWin2 {
-  margin-left: -180%;
+  margin-left: -80%;
   border-radius: 8px;
   width: 158%;
   height: 30vh;
@@ -28,7 +28,7 @@
   animation: animate-drum 2s linear infinite;
 }
 .CharacterPicWin3 {
-  margin-left: -180%;
+  margin-left: 10%;
   border-radius: 8px;
   width: 158%;
   height: 30vh;
@@ -38,7 +38,7 @@
   animation: animate-drum 2s linear infinite;
 }
 .CharacterPicWin4 {
-  margin-left: -180%;
+  margin-left: 100%;
   border-radius: 8px;
   width: 158%;
   height: 30vh;
@@ -58,11 +58,11 @@
   color: #4fb415;
   display: flex;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
   font-size: 28px;
 }
 .CharacterNameWin2 {
-  margin-left: -180%;
+  margin-left: -80%;
   border-radius: 8px;
   width: 158%;
   height: 20%;
@@ -72,11 +72,11 @@
   color: #4fb415;
   display: flex;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
   font-size: 28px;
 }
 .CharacterNameWin3 {
-  margin-left: -180%;
+  margin-left: 10%;
   border-radius: 8px;
   width: 158%;
   height: 20%;
@@ -86,11 +86,11 @@
   color: #4fb415;
   display: flex;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
   font-size: 28px;
 }
 .CharacterNameWin4 {
-  margin-left: -180%;
+  margin-left: 100%;
   border-radius: 8px;
   width: 158%;
   height: 20%;
@@ -100,7 +100,7 @@
   color: #4fb415;
   display: flex;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
   font-size: 28px;
 }
 .CharacterPicLost1 {
@@ -157,7 +157,7 @@
   color: #d42222;
   display: flex;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
   font-size: 28px;
 }
 .CharacterNameLost2 {

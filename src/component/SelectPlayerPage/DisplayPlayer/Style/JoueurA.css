@@ -5,10 +5,10 @@
     width: 13em;
     text-align: center;
     justify-content: center;
-    margin-left:-20px;
+    margin-left:15px;
     margin-right:auto;
     color: #c65e18;
-  
+
 }
 
 .descriptionJoueurA{
@@ -17,7 +17,7 @@
     justify-content: center;
     width: 14.6em;
     margin-left: 3%;
-      
+
 
 }
 
@@ -27,7 +27,7 @@
     margin-top: 8%;
     position: relative;
     margin-left: 4%;
-   
+
 }
 
 .randomSelectCTAA, .randomSelectCTAA2 {
@@ -69,7 +69,7 @@ form p {
 	position: relative; /* permet de positionner la checkbox cachée */
 }
 
-[type="checkbox"]#joueurA:not(:checked), 
+[type="checkbox"]#joueurA:not(:checked),
 [type="checkbox"]#joueurA:checked {
 	/* Cache la checkbox sans
 	   la désactiver pour les
@@ -102,7 +102,7 @@ form p {
     background-image: url('back-4.jpg');
     background-size: cover;
 	border-radius: .2em;
-	
+
     transition: all .275s;
     color: red;
 }
@@ -121,7 +121,7 @@ form p {
 	color: #181bc691;
 	line-height: 0;
     z-index:3;
-   
+
 }
 
 
@@ -136,7 +136,7 @@ form p {
 	color: #c65e18;
 	line-height: 0;
     z-index:3;
-   
+
 }
 
 /* Aspect non cochée */
@@ -164,15 +164,15 @@ form p {
 /* Aspect cochée */
 [type="checkbox"]#joueurA:checked + label:after {
 	opacity: 1;
-    color: #c65e18ad;  
-    
+    color: #c65e18ad;
+
 }
 
 /* Aspect cochée:hover */
 [type="checkbox"]#joueurA:checked + label:hover:after {
 	opacity: 1;
-    color: #c65e18;  
-    
+    color: #c65e18;
+
 }
 
 

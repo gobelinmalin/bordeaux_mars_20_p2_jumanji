@@ -1,0 +1,27 @@
+.rules {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    margin-top: 2.5%
+}
+.rules-p1 {
+    border: solid 2px rgb(247, 248, 183);
+    background-color: rgba(245, 245, 220);
+    width: 30%;
+    font-size: 40px;
+    font-weight: bold;
+    border-radius: 8px;
+}
+.rules-p2 {
+    border: solid 2px rgb(247, 248, 183);;
+    background-color: rgba(245, 245, 220);
+    width: 30%;
+    font-size: 40px;
+    font-weight: bold;
+    border-radius: 8px;
+    margin-left: 5px;
+}
+.btn-rules {
+    cursor: pointer;
+    margin-left: 45%
+}

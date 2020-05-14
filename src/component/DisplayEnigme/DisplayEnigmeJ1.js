@@ -59,6 +59,7 @@ class DisplayEnigmeJ1 extends React.Component {
       //player1
       top1: 45,
       left1: 0,
+      rotateP1: 'rotate(90)',
       countPath1: 4,
       endGame1: false,
       //player2
@@ -157,15 +158,13 @@ class DisplayEnigmeJ1 extends React.Component {
       }
 
       if (p1Top > pathY) {
-        this.setState({ left1: p1Left + 40 });
+        this.setState({ left1: p1Left + 40});
       } else {
         this.setState({ top1: p1Top + dice * 65 });
       }
       //endGame1
 
       if (p1Left > 40) {
-        //this.setState({endGame1 : true})
-        console.log(p1Left, "LEFTTTT")
         return <Redirect to="/GameWin" />
       }
     }
@@ -189,6 +188,12 @@ class DisplayEnigmeJ1 extends React.Component {
         this.setState({ right2: p2Right + 65 });
       } else {
         this.setState({ top2: p2Top + dice * 40 });
+      }
+
+      if (p2Top > 40) {
+        //this.setState({endGame1 : true})
+        console.log(p1Left, "LEFTTTT")
+        return <Redirect to="/GameWin" />
       }
     }
     //PLAYER 2
@@ -378,6 +383,7 @@ class DisplayEnigmeJ1 extends React.Component {
 
         <div className="solutions-enigme">
           <div className="introJoueur">{this.state.intro}</div>
+
           <button
             className="btn-enigme"
             onClick={() =>

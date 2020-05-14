@@ -47,7 +47,7 @@ ul {
     font-weight: bold;
     background-image: url('roll-dice-button.png');
     border-radius: 5px;
-    width:200px;
+    width:300px;
 }
 
 .enigmeContent2 {
@@ -100,7 +100,7 @@ ul {
     margin-top:-8.9vh;
     border-color: rgba(255, 166, 0, 0);
     border-style: solid;
-    margin-left:-5.5%;
+    margin-left:-22.5%;
 }
 
 .timesUp {
@@ -186,7 +186,7 @@ ul {
 @keyframes transitionWrongAnswer {
     0%   { opacity:1; transform: rotate(-90deg)}
     50%   { opacity:1; transform: rotate(0deg)}
-    100% { margin-left:10px; opacity:0;transform: rotate(0deg) }
+    100% { margin-left:20px; opacity:0;transform: rotate(0deg) }
   
     }
 
@@ -203,9 +203,11 @@ ul {
     height: 65px;
     margin-left:-10%;
     background-color:  #97450aa3;
-    animation : pathAllan ease-in 6s forwards;
-}
+    animation : pathAllan ease-in 6s forwards ;
 
+    
+}
+    
 
 .squareT12AllanActive {
     width: 65px;
@@ -213,6 +215,7 @@ ul {
     margin-left:-10%;
     background-color:  #97450aa3;
     animation : pathAllan ease-in 6s forwards;
+   
 }
 .squareT23AllanActive {
     width: 65px;
@@ -220,6 +223,7 @@ ul {
     margin-left:-10%;
     background-color:  #97450aa3;
     animation : pathAllan ease-in 6s forwards;
+  
 }
 
 .squareL1AllanActive {
@@ -228,6 +232,7 @@ ul {
     margin-left:-10%;
     background-color:  #97450aa3;
     animation : pathAllan ease-in 6s forwards;
+   
 }
 
 .squareL4AllanActive {
@@ -236,6 +241,7 @@ ul {
     margin-left:-10%;
     background-color:  #97450aa3;
     animation : pathAllan ease-in 6s forwards;
+ 
 }
 .squareL5AllanActive {
     width: 46px;
@@ -243,6 +249,7 @@ ul {
     margin-left:-6px;
     background-color:  #97450aa3;
     animation : pathAllan ease-in 6s forwards;
+ 
    
 }
 
@@ -251,30 +258,35 @@ ul {
     height: 67px;
     animation : pathJudith ease-in 6s forwards;
     background-color: rgba(12, 77, 103, 0.722);
+  
 }
 .squareT8JudithActive {
     width: 65px;
     height: 67px;
     animation : pathJudith  ease-in 6s forwards;
     background-color: rgba(12, 77, 103, 0.722);
+   
 }
 .squareT7JudithActive {
     width: 65px;
     height: 67px;
     animation : pathJudith ease-in 6s forwards;
     background-color: rgba(12, 77, 103, 0.722);
+
 }
 .squareT6JudithActive {
     width: 65px;
     height: 67px;
     animation : pathJudith ease-in 6s forwards;
     background-color: rgba(12, 77, 103, 0.722);
+
 }
 .squareT5JudithActive {
     width: 65px;
     height: 67px;
     animation : pathJudith ease-in 6s forwards;
     background-color: rgba(12, 77, 103, 0.722);
+ 
 }
 
 
@@ -285,12 +297,16 @@ ul {
     margin-left:-6.5%;
     animation : pathJudith ease-in 6s forwards;
     background-color: rgba(12, 77, 103, 0.722);
+  
  
 }
 
 @keyframes pathJudith {
-    0%   { opacity:0; }
-    100% { opacity:1 }
+    0%   { opacity:0;   box-shadow: 0 0px 0px #77e736, 0 0px 0px #77e736; }
+    25%   { opacity:0;   box-shadow: 0 0px 5px #77e736, 0 0px 0px #77e736; }
+    50%   { opacity:0;   box-shadow: 0 0px 0px #77e736, 0 0px 0px #77e736; }
+    75%   { opacity:0;   box-shadow: 0 0px 0px #77e736, 0 0px 0px #77e736; }
+    100% { opacity:1; box-shadow: 0 0px 5px #77e736, 0 0px 0px #77e736; }
   }
 
   
@@ -330,8 +346,27 @@ ul {
 .pathJudith {
   margin-top:3px;
   margin-right:-45px;
-  
+ 
 }
+
+
+@keyframes animate-drum {
+    0% {
+      box-shadow: 0 0px 0px #77e736, 0 0px 0px #77e736;
+    }
+    25% {
+      box-shadow: 0 0px 5px #77e736, 0 0px 0px #77e736;
+    }
+    50% {
+      box-shadow: 0 0px 5px #77e736, 0 0px 0px #77e736;
+    }
+    70% {
+      box-shadow: 0 0px 0px #77e736, 0 0px 5px #77e736;
+    }
+    100% {
+      box-shadow: 0 0px 5px #77e736, 0 0px px #77e736;
+    }
+  }
 
 .straightPathJudith{
     margin-left:-4%;
