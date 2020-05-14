@@ -1,6 +1,6 @@
 .containerGlobal {
     display:flex;
-    border-color: rgb(43, 255, 0);
+    border-color: rgba(43, 255, 0, 0);
     border-style:solid;
     width:1180px;
     margin-left:-115%;
@@ -43,7 +43,7 @@ ul {
 .containerBtn-enigme {
     margin-top:-17%;
 }
- 
+
 .btn-enigme:enabled{
     margin-left: 580px;
     margin-top: -20%;
@@ -55,8 +55,8 @@ ul {
     height: 50px;
     cursor: pointer;
     opacity:0.8;
-    
-   
+
+
 }
 
 
@@ -177,13 +177,13 @@ ul {
     color: #c65e18;
     font-weight: bold;
     animation: allanIntro  ease-in-out 3s forwards;
-  
+
 }
 
 @keyframes allanIntro {
     0%   { margin-left: 5%; opacity:0.2; transform: rotate(-90deg)}
     100% { margin-left: 5%;opacity:1;transform: rotate(0deg) }
-  
+
     }
 
 
@@ -224,27 +224,27 @@ ul {
     0%   { margin-left:50px; opacity:1; transform: rotate(-90deg)}
     50%   { margin-left:50px; opacity:1; transform: rotate(0deg)}
     100% { margin-left:50px; opacity:0;transform: rotate(0deg) }
-  
+
     }
 
 @keyframes transitionNextPlayer {
     0%   { opacity:0; transform: rotate(-90deg)}
     50%   { opacity:0; transform: rotate(-45deg)}
     100% { margin-left: 35px;opacity:1;transform: rotate(0deg) }
-  
-    } 
+
+    }
 
 
-.squareT1AllanActive {  
+.squareT1AllanActive {
     width: 65px;
     height: 65px;
     margin-left:-10%;
      /*background-color:  #97450aa3;*/
     animation : pathAllan ease-in 6s forwards ;
 
-    
+
 }
-    
+
 
 .squareT12AllanActive {
     width: 65px;
@@ -252,7 +252,7 @@ ul {
     margin-left:-10%;
     /*background-color:  #97450aa3;*/
     animation : pathAllan ease-in 6s forwards;
-   
+
 }
 .squareT23AllanActive {
     width: 65px;
@@ -260,7 +260,7 @@ ul {
     margin-left:-10%;
     /*background-color:  #97450aa3;*/
     animation : pathAllan ease-in 6s forwards;
-  
+
 }
 
 .squareL1AllanActive {
@@ -269,7 +269,7 @@ ul {
     margin-left:-10%;
     /*background-color:  #97450aa3;*/
     animation : pathAllan ease-in 6s forwards;
-   
+
 }
 
 .squareL4AllanActive {
@@ -278,7 +278,7 @@ ul {
     margin-left:-10%;
     /*background-color:  #97450aa3;*/
     animation : pathAllan ease-in 6s forwards;
- 
+
 }
 .squareL5AllanActive {
     width: 46px;
@@ -286,8 +286,8 @@ ul {
     margin-left:-6px;
      /*background-color:  #97450aa3;*/
     animation : pathAllan ease-in 6s forwards;
- 
-   
+
+
 }
 
 .squareT9JudithActive {
@@ -295,14 +295,14 @@ ul {
     height: 67px;
     animation : pathJudith ease-in 6s forwards;
     /*background-color: rgba(12, 77, 103, 0.722);*/
-  
+
 }
 .squareT8JudithActive {
     width: 65px;
     height: 67px;
     animation : pathJudith  ease-in 6s forwards;
    /*background-color: rgba(12, 77, 103, 0.722);*/
-   
+
 }
 .squareT7JudithActive {
     width: 65px;
@@ -323,32 +323,34 @@ ul {
     height: 67px;
     animation : pathJudith ease-in 6s forwards;
     /*background-color: rgba(12, 77, 103, 0.722);*/
- 
+
 }
 
 
-  
+
 .squareT16JudithActive {
     width: 65px;
     height: 38px;
     margin-left:-6.5%;
     animation : pathJudith ease-in 6s forwards;
     /*background-color: rgba(12, 77, 103, 0.722);*/
-  
- 
+
+
 }
 
 @keyframes pathJudith {
     0%   { opacity:0;   box-shadow: 0 0px 0px #00B0F0, 0 0px 0px #00B0F0; }
-    100% { opacity:1;  box-shadow: inset 0 0 1.5em goldenrod, 0 0 2em red }
+    25% { opacity:0.25;  box-shadow: inset 0 0 1.5em rgb(18, 69, 136), 0 0 2em #03b0f0 }
+    100% { opacity:1;  box-shadow: inset 0 0 1.5em rgb(18, 69, 136), 0 0 2em #03b0f0}
   }
 
-  
+
 
 
   @keyframes pathAllan {
     0%   { opacity:0;   box-shadow: 0 0px 0px #00B0F0, 0 0px 0px #00B0F0; }
-    100% { opacity:1;  box-shadow: inset 0 0 2em goldenrod, 0 0 2em red }
+    25% { opacity:0.25;  box-shadow: inset 0 0 1.5em goldenrod, 0 0 2em red }
+    100% { opacity:1;  box-shadow: inset 0 0 1.5em goldenrod, 0 0 2em red }
   }
 
 
@@ -380,7 +382,7 @@ ul {
 .pathJudith {
   margin-top:3px;
   margin-right:-45px;
- 
+
 }
 
 
@@ -433,7 +435,7 @@ margin-right:120px;
     0%   { opacity:1; transform: rotate(-90deg)}
     50%   { opacity:1; transform: rotate(0deg)}
     100% { margin-left:20%; opacity:0;transform: rotate(0deg) }
-  
+
     }
 
 .nextPlayerJudithBravo{
@@ -449,8 +451,8 @@ margin-right:120px;
 @keyframes transitionNextPlayerJudithBravo {
     0%   { opacity:0; transform: rotate(-90deg)}
     100% { margin-left: 10%;opacity:1;transform: rotate(0deg) }
-  
-    } 
+
+    }
 
 
 .judithBravo {
@@ -466,7 +468,7 @@ margin-right:120px;
     0%   { opacity:1; transform: rotate(-90deg)}
     50%   { opacity:1; transform: rotate(0deg)}
     100% { margin-left:20%; opacity:0;transform: rotate(0deg) }
-  
+
     }
 
 .nextPlayerAllanBravo{
@@ -482,8 +484,8 @@ margin-right:120px;
 @keyframes transitionNextPlayerAllanBravo {
     0%   { opacity:0; transform: rotate(-90deg)}
     100% { margin-left: 10%;opacity:1;transform: rotate(0deg) }
-  
-    } 
+
+    }
 
 
     .tooLate {
@@ -495,7 +497,7 @@ margin-right:120px;
         opacity:1;
         animation: transitionWrongAnswerTooLate  ease-in-out 6s forwards;
     }
-    
+
     .nextPlayerAllanTooLate {
         color: #c65e18;
         font-weight: bold;
@@ -506,7 +508,7 @@ margin-right:120px;
         animation: transitionNextPlayerTooLate  ease-in-out 6s forwards;
         width:100%;
     }
-    
+
     .nextPlayerJudithTooLate {
         color: #00B0F0;
         font-weight: bold;
@@ -517,26 +519,26 @@ margin-right:120px;
         animation: transitionNextPlayerTooLate  ease-in-out 6s forwards;
         width:100%;
     }
-    
+
     @keyframes transitionWrongAnswerTooLate {
         0%   { opacity:1; transform: rotate(-90deg)}
         50%   { opacity:1; transform: rotate(0deg)}
         100% { margin-left:45px; opacity:0;transform: rotate(0deg) }
-      
+
         }
-    
+
     @keyframes transitionNextPlayerTooLate {
         0%   { opacity:0; transform: rotate(-90deg)}
         50%   { opacity:0; transform: rotate(-45deg)}
         100% { margin-left: 30px;opacity:1;transform: rotate(0deg); width:100% }
-      
-        } 
+
+        }
 
 
     .containerRulesEscape {
         border: none;
         text-decoration: underline;
-        
+
         margin-left:10%;
         margin-top:1%;
         display:flex;
@@ -546,37 +548,37 @@ margin-right:120px;
     }
 
     .toRules {
-        color: #4fb415; 
+        color: #4fb415;
         border: none;
         text-decoration: underline;
         font-size: 20px;
     }
 
     .toEscape {
-        color: #4fb4159e; 
+        color: #4fb4159e;
         border: none;
         text-decoration: underline;
-        text-decoration-color:#4fb4159e; 
+        text-decoration-color:#4fb4159e;
         font-size: 20px;
     }
 
     .toRules {
-        color: #4fb4159e; 
+        color: #4fb4159e;
         border: none;
         text-decoration: underline;
-        text-decoration-color:#4fb4159e; 
+        text-decoration-color:#4fb4159e;
         font-size: 20px;
     }
 
     .toEscape:hover {
-        color: #4fb415; 
+        color: #4fb415;
         border: none;
         text-decoration: underline;
         font-size: 20px;
     }
 
     .toRules:hover {
-        color: #4fb415; 
+        color: #4fb415;
         border: none;
         text-decoration: underline;
         font-size: 20px;

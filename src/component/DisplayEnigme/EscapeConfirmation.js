@@ -4,10 +4,7 @@ import "react-responsive-modal/styles.css";
 import { Modal } from "react-responsive-modal";
 import './EscapeConfirmation.css'
 
-const styles = {
-  fontFamily: "sans-serif",
-  textAlign: "center"
-};
+
 
 class EscapeConfirmation extends React.Component {
   state = {
@@ -25,16 +22,22 @@ class EscapeConfirmation extends React.Component {
   render() {
     const { open } = this.state;
     return (
-      <div style={styles}>
-       
+      <div >
+
         <button className="toEscape2" onClick={this.onOpenModal}>Quitter</button>
         <Modal open={open} onClose={this.onCloseModal}>
-          <h2>Confirmation</h2>
-          <p>
-            Attention ! Votre partie sera terminée si vous quitter maintenant.
-          </p>
-          <button className="annulerCTA"> Annuler </button>
-          <button className="confirmerCTA"> Quitter </button>
+          <div className="containerPopUp">
+            <h2 className="titlePopUp">CONFIRMATION</h2>
+            <p className="textPopUp">
+              Attention ! </p>
+            <p className="textPopUp">
+             Votre partie sera terminée si vous quitter maintenant.
+            </p>
+            <div className="actionCTAcontainer">
+              <button className="annulerCTA"> Annuler </button>
+              <button className="confirmerCTA"> Quitter </button>
+            </div>
+          </div>
         </Modal>
       </div>
     );
