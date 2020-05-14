@@ -448,7 +448,7 @@ class DisplayEnigmeJ1 extends React.Component {
                     }
                     size={362}
                     trailColor={"#FFFFF"}
-
+                    
                   >
                     {this.renderTime}
                   </CountdownCircleTimer>

@@ -24,22 +24,29 @@ class Rules2 extends React.Component {
   render() {
     const { open } = this.state;
     return (
-      <div className="containerfullPopUpRules">
+      <div className="containerfullPopUp">
 
-        <button className="toRules2" onClick={this.onOpenModal}>Règles</button>
-        <Modal className="popUpfull" open={open} onClose={this.onCloseModal}>
-            <div className="containerRules2">
-                <div className="logoRules">
-                   
+        <button className="toEscape2" onClick={this.onOpenModal}>Règles</button>
+        <Modal className="popUpfull2" open={open} onClose={this.onCloseModal}>
+          <div className="containerPopUp2">
+            <h2 className="titlePopUp2">JUMANJI</h2>
+            <p className="textPopUp2">
+             Un jeu pour tous ceux qui espèrent laisser derrière eux leur univers...
+            </p>
+            <p className="textPopUp2">
+             1. Ne lancer les dès que si vous avez l'intention de terminer
+            </p>
+            <p className="textPopUp2">
+        
+             2. Les effest saisissants de ce jeux ne cesseront que lorsqu'un des joueurs aura atteint Jumanji
+    
+            </p>
+            <p className="textPopUp2">
 
-                </div>
-                <div className="containerPages">
-                    <div className="page1">
+             3. Aventurier méfiez-vous de votre niveau de panic. Votre équipe entière risquerait de ne pas s'en sortir!
+            </p>
+          </div>
 
-
-                    </div>
-                </div>
-            </div>
         </Modal>
       </div>
     );

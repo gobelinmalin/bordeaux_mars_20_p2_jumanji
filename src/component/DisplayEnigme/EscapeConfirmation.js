@@ -31,6 +31,7 @@ class EscapeConfirmation extends React.Component {
             <h2 className="titlePopUp">ATTENTION</h2>
             <p className="textPopUp2">
              Votre partie sera perdue si vous quitter maintenant.
+             
             </p>
             <div className="actionCTAcontainer">
             <NavLink className="confirmerCTA" to="/select-player"  >Quitter le jeu !</NavLink>
