@@ -4,12 +4,13 @@ import "react-responsive-modal/styles.css";
 import { Modal } from "react-responsive-modal";
 import './EscapeConfirmation.css'
 import { NavLink } from 'react-router-dom';
+import './Rules2.css'
 
 
 
 class Rules2 extends React.Component {
   state = {
-    open: false
+    open: true
   };
 
   onOpenModal = () => {
@@ -29,15 +30,11 @@ class Rules2 extends React.Component {
         <Modal className="popUpfull" open={open} onClose={this.onCloseModal}>
             <div className="containerRules2">
                 <div className="logoRules">
-                    <img src="https://zupimages.net/up/20/16/fc7x.png" alt="" />
+                   
 
                 </div>
                 <div className="containerPages">
                     <div className="page1">
-
-
-                    </div>
-                    <div className="page2">
 
 
                     </div>

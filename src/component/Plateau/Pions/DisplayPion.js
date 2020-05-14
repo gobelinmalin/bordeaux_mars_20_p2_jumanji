@@ -96,8 +96,8 @@ class DisplayPion extends React.Component {
 
   render() {
     let displayPionTest;
-    if (this.state.selectedPion === "3") {
-      displayPionTest = "joueur3 est selectionné";
+    if (this.state.selectedPion === "1") {
+      displayPionTest = this.displayPion1();
     } else if (this.state.selectedPion === "1,2") {
       return [[this.displayPion1()], [this.displayPion2()]];
     } else if (this.state.selectedPion === "1,3") {

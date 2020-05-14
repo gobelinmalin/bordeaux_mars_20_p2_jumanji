@@ -12,6 +12,7 @@ import { Route, Redirect } from "react-router-dom";
 import DisplayPion from "../Plateau/Pions/DisplayPion";
 import { NavLink } from 'react-router-dom';
 import EscapeConfirmation from './EscapeConfirmation'
+import Rules2 from './Rules2'
 
 
 //FRAMER LIBRARY
@@ -159,7 +160,7 @@ class DisplayEnigmeJ1 extends React.Component {
       }
 
       if (p1Top > pathY) {
-        this.setState({ left1: p1Left + 40 });
+        this.setState({ left1: p1Left + 65 });
       } else {
         this.setState({ top1: p1Top + dice * 65 });
       }
@@ -188,7 +189,7 @@ class DisplayEnigmeJ1 extends React.Component {
 
         this.setState({ right2: p2Right + 65 });
       } else {
-        this.setState({ top2: p2Top + dice * 40 });
+        this.setState({ top2: p2Top + dice * 65 });
       }
 
       if (p2Top > 40) {
@@ -201,7 +202,7 @@ class DisplayEnigmeJ1 extends React.Component {
 
     //PLAYER 3
     if (p3Bottom > pathY) {
-      this.setState({ right3: p3Right - 40 });
+      this.setState({ right3: p3Right - 65 });
     } else {
       this.setState({ bottom3: p3Bottom - dice * 65 });
     }
@@ -226,7 +227,7 @@ class DisplayEnigmeJ1 extends React.Component {
       pathCount: this.state.pathCount + 1,
       intro:
         localStorage.getItem("players") === "1"
-          ? <p className="allanIntro">"Bravo, relance les dés" </p>
+          ? <p className="allanIntro">Bravo, relance les dés </p>
           : "" ||
             (localStorage.getItem("players") === "1,2" &&
               this.state.count2J % 2 === 0)
@@ -523,10 +524,7 @@ class DisplayEnigmeJ1 extends React.Component {
           </div>
         </div>
         <div className="containerRulesEscape" >
-          <NavLink className="toRules" to="/rules">
-
-            Règles
-         </NavLink>
+          <Rules2 />
           <EscapeConfirmation />
         </div>
 
