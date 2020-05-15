@@ -34,16 +34,16 @@ class Rules2 extends React.Component {
              Un jeu pour tous ceux qui espèrent laisser derrière eux leur univers...
             </p>
             <p className="textPopUp2">
-             1. Ne lancer les dès que si vous avez l'intention de terminer
+             1. Ne lancez les dés que si vous avez l'intention de terminer
             </p>
             <p className="textPopUp2">
         
-             2. Les effest saisissants de ce jeux ne cesseront que lorsqu'un des joueurs aura atteint Jumanji
+             2. Les effets saisissants de ce jeu ne cesseront que lorsqu'un des joueurs aura atteint Jumanji
     
             </p>
             <p className="textPopUp2">
 
-             3. Aventurier méfiez-vous de votre niveau de panic. Votre équipe entière risquerait de ne pas s'en sortir!
+             3. Aventuriers méfiez-vous de votre niveau de panic. Votre équipe entière risquerait de ne pas s'en sortir!
             </p>
           </div>
 
