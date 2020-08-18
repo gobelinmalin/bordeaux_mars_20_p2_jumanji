@@ -18,7 +18,8 @@
     "react-player": "^1.15.3",
     "react-responsive-modal": "^5.0.3",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "^3.4.3"
+    "react-scripts": "^3.4.3",
+    "tslib": "^2.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
