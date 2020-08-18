@@ -1,0 +1,44 @@
+.containerPlayer3 {
+    border-color: rgba(255, 0, 0, 0);
+    border-style: solid;
+    width: 150%;
+    height: 150px;
+    background-image: url('peter-plateau.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top:0.5%;
+ 
+}
+
+.namePlayer3 {
+    font-size: 2vw;
+    text-align:center;
+    margin-top:8%;
+    color: #47C092;
+}
+
+
+.containerPanicPlayer3{
+    border-color: rgba(255, 0, 0, 0);
+    border-style: solid;
+    margin-top:20%;
+}
+
+.panicPlayer3{
+    background-color: black;
+    height: 1.7vw;
+    width: 11.6vw;
+    border-radius: 10px;
+    margin-left:16%;
+    margin-top:7%;
+}
+
+
+.panicJauge3{
+    background-color: rgba(71, 192, 146, 0);
+    margin-top:-8%;
+    height: 1vw;
+    width: 20%;
+    border-radius: 10px;
+    margin-left:18%;
+}

@@ -1,0 +1,58 @@
+.pictureDice1{
+    background-image: url('dice1.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 40%;
+    height: 100px;
+    transform: rotate(45deg);
+
+}
+
+.pictureDice2{
+    background-image: url('Dice2.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 40%;
+    height: 100px;
+    transform: rotate(65deg);
+}
+
+
+.pictureDice3{
+    background-image: url('dice3.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 40%;
+    height: 100px;
+    transform: rotate(20deg);
+}
+
+
+.pictureDice4{
+    background-image: url('Dice4.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 40%;
+    height: 100px;
+    transform: rotate(45deg);
+}
+
+.pictureDice5{
+    background-image: url('Dice5.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 40%;
+    height: 100px;
+    transform: rotate(15deg);
+}
+
+
+.pictureDice6{
+    background-image: url('Dice6.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 40%;
+    height: 100px;
+    transform: rotate(75deg);
+}
+

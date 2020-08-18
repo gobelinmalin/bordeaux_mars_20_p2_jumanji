@@ -1,0 +1,139 @@
+.toEscape2 {
+    color: #4fb4159e; 
+    border: none;
+    text-decoration: underline;
+    text-decoration-color:#4fb4159e; 
+    font-size: 20px;
+    background-color:rgba(255, 0, 0, 0);
+    margin-top:-8%;
+    outline: none;
+}
+
+.toEscape2:hover {
+    color: #4fb415; ; 
+    border: none;
+    text-decoration: underline;
+    text-decoration-color:#4fb415; ; 
+    font-size: 20px;
+    background-color:rgba(255, 0, 0, 0);
+    margin-top:-8%;
+    cursor: pointer;
+}
+
+.containerPopUp{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+   background-image: url("popup.jpg");
+   width: 400px;
+   border-color:rgb(166, 170, 125);
+   border-style:solid;
+   border-width:15px;
+
+  
+}
+
+.titlePopUp{
+    color: rgb(166, 170, 125);
+    margin-bottom:8%;
+    font-size:30px;
+}
+
+.textPopUp1 {
+    margin-top: -1%;
+    font-weight: bold;
+    color: beige;
+    font-size:25px;
+    color: rgb(40, 213, 17);
+}
+
+.textPopUp2 {
+    color: beige;
+    font-size:25px;
+    margin-top: -0.5%;
+    color: rgb(166, 170, 125);
+    margin-bottom:10%;
+}
+
+.annulerCTA{
+ border-radius: 5px;
+ background-image:url("../Plateau/Style/roll-dice-button.png");
+ font-weight: bold;
+ font-size:15px;
+ width:100px;
+ margin-bottom: 10%;
+ opacity:0.7
+}
+
+.confirmerCTA{
+ border-radius:5px;
+ background-image:url("../Plateau/Style/roll-dice-button.png");
+ font-weight: bold;
+ font-size:18px;
+ width:250px;
+ margin-bottom: 15%;
+ opacity:0.7;
+ outline: none;
+ padding:10px;
+ border:none;
+ text-decoration:none;
+ color:black;
+}
+
+.annulerCTA:hover{
+    border-radius: 5px;
+    background-image:url("../Plateau/Style/roll-dice-button.png");
+    font-weight: bold;
+    font-size:15px;
+    width:100px;
+    margin-bottom: 10%;
+    opacity:1;
+    cursor:pointer;
+   }
+   
+.confirmerCTA:hover{
+    border-radius:5px;
+    background-image:url("../Plateau/Style/roll-dice-button.png");
+    font-weight: bold;
+    font-size:18px;
+    width:250px;
+    margin-bottom: 15%;
+    opacity:1;
+    outline: none;
+    padding:10px;
+    border:none;
+    text-decoration:none;
+    color:black;
+   }
+
+
+
+
+.textPopUp2{
+    text-align:center;
+    width: 70%
+}
+
+.react-responsive-modal-modal {
+    background:rgba(255, 0, 0, 0);
+    border-width:30px;
+}
+
+
+
+
+
+.actionCTAcontainer{
+    height:60px;
+}
+
+.react-responsive-modal-modal{
+    margin-top: 25px;
+}
+
+.react-responsive-modal-closeButton {
+    margin-top: 25px;
+}
+
+
+

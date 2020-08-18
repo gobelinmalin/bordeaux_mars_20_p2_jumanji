@@ -1,0 +1,17 @@
+/* GameEnd Message  */
+  
+  .GameEndMessageBox {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Righteous', cursive;
+    font-size: 2rem;
+  }
+  
+  .GameEndMessageBox .Win p {
+    color: #60f14d;
+  }
+  
+  .GameEndMessageBox .Lost p {
+    color: #d42222
+  }

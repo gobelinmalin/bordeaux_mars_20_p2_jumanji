@@ -1,0 +1,61 @@
+.game-board{
+    display: grid;
+    width: 500%;
+    height: 210%;
+    margin: auto;
+    border: dotted deeppink;
+    margin-left:-200%;
+
+  
+}
+
+.TileNeutral {
+    background: linear-gradient(to right, #F6E3D1, #E4D0AB);
+    border: 1px solid #e4d0ab;
+}
+
+.TilePathPlayer1 {
+    border: 1px solid #ffc65e;
+    background-image: linear-gradient(to right, #ffc65e, #f4661b);
+    animation: gradient-animated 2s infinite;
+    background-size: 400%;
+  }
+
+  .SquarePathPlayer2 {
+    background-image: linear-gradient(to right, #9999ff, #6565e5);
+    border: 1px solid #9999ff;
+    animation: gradient-animated 2s infinite;
+    background-size: 400%;
+  }
+
+  @keyframes gradient-animated{
+    0%{
+      background-position: 4% 0%;
+    }
+    50%{
+      background-position: 97% 100%;
+    }
+    100%{
+      background-position: 4% 0%;
+    }
+  }
+
+  .containerBoardBoule{
+    border-color: red;
+    border-style:solid;
+    height: 80%;
+  }
+
+  .game-board{
+    border-color: yellow;
+    border-style:solid;
+  
+
+ 
+  }
+
+  .boule {
+    border-color: greenyellow;
+    border-style:solid;
+    height: 20%;
+  }
