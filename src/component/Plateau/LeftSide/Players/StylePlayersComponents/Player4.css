@@ -1,0 +1,44 @@
+.containerPlayer4 {
+    border-color: rgba(255, 0, 0, 0);
+    border-style: solid;
+    width: 150%;
+    height: 150px;
+    background-image: url('sarah-plateau.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top:0.5%;
+ 
+}
+
+.namePlayer4 {
+    font-size: 2vw;
+    text-align:center;
+    margin-top:8%;
+    color: #C630A5;
+}
+
+
+.containerPanicPlayer4{
+    border-color: rgba(255, 0, 0, 0);
+    border-style: solid;
+    margin-top:20%;
+}
+
+.panicPlayer4{
+    background-color: black;
+    height: 1.7vw;
+    width: 11.6vw;
+    border-radius: 10px;
+    margin-left:16%;
+    margin-top:7%;
+}
+
+
+.panicJauge4{
+    background-color: rgba(198, 48, 165, 0);
+    margin-top:-8%;
+    height: 1vw;
+    width: 20%;
+    border-radius: 10px;
+    margin-left:18%;
+}

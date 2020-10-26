@@ -1,0 +1,83 @@
+.containerPlayer2 {
+    border-color: rgba(255, 0, 0, 0);
+    border-style: solid;
+    width: 150%;
+    height: 150px;
+    background-image: url('judith-plateau.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top:0.5%;
+ 
+}
+
+.namePlayer2 {
+    font-size: 2vw;
+    text-align:center;
+    margin-top:8%;
+    color: #00B0F0;
+}
+
+
+.containerPanicPlayer2{
+    border-color: rgba(255, 0, 0, 0);
+    border-style: solid;
+    margin-top:20%;
+}
+
+.panicPlayer2{
+    background-color: black;
+    height: 1.7vw;
+    width: 11.6vw;
+    border-radius: 10px;
+    margin-left:16%;
+    margin-top:7%;
+}
+
+
+
+
+
+.panicJaugeA2{
+    background-color: red;
+    margin-top:-7.5%;
+    height: 1vw;
+    width: 0vw;
+    border-radius: 10px;
+    margin-left:18%;
+    transition-duration: 5s;
+}
+
+
+
+.panicJaugeB2{
+    background-color: red;
+    margin-top:-7.5%;
+    height: 1vw;
+    width: 2.7vw;
+    border-radius: 10px;
+    margin-left:18%;
+    transition-duration: 5s;
+}
+
+
+.panicJaugeC2{
+    background-color:red;
+    margin-top:-7.5%;
+    height: 1vw;
+    width: 5.6vw;
+    border-radius: 10px;
+    margin-left:18%;
+    transition-duration: 5s;
+}
+
+.panicJaugeD2{
+    background-color:red;
+    margin-top:-7.5%;
+    height: 1vw;
+    width: 8.5vw;
+    border-radius: 10px;
+    margin-left:18%;
+    transition-duration: 5s;
+}
+
+

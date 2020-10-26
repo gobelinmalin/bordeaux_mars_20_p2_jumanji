@@ -1,0 +1,99 @@
+.containerPlayer1 {
+    border-color: rgba(255, 0, 0, 0);
+    border-style: solid;
+    width: 150%;
+    height: 150px;
+    background-image: url('allan-plateau.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+   
+ 
+}
+
+.namePlayer1 {
+    font-size: 2vw;
+    text-align:center;
+    margin-top:8%;
+    color: #c65e18;
+}
+
+
+.containerPanicPlayer1{
+    border-color: rgba(255, 0, 0, 0);
+    border-style: solid;
+    margin-top:20%;
+}
+
+.panicPlayer1{
+    background-color: black;
+    height: 1.7vw;
+    width: 11.6vw;
+    border-radius: 10px;
+    margin-left:16%;
+    margin-top:7%;
+}
+
+
+.panicJaugeA{
+    background-color: #c65e18;
+    margin-top:-7.5%;
+    height: 1vw;
+    width: 0%;
+    border-radius: 10px;
+    margin-left:18%;
+}
+
+.panicJaugeB{
+    background-color: red;
+    margin-top:-7.5%;
+    height: 1vw;
+    width: 2.7vw;
+    border-radius: 10px;
+    margin-left:18%;
+    transition-duration: 5s;
+}
+
+.panicJaugeC{
+    background-color:red;
+    margin-top:-7.5%;
+    height: 1vw;
+    width: 5.6vw;
+    border-radius: 10px;
+    margin-left:18%;
+    transition-duration: 5s;
+}
+
+.panicJaugeD{
+    background-color:red;
+    margin-top:-7.5%;
+    height: 1vw;
+    width: 8.5vw;
+    border-radius: 10px;
+    margin-left:18%;
+    transition-duration: 5s;
+}
+
+.panicJaugeE{
+    background-color:red;
+    margin-top:-7.5%;
+    height: 1vw;
+    width: 10.9vw;
+    border-radius: 10px;
+    margin-left:18%;
+    transition-duration: 5s;
+}
+
+
+
+button{
+    width: 80px;
+    height: 40px;
+    margin: 15px;
+  }
+ 
+
+  .total {
+    color:red;
+  }
+
+

@@ -1,0 +1,222 @@
+.EndCard {
+  width: 10%;
+  height: 200px;
+  margin: 10px;
+}
+.Win {
+  font-size: 50px;
+}
+
+.CharacterPicWin1 {
+  margin-left: -110%;
+  border-radius: 8px;
+  width: 158%;
+  height: 30vh;
+  margin-bottom: 4%;
+  background: #071a0da6;
+  border: 2px solid #4fb415;
+  animation: animate-drum 2s linear infinite;
+}
+.CharacterPicWin2 {
+  margin-left: 50%;
+  border-radius: 8px;
+  width: 158%;
+  height: 30vh;
+  margin-bottom: 4%;
+  background: #071a0da6;
+  border: 2px solid #4fb415;
+  animation: animate-drum 2s linear infinite;
+}
+.CharacterPicWin3 {
+  margin-left: 10%;
+  border-radius: 8px;
+  width: 158%;
+  height: 30vh;
+  margin-bottom: 4%;
+  background: #071a0da6;
+  border: 2px solid #4fb415;
+  animation: animate-drum 2s linear infinite;
+}
+.CharacterPicWin4 {
+  margin-left: 100%;
+  border-radius: 8px;
+  width: 158%;
+  height: 30vh;
+  margin-bottom: 4%;
+  background: #071a0da6;
+  border: 2px solid #4fb415;
+  animation: animate-drum 2s linear infinite;
+}
+.CharacterNameWin1 {
+  margin-left: -110%;
+  border-radius: 8px;
+  width: 158%;
+  height: 20%;
+  background: #071a0da6;
+  border: 2px solid #4fb415;
+  box-shadow: 0 20px 50px #4fb415;
+  color: #4fb415;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+}
+.CharacterNameWin2 {
+  margin-left: 50%;
+  border-radius: 8px;
+  width: 158%;
+  height: 20%;
+  background: #071a0da6;
+  border: 2px solid #4fb415;
+  box-shadow: 0 20px 50px #4fb415;
+  color: #4fb415;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+}
+.CharacterNameWin3 {
+  margin-left: 10%;
+  border-radius: 8px;
+  width: 158%;
+  height: 20%;
+  background: #071a0da6;
+  border: 2px solid #4fb415;
+  box-shadow: 0 20px 50px #4fb415;
+  color: #4fb415;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+}
+.CharacterNameWin4 {
+  margin-left: 100%;
+  border-radius: 8px;
+  width: 158%;
+  height: 20%;
+  background: #071a0da6;
+  border: 2px solid #4fb415;
+  box-shadow: 0 20px 50px #4fb415;
+  color: #4fb415;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+}
+.CharacterPicLost1 {
+  margin-left: -110%;
+  border-radius: 8px;
+  width: 158%;
+  height: 30vh;
+  margin-bottom: 4%;
+  background: #071a0da6;
+  border: 2px solid #d42222;
+  animation: animate-drum 2s linear infinite;
+}
+.CharacterPicLost2 {
+  margin-left: 50%;
+  border-radius: 8px;
+  width: 158%;
+  height: 30vh;
+  margin-bottom: 4%;
+  background: #071a0da6;
+  border: 2px solid #d42222;
+  animation: animate-drum 2s linear infinite;
+}
+.CharacterPicLost3 {
+  margin-left: 10%;
+  border-radius: 8px;
+  width: 158%;
+  height: 30vh;
+  margin-bottom: 4%;
+  background: #071a0da6;
+  border: 2px solid #d42222;
+  animation: animate-drum 2s linear infinite;
+}
+.CharacterPicLost4 {
+  margin-left: 100%;
+  border-radius: 8px;
+  width: 158%;
+  height: 30vh;
+  margin-bottom: 4%;
+  background: #071a0da6;
+  border: 2px solid #d42222;
+  animation: animate-drum 2s linear infinite;
+}
+
+
+
+.CharacterNameLost1 {
+  margin-left: -110%;
+  border-radius: 8px;
+  width: 158%;
+  height: 20%;
+  background: #071a0da6;
+  border: 2px solid #d42222;
+  box-shadow: 0 20px 50px #d42222;
+  color: #d42222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+}
+.CharacterNameLost2 {
+  margin-left: 50%;
+  border-radius: 8px;
+  width: 158%;
+  height: 20%;
+  background: #071a0da6;
+  border: 2px solid #d42222;
+  box-shadow: 0 20px 50px #d42222;
+  color: #d42222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+}
+.CharacterNameLost3 {
+  margin-left: 10%;
+  border-radius: 8px;
+  width: 158%;
+  height: 20%;
+  background: #071a0da6;
+  border: 2px solid #d42222;
+  box-shadow: 0 20px 50px #d42222;
+  color: #d42222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+}
+.CharacterNameLost4 {
+  margin-left: 100%;
+  border-radius: 8px;
+  width: 158%;
+  height: 20%;
+  background: #071a0da6;
+  border: 2px solid #d42222;
+  box-shadow: 0 20px 50px #d42222;
+  color: #d42222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+}
+
+@keyframes animate-drum {
+  0% {
+    box-shadow: 0 0px 0px #77e736, 0 0px 0px #77e736;
+  }
+  25% {
+    box-shadow: 0 0px 5px #77e736, 0 0px 0px #77e736;
+  }
+  50% {
+    box-shadow: 0 0px 5px #77e736, 0 0px 0px #77e736;
+  }
+  70% {
+    box-shadow: 0 0px 0px #77e736, 0 0px 5px #77e736;
+  }
+  100% {
+    box-shadow: 0 0px 5px #77e736, 0 0px px #77e736;
+  }
+}

@@ -1,0 +1,29 @@
+.displayboule {
+    border : 5px;
+    height: 60%;
+    width: 30%;
+    border-radius: 60%;
+    background-color: #faecec;
+    margin-top: -89vh;
+    margin-left:10vw;
+    position: absolute;
+}
+
+.enigmeContainer2{
+    border-color:yellow;
+    border-style:solid;
+    width:30%;
+    height: 60%;
+    display:flex;
+    justify-content: space-between;
+}
+
+.displayEnigmeContainer{
+    border-color:red;
+    border-style:solid;
+    display: flex;
+    align-items: center;
+    width: 30%;
+    justify-content: center;
+
+}
